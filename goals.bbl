@@ -1,0 +1,15 @@
+\begin{thebibliography}{}
+
+\bibitem[Han et~al., 2015]{DBLP:journals/corr/HanMD15}
+Han, S., Mao, H., and Dally, W.~J. (2015).
+\newblock Deep compression: Compressing deep neural network with pruning,
+  trained quantization and huffman coding.
+\newblock {\em CoRR}, abs/1510.00149.
+
+\bibitem[Sze et~al., 2017]{DBLP:journals/corr/SzeCYE17}
+Sze, V., Chen, Y., Yang, T., and Emer, J.~S. (2017).
+\newblock Efficient processing of deep neural networks: {A} tutorial and
+  survey.
+\newblock {\em CoRR}, abs/1703.09039.
+
+\end{thebibliography}

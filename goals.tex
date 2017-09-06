@@ -1,17 +1,18 @@
 %Goals for the project.
 \documentclass[12pt]{article}
 \usepackage{hyperref}
+\usepackage[square,numbers]{natbib}
 \setlength{\parindent}{0pt}
 \begin{document}
 \title{Neural Net Implementation on FPGA's: Proposal}
 \author{Cory Nezin, Brenda So}
 \maketitle
 
-\section{Introduction}
+\section*{Introduction}
 
 Neural networks has recently gained momentum in the machine learning and artificial intelligence community. While neural networks provides state-of-the-art accuracy in many tasks, it comes with the cost of high computational and space complexity which modern CPU's can barely handle. The two main contenders that can achieve the computing ability required by neural nets includes FPGA's and GPU's. The comparison between FPGA's and GPU's are still in open research. Our project focuses on exploring ways to optimize neural network performance on FPGA, and ultimately provides an analog front end to demonstrate the ability of neural networks in real-life applications.
 
-\section{Goals}
+\section*{Goals}
 
   \begin{enumerate}
   \item Design and implement hardware optimized inference on an FPGA.
@@ -29,9 +30,9 @@ Neural networks has recently gained momentum in the machine learning and artific
       \begin{enumerate}
         \item Design high level architecture to increase data reuse and reduce energy consumption. Some examples of high level architectures include:
           \begin{enumerate}
-              \item Weight stationary (WS)
-              \item Output stationary (OS)
-              \item Row stationary (RS)
+              \item Weight stationary (WS) \cite{DBLP:journals/corr/SzeCYE17}
+              \item Output stationary (OS) \cite{DBLP:journals/corr/SzeCYE17}
+              \item Row stationary (RS) \cite{DBLP:journals/corr/SzeCYE17}
           \end{enumerate}
         \item Implement weight compression to decrease neural net size. Ways to implement weight compression include:
           \begin{enumerate}
@@ -39,7 +40,7 @@ Neural networks has recently gained momentum in the machine learning and artific
             \item Use SVD for fully connected compression?
             \item Implement Optimal Brain Damage.
             \item Implement Optimal Brain Surgeon.
-            \item Implement Deep Compression for specialized hardware.
+            \item Implement Deep Compression for specialized hardware. \cite{DBLP:journals/corr/HanMD15}
           \end{enumerate}
         \item Test neural net on a toy data set (spiral, checkerboard, wdbc).\
           \begin{enumerate}
@@ -65,12 +66,14 @@ Neural networks has recently gained momentum in the machine learning and artific
       \item Radar - Gender identification (toy problem), people in room.
       \item Style Transfer - live feed.
       \item Audio - Frank's speech denoising.
-      \item Video - \href{https://arxiv.org/pdf/1611.01599.pdf}{Live lip reading}, live 
-        blackboard transcription.
+      \item Video - Live lip reading \cite{DBLP:journals/corr/AssaelSWF16}, live blackboard transcription.
       \item Image - Handwriting transcription.
       \item Lidar - Car or pedestrian detection.
       \item Wireless - Signal classification, smart jamming?
     \end{enumerate}
   \end{enumerate}
-\section{Bibliography}
+  
+\bibliographystyle{abbrvnat}
+\bibliography{goals_bib}
+
 \end{document}

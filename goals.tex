@@ -3,50 +3,74 @@
 \usepackage{hyperref}
 \setlength{\parindent}{0pt}
 \begin{document}
-\title{Neural Net Implemntation on FPGA's: Goals}
+\title{Neural Net Implementation on FPGA's: Proposal}
 \author{Cory Nezin, Brenda So}
 \maketitle
-\begin{enumerate}
-\item Design and implement hardware optimized inference on an FPGA.
+
+\section{Introduction}
+
+Neural networks has recently gained momentum in the machine learning and artificial intelligence community. While neural networks provides state-of-the-art accuracy in many tasks, it comes with the cost of high computational and space complexity which modern CPU's can barely handle. The two main contenders that can achieve the computing ability required by neural nets includes FPGA's and GPU's. The comparison between FPGA's and GPU's are still in open research. Our project focuses on exploring ways to optimize neural network performance on FPGA, and ultimately provides an analog front end to demonstrate the ability of neural networks in real-life applications.
+
+\section{Goals}
+
   \begin{enumerate}
-    \item Create a framework to convert symbolic neural nets to FPGA code.
+  \item Design and implement hardware optimized inference on an FPGA.
+    \begin{enumerate}
+      \item Create a framework to convert symbolic neural nets to FPGA code. Some common neural net components include
+        \begin{enumerate}
+          \item ReLU, Sigmoid, Threshold.
+          \item Fully Connected (matrix multiply - with Strassen algorithm?).
+          \item Sparsely Connected? (Sparse martrix multiply).
+          \item 1D (2D and 3D also?) Convolution - just FIR filters.
+          \item Max pooling, average pooling, downsampling.
+          \item Recurrent elements?
+        \end{enumerate}
+      \item Optimize neural net implementation by improving energy efficiency and speed without sacrificing accuracy. 
       \begin{enumerate}
-        \item ReLU, Sigmoid, Threshold.
-        \item Fully Connected (matrix multiply - with Strassen algorithm?).
-        \item Sparsely Connected? (Sparse martrix multiply).
-        \item 1D (2D and 3D also?) Convolution - just FIR filters.
-        \item Max pooling, average pooling, downsampling.
-        \item Recurrent elements?
+        \item Design high level architecture to increase data reuse and reduce energy consumption. Some examples of high level architectures include:
+          \begin{enumerate}
+              \item Weight stationary (WS)
+              \item Output stationary (OS)
+              \item Row stationary (RS)
+          \end{enumerate}
+        \item Implement weight compression to decrease neural net size. Ways to implement weight compression include:
+          \begin{enumerate}
+            \item Use multiplierless multiplication?
+            \item Use SVD for fully connected compression?
+            \item Implement Optimal Brain Damage.
+            \item Implement Optimal Brain Surgeon.
+            \item Implement Deep Compression for specialized hardware.
+          \end{enumerate}
+        \item Test neural net on a toy data set (spiral, checkerboard, wdbc).\
+          \begin{enumerate}
+            \item Implement a simple live input method - ADC?
+            \item Perform live classification of hand written digits.
+          \end{enumerate}
       \end{enumerate}
-    \item Implement weight compression to decrease neural net size.
-      \begin{enumerate}
-        \item Use multiplierless multiplication?
-        \item Use SVD for fully connected compression?
-        \item Implement Optimal Brain Damage.
-        \item Implement Optimal Brain Surgeon.
-        \item Implement Deep Compression for specialized hardware.
-      \end{enumerate}
-    \item Test neural net on a toy data set (spiral, checkerboard, wdbc).\
-      \begin{enumerate}
-        \item Implement a simple live input method - ADC?
-        \item Perform live classification of hand written digits.
-      \end{enumerate}
+    \end{enumerate}
+  \item Benchmark performance of FPGA's against GPU's and CPU's.
+    \begin{enumerate}
+      \item Quantify operation in floating point and fixed point.
+      \item Measure performance in terms of 
+          \begin{enumerate}
+              \item power and energy consumption, of both processor and off-chip access (e.g. DRAM accesses)
+              \item latency and throughput
+              \item memory consumption
+              \item FPGA-specific measurements, e.g. utilization of resources such as DSP, BRAM,  LUT, FF
+              \item accuracy
+          \end{enumerate}
+    \end{enumerate}
+  \item Build a general front end, pick one of the following:
+    \begin{enumerate}
+      \item Radar - Gender identification (toy problem), people in room.
+      \item Style Transfer - live feed.
+      \item Audio - Frank's speech denoising.
+      \item Video - \href{https://arxiv.org/pdf/1611.01599.pdf}{Live lip reading}, live 
+        blackboard transcription.
+      \item Image - Handwriting transcription.
+      \item Lidar - Car or pedestrian detection.
+      \item Wireless - Signal classification, smart jamming?
+    \end{enumerate}
   \end{enumerate}
-\item Benchmark performance of FPGA's against GPU's and CPU's.
-  \begin{enumerate}
-    \item Quantify operation in floating point and fixed point.
-    \item Measure throughput, power, accuracy, memory, and latency.
-  \end{enumerate}
-\item Build a general front end, pick one of the following:
-  \begin{enumerate}
-    \item Radar - Gender identification (toy problem), people in room.
-    \item Style Transfer - live feed.
-    \item Audio - Frank's speech denoising.
-    \item Video - \href{https://arxiv.org/pdf/1611.01599.pdf}{Live lip reading}, live 
-      blackboard transcription.
-    \item Image - Handwriting transcription.
-    \item Lidar - Car or pedestrian detection.
-    \item Wireless - Signal classification, smart jamming?
-  \end{enumerate}
-\end{enumerate}
+\section{Bibliography}
 \end{document}

@@ -8,7 +8,27 @@
 \maketitle
 \begin{enumerate}
 \item Design and implement hardware optimized inference on an FPGA.
+  \begin{enumerate}
+    \item Create a framework to convert symbolic neural nets to FPGA code
+      \begin{enumerate}
+        \item ReLU, Sigmoid, Threshold
+        \item Fully Connected (matrix multiply - with Strassen algorithm?)
+        \item Sparsely Connected? (Sparse martrix multiply)
+        \item 1D (2D and 3D also?) Convolution - just FIR filters
+        \item Max pooling, average pooling, downsampling
+        \item Recurrent elements?
+      \end{enumerate}
+    \item Implement weight compression to decrease neural net size.
+      \begin{enumerate}
+        \item Use multiplierless multiplication?
+        \item Use SVD for fully connected compression?
+        \item Implement Optimal Brain Damage.
+        \item Implement Optimal Brain Surgeon.
+        \item Implement Deep Compression for specialized hardware.
+      \end{enumerate}
+  \end{enumerate}
 \item Benchmark performance of FPGA's against GPU's and CPU's.
+
 \item Build an "analog" front end.
   \begin{enumerate}
     \item Radar - Gender id, people in room

@@ -9,13 +9,13 @@
 \begin{enumerate}
 \item Design and implement hardware optimized inference on an FPGA.
   \begin{enumerate}
-    \item Create a framework to convert symbolic neural nets to FPGA code
+    \item Create a framework to convert symbolic neural nets to FPGA code.
       \begin{enumerate}
-        \item ReLU, Sigmoid, Threshold
-        \item Fully Connected (matrix multiply - with Strassen algorithm?)
-        \item Sparsely Connected? (Sparse martrix multiply)
-        \item 1D (2D and 3D also?) Convolution - just FIR filters
-        \item Max pooling, average pooling, downsampling
+        \item ReLU, Sigmoid, Threshold.
+        \item Fully Connected (matrix multiply - with Strassen algorithm?).
+        \item Sparsely Connected? (Sparse martrix multiply).
+        \item 1D (2D and 3D also?) Convolution - just FIR filters.
+        \item Max pooling, average pooling, downsampling.
         \item Recurrent elements?
       \end{enumerate}
     \item Implement weight compression to decrease neural net size.
@@ -26,18 +26,26 @@
         \item Implement Optimal Brain Surgeon.
         \item Implement Deep Compression for specialized hardware.
       \end{enumerate}
+    \item Test neural net on a toy data set (spiral, checkerboard, wdbc).\
+      \begin{enumerate}
+        \item Implement a simple live input method - ADC?
+        \item Perform live classification of hand written digits.
+      \end{enumerate}
   \end{enumerate}
 \item Benchmark performance of FPGA's against GPU's and CPU's.
-
-\item Build an "analog" front end.
   \begin{enumerate}
-    \item Radar - Gender id, people in room
-    \item Style Transfer - live feed
-    \item Audio - Frank's speech denoising
-    \item Video - \href{https://arxiv.org/pdf/1611.01599.pdf}{lipnet}, live blackboard 
-      transcription
-    \item Image - Handwriting transcription
-    \item Lidar - Car or pedestrian detection
+    \item Quantify operation in floating point and fixed point.
+    \item Measure throughput, power, accuracy, memory, and latency.
+  \end{enumerate}
+\item Build a general front end, pick one of the following:
+  \begin{enumerate}
+    \item Radar - Gender identification (toy problem), people in room.
+    \item Style Transfer - live feed.
+    \item Audio - Frank's speech denoising.
+    \item Video - \href{https://arxiv.org/pdf/1611.01599.pdf}{Live lip reading}, live 
+      blackboard transcription.
+    \item Image - Handwriting transcription.
+    \item Lidar - Car or pedestrian detection.
     \item Wireless - Signal classification, smart jamming?
   \end{enumerate}
 \end{enumerate}

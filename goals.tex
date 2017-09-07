@@ -2,6 +2,7 @@
 \documentclass[12pt]{article}
 \usepackage{hyperref}
 \usepackage[square,numbers]{natbib}
+
 \setlength{\parindent}{0pt}
 \begin{document}
 \title{Neural Net Implementation on FPGA's: Proposal}
@@ -21,9 +22,9 @@ Neural networks have recently gained momentum in the machine learning and artifi
         \begin{enumerate}
           \item ReLU, Sigmoid, Threshold.
           \item Fully Connected (matrix multiply - with Strassen algorithm?).
-          \item Sparsely Connected? (Sparse martrix multiply).
+          \item Sparsely Connected? (Sparse matrix multiply).
           \item 1D (2D and 3D also?) Convolution - just FIR filters.
-          \item Max pooling, average pooling, downsampling.
+          \item Max pooling, average pooling, down-sampling.
           \item Recurrent elements?
         \end{enumerate}
       \item Optimize neural net implementation by improving energy efficiency and speed without sacrificing accuracy. 
@@ -36,7 +37,7 @@ Neural networks have recently gained momentum in the machine learning and artifi
           \end{enumerate}
         \item Implement weight compression to decrease neural net size. Ways to implement weight compression include:
           \begin{enumerate}
-            \item Use multiplierless multiplication?
+            \item Use multiplier-less multiplication?
             \item Use SVD for fully connected compression?
             \item Implement Optimal Brain Damage. \cite{DBLP:conf/nips/CunDS89}
             \item Implement Optimal Brain Surgeon. \cite{DBLP:conf/nips/HassibiS92}

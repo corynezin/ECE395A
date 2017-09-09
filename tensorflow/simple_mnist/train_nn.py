@@ -7,6 +7,7 @@ import read_records
 import shallow_nn
 
 with tf.Session() as sess:
+  model_variables = tf.get_collection('model_variables')
   filename,dataset,iterator = read_records.get_iterator()
   net = shallow_nn.shallow_nn(iterator,sess)
   updates = tf.train.GradientDescentOptimizer(0.01).minimize(net.loss)
@@ -30,6 +31,10 @@ with tf.Session() as sess:
         n = n + 1
         if n % 100 == 0:
           print('Loss:',loss)
+          graph_keys = tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES)
+          for key in graph_keys:
+            print(key)
+            print(sess.run(key))
       except tf.errors.OutOfRangeError:
         print('Epoch finished, validating...')
         sess.run(iterator.initializer, 

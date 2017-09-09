@@ -18,6 +18,11 @@ class shallow_nn:
     self.b_1 = tf.get_variable('b_1',shape=([1,]),
       initializer=tf.random_normal_initializer(stddev=s))
 
+    tf.add_to_collection(tf.contrib.framework.model_variable,self.A)
+    tf.add_to_collection(tf.contrib.framework.model_variable,self.B)
+    tf.add_to_collection(tf.contrib.framework.model_variable,self.b_0)
+    tf.add_to_collection(tf.contrib.framework.model_variable,self.b_1)
+
     self.build()
 
   def build(self):
@@ -42,3 +47,7 @@ class shallow_nn:
     self.loss = self.mean_cross_entropy
 
     self.softmax = tf.nn.softmax(net)
+
+    self.prediction = tf.argmax(self.softmax, axis = 1)
+    self.equality = tf.equal(tf.cast(self.prediction, tf.int32), y)
+    self.accuracy = tf.reduce_mean(tf.cast(self.equality, tf.float32))

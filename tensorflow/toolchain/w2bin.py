@@ -12,7 +12,19 @@ import sys
 import struct
 from numpy import array
 
+# This function takes in a meta file and output name of the weights
+def show_weights(model_name):
+  weights_path = model_name + ".meta"
+  model_path = model_name
+  
+  sess = tf.Session()
+  new_saver = tf.train.import_meta_graph(weights_path)
+  what = new_saver.restore(sess, model_path)
+  graph_keys = tf.get_collection(tf.GraphKeys.MODEL_VARIABLES)
+  for keys in graph_keys:
+    print(keys)
 
+# This function takes in a meta file and generate a file for the weights from it
 def w2bin(model_name, output_file_path):
 
   weights_path = model_name + ".meta"
@@ -21,6 +33,7 @@ def w2bin(model_name, output_file_path):
 
   # extract weights from tensorflow
   sess = tf.Session()
+  dir(tf.contrib)
   new_saver = tf.train.import_meta_graph(weights_path)
   what = new_saver.restore(sess, model_path)
 
@@ -89,5 +102,4 @@ if __name__ == "__main__":
     print("Usage :  python3 w2bin.py [model name] [output file path] \n")
     sys.exit()
   w2bin(sys.argv[1], sys.argv[2])
-
 

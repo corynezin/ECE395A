@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log simple_nn.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source simple_nn.tcl
+EAStep vivado -log neural_net_testbed.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source neural_net_testbed.tcl

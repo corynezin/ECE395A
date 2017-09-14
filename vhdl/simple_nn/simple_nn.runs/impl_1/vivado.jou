@@ -2,11 +2,11 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Thu Sep 14 14:56:55 2017
-# Process ID: 16185
+# Start of session at: Thu Sep 14 16:28:48 2017
+# Process ID: 18021
 # Current directory: /home/bcv/Documents/ECE395A/vhdl/simple_nn/simple_nn.runs/impl_1
-# Command line: vivado -log simple_nn.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source simple_nn.tcl -notrace
-# Log file: /home/bcv/Documents/ECE395A/vhdl/simple_nn/simple_nn.runs/impl_1/simple_nn.vdi
+# Command line: vivado -log neural_net_testbed.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source neural_net_testbed.tcl -notrace
+# Log file: /home/bcv/Documents/ECE395A/vhdl/simple_nn/simple_nn.runs/impl_1/neural_net_testbed.vdi
 # Journal file: /home/bcv/Documents/ECE395A/vhdl/simple_nn/simple_nn.runs/impl_1/vivado.jou
 #-----------------------------------------------------------
-source simple_nn.tcl -notrace
+source neural_net_testbed.tcl -notrace

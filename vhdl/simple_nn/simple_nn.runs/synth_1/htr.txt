@@ -6,4 +6,4 @@
 # Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 #
 
-vivado -log simple_nn.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source simple_nn.tcl
+vivado -log neural_net_testbed.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source neural_net_testbed.tcl

@@ -29,7 +29,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
-         "-log simple_nn.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source simple_nn.tcl -notrace" );
+         "-log neural_net_testbed.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source neural_net_testbed.tcl -notrace" );
 
 
 

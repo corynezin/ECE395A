@@ -38,6 +38,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log simple_nn.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source simple_nn.tcl -notrace
+EAStep vivado -log neural_net_testbed.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source neural_net_testbed.tcl -notrace
 
 

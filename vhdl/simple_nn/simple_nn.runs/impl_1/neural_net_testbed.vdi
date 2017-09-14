@@ -2,14 +2,14 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Thu Sep 14 14:56:55 2017
-# Process ID: 16185
+# Start of session at: Thu Sep 14 16:28:48 2017
+# Process ID: 18021
 # Current directory: /home/bcv/Documents/ECE395A/vhdl/simple_nn/simple_nn.runs/impl_1
-# Command line: vivado -log simple_nn.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source simple_nn.tcl -notrace
-# Log file: /home/bcv/Documents/ECE395A/vhdl/simple_nn/simple_nn.runs/impl_1/simple_nn.vdi
+# Command line: vivado -log neural_net_testbed.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source neural_net_testbed.tcl -notrace
+# Log file: /home/bcv/Documents/ECE395A/vhdl/simple_nn/simple_nn.runs/impl_1/neural_net_testbed.vdi
 # Journal file: /home/bcv/Documents/ECE395A/vhdl/simple_nn/simple_nn.runs/impl_1/vivado.jou
 #-----------------------------------------------------------
-source simple_nn.tcl -notrace
+source neural_net_testbed.tcl -notrace
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Project 1-479] Netlist was created with Vivado 2017.2
@@ -19,7 +19,7 @@ INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-link_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1380.598 ; gain = 273.543 ; free physical = 6375 ; free virtual = 26332
+link_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1380.598 ; gain = 273.543 ; free physical = 6141 ; free virtual = 26142
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020-clg484'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020-clg484'
@@ -32,7 +32,7 @@ report_drc (run_mandatory_drcs) completed successfully
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.17 . Memory (MB): peak = 1444.629 ; gain = 64.031 ; free physical = 6372 ; free virtual = 26329
+Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1444.629 ; gain = 64.031 ; free physical = 6137 ; free virtual = 26138
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Starting Logic Optimization Task
@@ -40,55 +40,55 @@ Starting Logic Optimization Task
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 676e8e4c
+Phase 1 Retarget | Checksum: c93580f2
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1838.121 ; gain = 0.000 ; free physical = 5980 ; free virtual = 25940
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1838.121 ; gain = 0.000 ; free physical = 5760 ; free virtual = 25761
 INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 676e8e4c
+Phase 2 Constant propagation | Checksum: c93580f2
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1838.121 ; gain = 0.000 ; free physical = 5980 ; free virtual = 25940
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1838.121 ; gain = 0.000 ; free physical = 5760 ; free virtual = 25761
 INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 676e8e4c
+Phase 3 Sweep | Checksum: c93580f2
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1838.121 ; gain = 0.000 ; free physical = 5980 ; free virtual = 25940
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1838.121 ; gain = 0.000 ; free physical = 5760 ; free virtual = 25761
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: 676e8e4c
+Phase 4 BUFG optimization | Checksum: c93580f2
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1838.121 ; gain = 0.000 ; free physical = 5979 ; free virtual = 25939
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1838.121 ; gain = 0.000 ; free physical = 5760 ; free virtual = 25761
 INFO: [Opt 31-389] Phase BUFG optimization created 0 cells and removed 0 cells
 
 Phase 5 Shift Register Optimization
-Phase 5 Shift Register Optimization | Checksum: 676e8e4c
+Phase 5 Shift Register Optimization | Checksum: c93580f2
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1838.121 ; gain = 0.000 ; free physical = 5980 ; free virtual = 25940
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1838.121 ; gain = 0.000 ; free physical = 5760 ; free virtual = 25761
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1838.121 ; gain = 0.000 ; free physical = 5980 ; free virtual = 25940
-Ending Logic Optimization Task | Checksum: 676e8e4c
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1838.121 ; gain = 0.000 ; free physical = 5760 ; free virtual = 25761
+Ending Logic Optimization Task | Checksum: c93580f2
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1838.121 ; gain = 0.000 ; free physical = 5980 ; free virtual = 25940
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1838.121 ; gain = 0.000 ; free physical = 5760 ; free virtual = 25761
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-Ending Power Optimization Task | Checksum: 676e8e4c
+Ending Power Optimization Task | Checksum: c93580f2
 
-Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1838.121 ; gain = 0.000 ; free physical = 5980 ; free virtual = 25940
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1838.121 ; gain = 0.000 ; free physical = 5760 ; free virtual = 25761
 19 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1838.121 ; gain = 457.523 ; free physical = 5980 ; free virtual = 25940
-INFO: [Common 17-1381] The checkpoint '/home/bcv/Documents/ECE395A/vhdl/simple_nn/simple_nn.runs/impl_1/simple_nn_opt.dcp' has been generated.
-Command: report_drc -file simple_nn_drc_opted.rpt
+opt_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1838.121 ; gain = 457.523 ; free physical = 5760 ; free virtual = 25761
+INFO: [Common 17-1381] The checkpoint '/home/bcv/Documents/ECE395A/vhdl/simple_nn/simple_nn.runs/impl_1/neural_net_testbed_opt.dcp' has been generated.
+Command: report_drc -file neural_net_testbed_drc_opted.rpt
 INFO: [DRC 23-27] Running DRC with 8 threads
-INFO: [Coretcl 2-168] The results of DRC are in file /home/bcv/Documents/ECE395A/vhdl/simple_nn/simple_nn.runs/impl_1/simple_nn_drc_opted.rpt.
+INFO: [Coretcl 2-168] The results of DRC are in file /home/bcv/Documents/ECE395A/vhdl/simple_nn/simple_nn.runs/impl_1/neural_net_testbed_drc_opted.rpt.
 report_drc completed successfully
 INFO: [Chipscope 16-241] No debug cores found in the current design.
 Before running the implement_debug_core command, either use the Set Up Debug wizard (GUI mode)
@@ -114,19 +114,19 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1902.152 ; gain = 0.000 ; free physical = 5973 ; free virtual = 25933
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1902.152 ; gain = 0.000 ; free physical = 5750 ; free virtual = 25750
 Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 00000000
 
-Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1902.152 ; gain = 0.000 ; free physical = 5973 ; free virtual = 25933
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1902.152 ; gain = 0.000 ; free physical = 5750 ; free virtual = 25750
 Phase 1 Placer Initialization | Checksum: 00000000
 
-Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.13 . Memory (MB): peak = 1902.152 ; gain = 0.000 ; free physical = 5972 ; free virtual = 25933
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1902.152 ; gain = 0.000 ; free physical = 5750 ; free virtual = 25750
 ERROR: [Place 30-494] The design is empty
 Resolution: Check if opt_design has removed all the leaf cells of your design.  Check whether you have instantiated and connected all of the top level ports.
 Ending Placer Task | Checksum: 00000000
 
-Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.15 . Memory (MB): peak = 1902.152 ; gain = 0.000 ; free physical = 5973 ; free virtual = 25934
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1902.152 ; gain = 0.000 ; free physical = 5750 ; free virtual = 25750
 31 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
 place_design failed
 ERROR: [Common 17-69] Command failed: Placer could not place all instances
-INFO: [Common 17-206] Exiting Vivado at Thu Sep 14 14:57:25 2017...
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 14 16:29:18 2017...

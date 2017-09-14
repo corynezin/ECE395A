@@ -57,8 +57,8 @@ set rc [catch {
   set_property parent.project_path /home/bcv/Documents/ECE395A/vhdl/simple_nn/simple_nn.xpr [current_project]
   set_property ip_output_repo /home/bcv/Documents/ECE395A/vhdl/simple_nn/simple_nn.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet /home/bcv/Documents/ECE395A/vhdl/simple_nn/simple_nn.runs/synth_1/simple_nn.dcp
-  link_design -top simple_nn -part xc7z020clg484-1
+  add_files -quiet /home/bcv/Documents/ECE395A/vhdl/simple_nn/simple_nn.runs/synth_1/neural_net_testbed.dcp
+  link_design -top neural_net_testbed -part xc7z020clg484-1
   close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {
@@ -74,8 +74,8 @@ set ACTIVE_STEP opt_design
 set rc [catch {
   create_msg_db opt_design.pb
   opt_design 
-  write_checkpoint -force simple_nn_opt.dcp
-  catch { report_drc -file simple_nn_drc_opted.rpt }
+  write_checkpoint -force neural_net_testbed_opt.dcp
+  catch { report_drc -file neural_net_testbed_drc_opted.rpt }
   close_msg_db -file opt_design.pb
 } RESULT]
 if {$rc} {
@@ -92,10 +92,10 @@ set rc [catch {
   create_msg_db place_design.pb
   implement_debug_core 
   place_design 
-  write_checkpoint -force simple_nn_placed.dcp
-  catch { report_io -file simple_nn_io_placed.rpt }
-  catch { report_utilization -file simple_nn_utilization_placed.rpt -pb simple_nn_utilization_placed.pb }
-  catch { report_control_sets -verbose -file simple_nn_control_sets_placed.rpt }
+  write_checkpoint -force neural_net_testbed_placed.dcp
+  catch { report_io -file neural_net_testbed_io_placed.rpt }
+  catch { report_utilization -file neural_net_testbed_utilization_placed.rpt -pb neural_net_testbed_utilization_placed.pb }
+  catch { report_control_sets -verbose -file neural_net_testbed_control_sets_placed.rpt }
   close_msg_db -file place_design.pb
 } RESULT]
 if {$rc} {
@@ -111,17 +111,17 @@ set ACTIVE_STEP route_design
 set rc [catch {
   create_msg_db route_design.pb
   route_design 
-  write_checkpoint -force simple_nn_routed.dcp
-  catch { report_drc -file simple_nn_drc_routed.rpt -pb simple_nn_drc_routed.pb -rpx simple_nn_drc_routed.rpx }
-  catch { report_methodology -file simple_nn_methodology_drc_routed.rpt -rpx simple_nn_methodology_drc_routed.rpx }
-  catch { report_power -file simple_nn_power_routed.rpt -pb simple_nn_power_summary_routed.pb -rpx simple_nn_power_routed.rpx }
-  catch { report_route_status -file simple_nn_route_status.rpt -pb simple_nn_route_status.pb }
-  catch { report_clock_utilization -file simple_nn_clock_utilization_routed.rpt }
-  catch { report_timing_summary -warn_on_violation -max_paths 10 -file simple_nn_timing_summary_routed.rpt -rpx simple_nn_timing_summary_routed.rpx }
+  write_checkpoint -force neural_net_testbed_routed.dcp
+  catch { report_drc -file neural_net_testbed_drc_routed.rpt -pb neural_net_testbed_drc_routed.pb -rpx neural_net_testbed_drc_routed.rpx }
+  catch { report_methodology -file neural_net_testbed_methodology_drc_routed.rpt -rpx neural_net_testbed_methodology_drc_routed.rpx }
+  catch { report_power -file neural_net_testbed_power_routed.rpt -pb neural_net_testbed_power_summary_routed.pb -rpx neural_net_testbed_power_routed.rpx }
+  catch { report_route_status -file neural_net_testbed_route_status.rpt -pb neural_net_testbed_route_status.pb }
+  catch { report_clock_utilization -file neural_net_testbed_clock_utilization_routed.rpt }
+  catch { report_timing_summary -warn_on_violation -max_paths 10 -file neural_net_testbed_timing_summary_routed.rpt -rpx neural_net_testbed_timing_summary_routed.rpx }
   close_msg_db -file route_design.pb
 } RESULT]
 if {$rc} {
-  write_checkpoint -force simple_nn_routed_error.dcp
+  write_checkpoint -force neural_net_testbed_routed_error.dcp
   step_failed route_design
   return -code error $RESULT
 } else {

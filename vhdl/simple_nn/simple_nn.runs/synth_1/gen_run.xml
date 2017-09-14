@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1505413680">
-  <File Type="VDS-TIMING-PB" Name="simple_nn_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="simple_nn_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="simple_nn.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="simple_nn_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="simple_nn_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="simple_nn_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="simple_nn.vds"/>
-  <File Type="PA-TCL" Name="simple_nn.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1505419294">
+  <File Type="VDS-TIMING-PB" Name="neural_net_testbed_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="neural_net_testbed_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="neural_net_testbed.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="neural_net_testbed_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="neural_net_testbed_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="neural_net_testbed_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="neural_net_testbed.vds"/>
+  <File Type="PA-TCL" Name="neural_net_testbed.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/vector.vhd">
@@ -72,9 +72,15 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/neural_net_testbed.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="simple_nn"/>
+      <Option Name="TopModule" Val="neural_net_testbed"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

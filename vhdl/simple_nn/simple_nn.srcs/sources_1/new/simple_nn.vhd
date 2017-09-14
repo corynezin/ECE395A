@@ -26,7 +26,8 @@ use WORK.MATRIX.ALL;
 use WORK.VECTOR_V.ALL;
 
 entity simple_nn is
---  Port ( );
+  Port ( v_in : in vector_in;
+         v_out : out vector_out );
 end simple_nn;
 
 architecture Behavioral of simple_nn is

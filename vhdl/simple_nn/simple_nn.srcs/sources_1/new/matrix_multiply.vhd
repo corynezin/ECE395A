@@ -51,13 +51,12 @@ component inner_product
            M: INTEGER; M_n: INTEGER; M_m: INTEGER;
            L: INTEGER; L_n: INTEGER; L_m: INTEGER);
   port(w,v : in vector_in;
-       z   : out signed(L-1 downto 0));
+       x   : out signed(L-1 downto 0));
 end component;
 
 -- Input and output vectors
 signal w: vector_in;
 signal v: vector_in;
-signal z: vector_out;
 
 begin
   GEN_IP: 
@@ -67,6 +66,6 @@ begin
       generic map( N => 8, N_n => 1, N_m => 7,
                    M => 8, M_n => 1, M_m => 7,
                    L => 8, L_n => 1, L_m => 7)
-      port map (w => A(i), v => v, z => z(i));
+      port map (w => A(i), v => v, x => v_out(i));
   END GENERATE GEN_IP;
 end RTL;

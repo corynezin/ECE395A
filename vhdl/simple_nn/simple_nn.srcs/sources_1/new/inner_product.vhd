@@ -35,7 +35,7 @@ entity inner_product is
 end inner_product;
 
 package body VECTOR is
-  constant vector_in_size: INTEGER := 100;
+  constant vector_in_size: INTEGER := 784;
   constant number_in_size: INTEGER := 8;
   constant vector_out_size: INTEGER := 100;
   constant number_out_size: INTEGER := 8;
@@ -66,7 +66,7 @@ begin
         port map (x => v(n), y => w(n), z => t(n) );
     END GENERATE GEN_MULT;
   -- Sum up all of the results
-  process(w,v)
+  process(s,t)
   begin
     for n in 0 to 784-1 loop
       s <= s + t(n);

@@ -33,10 +33,10 @@ entity multiply is
 end multiply;
 
 architecture RTL of multiply is
-signal t: SIGNED(L-1 downto 0);
+signal t: SIGNED(N+M-1 downto 0);
 begin
 
 t <= x*y;
-z <= t(N + M + 1 - L_n downto N + M + 1 - L_n - L + 1);
+z <= t(N + M - 1 - L_n downto N + M - 1 - L_n - L + 1);
 
 end RTL;

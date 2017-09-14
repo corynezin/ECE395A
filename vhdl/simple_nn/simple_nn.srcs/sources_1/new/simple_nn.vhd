@@ -22,6 +22,8 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
+use WORK.MATRIX.ALL;
+use WORK.VECTOR_V.ALL;
 
 entity simple_nn is
 --  Port ( );
@@ -31,11 +33,15 @@ architecture Behavioral of simple_nn is
 
 component matrix_multiply is
     generic ( N: INTEGER; M: INTEGER );
-    Port ( v_in : in INTEGER;
-           v_out : out INTEGER);
+    Port ( v_in : in vector_in;
+           v_out : out vector_out);
 end component;
 
-begin
+signal w: vector_out;
 
+begin
+matrix_a : matrix_multiply 
+  generic map(N => 100, M => 784)
+  port map(v_in => v, v_out => w );
 
 end Behavioral;

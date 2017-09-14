@@ -21,21 +21,22 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
-use WORK.VECTOR.ALL;
+--use WORK.VECTOR.ALL;
 use WORK.MATRIX.ALL;
+use WORK.MATRIX_A.ALL;
 
 entity matrix_multiply is
     generic ( N: INTEGER; M: INTEGER );
     Port ( v_in : in vector_in;
-           v_out : out vector_in);
+           v_out : out vector_out);
 end matrix_multiply;
 
-package body VECTOR is
-  constant vector_in_size: INTEGER := 784;
-  constant number_in_size: INTEGER := 8;
-  constant vector_out_size: INTEGER := 100;
-  constant number_out_size: INTEGER := 8;
-end VECTOR;
+--package body VECTOR is
+--  constant vector_in_size: INTEGER := 784;
+--  constant number_in_size: INTEGER := 8;
+--  constant vector_out_size: INTEGER := 100;
+--  constant number_out_size: INTEGER := 8;
+--end VECTOR;
 
 package body MATRIX is
   constant matrix_height: INTEGER:= 100;
@@ -56,19 +57,16 @@ end component;
 -- Input and output vectors
 signal w: vector_in;
 signal v: vector_in;
-signal z: signed(7 downto 0);
-
-signal A: matrix;
-
+signal z: vector_out;
 
 begin
   GEN_IP: 
-  for i in 0 to M-1 generate
+  for i in 0 to N-1 generate
   begin
     MULTX: inner_product
       generic map( N => 8, N_n => 1, N_m => 7,
                    M => 8, M_n => 1, M_m => 7,
                    L => 8, L_n => 1, L_m => 7)
-      port map (w => w, v => v, z => z);
+      port map (w => A(i), v => v, z => z(i));
   END GENERATE GEN_IP;
 end RTL;

@@ -7,6 +7,7 @@ package MATRIX is
   constant matrix_height: INTEGER;
   constant matrix_width: INTEGER;
   constant number_size: INTEGER;
-  type vector is array(0 to matrix_width-1) of SIGNED (number_size-1 downto 0);
-  type matrix is array(0 to matrix_height-1) of vector;
+  type vector_out is array(0 to matrix_height-1) of SIGNED(number_size-1 downto 0);
+  type vector_in is array(0 to matrix_width-1) of SIGNED (number_size-1 downto 0);
+  type matrix is array(0 to matrix_height-1) of vector_in;
 end MATRIX;

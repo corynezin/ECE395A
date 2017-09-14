@@ -60,6 +60,7 @@ signal z: signed(7 downto 0);
 
 signal A: matrix;
 
+
 begin
   GEN_IP: 
   for i in 0 to M-1 generate

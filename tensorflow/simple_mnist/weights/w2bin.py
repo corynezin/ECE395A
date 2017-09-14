@@ -10,6 +10,7 @@
 import tensorflow as tf
 import sys
 import struct
+import math
 from numpy import array
 
 # This function takes in a meta file and output name of the weights
@@ -29,17 +30,61 @@ def show_weights(model_name):
 # is_signed : signed conversion?
 # w_length: length of the fixed point number
 # d_length : length of bits after decimal point
+# return : byte array representation of the number
 def sfi(f_num, is_signed, w_length, d_length):
   
+  frame = bytearray()
+ 
   # error checking
   if (d_length >= w_length):
     print("w2bin.py : length of bits after decimal point should be less than length of fixed point")
-    return 0
+    return frame
   if (is_signed != 0 and is_signed != 1):
     print("w2bin.py : is_signed should be either 0 or 1")
-    return 0
+    return frame
 
-  
+  for num in  f_num:
+    
+    bin_frame = ""
+    
+    new_num = num * pow(2,d_length)
+    print(new_num)
+    new_num = round(new_num)
+    if (new_num > pow(2, w_length-1)):
+      # overflow
+      print("overflow")
+      bin_frame += '0'
+      for i in range(w_length-1):
+        bin_frame += '1'
+    elif (new_num < -pow(2, w_length)):
+      # underflow
+      print("underflow")
+      bin_frame += '1'
+      for i in range(w_length-1):
+        bin_frame += '0'
+    else:
+      if(new_num < 0):
+        new_num = new_num + pow(2, w_length)
+      while (new_num >= 1):
+        bin_frame += chr(new_num % 2 + 48)
+        new_num = int(new_num / 2)
+    
+    bin_frame = bin_frame[::-1]
+    if (len(bin_frame) < w_length):
+      for i in range(w_length-len(bin_frame)):
+        bin_frame = '0'+bin_frame
+    elif (len(bin_frame) > w_length):
+        bin_frame = bin_frame[:8:]
+    
+    final_int = 0
+    for i in range(w_length):
+      if (bin_frame[i] == '1'):
+        final_int += pow(2,w_length-i-1) 
+    a = ord(chr(final_int))
+    print("num: " + str(num) + "\tbin_frame: " + bin_frame + "\ta: " + str(a) + "\ta_trunc:  " + bin(a))
+    frame.append(a)
+
+  return frame 
 
 # This function takes in a meta file and generate a file for the weights from it
 def w2bin(model_name, output_file_path):
@@ -85,7 +130,7 @@ def w2bin(model_name, output_file_path):
     dims = all_vars_arr.shape
     dims = list(dims)
     num_elements = 1
-    print(all_vars_arr)
+    # print(all_vars_arr)
   
     for d in dims:
       num_elements = num_elements * d
@@ -103,8 +148,9 @@ def w2bin(model_name, output_file_path):
     f.write(struct.pack("I"*len(dims), *dims))
     # write weights
     all_vars = all_vars_arr.flatten().tolist()
-    f.write(struct.pack("I"*num_elements, *all_vars))
-  
+    all_vars = sfi(all_vars, 1, 8, 7)
+    # f.write(struct.pack("c"*num_elements, *all_vars))
+    f.write(all_vars)
     # update counter
     counter = counter + 1
     lut_offset = lut_offset + 8
@@ -119,4 +165,10 @@ if __name__ == "__main__":
     sys.exit()
   w2bin(sys.argv[1], sys.argv[2])
 
+  # Test sfi
+  # test_vec = [1.0000, -1.0000]
+  # new_vec = sfi(test_vec, 0, 8, 7)
 
+  # for i in range(len(test_vec)):
+  #   print(test_vec[i])
+  #   print(new_vec[i])

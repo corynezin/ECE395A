@@ -20,7 +20,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
-use WORK.VECTOR.ALL;
+use WORK.MATRIX.ALL;
 
 entity inner_product is
 -- Q n m Should be defined for both inputs and the output
@@ -28,18 +28,17 @@ entity inner_product is
             M: INTEGER; M_n: INTEGER; M_m: INTEGER;
             L: INTEGER; L_n: INTEGER; L_m: INTEGER);
             
-  Port ( v : in vector_in;
-         w : in vector_in;
+  Port ( w : in vector_in;
+         v : in vector_in;
          x : out SIGNED(L-1 downto 0));
          
 end inner_product;
 
-package body VECTOR is
-  constant vector_in_size: INTEGER := 784;
-  constant number_in_size: INTEGER := 8;
-  constant vector_out_size: INTEGER := 100;
-  constant number_out_size: INTEGER := 8;
-end VECTOR;
+package body MATRIX is
+  constant matrix_height: INTEGER:= 3;
+  constant matrix_width: INTEGER:= 5;
+  constant number_size: INTEGER:= 8;
+end MATRIX;
 
 architecture RTL of inner_product is
 
@@ -53,25 +52,26 @@ component multiply
 end component;
 
 signal t: vector_in;
-signal s: SIGNED(L-1 downto 0);
 
 begin
   GEN_MULT: -- Multiply vectors element-wise
-    for i in 0 to 784-1 generate
+    for i in 0 to 5-1 generate
     begin
       MULTX: multiply
         generic map( N => 8, N_n => 1, N_m => 7,
                      M => 8, M_n => 1, M_m => 7,
                      L => 8, L_n => 1, L_m => 7)
-        port map (x => v(n), y => w(n), z => t(n) );
+        port map (x => v(i), y => w(i), z => t(i) );
     END GENERATE GEN_MULT;
   -- Sum up all of the results
-  process(s,t)
+  process(t)
+    variable s : signed(7 downto 0);
   begin
-    for n in 0 to 784-1 loop
-      s <= s + t(n);
+  s:= (others => '0');
+    for j in 0 to 5-1 loop
+      s := s + t(j);
     end loop;
+    x <= s;
   end process;
-  x <= s;
     
 end RTL;

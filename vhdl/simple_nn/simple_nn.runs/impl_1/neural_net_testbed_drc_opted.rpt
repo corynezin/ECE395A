@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-| Date         : Thu Sep 14 16:29:18 2017
+| Date         : Fri Sep 15 13:44:18 2017
 | Host         : bcv-Vostro-430 running 64-bit Ubuntu 16.04.1 LTS
 | Command      : report_drc -file neural_net_testbed_drc_opted.rpt
 | Design       : neural_net_testbed

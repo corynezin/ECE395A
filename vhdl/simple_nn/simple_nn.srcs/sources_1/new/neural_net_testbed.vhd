@@ -34,12 +34,13 @@ component simple_nn is
         v_out : out vector_out );
 end component;
 
+signal ww: vector_in;
 signal v: vector_out;
 
 begin
-
+ww <= w;
 nn: simple_nn
-  port map(v_in => w, v_out => v );
+  port map(v_in => ww, v_out => v );
 
 end Behavioral;
 

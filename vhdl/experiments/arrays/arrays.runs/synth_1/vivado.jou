@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Fri Sep 15 16:31:09 2017
+# Process ID: 6900
+# Current directory: /home/bcv/Documents/ECE395A/vhdl/experiments/arrays/arrays.runs/synth_1
+# Command line: vivado -log neural_net_testbed.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source neural_net_testbed.tcl
+# Log file: /home/bcv/Documents/ECE395A/vhdl/experiments/arrays/arrays.runs/synth_1/neural_net_testbed.vds
+# Journal file: /home/bcv/Documents/ECE395A/vhdl/experiments/arrays/arrays.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source neural_net_testbed.tcl -notrace

@@ -34,11 +34,11 @@ entity inner_product is
          
 end inner_product;
 
-package body MATRIX is
-  constant matrix_height: INTEGER:= 3;
-  constant matrix_width: INTEGER:= 5;
-  constant number_size: INTEGER:= 8;
-end MATRIX;
+--package body MATRIX is
+--  constant matrix_height: INTEGER:= 3;
+--  constant matrix_width: INTEGER:= 5;
+--  constant number_size: INTEGER:= 8;
+--end MATRIX;
 
 architecture RTL of inner_product is
 

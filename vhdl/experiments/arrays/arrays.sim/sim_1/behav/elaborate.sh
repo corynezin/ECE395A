@@ -9,4 +9,4 @@ then
 exit $RETVAL
 fi
 }
-ExecStep $xv_path/bin/xelab -wto 34f5c262ecf44ef2a09baa0a9c419b7f -m64 --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot neural_net_testbed_behav xil_defaultlib.neural_net_testbed -log elaborate.log
+ExecStep $xv_path/bin/xelab -wto 34f5c262ecf44ef2a09baa0a9c419b7f -m64 --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot simple_nn_behav xil_defaultlib.simple_nn -log elaborate.log

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Sep 19 17:32:34 2017
+# Process ID: 5647
+# Current directory: /home/bcv/Documents/ECE395A/vhdl/experiments/matmul_pl/matmul_pl.runs/xbip_multadd_0_synth_1
+# Command line: vivado -log xbip_multadd_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source xbip_multadd_0.tcl
+# Log file: /home/bcv/Documents/ECE395A/vhdl/experiments/matmul_pl/matmul_pl.runs/xbip_multadd_0_synth_1/xbip_multadd_0.vds
+# Journal file: /home/bcv/Documents/ECE395A/vhdl/experiments/matmul_pl/matmul_pl.runs/xbip_multadd_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source xbip_multadd_0.tcl -notrace

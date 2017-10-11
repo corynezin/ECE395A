@@ -31,11 +31,11 @@ entity matrix_multiply is
            v_out : out vector_out);
 end matrix_multiply;
 
-package body MATRIX is
-  constant matrix_height: INTEGER:= 3;
-  constant matrix_width: INTEGER:= 5;
-  constant number_size: INTEGER:= 8;
-end MATRIX;
+--package body MATRIX is
+--  constant matrix_height: INTEGER:= 3;
+--  constant matrix_width: INTEGER:= 5;
+--  constant number_size: INTEGER:= 8;
+--end MATRIX;
 
 architecture RTL of matrix_multiply is
 -- Inner Product to be used:

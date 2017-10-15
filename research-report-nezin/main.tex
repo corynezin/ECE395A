@@ -1,0 +1,18 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\renewcommand{\baselinestretch}{1.5}
+\usepackage[margin=1.0in]{geometry}
+\begin{document}
+\title{Wireless Modulation Classification Using Deep Learning on FPGAs}
+\author{Cory Nezin}
+\maketitle
+\section{Abstract}
+Wireless modulation classification has been, and continues to be an important engineering problem.  
+Sensing and classifying wireless signals is relevant to applications including government spectrum regulation, cognitive radio, and situational awareness in military/adversarial environments.  ~\cite{DBLP:journals/corr/RajendranCFBCGP17}  Deep neural networks have recently achieved impressive performance in classifying audio, images, and video.  The application of neural networks to wireless communication has recently grown in the machine learning community.  Applications include nonlinear channel modeling, learned data encoding, and modulation classification.  ~\cite{DBLP:journals/corr/OSheaH17}  While promising results have been achieved, they have only been implemented on graphics processing units (GPUs) which have relatively large size, weight, power, and latency compared to FPGAs. ~\cite{Nurvitadhi:2017:FBG:3020078.3021740} We propose a general framework for converting computational graphs (a more general term than neural network) bulit in TensorFlow ~\cite{DBLP:journals/corr/AbadiABBCCCDDDG16} into synthesizable VHDL code for implementation on field programmable gate arrays (FPGAs).
+
+In addition to the size, weight, power, and latency advantages offered by FPGA's, they have also drawn attention in deep learning applications for their reconfigurability from large companies like Microsoft.~\cite{Putnam:2014:RFA:2665671.2665678} Google has also recently developed specialized hardware for deep learning performance enhancement in the form of the "Tensor Processing Unit" (TPU).  The TPU was originally planned to be an FPGA when "[Google] saw that the FPGAs of that time were not competitive in performance compared to the GPUs of that timae."~\cite{DBLP:journals/corr/JouppiYPPABBBBB17}
+
+
+\bibliography{mybib}{}
+\bibliographystyle{plain}
+\end{document}

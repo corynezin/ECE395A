@@ -64,6 +64,7 @@ ENTITY mac IS
     A : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     B : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     C : IN STD_LOGIC_VECTOR(47 DOWNTO 0);
+    PCIN : IN STD_LOGIC_VECTOR(47 DOWNTO 0);
     SUBTRACT : IN STD_LOGIC;
     P : OUT STD_LOGIC_VECTOR(47 DOWNTO 0);
     PCOUT : OUT STD_LOGIC_VECTOR(47 DOWNTO 0)
@@ -111,6 +112,7 @@ ARCHITECTURE mac_arch OF mac IS
   ATTRIBUTE X_INTERFACE_INFO OF A: SIGNAL IS "xilinx.com:signal:data:1.0 a_intf DATA";
   ATTRIBUTE X_INTERFACE_INFO OF B: SIGNAL IS "xilinx.com:signal:data:1.0 b_intf DATA";
   ATTRIBUTE X_INTERFACE_INFO OF C: SIGNAL IS "xilinx.com:signal:data:1.0 c_intf DATA";
+  ATTRIBUTE X_INTERFACE_INFO OF PCIN: SIGNAL IS "xilinx.com:signal:data:1.0 pcin_intf DATA";
   ATTRIBUTE X_INTERFACE_INFO OF SUBTRACT: SIGNAL IS "xilinx.com:signal:data:1.0 subtract_intf DATA";
   ATTRIBUTE X_INTERFACE_INFO OF P: SIGNAL IS "xilinx.com:signal:data:1.0 p_intf DATA";
   ATTRIBUTE X_INTERFACE_INFO OF PCOUT: SIGNAL IS "xilinx.com:signal:data:1.0 pcout_intf DATA";
@@ -127,10 +129,10 @@ BEGIN
       C_C_TYPE => 0,
       C_CE_OVERRIDES_SCLR => 0,
       C_AB_LATENCY => -1,
-      C_C_LATENCY => -1,
+      C_C_LATENCY => 0,
       C_OUT_HIGH => 47,
       C_OUT_LOW => 0,
-      C_USE_PCIN => 0,
+      C_USE_PCIN => 1,
       C_TEST_CORE => 0
     )
     PORT MAP (
@@ -140,7 +142,7 @@ BEGIN
       A => A,
       B => B,
       C => C,
-      PCIN => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 48)),
+      PCIN => PCIN,
       SUBTRACT => SUBTRACT,
       P => P,
       PCOUT => PCOUT

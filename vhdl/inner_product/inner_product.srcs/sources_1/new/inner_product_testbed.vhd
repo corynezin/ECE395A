@@ -29,6 +29,9 @@ signal c: STD_LOGIC_VECTOR(47 downto 0) := "000000000000000000000000000000000000
 signal ac: STD_LOGIC_VECTOR(47 downto 0) := "000000000000000000000000000000000000000000000000";
 signal std_ui : STD_LOGIC_VECTOR(7 downto 0);
 signal std_vi : STD_LOGIC_VECTOR(7 downto 0);
+signal carry_clear : STD_LOGIC := '0';
+signal init : STD_LOGIC := '1';
+signal ctr: unsigned ( 2 downto 0 ) := "000";
 -- Components
 component mac
   Port ( 
@@ -40,15 +43,14 @@ component mac
     C : in STD_LOGIC_VECTOR ( 47 downto 0 );
     SUBTRACT : in STD_LOGIC;
     P : out STD_LOGIC_VECTOR ( 47 downto 0 );
+    PCIN : in STD_LOGIC_VECTOR ( 47 downto 0 );
     PCOUT : out STD_LOGIC_VECTOR ( 47 downto 0 )
   );
 end component;
 
 begin
+c <= as when carry_clear = '0' else "000000000000000000000000000000000000000000000000";
 process(clk) begin
-  if clk = '1' then
-    c <= as;
-  end if;
   aout <= signed( ac(47 downto 40) );
 end process;
 std_ui <= std_logic_vector(ui);
@@ -63,30 +65,52 @@ mac0: mac
     c => c,
     subtract => sub,
     p => as,
+    pcin => c,
     pcout => ac
   );
-  
---Queue for loading from vector
+
+--Queue for loading from vector`
 process(clk)
   variable i : integer := 0;
   begin
+  
+-- Mod 5 Counter (since vectors are length 5)
+
+
   if rising_edge(clk) then
+    -- Go to next element in vector
     if sclr = '0' then
       ui <= u(i);
       vi <= v(i);
-      i := i + 1;
-      i := i mod 5;
     end if;
+    
+    -- Account for internal latency of 3 on MAC
+    if i = 2 then
+      carry_clear <= '1';
+    else
+      carry_clear <= '0';
+    end if;
+    
+    if i = 4 then
+      v <= ("00000001","00000001","00000001","00000001","00000001");
+    end if;
+    
   end if;
-  end process;
   
+  if rising_edge(clk) then
+    i := (i + 1) mod 5;
+    ctr <= to_unsigned(i,3);
+  end if;
+  
+  end process;
+
 --Simulated Clock
 process begin
   wait for 1 ms;
   clk <= not clk;
 end process;
 process begin
-  wait for 2 ms;
+  wait for 0.5 ms;
   sclr <= '0';
 end process;
 

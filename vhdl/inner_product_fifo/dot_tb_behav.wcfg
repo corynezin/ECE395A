@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="dot_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="dot_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="20240000000001fs"></ZoomEndTime>
+      <Cursor1Time time="600000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="98"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wvobject type="logic" fp_name="/dot_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/dot_tb/out1">
+      <obj_property name="ElementShortName">out1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">out1[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/dot_tb/out2">
+      <obj_property name="ElementShortName">out2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">out2[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/dot_tb/ram1out">
+      <obj_property name="ElementShortName">ram1out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ram1out[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/dot_tb/ram2out">
+      <obj_property name="ElementShortName">ram2out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ram2out[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/dot_tb/ramindex">
+      <obj_property name="ElementShortName">ramindex[9:0]</obj_property>
+      <obj_property name="ObjectShortName">ramindex[9:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/dot_tb/wren">
+      <obj_property name="ElementShortName">wren</obj_property>
+      <obj_property name="ObjectShortName">wren</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/dot_tb/rden">
+      <obj_property name="ElementShortName">rden</obj_property>
+      <obj_property name="ObjectShortName">rden</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/dot_tb/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/dot_tb/full1">
+      <obj_property name="ElementShortName">full1</obj_property>
+      <obj_property name="ObjectShortName">full1</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/dot_tb/full2">
+      <obj_property name="ElementShortName">full2</obj_property>
+      <obj_property name="ObjectShortName">full2</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/dot_tb/empty1">
+      <obj_property name="ElementShortName">empty1</obj_property>
+      <obj_property name="ObjectShortName">empty1</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/dot_tb/empty2">
+      <obj_property name="ElementShortName">empty2</obj_property>
+      <obj_property name="ObjectShortName">empty2</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/dot_tb/wrack1">
+      <obj_property name="ElementShortName">wrack1</obj_property>
+      <obj_property name="ObjectShortName">wrack1</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/dot_tb/wrack2">
+      <obj_property name="ElementShortName">wrack2</obj_property>
+      <obj_property name="ObjectShortName">wrack2</obj_property>
+   </wvobject>
+</wave_config>

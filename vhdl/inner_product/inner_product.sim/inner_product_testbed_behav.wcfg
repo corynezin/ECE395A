@@ -12,14 +12,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="30000000000001fs"></ZoomEndTime>
+      <ZoomEndTime time="18366336633664fs"></ZoomEndTime>
       <Cursor1Time time="0fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
       <ValueColumnWidth column_width="118"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="14" />
+   <WVObjectSize size="10" />
    <wave_markers>
       <marker label="" time="17000000100000" />
       <marker label="" time="27000000000000" />
@@ -67,23 +67,6 @@
       <obj_property name="CustomSignalColor">#0000FF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="divider79" type="divider">
-      <obj_property name="label">misc</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/inner_product_testbed/as">
-      <obj_property name="ElementShortName">as[47:0]</obj_property>
-      <obj_property name="ObjectShortName">as[47:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/inner_product_testbed/sub">
-      <obj_property name="ElementShortName">sub</obj_property>
-      <obj_property name="ObjectShortName">sub</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/inner_product_testbed/aout">
-      <obj_property name="ElementShortName">aout[7:0]</obj_property>
-      <obj_property name="ObjectShortName">aout[7:0]</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/inner_product_testbed/carry_clear">
       <obj_property name="ElementShortName">carry_clear</obj_property>

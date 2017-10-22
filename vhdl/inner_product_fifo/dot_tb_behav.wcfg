@@ -10,15 +10,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="20240000000001fs"></ZoomEndTime>
-      <Cursor1Time time="600000000000fs"></Cursor1Time>
+      <ZoomStartTime time="1962500000000000fs"></ZoomStartTime>
+      <ZoomEndTime time="2120328936170221fs"></ZoomEndTime>
+      <Cursor1Time time="2074042553191000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="98"></ValueColumnWidth>
+      <ValueColumnWidth column_width="94"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="15" />
+   <WVObjectSize size="17" />
    <wvobject type="logic" fp_name="/dot_tb/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -79,5 +79,13 @@
    <wvobject type="logic" fp_name="/dot_tb/wrack2">
       <obj_property name="ElementShortName">wrack2</obj_property>
       <obj_property name="ObjectShortName">wrack2</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/dot_tb/innerprod">
+      <obj_property name="ElementShortName">innerprod[47:0]</obj_property>
+      <obj_property name="ObjectShortName">innerprod[47:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/dot_tb/mult_enable">
+      <obj_property name="ElementShortName">mult_enable</obj_property>
+      <obj_property name="ObjectShortName">mult_enable</obj_property>
    </wvobject>
 </wave_config>

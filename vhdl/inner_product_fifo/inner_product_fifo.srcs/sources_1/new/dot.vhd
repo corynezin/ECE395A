@@ -18,13 +18,14 @@ entity dot is
         T:      in UNSIGNED (L downto 0);         --Length of vector
         sclr:   in STD_LOGIC;                     --Synchronus Clear
         clk:    in STD_LOGIC;                     --Clock
-        ce:     in STD_LOGIC                      --Clock Enable
+        ce:     in STD_LOGIC;                     --Clock Enable
+        zout:   out STD_LOGIC_VECTOR (47 downto 0)
     );
 end dot;
 
 architecture RTL of dot is
 
-component mac
+component xbip_multadd_0
     Port ( 
         CLK : in STD_LOGIC;
         CE : in STD_LOGIC;
@@ -45,7 +46,7 @@ signal cc: STD_LOGIC := '1';                          --Carry clear
 signal ctr: UNSIGNED (L downto 0) := (others => '0'); --For debugging purposes only
 
 begin
-mac0: mac
+mac0: xbip_multadd_0
     Port Map (
         clk => clk,
         ce => ce,
@@ -59,7 +60,7 @@ mac0: mac
     );
 
 z <= ac when cc = '0' else (others => '0');
-
+zout <= ac;
 process(clk)
 variable i: integer := 0;
 begin

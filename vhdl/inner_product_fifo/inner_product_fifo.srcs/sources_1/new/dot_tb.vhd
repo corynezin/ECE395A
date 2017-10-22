@@ -23,7 +23,8 @@ component dot is
         T:      in UNSIGNED (L downto 0);         --Length of vector
         sclr:   in STD_LOGIC;                     --Synchronus Clear
         clk:    in STD_LOGIC;                     --Clock
-        ce:     in STD_LOGIC                      --Clock Enable
+        ce:     in STD_LOGIC;                     --Clock Enable
+        zout:   out STD_LOGIC_VECTOR ( 47 downto 0 )
     );
 end component dot;
 
@@ -66,6 +67,8 @@ signal rst: STD_LOGIC := '1';
 signal full1, full2: STD_LOGIC;
 signal empty1, empty2: STD_LOGIC;
 signal wrack1, wrack2: STD_LOGIC;
+signal innerprod: STD_LOGIC_VECTOR ( 47 downto 0 );
+signal mult_enable: STD_LOGIC := '0';
 
 begin
 ramcomp1: ram1
@@ -109,8 +112,10 @@ dot0: dot
         T => "0000001000",
         sclr => '0',
         clk => clk,
-        ce => '1'
+        ce => mult_enable,
+        zout => innerprod
     );
+    
 --Simulated Clock and Counter
 process
 variable i: integer:= 1;
@@ -124,7 +129,7 @@ begin
     if i = 1 then
         rst <= '0';
     end if;
-    if i = 13 then
+    if i = 13 and init = 1 then
         wren <= '1';
     end if;
     -- If initializing, load ram into fifo
@@ -141,6 +146,7 @@ begin
         -- Enable FIFO read, disable write
         rden <= '1';
         wren <= '0';
+        mult_enable <= '1';
     end if;
 end process;
 

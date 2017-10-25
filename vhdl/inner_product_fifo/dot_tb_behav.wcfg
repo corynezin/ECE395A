@@ -10,15 +10,19 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1962500000000000fs"></ZoomStartTime>
-      <ZoomEndTime time="2120328936170221fs"></ZoomEndTime>
-      <Cursor1Time time="2074042553191000fs"></Cursor1Time>
+      <ZoomStartTime time="2090000000100000fs"></ZoomStartTime>
+      <ZoomEndTime time="2110400000100001fs"></ZoomEndTime>
+      <Cursor1Time time="2101000000100000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="94"></ValueColumnWidth>
+      <ValueColumnWidth column_width="90"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="17" />
+   <wave_markers>
+      <marker label="" time="2099000000100000" />
+      <marker label="" time="2105000000000000" />
+   </wave_markers>
    <wvobject type="logic" fp_name="/dot_tb/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -26,11 +30,12 @@
    <wvobject type="array" fp_name="/dot_tb/out1">
       <obj_property name="ElementShortName">out1[7:0]</obj_property>
       <obj_property name="ObjectShortName">out1[7:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/dot_tb/out2">
       <obj_property name="ElementShortName">out2[7:0]</obj_property>
       <obj_property name="ObjectShortName">out2[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/dot_tb/ram1out">
       <obj_property name="ElementShortName">ram1out[7:0]</obj_property>
@@ -83,6 +88,7 @@
    <wvobject type="array" fp_name="/dot_tb/innerprod">
       <obj_property name="ElementShortName">innerprod[47:0]</obj_property>
       <obj_property name="ObjectShortName">innerprod[47:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/dot_tb/mult_enable">
       <obj_property name="ElementShortName">mult_enable</obj_property>

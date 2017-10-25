@@ -44,6 +44,7 @@ signal z: STD_LOGIC_VECTOR (47 downto 0) := (others => '0');        --Carry
 signal ac: STD_LOGIC_VECTOR (47 downto 0) := (others => '0');       --Accumulated Value
 signal cc: STD_LOGIC := '1';                          --Carry clear
 signal ctr: UNSIGNED (L downto 0) := (others => '0'); --For debugging purposes only
+signal gclk: STD_LOGIC;
 
 begin
 mac0: xbip_multadd_0
@@ -61,10 +62,11 @@ mac0: xbip_multadd_0
 
 z <= ac when cc = '0' else (others => '0');
 zout <= ac;
-process(clk)
+gclk <= clk when ce = '1' else '0';
+process(gclk)
 variable i: integer := 0;
 begin
-    if rising_edge(clk) then
+    if rising_edge(gclk) then
         -- Accounting for latency of Multiply Adder
         if i = 2 then
             cc <= '1';
@@ -72,7 +74,7 @@ begin
             cc <= '0';
         end if;
     end if;
-    if rising_edge(clk) then
+    if rising_edge(gclk) then
         i := (i + 1) mod to_integer(T);
     end if;
 end process;

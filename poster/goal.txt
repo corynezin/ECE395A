@@ -1,0 +1,7 @@
+Modulation is process of varying an electronic signal to transmit information.
+
+There are many different common types of modulation for wireless communication which vary features such as amplitude, phase, and frequency.
+
+MAIA will enable fast, accurate, and low power signal classification
+
+

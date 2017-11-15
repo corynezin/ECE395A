@@ -1,0 +1,76 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
+| Date         : Thu Nov  9 22:52:32 2017
+| Host         : bcv-Vostro-430 running 64-bit Ubuntu 16.04.1 LTS
+| Command      : report_control_sets -verbose -file conv_control_sets_placed.rpt
+| Design       : conv
+| Device       : xc7z020
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    14 |
+| Unused register locations in slices containing registers |     4 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             215 |           79 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |             101 |           22 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++----------------+------------------------------------------------------------------------------------------------------------------------------------+------------------+------------------+----------------+
+|  Clock Signal  |                                                            Enable Signal                                                           | Set/Reset Signal | Slice Load Count | Bel Load Count |
++----------------+------------------------------------------------------------------------------------------------------------------------------------+------------------+------------------+----------------+
+|  clk_IBUF_BUFG | F/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_cnfg_and_reload.i_cnfg_and_reload/g_fsel_store.i_next_chan_dly/next_chan_dly |                  |                1 |              7 |
+|  clk_IBUF_BUFG | F/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_cnfg_and_reload.i_cnfg_and_reload/i_config_chan_fifo/wr_enable               |                  |                1 |              7 |
+|  clk_IBUF_BUFG | F/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_cnfg_and_reload.i_cnfg_and_reload/config_chan_read                           |                  |                1 |              7 |
+|  clk_IBUF_BUFG | sel_valid                                                                                                                          |                  |                3 |              7 |
+|  clk_IBUF_BUFG | F/U0/i_synth/g_single_rate.i_single_rate/g_s_data_chan_fifo.i_s_data_chan_fifo/wr_enable                                           |                  |                1 |              8 |
+|  clk_IBUF_BUFG | F/U0/i_synth/g_single_rate.i_single_rate/g_parallel.i_cntrl_src/cntrl[-1]_13[0]                                                    |                  |                2 |             16 |
+|  clk_IBUF_BUFG | F/U0/i_synth/g_single_rate.i_single_rate/cntrl[1]_7[5]                                                                             |                  |                2 |             16 |
+|  clk_IBUF_BUFG | F/U0/i_synth/g_single_rate.i_single_rate/cntrl[2]_8[5]                                                                             |                  |                2 |             16 |
+|  clk_IBUF_BUFG | F/U0/i_synth/g_single_rate.i_single_rate/cntrl[3]_9[5]                                                                             |                  |                2 |             16 |
+|  clk_IBUF_BUFG | F/U0/i_synth/g_single_rate.i_single_rate/cntrl[4]_10[5]                                                                            |                  |                2 |             16 |
+|  clk_IBUF_BUFG | F/U0/i_synth/g_single_rate.i_single_rate/cntrl[5]_11[5]                                                                            |                  |                2 |             16 |
+|  clk_IBUF_BUFG | F/U0/i_synth/g_single_rate.i_single_rate/cntrl[6]_12[5]                                                                            |                  |                2 |             16 |
+|  clk_IBUF_BUFG | F/U0/i_synth/g_single_rate.i_single_rate/g_parallel.i_latch_op/latch_op                                                            |                  |               10 |             24 |
+|  clk_IBUF_BUFG |                                                                                                                                    |                  |               82 |            226 |
++----------------+------------------------------------------------------------------------------------------------------------------------------------+------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 7      |                     4 |
+| 8      |                     1 |
+| 16+    |                     9 |
++--------+-----------------------+
+
+

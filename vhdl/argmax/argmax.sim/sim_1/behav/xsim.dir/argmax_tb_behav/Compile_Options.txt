@@ -1,0 +1,1 @@
+-wto "5992ad49c8454188972ffb863494dac6" --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "argmax_tb_behav" "xil_defaultlib.argmax_tb" -log "elaborate.log" 

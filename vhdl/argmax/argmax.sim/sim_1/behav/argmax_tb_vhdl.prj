@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "../../../argmax.srcs/sources_1/imports/new/vector.vhd"
+vhdl xil_defaultlib  "../../../argmax.srcs/sources_1/new/argmax.vhd"
+vhdl xil_defaultlib  "../../../argmax.srcs/sources_1/new/argmax_tb.vhd"
+
+# Do not sort compile order
+nosort

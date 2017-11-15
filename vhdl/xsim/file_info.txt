@@ -1,0 +1,6 @@
+xbip_multadd_0.vhd,vhdl,xil_defaultlib,../inner_product_fifo/inner_product_fifo.srcs/sources_1/ip/xbip_multadd_0/sim/xbip_multadd_0.vhd,
+fifo_sim_netlist.vhdl,vhdl,xil_defaultlib,../inner_product_fifo/inner_product_fifo.srcs/sources_1/ip/fifo/fifo_sim_netlist.vhdl,
+ram2_sim_netlist.vhdl,vhdl,xil_defaultlib,../inner_product_fifo/inner_product_fifo.srcs/sources_1/ip/ram2/ram2_sim_netlist.vhdl,
+ram1_sim_netlist.vhdl,vhdl,xil_defaultlib,../inner_product_fifo/inner_product_fifo.srcs/sources_1/ip/ram1/ram1_sim_netlist.vhdl,
+dot.vhd,vhdl,xil_defaultlib,../inner_product_fifo/inner_product_fifo.srcs/sources_1/new/dot.vhd,
+dot_tb.vhd,vhdl,xil_defaultlib,../inner_product_fifo/inner_product_fifo.srcs/sources_1/new/dot_tb.vhd,

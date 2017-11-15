@@ -10,18 +10,21 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="2090000000100000fs"></ZoomStartTime>
-      <ZoomEndTime time="2110400000100001fs"></ZoomEndTime>
-      <Cursor1Time time="2101000000100000fs"></Cursor1Time>
+      <ZoomStartTime time="2070110000100667fs"></ZoomStartTime>
+      <ZoomEndTime time="2084970000100668fs"></ZoomEndTime>
+      <Cursor1Time time="2071990000101000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="90"></ValueColumnWidth>
+      <NameColumnWidth column_width="115"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="17" />
+   <WVObjectSize size="8" />
    <wave_markers>
       <marker label="" time="2099000000100000" />
       <marker label="" time="2105000000000000" />
+      <marker label="" time="2073000000000000" />
+      <marker label="" time="2079000000100000" />
+      <marker label="" time="2093000000100000" />
    </wave_markers>
    <wvobject type="logic" fp_name="/dot_tb/clk">
       <obj_property name="ElementShortName">clk</obj_property>
@@ -31,67 +34,45 @@
       <obj_property name="ElementShortName">out1[7:0]</obj_property>
       <obj_property name="ObjectShortName">out1[7:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#D2691E</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/dot_tb/out2">
       <obj_property name="ElementShortName">out2[7:0]</obj_property>
       <obj_property name="ObjectShortName">out2[7:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#D2691E</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/dot_tb/ram1out">
       <obj_property name="ElementShortName">ram1out[7:0]</obj_property>
       <obj_property name="ObjectShortName">ram1out[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/dot_tb/ram2out">
       <obj_property name="ElementShortName">ram2out[7:0]</obj_property>
       <obj_property name="ObjectShortName">ram2out[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/dot_tb/ramindex">
       <obj_property name="ElementShortName">ramindex[9:0]</obj_property>
       <obj_property name="ObjectShortName">ramindex[9:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/dot_tb/wren">
-      <obj_property name="ElementShortName">wren</obj_property>
-      <obj_property name="ObjectShortName">wren</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/dot_tb/rden">
-      <obj_property name="ElementShortName">rden</obj_property>
-      <obj_property name="ObjectShortName">rden</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/dot_tb/rst">
-      <obj_property name="ElementShortName">rst</obj_property>
-      <obj_property name="ObjectShortName">rst</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/dot_tb/full1">
-      <obj_property name="ElementShortName">full1</obj_property>
-      <obj_property name="ObjectShortName">full1</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/dot_tb/full2">
-      <obj_property name="ElementShortName">full2</obj_property>
-      <obj_property name="ObjectShortName">full2</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/dot_tb/empty1">
-      <obj_property name="ElementShortName">empty1</obj_property>
-      <obj_property name="ObjectShortName">empty1</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/dot_tb/empty2">
-      <obj_property name="ElementShortName">empty2</obj_property>
-      <obj_property name="ObjectShortName">empty2</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/dot_tb/wrack1">
-      <obj_property name="ElementShortName">wrack1</obj_property>
-      <obj_property name="ObjectShortName">wrack1</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/dot_tb/wrack2">
-      <obj_property name="ElementShortName">wrack2</obj_property>
-      <obj_property name="ObjectShortName">wrack2</obj_property>
+      <obj_property name="CustomSignalColor">#808080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/dot_tb/innerprod">
       <obj_property name="ElementShortName">innerprod[47:0]</obj_property>
       <obj_property name="ObjectShortName">innerprod[47:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFFFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/dot_tb/mult_enable">
-      <obj_property name="ElementShortName">mult_enable</obj_property>
-      <obj_property name="ObjectShortName">mult_enable</obj_property>
+   <wvobject type="logic" fp_name="/dot_tb/valid">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+      <obj_property name="CustomSignalColor">#00FF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
 </wave_config>

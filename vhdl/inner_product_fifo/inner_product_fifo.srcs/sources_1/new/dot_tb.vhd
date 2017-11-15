@@ -24,7 +24,8 @@ component dot is
         sclr:   in STD_LOGIC;                     --Synchronus Clear
         clk:    in STD_LOGIC;                     --Clock
         ce:     in STD_LOGIC;                     --Clock Enable
-        zout:   out STD_LOGIC_VECTOR ( 47 downto 0 )
+        zout:   out STD_LOGIC_VECTOR ( 47 downto 0 );
+        valid:  out STD_LOGIC
     );
 end component dot;
 
@@ -69,6 +70,7 @@ signal empty1, empty2: STD_LOGIC;
 signal wrack1, wrack2: STD_LOGIC;
 signal innerprod: STD_LOGIC_VECTOR ( 47 downto 0 );
 signal mult_enable: STD_LOGIC := '0';
+signal valid: STD_LOGIC;
 
 begin
 ramcomp1: ram1
@@ -113,7 +115,8 @@ dot0: dot
         sclr => '0',
         clk => clk,
         ce => mult_enable,
-        zout => innerprod
+        zout => innerprod,
+        valid => valid
     );
     
 --Simulated Clock and Counter

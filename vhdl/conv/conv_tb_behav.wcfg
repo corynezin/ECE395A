@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="conv_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="conv_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="300001000000001fs"></ZoomEndTime>
+      <Cursor1Time time="100000000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="181"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="21" />
+   <wave_markers>
+      <marker label="" time="281000000000000" />
+      <marker label="" time="293048427830000" />
+      <marker label="" time="313345212766000" />
+   </wave_markers>
+   <wvobject type="logic" fp_name="/conv_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_tb/lfsr">
+      <obj_property name="ElementShortName">lfsr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">lfsr[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDMAGRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_tb/y">
+      <obj_property name="ElementShortName">y[23:0]</obj_property>
+      <obj_property name="ObjectShortName">y[23:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider13" type="divider">
+      <obj_property name="label">conv0</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_tb/conv0/x">
+      <obj_property name="ElementShortName">x[7:0]</obj_property>
+      <obj_property name="ObjectShortName">x[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_tb/conv0/y">
+      <obj_property name="ElementShortName">y[23:0]</obj_property>
+      <obj_property name="ObjectShortName">y[23:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_tb/conv0/data_valid">
+      <obj_property name="ElementShortName">data_valid</obj_property>
+      <obj_property name="ObjectShortName">data_valid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_tb/conv0/weights_ready">
+      <obj_property name="ElementShortName">weights_ready</obj_property>
+      <obj_property name="ObjectShortName">weights_ready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_tb/conv0/sel">
+      <obj_property name="ElementShortName">sel[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sel[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_tb/conv0/sel_valid">
+      <obj_property name="ElementShortName">sel_valid</obj_property>
+      <obj_property name="ObjectShortName">sel_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider14" type="divider">
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_tb/conv0/F/aclk">
+      <obj_property name="ElementShortName">aclk</obj_property>
+      <obj_property name="ObjectShortName">aclk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_tb/conv0/F/s_axis_data_tvalid">
+      <obj_property name="ElementShortName">s_axis_data_tvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axis_data_tvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_tb/conv0/F/s_axis_data_tready">
+      <obj_property name="ElementShortName">s_axis_data_tready</obj_property>
+      <obj_property name="ObjectShortName">s_axis_data_tready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_tb/conv0/F/s_axis_data_tdata">
+      <obj_property name="ElementShortName">s_axis_data_tdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_data_tdata[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_tb/conv0/F/s_axis_config_tvalid">
+      <obj_property name="ElementShortName">s_axis_config_tvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axis_config_tvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_tb/conv0/F/s_axis_config_tready">
+      <obj_property name="ElementShortName">s_axis_config_tready</obj_property>
+      <obj_property name="ObjectShortName">s_axis_config_tready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_tb/conv0/F/s_axis_config_tdata">
+      <obj_property name="ElementShortName">s_axis_config_tdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_config_tdata[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_tb/conv0/F/m_axis_data_tvalid">
+      <obj_property name="ElementShortName">m_axis_data_tvalid</obj_property>
+      <obj_property name="ObjectShortName">m_axis_data_tvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_tb/conv0/F/m_axis_data_tdata">
+      <obj_property name="ElementShortName">m_axis_data_tdata[23:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_data_tdata[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_tb/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+</wave_config>

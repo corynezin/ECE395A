@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "../../../maxpool.srcs/sources_1/imports/new/downsample.vhd"
+vhdl xil_defaultlib  "../../../maxpool.srcs/sources_1/new/maxpool.vhd"
+vhdl xil_defaultlib  "../../../maxpool.srcs/sources_1/new/maxpool_tb.vhd"
+
+# Do not sort compile order
+nosort

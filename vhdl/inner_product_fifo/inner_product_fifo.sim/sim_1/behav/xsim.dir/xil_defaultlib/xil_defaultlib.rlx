@@ -6,5 +6,5 @@ Jun 15 2017
 /home/bcv/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.srcs/sources_1/ip/ram1/ram1_sim_netlist.vhdl,1508706879,vhdl,,,,ram1;ram1_dist_mem_gen_v8_0_11,,,,,,,,
 /home/bcv/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.srcs/sources_1/ip/ram2/ram2_sim_netlist.vhdl,1508706937,vhdl,,,,ram2;ram2_dist_mem_gen_v8_0_11,,,,,,,,
 /home/bcv/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.srcs/sources_1/ip/xbip_multadd_0/sim/xbip_multadd_0.vhd,1508368137,vhdl,,,,xbip_multadd_0,,,,,,,,
-/home/bcv/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.srcs/sources_1/new/dot.vhd,1508897815,vhdl,,,,dot,,,,,,,,
-/home/bcv/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.srcs/sources_1/new/dot_tb.vhd,1508712454,vhdl,,,,dot_tb,,,,,,,,
+/home/bcv/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.srcs/sources_1/new/dot.vhd,1509151592,vhdl,,,,dot,,,,,,,,
+/home/bcv/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.srcs/sources_1/new/dot_tb.vhd,1509151455,vhdl,,,,dot_tb,,,,,,,,

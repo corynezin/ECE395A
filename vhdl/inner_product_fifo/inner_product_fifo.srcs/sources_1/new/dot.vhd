@@ -19,7 +19,8 @@ entity dot is
         sclr:   in STD_LOGIC;                     --Synchronus Clear
         clk:    in STD_LOGIC;                     --Clock
         ce:     in STD_LOGIC;                     --Clock Enable
-        zout:   out STD_LOGIC_VECTOR (47 downto 0)
+        zout:   out STD_LOGIC_VECTOR (47 downto 0);
+        valid:  out STD_LOGIC
     );
 end dot;
 
@@ -45,7 +46,7 @@ signal ac: STD_LOGIC_VECTOR (47 downto 0) := (others => '0');       --Accumulate
 signal cc: STD_LOGIC := '1';                          --Carry clear
 signal ctr: UNSIGNED (L downto 0) := (others => '0'); --For debugging purposes only
 signal gclk: STD_LOGIC;
-
+signal validsig: STD_LOGIC := '0';
 begin
 mac0: xbip_multadd_0
     Port Map (
@@ -63,14 +64,17 @@ mac0: xbip_multadd_0
 z <= ac when cc = '0' else (others => '0');
 zout <= ac;
 gclk <= clk when ce = '1' else '0';
+valid <= validsig;
 process(gclk)
 variable i: integer := 0;
 begin
     if rising_edge(gclk) then
         -- Accounting for latency of Multiply Adder
         if i = 2 then
+            validsig <= '1';
             cc <= '1';
         else
+            validsig <= '0';
             cc <= '0';
         end if;
     end if;

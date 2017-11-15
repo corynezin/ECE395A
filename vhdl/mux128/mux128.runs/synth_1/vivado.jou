@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Nov  9 10:42:49 2017
+# Process ID: 12732
+# Current directory: /home/bcv/Documents/ECE395A/vhdl/mux128/mux128.runs/synth_1
+# Command line: vivado -log mux128.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mux128.tcl
+# Log file: /home/bcv/Documents/ECE395A/vhdl/mux128/mux128.runs/synth_1/mux128.vds
+# Journal file: /home/bcv/Documents/ECE395A/vhdl/mux128/mux128.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source mux128.tcl -notrace

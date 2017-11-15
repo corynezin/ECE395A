@@ -31,7 +31,7 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="zed"/>
     <Option Name="DSANumComputeUnits" Val="16"/>
-    <Option Name="WTXSimLaunchSim" Val="41"/>
+    <Option Name="WTXSimLaunchSim" Val="46"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -221,21 +221,19 @@
       <ReportStrategy/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="ram1_synth_1" Type="Ft3:Synth" SrcSet="ram1" Part="xc7z020clg484-1" ConstrsSet="ram1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ram1_synth_1" IncludeInArchive="true">
+    <Run Id="ram1_synth_1" Type="Ft3:Synth" SrcSet="ram1" Part="xc7z020clg484-1" ConstrsSet="ram1" Description="Vivado Synthesis Defaults" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
         <Step Id="synth_design"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="ram2_synth_1" Type="Ft3:Synth" SrcSet="ram2" Part="xc7z020clg484-1" ConstrsSet="ram2" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ram2_synth_1" IncludeInArchive="true">
+    <Run Id="ram2_synth_1" Type="Ft3:Synth" SrcSet="ram2" Part="xc7z020clg484-1" ConstrsSet="ram2" Description="Vivado Synthesis Defaults" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
         <Step Id="synth_design"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>

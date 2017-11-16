@@ -12,7 +12,7 @@ entity conv is
            rst: in STD_LOGIC;
            data_valid: in STD_LOGIC;
            clk: in STD_LOGIC;
-           weights_ready: out STD_LOGIC);
+           output_valid : out STD_LOGIC);
 end conv;
 
 architecture RTL of conv is
@@ -34,11 +34,9 @@ end component fir128;
 signal sel: STD_LOGIC_VECTOR(7 downto 0):= "00000000";
 signal sel_valid: STD_LOGIC := '0';
 signal valid_data : STD_LOGIC_VECTOR(7 downto 0);
-signal inter_weights_ready : STD_LOGIC := '1';
+-- signal inter_weights_ready : STD_LOGIC := '1';
 -- DEBUGGING SIGNALS
 -- signal inter_signal : STD_LOGIC_VECTOR(7 downto 0) := "00000000";
--- signal si : SIGNED(7 downto 0);
--- signal sj : SIGNED(7 downto 0);
 begin
 
 F: fir128
@@ -52,7 +50,8 @@ F: fir128
     -- Outputs
     m_axis_data_tdata => y
     );
-valid_data <= x when (inter_weights_ready = '1') else "00000000";    
+-- valid_data <= x when (inter_weights_ready = '1') else "00000000";    
+valid_data <= x;
 process(clk)
 variable i : integer := 0; -- Indexes samples
 variable j : integer := 0; -- Indexes set of taps
@@ -60,48 +59,32 @@ variable counter : integer := 0;  -- Indexes to start latency counter, used to p
 variable init : integer := 1;
 begin
     if rising_edge(clk) then
-        if (counter > 0 and counter <= 8) then
-            counter := counter+1;
-            --inter_signal <= inter_signal + "00000001";
-        else
-            if (init = 0) then
-                i := (i + 1) mod 128;
+        if (init = 0) then
+            i := (i + 1) mod 128;
+        end if;
+        
+        if i = 127 and init = 0 then
+            if (data_valid = '1') then
+                j := (j + 1) mod 128;
+                sel_valid <= '1';
+                sel <= std_logic_vector(to_unsigned(j,8));
             end if;
-            inter_weights_ready <= '1';
-            weights_ready <= '1';
-        end if;   
-        
-        
-        if i = 127 and counter = 0 and init = 0 then
-            j := (j + 1) mod 128;
-            sel_valid <= '1';
-            sel <= std_logic_vector(to_unsigned(j,8));
-            counter := 1;
-            inter_weights_ready <= '0';
-            weights_ready <= '0';
         else
             sel_valid <= '0';
         end if;
         
-            
-        if (counter > 8) then
-            counter := 0;
-            --inter_signal <= "00000000";
-            inter_weights_ready <= '1';
-            weights_ready <= '1';
+        -- throw away the first 7 datapoints
+        if (i >= 16#0c# and i <= 16#12#) then
+            output_valid <= '0';
+        else
+            output_valid <= '1'; 
         end if;
---        inter_signal <= std_logic_vector(to_unsigned(counter,8));
---        si <= to_signed(i,8);
---        sj <= to_signed(j,8);
-        
+
         if rst = '1' then
             init := 1;
             i := 0;
             j := 0;
             sel <= std_logic_vector(to_unsigned(j,8));
-            counter := 1;
-            inter_weights_ready <= '0';
-            weights_ready <= '0';
         else
             init := 0;
         end if;

@@ -4,7 +4,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
--- use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 entity conv_layer is
   Port ( 
@@ -114,11 +114,11 @@ mux_1: mux2_1_1 port map(
 -- wr_enable <= not (is_full and not(w_ready)) when (init = '1') else wr_intermediate;
 rd_enable <= is_full;
 wr_enable <= not is_full when (init = '1') else wr_intermediate;
-output_valid <= (not init) and h1_output_valid;
---output_valid <= ((not init) and h1_output_valid) when (is_output_valid = '1') else '0';
+--output_valid <= (not init) and h1_output_valid;
+output_valid <= ((not init) and h1_output_valid) when (is_output_valid = '1') else '0';
 
 process(clk)
--- variable counter : integer := 0;
+variable counter : integer := 0;
 begin
     
     if (rising_edge(clk)) then
@@ -129,17 +129,17 @@ begin
         end if;
         if (fifo_full = '1') then
             init <= '0';
-            -- counter := 1;
+            counter := 1;
             is_output_valid <= '0';
         end if;    
-        --if (counter > 1) then
-        --    counter := counter + 1;
-        --end if;
-        --if (counter = 8) then
-        --    counter := 0;
-        --    is_output_valid <= '1';
-        --end if;
-        -- counter_signal <= std_logic_vector(to_signed(counter,8));
+        if (counter >= 1) then
+            counter := counter + 1;
+        end if;
+        if (counter = 14) then
+            counter := 0;
+            is_output_valid <= '1';
+        end if;
+        counter_signal <= std_logic_vector(to_signed(counter,8));
     end if;
     
 end process;

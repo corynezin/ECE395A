@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
--- Date        : Tue Nov 14 20:28:38 2017
+-- Date        : Tue Nov 14 23:53:56 2017
 -- Host        : bcv-Vostro-430 running 64-bit Ubuntu 16.04.1 LTS
--- Command     : write_vhdl -force -mode synth_stub
---               /home/bcv/Documents/ECE395A/vhdl/conv/conv.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top fifo_generator_0 -prefix
+--               fifo_generator_0_ fifo_generator_0_stub.vhdl
 -- Design      : fifo_generator_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1
@@ -21,7 +21,10 @@ entity fifo_generator_0 is
     rd_en : in STD_LOGIC;
     dout : out STD_LOGIC_VECTOR ( 7 downto 0 );
     full : out STD_LOGIC;
-    empty : out STD_LOGIC
+    almost_full : out STD_LOGIC;
+    empty : out STD_LOGIC;
+    data_count : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    prog_full : out STD_LOGIC
   );
 
 end fifo_generator_0;
@@ -30,7 +33,7 @@ architecture stub of fifo_generator_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "clk,srst,din[7:0],wr_en,rd_en,dout[7:0],full,empty";
+attribute black_box_pad_pin of stub : architecture is "clk,srst,din[7:0],wr_en,rd_en,dout[7:0],full,almost_full,empty,data_count[6:0],prog_full";
 attribute x_core_info : string;
 attribute x_core_info of stub : architecture is "fifo_generator_v13_1_4,Vivado 2017.2";
 begin

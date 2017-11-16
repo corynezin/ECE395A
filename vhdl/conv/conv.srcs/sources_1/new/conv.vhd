@@ -59,7 +59,8 @@ variable j : integer := 0; -- Indexes set of taps
 variable counter : integer := 0;  -- Indexes to start latency counter, used to pause the FIFO
 variable init : integer := 1;
 begin
-         if (counter > 0 and counter <= 8) then
+    if rising_edge(clk) then
+        if (counter > 0 and counter <= 8) then
             counter := counter+1;
             --inter_signal <= inter_signal + "00000001";
         else

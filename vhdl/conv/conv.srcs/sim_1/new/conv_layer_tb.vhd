@@ -4,6 +4,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 entity conv_layer_tb is
 --  Port ( );
@@ -19,9 +20,9 @@ component conv_layer is
          y: OUT STD_LOGIC_VECTOR(23 downto 0)
          );
 end component;
-signal input_x : STD_LOGIC_VECTOR(7 downto 0);
+signal input_x : STD_LOGIC_VECTOR(7 downto 0) := "00000000";
 signal input_rst : STD_LOGIC;
-signal clk : STD_LOGIC;
+signal clk : STD_LOGIC := '0';
 signal y : STD_LOGIC_VECTOR(23 downto 0);
 begin
 conv_layer_0 : conv_layer port map (
@@ -31,7 +32,7 @@ conv_layer_0 : conv_layer port map (
                                     y => y);
 input_rst <= '0';                                  
 process
-variable i : INTEGER := 1:
+variable i : INTEGER := 3;
 begin
     wait for 1 ms;
     clk <= not clk;

@@ -31,21 +31,32 @@ end component;
 -- FIFO component
 component fifo_generator_0 is
   Port ( 
-    clk : in STD_LOGIC;
-    srst : in STD_LOGIC;
-    din : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    wr_en : in STD_LOGIC;
-    rd_en : in STD_LOGIC;
-    dout : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    full : out STD_LOGIC;
-    empty : out STD_LOGIC );
+    
+      clk : in STD_LOGIC;
+      srst : in STD_LOGIC;
+      din : in STD_LOGIC_VECTOR ( 7 downto 0 );
+      wr_en : in STD_LOGIC;
+      rd_en : in STD_LOGIC;
+      dout : out STD_LOGIC_VECTOR ( 7 downto 0 );
+      full : out STD_LOGIC;
+      almost_full : out STD_LOGIC;
+      empty : out STD_LOGIC;
+      prog_full : out STD_LOGIC );
 end component;
 
-component mux2_1 is
+component mux2_1_8 is
   Port ( 
         x_0 : IN STD_LOGIC_VECTOR(7 downto 0);
         x_1 : IN STD_LOGIC_VECTOR(7 downto 0);
         y : OUT STD_LOGIC_VECTOR(7 downto 0);
+        addr : IN STD_LOGIC);
+end component;
+
+component mux2_1_1 is
+  Port ( 
+        x_0 : IN STD_LOGIC;
+        x_1 : IN STD_LOGIC;
+        y : OUT STD_LOGIC;
         addr : IN STD_LOGIC);
 end component;
 
@@ -56,7 +67,11 @@ signal wr_enable : STD_LOGIC := '0';
 signal fifo_in : STD_LOGIC_VECTOR(7 downto 0) := "00000000";
 signal fifo_out : STD_LOGIC_VECTOR(7 downto 0) := "00000000";
 signal fifo_full : STD_LOGIC;
-
+signal fifo_almost_full : STD_LOGIC;
+signal is_full : STD_LOGIC;
+signal init : STD_LOGIC := '1';
+signal wr_intermediate : STD_LOGIC;
+signal wr_inter : STD_LOGIC;
 begin
 h1: conv port map (x => fifo_out,
                    y => y,
@@ -71,16 +86,41 @@ fifo_128_1: fifo_generator_0 port map (
                                         wr_en => wr_enable,
                                         rd_en => rd_enable,
                                         dout => fifo_out,
-                                        full => fifo_full
+                                        full => fifo_full,
+                                        -- note : prog_full is the programmable full,
+                                        prog_full => fifo_almost_full
                                       );
-mux_0 : mux2_1 port map (
+mux_0 : mux2_1_8 port map (
                          x_0 => x,
                          x_1 => fifo_out,
-                         y => y,
-                         addr => fifo_full
-                         );
-                                 
-rd_enable <= w_ready and fifo_full;
-wr_enable <= not (fifo_full and not(w_ready));
+                         y => fifo_in,
+                         addr => is_full
+                         );     
 
+mux_1 : mux2_1_1 port map (
+                          x_0 => fifo_almost_full,
+                          x_1 => fifo_full,
+                          y => is_full,
+                          addr => init
+                          );
+
+                             
+rd_enable <= (w_ready and is_full);
+wr_enable <= not (is_full and not(w_ready)) when (init = '1') else wr_intermediate;
+process (rst, fifo_full)
+begin
+    if (rising_edge(rst)) then
+        init <= '1';
+    end if;
+    if (rising_edge(fifo_full)) then
+        init <= '0';
+    end if;
+end process;
+process(clk)
+begin
+    -- shift registers to deal with read latency 
+    if (rising_edge(clk)) then
+        wr_intermediate <= rd_enable;
+    end if;
+end process;
 end RTL;

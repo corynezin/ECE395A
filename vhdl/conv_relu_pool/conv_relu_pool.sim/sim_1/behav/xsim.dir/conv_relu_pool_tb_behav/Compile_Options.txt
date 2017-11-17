@@ -1,0 +1,1 @@
+-wto "6265e889040141739e5ea8782ba244c5" --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "xbip_utils_v3_0_7" -L "axi_utils_v2_0_3" -L "fir_compiler_v7_2_8" -L "secureip" -L "xpm" --snapshot "conv_relu_pool_tb_behav" "xil_defaultlib.conv_relu_pool_tb" -log "elaborate.log" 

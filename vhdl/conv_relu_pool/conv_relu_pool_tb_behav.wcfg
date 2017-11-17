@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="conv_relu_pool_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="conv_relu_pool_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="11300000000001fs"></ZoomEndTime>
+      <Cursor1Time time="546484902440000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="184"></NameColumnWidth>
+      <ValueColumnWidth column_width="129"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="18" />
+   <wave_markers>
+      <marker label="" time="295000000000000" />
+   </wave_markers>
+   <wvobject type="array" fp_name="/conv_relu_pool_tb/input_x">
+      <obj_property name="ElementShortName">input_x[7:0]</obj_property>
+      <obj_property name="ObjectShortName">input_x[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_relu_pool_tb/input_rst">
+      <obj_property name="ElementShortName">input_rst</obj_property>
+      <obj_property name="ObjectShortName">input_rst</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_relu_pool_tb/y_output">
+      <obj_property name="ElementShortName">y_output[23:0]</obj_property>
+      <obj_property name="ObjectShortName">y_output[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_relu_pool_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider338" type="divider">
+      <obj_property name="label">conv_relu_pool</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#FFFFFF</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_relu_pool_tb/crp/x">
+      <obj_property name="ElementShortName">x[7:0]</obj_property>
+      <obj_property name="ObjectShortName">x[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_relu_pool_tb/crp/y">
+      <obj_property name="ElementShortName">y[23:0]</obj_property>
+      <obj_property name="ObjectShortName">y[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_relu_pool_tb/crp/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_relu_pool_tb/crp/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_relu_pool_tb/crp/conv0_valid">
+      <obj_property name="ElementShortName">conv0_valid</obj_property>
+      <obj_property name="ObjectShortName">conv0_valid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_relu_pool_tb/crp/conv1_valid">
+      <obj_property name="ElementShortName">conv1_valid</obj_property>
+      <obj_property name="ObjectShortName">conv1_valid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_relu_pool_tb/crp/y1">
+      <obj_property name="ElementShortName">y1[23:0]</obj_property>
+      <obj_property name="ObjectShortName">y1[23:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">13</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_relu_pool_tb/crp/y2">
+      <obj_property name="ElementShortName">y2[23:0]</obj_property>
+      <obj_property name="ObjectShortName">y2[23:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">13</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_relu_pool_tb/crp/sum">
+      <obj_property name="ElementShortName">sum[23:0]</obj_property>
+      <obj_property name="ObjectShortName">sum[23:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">13</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_relu_pool_tb/crp/z">
+      <obj_property name="ElementShortName">z[23:0]</obj_property>
+      <obj_property name="ObjectShortName">z[23:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">13</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_relu_pool_tb/crp/w">
+      <obj_property name="ElementShortName">w[23:0]</obj_property>
+      <obj_property name="ObjectShortName">w[23:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">13</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_relu_pool_tb/crp/ceclk">
+      <obj_property name="ElementShortName">ceclk</obj_property>
+      <obj_property name="ObjectShortName">ceclk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_relu_pool_tb/crp/sum_valid">
+      <obj_property name="ElementShortName">sum_valid</obj_property>
+      <obj_property name="ObjectShortName">sum_valid</obj_property>
+   </wvobject>
+</wave_config>

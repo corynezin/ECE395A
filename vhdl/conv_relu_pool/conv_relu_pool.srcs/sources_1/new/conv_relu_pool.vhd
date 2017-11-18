@@ -43,7 +43,6 @@ end component conv_layer_1;
 component Relu is
   generic (N : INTEGER);
   Port ( 
-    clk     : IN STD_LOGIC;
     d0      : IN STD_LOGIC_VECTOR(N-1 downto 0);
     output  : OUT STD_LOGIC_VECTOR(N-1 downto 0)
   );
@@ -91,7 +90,6 @@ r: Relu
         N => 24
     )
     port map(
-        clk => ceclk,
         d0 => sum,
         output => z
     );

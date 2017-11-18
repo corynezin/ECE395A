@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Thu Nov 16 17:41:32 2017">
+<application name="pa" timeStamp="Thu Nov 16 19:29:50 2017">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="5adaa2fee07940679e242bab2e4d35bb" type="ProjectID"/>
 <property name="ProjectIteration" value="1" type="ProjectIteration"/>
@@ -20,44 +20,65 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="CoreView" value="2" type="JavaHandler"/>
 <property name="CustomizeCore" value="1" type="JavaHandler"/>
 <property name="EditUndo" value="59" type="JavaHandler"/>
+<property name="NewProject" value="1" type="JavaHandler"/>
 <property name="ProjectSummary" value="1" type="JavaHandler"/>
-<property name="RecustomizeCore" value="2" type="JavaHandler"/>
+<property name="RecustomizeCore" value="5" type="JavaHandler"/>
 <property name="SaveFileProxyHandler" value="3" type="JavaHandler"/>
 <property name="ShowProductGuide" value="1" type="JavaHandler"/>
 <property name="SimulationRestart" value="9" type="JavaHandler"/>
-<property name="SimulationRun" value="29" type="JavaHandler"/>
-<property name="SimulationRunForTime" value="45" type="JavaHandler"/>
-<property name="WaveformSaveConfiguration" value="2" type="JavaHandler"/>
+<property name="SimulationRun" value="39" type="JavaHandler"/>
+<property name="SimulationRunForTime" value="62" type="JavaHandler"/>
+<property name="ToolsSettings" value="1" type="JavaHandler"/>
+<property name="WaveformSaveConfiguration" value="3" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
-<property name="BaseDialog_OK" value="1" type="GuiResourceData"/>
+<property name="BaseDialog_APPLY" value="1" type="GuiResourceData"/>
+<property name="BaseDialog_CANCEL" value="1" type="GuiResourceData"/>
+<property name="BaseDialog_OK" value="2" type="GuiResourceData"/>
 <property name="CmdMsgDialog_OK" value="1" type="GuiResourceData"/>
 <property name="CoreTreeTablePanel_CORE_TREE_TABLE" value="5" type="GuiResourceData"/>
-<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="25" type="GuiResourceData"/>
-<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="65" type="GuiResourceData"/>
+<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="55" type="GuiResourceData"/>
+<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="89" type="GuiResourceData"/>
 <property name="GraphicalView_ZOOM_FIT" value="2" type="GuiResourceData"/>
-<property name="GraphicalView_ZOOM_IN" value="30" type="GuiResourceData"/>
-<property name="GraphicalView_ZOOM_OUT" value="8" type="GuiResourceData"/>
-<property name="HCodeEditor_SEARCH_TEXT_COMBO_BOX" value="2" type="GuiResourceData"/>
+<property name="GraphicalView_ZOOM_IN" value="31" type="GuiResourceData"/>
+<property name="GraphicalView_ZOOM_OUT" value="9" type="GuiResourceData"/>
+<property name="HCodeEditor_SEARCH_TEXT_COMBO_BOX" value="14" type="GuiResourceData"/>
+<property name="MainMenuMgr_EDIT" value="2" type="GuiResourceData"/>
+<property name="MainMenuMgr_FILE" value="4" type="GuiResourceData"/>
+<property name="NumJobsChooser_NUMBER_OF_JOBS" value="2" type="GuiResourceData"/>
+<property name="PACommandNames_NEW_PROJECT" value="1" type="GuiResourceData"/>
 <property name="PACommandNames_PROJECT_SUMMARY" value="1" type="GuiResourceData"/>
 <property name="PACommandNames_SHOW_PRODUCT_GUIDE" value="1" type="GuiResourceData"/>
 <property name="PACommandNames_SIMULATION_LIVE_RESTART" value="9" type="GuiResourceData"/>
-<property name="PACommandNames_SIMULATION_LIVE_RUN" value="45" type="GuiResourceData"/>
-<property name="PACommandNames_SIMULATION_RUN_BEHAVIORAL" value="30" type="GuiResourceData"/>
-<property name="PAViews_CODE" value="2" type="GuiResourceData"/>
+<property name="PACommandNames_SIMULATION_LIVE_RUN" value="62" type="GuiResourceData"/>
+<property name="PACommandNames_SIMULATION_RUN_BEHAVIORAL" value="40" type="GuiResourceData"/>
+<property name="PAViews_CODE" value="4" type="GuiResourceData"/>
+<property name="PartChooser_BOARDS" value="2" type="GuiResourceData"/>
 <property name="ProgressDialog_BACKGROUND" value="1" type="GuiResourceData"/>
 <property name="ProgressDialog_CANCEL" value="1" type="GuiResourceData"/>
-<property name="RDIViews_WAVEFORM_VIEWER" value="205" type="GuiResourceData"/>
+<property name="ProjectNameChooser_CHOOSE_PROJECT_LOCATION" value="1" type="GuiResourceData"/>
+<property name="ProjectNameChooser_PROJECT_NAME" value="1" type="GuiResourceData"/>
+<property name="ProjectSettingsSimulationPanel_TABBED_PANE" value="4" type="GuiResourceData"/>
+<property name="RDIViews_WAVEFORM_VIEWER" value="232" type="GuiResourceData"/>
+<property name="SettingsDialog_PROJECT_TREE" value="1" type="GuiResourceData"/>
+<property name="SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY" value="1" type="GuiResourceData"/>
 <property name="SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE" value="18" type="GuiResourceData"/>
 <property name="SimulationScopesPanel_SIMULATION_SCOPES_TREE_TABLE" value="27" type="GuiResourceData"/>
-<property name="SyntheticaGettingStartedView_RECENT_PROJECTS" value="1" type="GuiResourceData"/>
-<property name="TclConsoleView_TCL_CONSOLE_CODE_EDITOR" value="7" type="GuiResourceData"/>
+<property name="SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT" value="4" type="GuiResourceData"/>
+<property name="SrcChooserPanel_SIMULATOR_LANGUAGE" value="1" type="GuiResourceData"/>
+<property name="SrcChooserPanel_TARGET_LANGUAGE" value="1" type="GuiResourceData"/>
+<property name="SyntheticaGettingStartedView_RECENT_PROJECTS" value="2" type="GuiResourceData"/>
+<property name="TclConsoleView_TCL_CONSOLE_CODE_EDITOR" value="13" type="GuiResourceData"/>
 <property name="WaveformNameTree_WAVEFORM_NAME_TREE" value="27" type="GuiResourceData"/>
+<property name="WaveformRealSettingsDialog_BINARY_POINT" value="1" type="GuiResourceData"/>
+<property name="WaveformRealSettingsDialog_FIXED_POINT" value="1" type="GuiResourceData"/>
+<property name="WaveformRealSettingsDialog_SIGNED" value="1" type="GuiResourceData"/>
+<property name="XPG_CoeFileWidgdet_BROWSE" value="1" type="GuiResourceData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="7" type="GuiMode"/>
+<property name="GuiMode" value="8" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="4" type="TclMode"/>
+<property name="TclMode" value="5" type="TclMode"/>
 </item>
 </section>
 </application>

@@ -28,11 +28,12 @@ signal y : STD_LOGIC_VECTOR(23 downto 0);
 signal output_valid : STD_LOGIC;
 begin
 conv_layer_0 : conv_layer port map (
-                                    x => input_x,
-                                    rst => input_rst,
-                                    clk => clk,
-                                    y => y,
-                                    output_valid => output_valid);
+    x => input_x,
+    rst => input_rst,
+    clk => clk,
+    y => y,
+    output_valid => output_valid);
+                                    
 input_rst <= '0';                                  
 process
 variable i : INTEGER := 3;

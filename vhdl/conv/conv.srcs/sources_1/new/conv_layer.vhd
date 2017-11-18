@@ -7,7 +7,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 entity conv_layer is
-  Port ( 
+    Port ( 
          x: IN STD_LOGIC_VECTOR(7 downto 0);
          rst: IN STD_LOGIC;
          clk: IN STD_LOGIC;
@@ -31,7 +31,7 @@ component conv is
 end component;
 
 -- FIFO component
-component fifo_generator_0 is
+component fifo_generator is
   Port ( 
     
       clk : in STD_LOGIC;
@@ -85,7 +85,7 @@ h1: conv port map (
     data_valid=> rd_enable, -- PROBLEM LINE >:(
     clk => clk,
     output_valid => h1_output_valid);
-fifo_128_1: fifo_generator_0 port map (
+fifo_128_1: fifo_generator port map (
     clk => clk,
     srst => rst,
     din => fifo_in,

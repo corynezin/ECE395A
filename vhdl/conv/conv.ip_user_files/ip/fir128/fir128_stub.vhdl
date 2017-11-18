@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
--- Date        : Tue Nov 14 01:00:05 2017
--- Host        : bcv-Vostro-430 running 64-bit Ubuntu 16.04.1 LTS
+-- Date        : Thu Nov 16 19:13:34 2017
+-- Host        : nezin-desktop running 64-bit Ubuntu 16.04.3 LTS
 -- Command     : write_vhdl -force -mode synth_stub
---               /home/bcv/Documents/ECE395A/vhdl/conv/conv.srcs/sources_1/ip/fir128/fir128_stub.vhdl
+--               /home/nezin/Documents/ECE395A/vhdl/conv/conv.srcs/sources_1/ip/fir128/fir128_stub.vhdl
 -- Design      : fir128
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1

@@ -37,3 +37,13 @@ launch_runs impl_1 -jobs 16
 wait_on_run impl_1
 close_design
 open_run impl_1
+open_run synth_1 -name synth_1
+reset_run impl_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+current_design impl_1
+close_design
+close_design
+open_run impl_1
+save_wave_config {/home/nezin/Documents/ECE395A/vhdl/conv_relu_pool/conv_relu_pool_tb_behav.wcfg}
+close_sim

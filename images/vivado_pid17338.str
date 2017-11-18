@@ -2169,3 +2169,287 @@ closeView(PAResourceOtoP.PAViews_DEVICE, "Device"); // Y:C
 selectButton(PAResourceCommand.PACommandNames_PROJECT_SUMMARY, "project_summary"); // B:JideButton (f:CommandBar, cg:JFrame)
 // Run Command: PAResourceCommand.PACommandNames_PROJECT_SUMMARY
 selectTab(PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_PANEL_TABBED, PAResourceOtoP.ProjectSummaryUtilizationPanel_TABLE, "Table", 1); // f:i (C:JPanel, cg:JFrame)
+// Elapsed time: 590 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design, Schematic]", 41, false); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+// Elapsed time: 15 seconds
+selectButton(PAResourceCommand.PACommandNames_PROJECT_SUMMARY, "project_summary"); // B:JideButton (f:CommandBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_PROJECT_SUMMARY
+// Elapsed time: 47 seconds
+selectTab(PAResourceQtoS.RunGadget_RUN_GADGET_TABBED_PANE, PAResourceQtoS.RunGadget_ROUTE_STATUS, "Route Status", 1); // i:JideTabbedPane (C:JPanel, cg:JFrame)
+selectTab(PAResourceQtoS.RunGadget_RUN_GADGET_TABBED_PANE, PAResourceQtoS.RunGadget_SUMMARY, "Summary", 0); // i:JideTabbedPane (C:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Schematic]", 27, false); // u:M (JViewport:JComponent, cg:JFrame)
+// bs:g (cg:JFrame):  Open Synthesized Design : addNotify
+// Tcl Message: open_run synth_1 -name synth_1 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xc7z020clg484-1 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,669 MB. GUI used memory: 142 MB. Current time: 11/18/17 1:29:37 PM EST
+// [Engine Memory]: 2,691 MB (+18539kb) [01:47:56]
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Device: addNotify
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+dismissDialog("Open Synthesized Design"); // bs:g (cg:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "conv0_0.coe", 4); // k:TdiGroup (j:CodeEditorDocumentPane, cg:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "conv0_0.coe", 5); // k:TdiGroup (j:CodeEditorDocumentPane, cg:JFrame)
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f:R
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "conv0_0.coe", 4); // k:TdiGroup (j:CodeEditorDocumentPane, cg:JFrame)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // A:b
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "relu.vhd", 3); // k:TdiGroup (j:CodeEditorDocumentPane, cg:JFrame)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // A:b
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "conv_relu_pool.vhd", 2); // k:TdiGroup (j:CodeEditorDocumentPane, cg:JFrame)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // A:b
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design, Schematic]", 41, false); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+// Elapsed time: 36 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 29, false); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bs:g (cg:JFrame):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.RunRun_COMPLETED_IMPLEMENTATION_RUN_EXISTS_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, G:JDialog)
+// TclEventType: RUN_MODIFY
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run impl_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f:p (cg:JFrame): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, f:p)
+// bs:g (cg:JFrame):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f:p (cg:JFrame)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -jobs 16 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/nezin/Documents/ECE395A/vhdl/conv/conv.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci' is already up-to-date 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Sat Nov 18 13:30:30 2017] Launched impl_1... Run output will be captured here: /home/nezin/Documents/ECE395A/vhdl/conv_relu_pool/conv_relu_pool.runs/impl_1/runme.log 
+// 'c' command handler elapsed time: 3 seconds
+dismissDialog("Starting Design Runs"); // bs:g (cg:JFrame)
+selectButton(PAResourceOtoP.ProjectTab_CLOSE_DESIGN, "Close Design"); // h:k (JPanel:JComponent, cg:JFrame)
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: current_design impl_1 
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,755 MB. GUI used memory: 119 MB. Current time: 11/18/17 1:30:37 PM EST
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 2,755 MB. GUI used memory: 120 MB. Current time: 11/18/17 1:30:37 PM EST
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: close_design 
+// bs:g (cg:JFrame):  Closing : addNotify
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Closing"); // bs:g (cg:JFrame)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah:x (cg:JFrame): Implementation Completed: addNotify
+// Elapsed time: 48 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ah:x)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// e:g (cg:JFrame): Close Design: addNotify
+selectButton(PAResourceAtoD.ClosePlanner_YES, "Yes"); // a:JButton (JPanel:JComponent, e:g)
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,755 MB. GUI used memory: 109 MB. Current time: 11/18/17 1:31:28 PM EST
+// Engine heap size: 2,755 MB. GUI used memory: 110 MB. Current time: 11/18/17 1:31:28 PM EST
+// TclEventType: CURR_DESIGN_SET
+// TclEventType: DESIGN_CLOSE
+// bs:g (cg:JFrame):  Open Implemented Design : addNotify
+// Tcl Message: close_design 
+dismissDialog("Close Design"); // e:g (cg:JFrame)
+// Tcl Message: open_run impl_1 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,755 MB. GUI used memory: 77 MB. Current time: 11/18/17 1:31:30 PM EST
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Device: addNotify
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 82 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2017.2 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/home/nezin/.Xil/Vivado-17338-nezin-desktop/dcp41/conv_relu_pool_early.xdc] Finished Parsing XDC File [/home/nezin/.Xil/Vivado-17338-nezin-desktop/dcp41/conv_relu_pool_early.xdc] Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.12 . Memory (MB): peak = 7389.934 ; gain = 0.000 ; free physical = 1394 ; free virtual = 49714 
+// Tcl Message: Restored from archive | CPU: 0.130000 secs | Memory: 2.393135 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.12 . Memory (MB): peak = 7389.934 ; gain = 0.000 ; free physical = 1394 ; free virtual = 49714 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// TclEventType: DRC_ADDED
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// TclEventType: TIMING_SUMMARY_UPDATED
+// 'dH' command handler elapsed time: 7 seconds
+dismissDialog("Open Implemented Design"); // bs:g (cg:JFrame)
+// Device view-level: 0.3
+// Device view-level: 0.0
+// Device view-level: 0.3
+// HMemoryUtils.trashcanNow. Engine heap size: 2,759 MB. GUI used memory: 141 MB. Current time: 11/18/17 1:31:38 PM EST
+// Device view-level: 0.6
+// Device view-level: 0.9
+// Device view-level: 1.2
+// HMemoryUtils.trashcanNow. Engine heap size: 2,751 MB. GUI used memory: 130 MB. Current time: 11/18/17 1:31:40 PM EST
+// Device view-level: 1.5
+// Device view-level: 1.8
+// Device view-level: 2.0
+// Elapsed time: 10 seconds
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // G:M (Workspace:JPanel, cg:JFrame)
+selectButton(PAResourceCommand.PACommandNames_FED_TOGGLE_ROUTING_RESOURCES, (String) null); // u:JideToggleButton (f:CommandBar, cg:JFrame): TRUE
+// Run Command: PAResourceCommand.PACommandNames_FED_TOGGLE_ROUTING_RESOURCES
+// Device view-level: 2.5
+// HMemoryUtils.trashcanNow. Engine heap size: 2,752 MB. GUI used memory: 205 MB. Current time: 11/18/17 1:31:49 PM EST
+// Device view-level: 1.3
+// Device view-level: 1.0
+// Device view-level: 0.8
+// Device view-level: 0.6
+// Device view-level: 0.8
+// HMemoryUtils.trashcanNow. Engine heap size: 2,752 MB. GUI used memory: 217 MB. Current time: 11/18/17 1:31:51 PM EST
+// Device view-level: 1.0
+// Device view-level: 1.3
+// Device view-level: 1.5
+// RouteApi::getRouteInfo length(bytes): 988307
+// Device view-level: 1.7
+// RouteApi::getRouteInfo length(bytes): 540391
+// Device view-level: 1.5
+// RouteApi::getRouteInfo length(bytes): 988307
+// HMemoryUtils.trashcanNow. Engine heap size: 2,752 MB. GUI used memory: 278 MB. Current time: 11/18/17 1:31:53 PM EST
+// Device view-level: 1.3
+// RouteApi::getRouteInfo length(bytes): 1683121
+// Device view-level: 1.0
+// Device view-level: 1.3
+// RouteApi::getRouteInfo length(bytes): 1684303
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 1169969, 3811046, false, false, true, false, false); // D:a (JViewport:JComponent, cg:JFrame) - Alt Key
+// Device view-level: 1.3
+// RouteApi::getRouteInfo length(bytes): 1661490
+// RouteApi::getRouteInfo length(bytes): 1721679
+// HMemoryUtils.trashcanNow. Engine heap size: 2,752 MB. GUI used memory: 413 MB. Current time: 11/18/17 1:31:55 PM EST
+// RouteApi::getRouteInfo length(bytes): 1721679
+// RouteApi::getRouteInfo length(bytes): 1705269
+// RouteApi::getRouteInfo length(bytes): 1705269
+floatView(PAResourceOtoP.PAViews_DEVICE, "Device"); // ax:DockableFrame (aF:FrameContainer, cg:JFrame)
+// PAResourceOtoP.PAViews_DEVICE: Device: float view
+maximizeFrame(PAResourceOtoP.PAViews_DEVICE, "Device"); // ax:DockableFrame (aF:FrameContainer, FrameFloatingContainer:ResizableFrame)
+// RouteApi::getRouteInfo length(bytes): 1922409
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 1207611, 3752039, false, false, true, false, false); // D:a (JViewport:JComponent, FrameFloatingContainer:ResizableFrame) - Alt Key
+// Device view-level: 1.3
+// RouteApi::getRouteInfo length(bytes): 1923799
+// HMemoryUtils.trashcanNow. Engine heap size: 2,765 MB. GUI used memory: 229 MB. Current time: 11/18/17 1:32:09 PM EST
+// RouteApi::getRouteInfo length(bytes): 1925174
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 1245763, 3747970, false, false, true, false, false); // D:a (JViewport:JComponent, FrameFloatingContainer:ResizableFrame) - Alt Key
+// RouteApi::getRouteInfo length(bytes): 1925174
+// RouteApi::getRouteInfo length(bytes): 1884857
+// RouteApi::getRouteInfo length(bytes): 1831167
+// RouteApi::getRouteInfo length(bytes): 1831167
+// HMemoryUtils.trashcanNow. Engine heap size: 2,765 MB. GUI used memory: 405 MB. Current time: 11/18/17 1:32:14 PM EST
+// RouteApi::getRouteInfo length(bytes): 1831167
+// RouteApi::getRouteInfo length(bytes): 1831167
+// Device view-level: 1.5
+// RouteApi::getRouteInfo length(bytes): 1132149
+// Device view-level: 1.3
+// RouteApi::getRouteInfo length(bytes): 1823946
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 1238641, 3727114, false, false, true, false, false); // D:a (JViewport:JComponent, FrameFloatingContainer:ResizableFrame) - Alt Key
+// RouteApi::getRouteInfo length(bytes): 1825204
+// HMemoryUtils.trashcanNow. Engine heap size: 2,765 MB. GUI used memory: 596 MB. Current time: 11/18/17 1:32:20 PM EST
+// [GUI Memory]: 574 MB (+13472kb) [01:50:40]
+// RouteApi::getRouteInfo length(bytes): 1825204
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 1222872, 3710328, false, false, true, false, false); // D:a (JViewport:JComponent, FrameFloatingContainer:ResizableFrame) - Alt Key
+// RouteApi::getRouteInfo length(bytes): 1881650
+// RouteApi::getRouteInfo length(bytes): 1878780
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 1214224, 3694050, false, false, true, false, false); // D:a (JViewport:JComponent, FrameFloatingContainer:ResizableFrame) - Alt Key
+// RouteApi::getRouteInfo length(bytes): 1878780
+// RouteApi::getRouteInfo length(bytes): 1884857
+// HMemoryUtils.trashcanNow. Engine heap size: 2,728 MB. GUI used memory: 352 MB. Current time: 11/18/17 1:32:30 PM EST
+// Device view-level: 1.5
+// RouteApi::getRouteInfo length(bytes): 1371437
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 1119101, 3784596, false, false, true, false, false); // D:a (JViewport:JComponent, FrameFloatingContainer:ResizableFrame) - Alt Key
+// Device view-level: 1.5
+// RouteApi::getRouteInfo length(bytes): 1371437
+// RouteApi::getRouteInfo length(bytes): 1371437
+// RouteApi::getRouteInfo length(bytes): 1396583
+// RouteApi::getRouteInfo length(bytes): 1270147
+// HMemoryUtils.trashcanNow. Engine heap size: 2,728 MB. GUI used memory: 531 MB. Current time: 11/18/17 1:32:37 PM EST
+// RouteApi::getRouteInfo length(bytes): 1335400
+// RouteApi::getRouteInfo length(bytes): 1335400
+// RouteApi::getRouteInfo length(bytes): 1335400
+// RouteApi::getRouteInfo length(bytes): 1335400
+// RouteApi::getRouteInfo length(bytes): 1294605
+// HMemoryUtils.trashcanNow. Engine heap size: 2,758 MB. GUI used memory: 333 MB. Current time: 11/18/17 1:32:38 PM EST
+// RouteApi::getRouteInfo length(bytes): 1227658
+// RouteApi::getRouteInfo length(bytes): 1271866
+// RouteApi::getRouteInfo length(bytes): 1276041
+// RouteApi::getRouteInfo length(bytes): 1235345
+// RouteApi::getRouteInfo length(bytes): 1235345
+// HMemoryUtils.trashcanNow. Engine heap size: 2,758 MB. GUI used memory: 525 MB. Current time: 11/18/17 1:32:39 PM EST
+// RouteApi::getRouteInfo length(bytes): 1167914
+// RouteApi::getRouteInfo length(bytes): 1099517
+// RouteApi::getRouteInfo length(bytes): 1161620
+// RouteApi::getRouteInfo length(bytes): 1211255
+// RouteApi::getRouteInfo length(bytes): 1195847
+// HMemoryUtils.trashcanNow. Engine heap size: 2,760 MB. GUI used memory: 277 MB. Current time: 11/18/17 1:32:40 PM EST
+// RouteApi::getRouteInfo length(bytes): 1235843
+// RouteApi::getRouteInfo length(bytes): 1210697
+// RouteApi::getRouteInfo length(bytes): 1210697
+// RouteApi::getRouteInfo length(bytes): 1289222
+// RouteApi::getRouteInfo length(bytes): 1289222
+// HMemoryUtils.trashcanNow. Engine heap size: 2,760 MB. GUI used memory: 468 MB. Current time: 11/18/17 1:32:41 PM EST
+// RouteApi::getRouteInfo length(bytes): 1289222
+// RouteApi::getRouteInfo length(bytes): 1289222
+// RouteApi::getRouteInfo length(bytes): 1310254
+// RouteApi::getRouteInfo length(bytes): 1310254
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 1146570, 3767641, false, false, true, false, false); // D:a (JViewport:JComponent, FrameFloatingContainer:ResizableFrame) - Alt Key
+// RouteApi::getRouteInfo length(bytes): 1314458
+// HMemoryUtils.trashcanNow. Engine heap size: 2,784 MB. GUI used memory: 248 MB. Current time: 11/18/17 1:32:43 PM EST
+// RouteApi::getRouteInfo length(bytes): 1314458
+// RouteApi::getRouteInfo length(bytes): 1314458
+// RouteApi::getRouteInfo length(bytes): 1303849
+// PAResourceOtoP.PAViews_DEVICE: Device: close view
+// Elapsed time: 38 seconds
+closeFrame(PAResourceOtoP.PAViews_DEVICE, "Device"); // ax:DockableFrame (aF:FrameContainer, FrameFloatingContainer:ResizableFrame)
+dockFrame(PAResourceOtoP.PAViews_DEVICE, "Device"); // ax:DockableFrame (aF:FrameContainer, FrameFloatingContainer:ResizableFrame)
+maximizeFrame(PAResourceOtoP.PAViews_DEVICE, "Device"); // ax:DockableFrame (aF:FrameContainer, FrameFloatingContainer:ResizableFrame)
+closeView(PAResourceOtoP.PAViews_DEVICE, "Device"); // Y:C
+// Elapsed time: 28 seconds
+closeMainWindow("conv_relu_pool - [/home/nezin/Documents/ECE395A/vhdl/conv_relu_pool/conv_relu_pool.xpr] - Vivado 2017.2"); // cg:JFrame
+// x:aN (cg:JFrame): Exit Vivado: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, x:aN)
+dismissDialog("Exit Vivado"); // x:aN (cg:JFrame)
+selectButton(PAResourceOtoP.ProjectSummaryDRCPanel_OPEN_DRC_REPORT, "Implemented DRC Report"); // h:k (JPanel:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_REPORT_DRC
+selectTreeTable(PAResourceTtoZ.VioTreeTablePanel_VIO_TREE_TABLE, "NSTD-1 ; ", 2, "NSTD-1", 0, true); // F:af (JViewport:JComponent, cg:JFrame) - Node
+selectTreeTable(PAResourceTtoZ.VioTreeTablePanel_VIO_TREE_TABLE, "NSTD #1 ; 34 out of 34 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: x[7], x[6], x[5], x[4], x[3], x[2], x[1], x[0], y[23], y[22], y[21], y[20], y[19], y[18], y[17] (the first 15 of 34 listed).", 3, "Critical Warning", 1, false); // F:af (JViewport:JComponent, cg:JFrame)
+closeMainWindow("conv_relu_pool - [/home/nezin/Documents/ECE395A/vhdl/conv_relu_pool/conv_relu_pool.xpr] - Vivado 2017.2"); // cg:JFrame
+// x:aN (cg:JFrame): Exit Vivado: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, x:aN)
+dismissDialog("Exit Vivado"); // x:aN (cg:JFrame)
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_CLOSE_WCFG
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// Tcl Command: 'exit'
+// TclEventType: STOP_GUI
+/*
+#-------------------------------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Current time: 11/18/17 1:34:20 PM EST
+# Process ID: 17338
+# OS: Linux
+# User: nezin
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx
+# Technical Support with this file and a testcase attached.
+#-------------------------------------------------------------------------------
+java.lang.NullPointerException (See /home/nezin/vivado_pid17338.debug)
+*/

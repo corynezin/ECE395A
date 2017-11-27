@@ -15,7 +15,8 @@ entity conv_relu_pool is
         x: IN STD_LOGIC_VECTOR(M-1 downto 0);
         y: OUT STD_LOGIC_VECTOR(N-1 downto 0);
         rst: IN STD_LOGIC;
-        clk: IN STD_LOGIC
+        clk: IN STD_LOGIC;
+        y_valid: OUT STD_LOGIC
     );
 end conv_relu_pool;
 
@@ -52,7 +53,10 @@ component maxpool2 is
     generic (N : INTEGER);
     Port ( input : in STD_LOGIC_VECTOR (N-1 downto 0);
            output : out STD_LOGIC_VECTOR (N-1 downto 0);
-           clk : in STD_LOGIC);
+           clk : in STD_LOGIC;
+           ceclk: in STD_LOGIC;
+           input_valid: in STD_LOGIC;
+           output_valid: out STD_LOGIC);
 end component maxpool2;
 
 signal conv0_valid: STD_LOGIC:= '0';
@@ -63,6 +67,7 @@ signal z: STD_LOGIC_VECTOR(N-1 downto 0);
 signal w: STD_LOGIC_VECTOR(N-1 downto 0);
 signal ceclk: STD_LOGIC:= '0';
 signal sum_valid: STD_LOGIC:='0';
+signal pool_valid: STD_LOGIC:='0';
 begin
 sum_valid <= conv0_valid and conv1_valid;
 ceclk <= clk and sum_valid;
@@ -98,10 +103,14 @@ mp: maxpool2
         N => 24
     )
     port map(
-        clk => ceclk,
+        clk => clk,
+        ceclk => ceclk,
         input => sum,
-        output => w
+        output => w,
+        input_valid => sum_valid,
+        output_valid => pool_valid
     );
     
 y <= w when sum_valid = '1' else (others=>'0');
+y_valid <= '1' when pool_valid = '1' else '0';
 end RTL;

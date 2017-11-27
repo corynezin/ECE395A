@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="conv_2_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="conv_2_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="297250000000000fs"></ZoomStartTime>
+      <ZoomEndTime time="373750000000001fs"></ZoomEndTime>
+      <Cursor1Time time="301000000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="184"></NameColumnWidth>
+      <ValueColumnWidth column_width="107"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="32" />
+   <wvobject type="array" fp_name="/conv_2_tb/input_x">
+      <obj_property name="ElementShortName">input_x[7:0]</obj_property>
+      <obj_property name="ObjectShortName">input_x[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_2_tb/input_rst">
+      <obj_property name="ElementShortName">input_rst</obj_property>
+      <obj_property name="ObjectShortName">input_rst</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_2_tb/y_output">
+      <obj_property name="ElementShortName">y_output[23:0]</obj_property>
+      <obj_property name="ObjectShortName">y_output[23:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">19</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_2_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_2_tb/clk2">
+      <obj_property name="ElementShortName">clk2</obj_property>
+      <obj_property name="ObjectShortName">clk2</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_2_tb/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_2_tb/wren">
+      <obj_property name="ElementShortName">wren</obj_property>
+      <obj_property name="ObjectShortName">wren</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_2_tb/rden">
+      <obj_property name="ElementShortName">rden</obj_property>
+      <obj_property name="ObjectShortName">rden</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_2_tb/big_fifo_full">
+      <obj_property name="ElementShortName">big_fifo_full</obj_property>
+      <obj_property name="ObjectShortName">big_fifo_full</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider116" type="divider">
+      <obj_property name="label">conv0</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_2_tb/crp/conv0/y">
+      <obj_property name="ElementShortName">y[23:0]</obj_property>
+      <obj_property name="ObjectShortName">y[23:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">19</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider174" type="divider">
+      <obj_property name="label">conv1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">19</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_2_tb/crp/conv1/y">
+      <obj_property name="ElementShortName">y[23:0]</obj_property>
+      <obj_property name="ObjectShortName">y[23:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">19</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider194" type="divider">
+      <obj_property name="label">relu</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">19</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_2_tb/crp/r/output">
+      <obj_property name="ElementShortName">output[23:0]</obj_property>
+      <obj_property name="ObjectShortName">output[23:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">19</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider200" type="divider">
+      <obj_property name="label">maxpool</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">19</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_2_tb/crp/mp/output">
+      <obj_property name="ElementShortName">output[23:0]</obj_property>
+      <obj_property name="ObjectShortName">output[23:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">19</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider225" type="divider">
+      <obj_property name="label">objects</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_2_tb/crp/y_valid">
+      <obj_property name="ElementShortName">y_valid</obj_property>
+      <obj_property name="ObjectShortName">y_valid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_2_tb/controller/b_fifo_wren">
+      <obj_property name="ElementShortName">b_fifo_wren</obj_property>
+      <obj_property name="ObjectShortName">b_fifo_wren</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_2_tb/controller/curr_state">
+      <obj_property name="ElementShortName">curr_state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">curr_state[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider200" type="divider">
+      <obj_property name="label">Big FIFO</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_2_tb/fifo1/din">
+      <obj_property name="ElementShortName">din[7:0]</obj_property>
+      <obj_property name="ObjectShortName">din[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_2_tb/fifo1/U0/inst_fifo_gen/dout">
+      <obj_property name="ElementShortName">dout[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_2_tb/b_fifo_rden">
+      <obj_property name="ElementShortName">b_fifo_rden</obj_property>
+      <obj_property name="ObjectShortName">b_fifo_rden</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_2_tb/b_fifo_output">
+      <obj_property name="ElementShortName">b_fifo_output[7:0]</obj_property>
+      <obj_property name="ObjectShortName">b_fifo_output[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider231" type="divider">
+      <obj_property name="label">x fifo</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_2_tb/x_fifo_full">
+      <obj_property name="ElementShortName">x_fifo_full</obj_property>
+      <obj_property name="ObjectShortName">x_fifo_full</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_2_tb/x_fifo_input">
+      <obj_property name="ElementShortName">x_fifo_input[7:0]</obj_property>
+      <obj_property name="ObjectShortName">x_fifo_input[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_2_tb/x_fifo_wren">
+      <obj_property name="ElementShortName">x_fifo_wren</obj_property>
+      <obj_property name="ObjectShortName">x_fifo_wren</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_2_tb/x_fifo_rden">
+      <obj_property name="ElementShortName">x_fifo_rden</obj_property>
+      <obj_property name="ObjectShortName">x_fifo_rden</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_2_tb/x_fifo_loop">
+      <obj_property name="ElementShortName">x_fifo_loop[7:0]</obj_property>
+      <obj_property name="ObjectShortName">x_fifo_loop[7:0]</obj_property>
+   </wvobject>
+</wave_config>

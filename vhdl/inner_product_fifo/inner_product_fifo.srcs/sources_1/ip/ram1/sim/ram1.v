@@ -58,14 +58,14 @@ module ram1 (
   spo
 );
 
-input wire [9 : 0] a;
+input wire [12 : 0] a;
 output wire [7 : 0] spo;
 
   dist_mem_gen_v8_0_11 #(
     .C_FAMILY("zynq"),
-    .C_ADDR_WIDTH(10),
+    .C_ADDR_WIDTH(13),
     .C_DEFAULT_DATA("0"),
-    .C_DEPTH(1024),
+    .C_DEPTH(7680),
     .C_HAS_CLK(0),
     .C_HAS_D(0),
     .C_HAS_DPO(0),
@@ -97,7 +97,7 @@ output wire [7 : 0] spo;
   ) inst (
     .a(a),
     .d(8'B0),
-    .dpra(10'B0),
+    .dpra(13'B0),
     .clk(1'D0),
     .we(1'D0),
     .i_ce(1'D1),

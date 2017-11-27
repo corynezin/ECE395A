@@ -29,39 +29,31 @@ component dot is
     );
 end component dot;
 
-component fifo is
-  Port ( 
-    clk : in STD_LOGIC;
-    rst : in STD_LOGIC;
-    din : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    dout : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    wr_en : in STD_LOGIC;
-    rd_en : in STD_LOGIC;
-    full: out STD_LOGIC;
-    empty: out STD_LOGIC;
-    wr_ack: out STD_LOGIC
-  );
-
-end component fifo;
+component fifo_7680 is
+    Port ( 
+        clk : in STD_LOGIC;
+        rst : in STD_LOGIC;
+        din : in STD_LOGIC_VECTOR ( 7 downto 0 );
+        wr_en : in STD_LOGIC;
+        rd_en : in STD_LOGIC;
+        dout : out STD_LOGIC_VECTOR ( 7 downto 0 );
+        full : out STD_LOGIC;
+        empty : out STD_LOGIC;
+        prog_full : out STD_LOGIC
+    );
+end component fifo_7680;
 
 component ram1 is
   Port ( 
-    a : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    a : in STD_LOGIC_VECTOR ( 12 downto 0 );
     spo : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
 end component ram1;
 
-component ram2 is
-  Port ( 
-    a : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    spo : out STD_LOGIC_VECTOR ( 7 downto 0 )
-  );
-end component ram2;
-
 signal clk: STD_LOGIC := '0';
 signal out1,out2: STD_LOGIC_VECTOR (7 downto 0);
 signal ram1out,ram2out: STD_LOGIC_VECTOR (7 downto 0);
-signal ramindex: STD_LOGIC_VECTOR (9 downto 0);
+signal ramindex: STD_LOGIC_VECTOR (12 downto 0);
 signal wren: STD_LOGIC := '0';
 signal rden: STD_LOGIC := '0';
 signal rst: STD_LOGIC := '1';
@@ -78,12 +70,8 @@ ramcomp1: ram1
         a => ramindex,
         spo => ram1out
     );
-ramcomp2: ram2
-    port map(
-        a => ramindex,
-        spo => ram2out
-    );
-fifo1: fifo
+
+fifo1: fifo_7680
     port map(
         clk => clk,
         rst => rst,
@@ -91,32 +79,8 @@ fifo1: fifo
         dout => out1,
         wr_en => wren,
         rd_en => rden,
-        full => full1,
-        empty => empty1,
-        wr_ack => wrack1
-    );
-fifo2: fifo
-    port map(
-        clk => clk,
-        rst => rst,
-        din => ram2out,
-        dout => out2,
-        wr_en => wren,
-        rd_en => rden,
-        full => full2,
-        empty => empty2,
-        wr_ack => wrack2
-    );
-dot0: dot
-    port map(
-        x => out1,
-        y => out2,
-        T => "0000001000",
-        sclr => '0',
-        clk => clk,
-        ce => mult_enable,
-        zout => innerprod,
-        valid => valid
+        prog_full => full1,
+        empty => empty1
     );
     
 --Simulated Clock and Counter
@@ -137,11 +101,11 @@ begin
     end if;
     -- If initializing, load ram into fifo
     if init = 1 and i >= 12 and clk = '1' then
-        ramindex <= std_logic_vector(to_unsigned(i-12,10));
+        ramindex <= std_logic_vector(to_unsigned(i-12,13));
     end if;
     -- Increment counter
     if clk = '1' then
-        i := (i + 1) mod 1037;
+        i := (i + 1) mod (7680 + 13);
     end if;
     -- If done loading, stop loading
     if i = 0 then

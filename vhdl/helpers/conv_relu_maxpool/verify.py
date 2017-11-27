@@ -23,7 +23,7 @@ for line_num,line in enumerate(f):
         binary = "{0:b}".format(v).zfill(8)
         val = bin2fix(binary,1,True)
         x[i] = val
-    if line_num == 3:
+    if line_num == 2:
         print(x)
         print(h)
         print(np.convolve(x,h))

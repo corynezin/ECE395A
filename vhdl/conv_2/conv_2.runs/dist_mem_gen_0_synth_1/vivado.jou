@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Sat Nov 25 21:34:45 2017
+# Process ID: 5499
+# Current directory: /home/nezin/Documents/ECE395A/vhdl/conv_2/conv_2.runs/dist_mem_gen_0_synth_1
+# Command line: vivado -log dist_mem_gen_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source dist_mem_gen_0.tcl
+# Log file: /home/nezin/Documents/ECE395A/vhdl/conv_2/conv_2.runs/dist_mem_gen_0_synth_1/dist_mem_gen_0.vds
+# Journal file: /home/nezin/Documents/ECE395A/vhdl/conv_2/conv_2.runs/dist_mem_gen_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source dist_mem_gen_0.tcl -notrace

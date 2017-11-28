@@ -3,8 +3,8 @@
 Jun 15 2017
 18:41:53
 /home/nezin/Documents/ECE395A/vhdl/conv/conv.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0_sim_netlist.vhdl,1510858125,vhdl,,,,fifo_generator_0;fifo_generator_0_blk_mem_gen_generic_cstr;fifo_generator_0_blk_mem_gen_prim_width;fifo_generator_0_blk_mem_gen_prim_wrapper;fifo_generator_0_blk_mem_gen_top;fifo_generator_0_blk_mem_gen_v8_3_6;fifo_generator_0_blk_mem_gen_v8_3_6_synth;fifo_generator_0_dc_ss;fifo_generator_0_fifo_generator_ramfifo;fifo_generator_0_fifo_generator_top;fifo_generator_0_fifo_generator_v13_1_4;fifo_generator_0_fifo_generator_v13_1_4_synth;fifo_generator_0_memory;fifo_generator_0_rd_bin_cntr;fifo_generator_0_rd_logic;fifo_generator_0_rd_status_flags_ss;fifo_generator_0_updn_cntr;fifo_generator_0_wr_bin_cntr;fifo_generator_0_wr_logic;fifo_generator_0_wr_pf_ss;fifo_generator_0_wr_status_flags_ss,,,,,,,,
-/home/nezin/Documents/ECE395A/vhdl/conv_2/conv_2.srcs/sim_1/new/conv_2_tb.vhd,1511804784,vhdl,,,,conv_2_tb,,,,,,,,
-/home/nezin/Documents/ECE395A/vhdl/conv_2/conv_2.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0_sim_netlist.vhdl,1511804784,vhdl,,,,dist_mem_gen_0;dist_mem_gen_0_dist_mem_gen_v8_0_11,,,,,,,,
+/home/nezin/Documents/ECE395A/vhdl/conv_2/conv_2.srcs/sim_1/new/conv_2_tb.vhd,1511903465,vhdl,,,,conv_2_tb,,,,,,,,
+/home/nezin/Documents/ECE395A/vhdl/conv_2/conv_2.srcs/sources_1/ip/dist_mem_gen_2/dist_mem_gen_2_sim_netlist.vhdl,1511901938,vhdl,,,,dist_mem_gen_2;dist_mem_gen_2_dist_mem_gen_v8_0_11;dist_mem_gen_2_dist_mem_gen_v8_0_11_synth;dist_mem_gen_2_rom,,,,,,,,
 /home/nezin/Documents/ECE395A/vhdl/conv_2/conv_2.srcs/sources_1/ip/fifo_16/fifo_16_sim_netlist.vhdl,1511804784,vhdl,,,,fifo_16;fifo_16_blk_mem_gen_generic_cstr;fifo_16_blk_mem_gen_prim_width;fifo_16_blk_mem_gen_prim_wrapper;fifo_16_blk_mem_gen_top;fifo_16_blk_mem_gen_v8_3_6;fifo_16_blk_mem_gen_v8_3_6_synth;fifo_16_fifo_generator_ramfifo;fifo_16_fifo_generator_top;fifo_16_fifo_generator_v13_1_4;fifo_16_fifo_generator_v13_1_4_synth;fifo_16_memory;fifo_16_rd_bin_cntr;fifo_16_rd_logic;fifo_16_rd_status_flags_ss;fifo_16_wr_bin_cntr;fifo_16_wr_logic;fifo_16_wr_status_flags_ss,,,,,,,,
 /home/nezin/Documents/ECE395A/vhdl/conv_2/conv_2.srcs/sources_1/ip/fifo_7680/fifo_7680_sim_netlist.vhdl,1511804784,vhdl,,,,fifo_7680;fifo_7680_builtin_extdepth_v6;fifo_7680_builtin_extdepth_v6_0;fifo_7680_builtin_prim_v6;fifo_7680_builtin_prim_v6_1;fifo_7680_builtin_top_v6;fifo_7680_fifo_generator_top;fifo_7680_fifo_generator_v13_1_4;fifo_7680_fifo_generator_v13_1_4_builtin;fifo_7680_fifo_generator_v13_1_4_synth;fifo_7680_reset_builtin,,,,,,,,
 /home/nezin/Documents/ECE395A/vhdl/conv_relu_pool/conv_relu_pool.srcs/sources_1/ip/fir128_0/demo_tb/tb_fir128_0.vhd,1511027711,vhdl,,,,tb_fir128_0,,,,,,,,
@@ -15,7 +15,7 @@ Jun 15 2017
 /home/nezin/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.srcs/sources_1/ip/ram1/ram1_sim_netlist.vhdl,1511804785,vhdl,,,,ram1;ram1_dist_mem_gen_v8_0_11,,,,,,,,
 /home/nezin/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.srcs/sources_1/ip/xbip_multadd_0/sim/xbip_multadd_0.vhd,1510858125,vhdl,,,,xbip_multadd_0,,,,,,,,
 /home/nezin/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.srcs/sources_1/new/dot_tb.vhd,1511804785,vhdl,,,,dot_tb,,,,,,,,
-/home/nezin/Documents/ECE395A/vhdl/source/conv2_controller.vhd,1511804785,vhdl,,,,conv2_controller,,,,,,,,
+/home/nezin/Documents/ECE395A/vhdl/source/conv2_controller.vhd,1511911860,vhdl,,,,conv2_controller,,,,,,,,
 /home/nezin/Documents/ECE395A/vhdl/source/conv_0.vhd,1511804785,vhdl,,,,conv_0,,,,,,,,
 /home/nezin/Documents/ECE395A/vhdl/source/conv_1.vhd,1511804785,vhdl,,,,conv_1,,,,,,,,
 /home/nezin/Documents/ECE395A/vhdl/source/conv_layer_0.vhd,1511804785,vhdl,,,,conv_layer_0,,,,,,,,

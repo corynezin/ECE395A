@@ -55,12 +55,13 @@ component fifo_16 is
   );
 end component fifo_16;
 -------------------------- Filter Memory Declaration --------------------------
-component dist_mem_gen_0 is
-  Port ( 
-    a : in STD_LOGIC_VECTOR ( 10 downto 0 );  -- Memory address
-    spo : out STD_LOGIC_VECTOR ( 7 downto 0 ) -- Data
-  );
-end component dist_mem_gen_0;
+component dist_mem_gen_2 is
+    Port ( 
+        a : in STD_LOGIC_VECTOR ( 10 downto 0 );
+        clk : in STD_LOGIC;
+        qspo : out STD_LOGIC_VECTOR ( 7 downto 0 )
+    );
+end component dist_mem_gen_2;
 -------------------------- Controller Declaration --------------------------
 component conv2_controller is
   Port ( 
@@ -85,7 +86,9 @@ component conv2_controller is
     o_fifo_rden: OUT STD_LOGIC;
     o_fifo_wren: OUT STD_LOGIC;
     b_fifo_rden: OUT STD_LOGIC;
-    b_fifo_wren: OUT STD_LOGIC
+    b_fifo_wren: OUT STD_LOGIC;
+    
+    ram_address: OUT STD_LOGIC_VECTOR(10 downto 0)
   );
 end component conv2_controller;
 -------------------------- Mux Declaration --------------------------
@@ -114,6 +117,8 @@ signal x_mux_addr, h_mux_addr, o_mux_addr: STD_LOGIC:= '0';
 signal x_fifo_wren, h_fifo_wren, o_fifo_wren, b_fifo_wren: STD_LOGIC:= '0';
 signal x_fifo_rden, h_fifo_rden, o_fifo_rden, b_fifo_rden: STD_LOGIC:= '0';
 signal y_valid : STD_LOGIC := '0';
+signal filter_rom_output: STD_LOGIC_VECTOR (7 downto 0);
+signal filter_rom_address: STD_LOGIC_VECTOR( 10 downto 0);
 
 signal x_fifo_full, h_fifo_full: STD_LOGIC:= '0';
 -------------------------- Conv Relu Pool instantiation --------------------------
@@ -148,6 +153,16 @@ x_fifo: fifo_16
       dout => x_fifo_loop,
       full => x_fifo_full);
       
+h_fifo: fifo_16
+    port map ( 
+        clk => clk2,
+        srst => rst,
+        din => h_fifo_input,
+        wr_en => h_fifo_wren,
+        rd_en => h_fifo_rden,
+        dout => h_fifo_loop,
+        full => h_fifo_full);
+-------------------------- Controller instantiation --------------------------
 controller: conv2_controller
   port map( 
   -- input 
@@ -170,7 +185,9 @@ controller: conv2_controller
   o_fifo_rden => o_fifo_rden,
   o_fifo_wren => o_fifo_wren,
   b_fifo_rden => b_fifo_rden,
-  b_fifo_wren => b_fifo_wren
+  b_fifo_wren => b_fifo_wren,
+  
+  ram_address => filter_rom_address
 );
 -------------------------- Mux instantiations --------------------------
 x_mux: mux2_1_8
@@ -182,15 +199,21 @@ x_mux: mux2_1_8
         
 h_mux: mux2_1_8
     port map ( 
-        x_0 => h_fifo_output,
+        x_0 => filter_rom_output,
         x_1 => h_fifo_loop, 
-        y => x_fifo_input,
-        addr => x_mux_addr);
+        y => h_fifo_input,
+        addr => h_mux_addr);
 -- Misc.     
 input_rst <= '0';
-y_trunc <= y_output(19 downto 12); -- Truncate to 8 bits - 4 integer, 4 fractional
+y_trunc <= y_output(19 downto 12); -- TODO: determine optimal cutoff.
 wren <= b_fifo_wren and y_valid;    -- only write if the output is valid and if the state machine allows it
 rden <= b_fifo_rden;
+-------------------------- ROM Instantiation --------------------------
+filter_rom: dist_mem_gen_2     
+    port map ( 
+        a => filter_rom_address,
+        clk => clk2,
+        qspo => filter_rom_output );
 -------------------------- Input generation --------------------------
 process
 variable i : INTEGER := 3;

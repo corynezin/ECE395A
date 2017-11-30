@@ -1,6 +1,11 @@
 \documentclass[12pt]{article}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{caption}
+\usepackage{setspace}
 \renewcommand{\baselinestretch}{1.5}
 \usepackage[margin=1.0in]{geometry}
 \usepackage{float}
@@ -8,12 +13,15 @@
 \graphicspath{{images/}}
 \bibliographystyle{IEEEtran}
 
+\def\code#1{\texttt{#1}}
+
 \begin{document}
-\title{MAIA: Modulation Classification with Artificial Intellgence Automata}
+\title{MAIA: Modulation Classification with Artificial Intellgence Automata \\ Progress Report I}
 \author{Cory Nezin}
 \maketitle
-%\input{Abstract}
-%\input{Literature-Search}
-
+\input{Abstract}
+\input{Introduction}
+\input{Hardware}
+\input{Conclusion}
 %\bibliography{mybib}{}
 \end{document}

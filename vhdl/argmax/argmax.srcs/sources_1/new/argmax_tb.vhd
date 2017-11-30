@@ -12,14 +12,14 @@ entity argmax_tb is
 end argmax_tb;
 
 architecture Behavioral of argmax_tb is
-signal ans: STD_LOGIC_VECTOR(1 downto 0);
-signal inp: VECTOR := ("00000001","01110010","01100000");
+signal ans: STD_LOGIC_VECTOR(3 downto 0);
+signal inp: VECTOR := ("00000001","01110010","01100000","11100000","01100100","00001001","01110010","11100010","01101010","01100011");
 signal clk: STD_LOGIC := '0';
 
 component argmax is
   Port (
     logits: in vector;
-    biggest: out STD_LOGIC_VECTOR(1 downto 0);
+    biggest: out STD_LOGIC_VECTOR(3 downto 0);
     clk: in STD_LOGIC
   );
 end component argmax;
@@ -37,4 +37,9 @@ process begin
     clk <= not clk;
 end process;
 
+process (clk) begin
+    if falling_edge(clk) then
+        inp <= ("10000001","11110010","11100000","01100000","11100100","10001001","11110010","01100010","11101010","11100011");
+    end if;
+end process;
 end Behavioral;

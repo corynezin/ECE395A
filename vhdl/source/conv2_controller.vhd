@@ -16,7 +16,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
+use IEEE.NUMERIC_STD.ALL;
 
 entity conv2_controller is
   Port ( 
@@ -41,18 +41,23 @@ entity conv2_controller is
     o_fifo_rden: OUT STD_LOGIC;
     o_fifo_wren: OUT STD_LOGIC;
     b_fifo_rden: OUT STD_LOGIC;
-    b_fifo_wren: OUT STD_LOGIC
+    b_fifo_wren: OUT STD_LOGIC;
+    
+    ram_address: OUT STD_LOGIC_VECTOR(10 downto 0)
   );
 end conv2_controller;
 
 architecture RTL of conv2_controller is
 signal curr_state : STD_LOGIC_VECTOR(3 downto 0) := "0000";
+signal curr_state_d1,curr_state_d2 : STD_LOGIC_VECTOR(3 downto 0) := "0000";
 begin
 process(clk) 
-variable w_counter : INTEGER := 0;  -- counter to see when to change weights (h)
-variable wc_counter : INTEGER := 0; -- counter to change weights
+variable w_counter : INTEGER := 0;  -- counter to see when to change weights (h) (start changing
+variable wc_counter : INTEGER := 0; -- counter to change weights (stop changing)
 variable d_counter : INTEGER := 0;  -- counter for data (x)
 variable o_counter : INTEGER := 0;  -- counter to see whether we finish changing all the weights
+variable ram_counter: INTEGER := 0;
+variable load_counter: INTEGER := 0;
 begin
     if rising_edge(clk) then
         if (rst = '1') then
@@ -75,12 +80,20 @@ begin
                 b_fifo_wren <= '1'; -- since fifo is not full, we keep on writing to FIFO
                 -- if the previous fifo is full, then we should go to initialize state
                 if last_fifo_full = '1' then
-                    curr_state <= "0001";
+                    curr_state_d1 <= "0001";
+                    curr_state <= curr_state_d1;
                 end if;
+                w_counter := 0;
+                d_counter := 0;
+                o_counter := 0;
+                wc_counter := 0;
+                ram_counter := 0;
+                ram_address <= "00000000000";
             when "0001" =>
                 -- case 1 : INIT state, the MAC and output FIFO should not be changed
                 -- but we can start filling up the x_fifo and h_fifo, the MAC and output FIFO
                 -- should still be disabled
+                ram_address <= std_logic_vector(to_unsigned(ram_counter,11));
                 x_mux <= '0';
                 h_mux <= '0';
                 o_mux <= '0';
@@ -98,6 +111,7 @@ begin
                 d_counter := 0;
                 o_counter := 0;
                 wc_counter := 0;
+                ram_counter := ram_counter + 1;
                 if (x_fifo_full = '1' and h_fifo_full = '1') then
                     curr_state <= "0010";
                 end if;
@@ -113,7 +127,7 @@ begin
                 h_fifo_wren <= '1';
                 o_fifo_rden <= '0';
                 o_fifo_wren <= '0'; 
-                b_fifo_rden <= '0';
+                b_fifo_rden <= '1';
                 b_fifo_wren <= '0';
                 w_counter := w_counter + 1; -- increment the weight counter by 1 
                 d_counter := 1;
@@ -136,6 +150,7 @@ begin
                 if (d_counter = 16) then
                     curr_state <= "0100";
                 end if;
+
             when "0100" =>
                 -- state 4 : OUTPUT WRITE State. In this State, the output of the MAC is written to o_fifo. 
                 --           the value of o_mux will depend on whether w_counter is 1 or not
@@ -164,27 +179,6 @@ begin
                 else 
                     -- no need to change weights, go back to state 2
                     curr_state <= "0010";
-                end if;
-            when "0101" =>
-                -- state 5 : CHANGE WEIGHT State. In this state, remove all elements in h_fifo
-                --           and replace with a new set of values, disable MAC at this stage
-                h_mux <= '0';   -- read from RAM
-                x_fifo_rden <= '0';
-                x_fifo_wren <= '0';
-                h_fifo_rden <= '1';
-                h_fifo_wren <= '1';
-                b_fifo_rden <= '0';
-                b_fifo_wren <= '0';
-                w_counter := 0; -- increment the weight counter by 1 
-                wc_counter := wc_counter + 1;
-                if (wc_counter = 16) then
-                    wc_counter := 0;            -- reset wc_counter
-                    o_counter := o_counter + 1; -- increment overall counter by 1
-                    if (o_counter = 128) then
-                        curr_state <= "0000";   -- finish going through all counters, go to IDLE Stage again
-                    else
-                        curr_state <= "0010";   -- go back to DROP READ Stage
-                    end if;
                 end if;
             when others =>
                 -- if we ever get to an invalid state, go back to IDLE state

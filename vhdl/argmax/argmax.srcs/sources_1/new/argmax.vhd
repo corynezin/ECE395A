@@ -10,7 +10,7 @@ use WORK.VECTOR.ALL;
 entity argmax is
   Port (
     logits: in vector;
-    biggest: out STD_LOGIC_VECTOR(1 downto 0);
+    biggest: out STD_LOGIC_VECTOR(3 downto 0);
     clk: in STD_LOGIC 
   );
 end argmax;
@@ -22,16 +22,12 @@ process(clk)
 variable max: integer := -256;
 variable ind: integer := 0;
 begin
-    for i in 0 to 1 loop
-        if logits(i) > logits(i+1) then
+    for i in 1 to 9 loop
+        if logits(i) > logits(ind) then
             ind := i;
-            max := to_integer(logits(i));
-        else
-            ind := i+1;
-            max := to_integer(logits(i+1));
         end if;  
     end loop;
-    biggest <= std_logic_vector(to_unsigned(ind,2));
+    biggest <= std_logic_vector(to_unsigned(ind,4));
 end process;
 
 end RTL;

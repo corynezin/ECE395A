@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Sat Oct 21 17:40:06 2017
+# Generated: Tue Nov 28 13:19:15 2017
 ##################################################
 
 if __name__ == '__main__':
@@ -25,6 +25,7 @@ from gnuradio import eng_notation
 from gnuradio import filter
 from gnuradio import gr
 from gnuradio import qtgui
+from gnuradio import uhd
 from gnuradio.eng_option import eng_option
 from gnuradio.filter import firdes
 from gnuradio.qtgui import Range, RangeWidget
@@ -33,6 +34,7 @@ from optparse import OptionParser
 import numpy
 import sip
 import sys
+import time
 
 
 class top_block(gr.top_block, Qt.QWidget):
@@ -99,6 +101,16 @@ class top_block(gr.top_block, Qt.QWidget):
         self._a_src_freq_range = Range(44100, 200e3, 10, 200e3, 200)
         self._a_src_freq_win = RangeWidget(self._a_src_freq_range, self.set_a_src_freq, "Analog Source Frequency", "counter_slider", float)
         self.top_layout.addWidget(self._a_src_freq_win)
+        self.uhd_usrp_sink_0 = uhd.usrp_sink(
+        	",".join(("", "")),
+        	uhd.stream_args(
+        		cpu_format="fc32",
+        		channels=range(1),
+        	),
+        )
+        self.uhd_usrp_sink_0.set_samp_rate(samp_rate)
+        self.uhd_usrp_sink_0.set_center_freq(0, 0)
+        self.uhd_usrp_sink_0.set_gain(0, 0)
         self.sig_source_0 = analog.sig_source_f(samp_rate, analog.GR_TRI_WAVE, 44100, 1, 0)
         self.qtgui_time_sink_x_0 = qtgui.time_sink_c(
         	2048, #size
@@ -367,6 +379,7 @@ class top_block(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_throttle_0, 0), (self.qtgui_const_sink_x_0, 0))    
         self.connect((self.blocks_throttle_0, 0), (self.qtgui_freq_sink_x_0, 0))    
         self.connect((self.blocks_throttle_0, 0), (self.qtgui_time_sink_x_0, 0))    
+        self.connect((self.blocks_throttle_0, 0), (self.uhd_usrp_sink_0, 0))    
         self.connect((self.digital_constellation_modulator_0, 0), (self.blks2_selector_0, 5))    
         self.connect((self.digital_gfsk_mod_0, 0), (self.blks2_selector_0, 6))    
         self.connect((self.digital_psk_mod_0, 0), (self.blocks_multiply_const_vxx_0, 0))    
@@ -393,10 +406,11 @@ class top_block(gr.top_block, Qt.QWidget):
         self.samp_rate = samp_rate
         self.analog_sig_source_x_0.set_sampling_freq(self.samp_rate)
         self.analog_sig_source_x_0_0.set_sampling_freq(self.samp_rate)
-        self.blocks_throttle_0.set_sample_rate(self.samp_rate)
         self.qtgui_freq_sink_x_0.set_frequency_range(0, self.samp_rate)
-        self.qtgui_time_sink_x_0.set_samp_rate(self.samp_rate)
         self.sig_source_0.set_sampling_freq(self.samp_rate)
+        self.qtgui_time_sink_x_0.set_samp_rate(self.samp_rate)
+        self.blocks_throttle_0.set_sample_rate(self.samp_rate)
+        self.uhd_usrp_sink_0.set_samp_rate(self.samp_rate)
 
     def get_pam4_constellation(self):
         return self.pam4_constellation
@@ -424,8 +438,8 @@ class top_block(gr.top_block, Qt.QWidget):
 
     def set_mod_select(self, mod_select):
         self.mod_select = mod_select
-        self.blks2_selector_0.set_input_index(int(self.mod_select))
         self._mod_select_callback(self.mod_select)
+        self.blks2_selector_0.set_input_index(int(self.mod_select))
 
     def get_ebw_range(self):
         return self.ebw_range

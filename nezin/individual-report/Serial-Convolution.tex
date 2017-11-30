@@ -1,0 +1,27 @@
+\subsection{Serial Convolution}
+Systolic convolution is extremely speed efficient, and relatively simple to implement since IP cores are available directly from Xilinx.  However it is also relatively space inefficient, requiring one DSP slice per tap.  In our original design, we had a misconception regarding the filtering operation in the second stage of the convolution, we beleived that it required 64 16-tap filters.  However, we recently discovered that the nueral net was actually performing essentially a 2D convolution, and we need 128 2D filters consisting of $64\times 16$ kernels.  One could also think of this as $128\times 64$ 16-tap filters.  This would require 8192 16-tap filters.  The FIR filter IP core only allows switching of up to 256 coefficient sets, which means we would have to use 512 DSP slices to accomplish this convolution in a systolic way, significantly more resources than we have.  Therefore we designed the second convolution layer directly with multiply accumulates, similar to the matrix multiplication method already discussed.
+The 2D convolution algorithm specific to our case is given in algorithm \ref{alg:conv}, note that $X$ is the output of the previous stage.\\
+
+
+\begin{spacing}{1.0}
+\begin{algorithm}
+\begin{algorithmic}[1]
+    \caption{2D Convolution}
+    \For{$i < 128$} \
+        \For{$j < 45$}
+            \State{ $s \gets 0$ }
+            \State{ $x \gets X[i,j:j+16]$ }
+            \For{$k < 16$}
+                \State{$ s \gets s + x[k] \times h[15-k]$}
+            \EndFor
+            \State{$output[i,j] \gets output[i,j] + s$}
+        \EndFor
+    \EndFor
+\end{algorithmic}
+\end{algorithm}
+\label{alg:conv}
+\end{spacing}
+
+Although this is quite abstract and not necessarily easy to map to hardware, we can see that only one multiply accumulator, and therefore one DSP slice is required to perform this operation.  However, it also involves a possibly complex memory access pattern for reading and writing.  To simplify the design, we plan on using circular queues for both reading and writing.  Note that the position that an output is written to is periodic.  If we think of each row in the output matrix as a circular queue, we can simply accumulate s, add it the location in that queue, increment $j$ and shift the queue over one, ready to receive the next `piece' of the output.  The input, $X$ obeys a similar pattern.  Once the first row of samples in $X$ is used, it is never needed again, so we may think of it as a regular queue rather than a circular one.
+
+Note also that line 6, which composes the vast majority of computation is a multiply accumulate operation for vectors of length 16, which represent the signal and the impulse reponse.  Here we can use the inner product component which was already designed for matrix multiplication, since it was designed to accomodate arbitrary vector lengths.  The queue controller has already been designed and is currently being implemented and verified.

@@ -2,11 +2,11 @@
 # Webtalk v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Fri Oct 27 22:11:40 2017
-# Process ID: 9427
-# Current directory: /home/bcv/Documents/ECE395A/vhdl/argmax/argmax.sim/sim_1/behav
-# Command line: wbtcv -mode batch -source /home/bcv/Documents/ECE395A/vhdl/argmax/argmax.sim/sim_1/behav/xsim.dir/argmax_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-# Log file: /home/bcv/Documents/ECE395A/vhdl/argmax/argmax.sim/sim_1/behav/webtalk.log
-# Journal file: /home/bcv/Documents/ECE395A/vhdl/argmax/argmax.sim/sim_1/behav/webtalk.jou
+# Start of session at: Mon Nov 27 23:33:44 2017
+# Process ID: 26947
+# Current directory: /home/nezin/Documents/ECE395A/vhdl/argmax/argmax.sim/sim_1/behav
+# Command line: wbtcv -mode batch -source /home/nezin/Documents/ECE395A/vhdl/argmax/argmax.sim/sim_1/behav/xsim.dir/argmax_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/nezin/Documents/ECE395A/vhdl/argmax/argmax.sim/sim_1/behav/webtalk.log
+# Journal file: /home/nezin/Documents/ECE395A/vhdl/argmax/argmax.sim/sim_1/behav/webtalk.jou
 #-----------------------------------------------------------
-source /home/bcv/Documents/ECE395A/vhdl/argmax/argmax.sim/sim_1/behav/xsim.dir/argmax_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+source /home/nezin/Documents/ECE395A/vhdl/argmax/argmax.sim/sim_1/behav/xsim.dir/argmax_tb_behav/webtalk/xsim_webtalk.tcl -notrace

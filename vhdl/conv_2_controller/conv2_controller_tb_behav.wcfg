@@ -10,18 +10,28 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="142875000000000fs"></ZoomStartTime>
-      <ZoomEndTime time="174225000000001fs"></ZoomEndTime>
-      <Cursor1Time time="169000000000000fs"></Cursor1Time>
+      <ZoomStartTime time="1897475000000000fs"></ZoomStartTime>
+      <ZoomEndTime time="1930625000000001fs"></ZoomEndTime>
+      <Cursor1Time time="1918125000000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="184"></NameColumnWidth>
-      <ValueColumnWidth column_width="67"></ValueColumnWidth>
+      <NameColumnWidth column_width="149"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="56" />
+   <WVObjectSize size="64" />
+   <wave_markers>
+      <marker label="" time="1877000000000000" />
+      <marker label="" time="1883000000000000" />
+      <marker label="" time="1919000000100000" />
+      <marker label="" time="1913000000000000" />
+   </wave_markers>
    <wvobject type="array" fp_name="/conv2_controller_tb/state">
       <obj_property name="ElementShortName">state[3:0]</obj_property>
       <obj_property name="ObjectShortName">state[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv2_controller_tb/controller/prev_state">
+      <obj_property name="ElementShortName">prev_state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">prev_state[3:0]</obj_property>
    </wvobject>
    <wvobject fp_name="divider355" type="divider">
       <obj_property name="label">x_fifo</obj_property>
@@ -63,6 +73,39 @@
       <obj_property name="label">h_fifo</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
+   <wvobject type="array" fp_name="/conv2_controller_tb/filter_rom_address">
+      <obj_property name="ElementShortName">filter_rom_address[10:0]</obj_property>
+      <obj_property name="ObjectShortName">filter_rom_address[10:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv2_controller_tb/h_fifo_wren">
+      <obj_property name="ElementShortName">h_fifo_wren</obj_property>
+      <obj_property name="ObjectShortName">h_fifo_wren</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv2_controller_tb/h_fifo_rden">
+      <obj_property name="ElementShortName">h_fifo_rden</obj_property>
+      <obj_property name="ObjectShortName">h_fifo_rden</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv2_controller_tb/h_fifo_full">
+      <obj_property name="ElementShortName">h_fifo_full</obj_property>
+      <obj_property name="ObjectShortName">h_fifo_full</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv2_controller_tb/h_fifo_empty">
+      <obj_property name="ElementShortName">h_fifo_empty</obj_property>
+      <obj_property name="ObjectShortName">h_fifo_empty</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv2_controller_tb/h_fifo_prog_full">
+      <obj_property name="ElementShortName">h_fifo_prog_full</obj_property>
+      <obj_property name="ObjectShortName">h_fifo_prog_full</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv2_controller_tb/h_fifo_input">
+      <obj_property name="ElementShortName">h_fifo_input[7:0]</obj_property>
+      <obj_property name="ObjectShortName">h_fifo_input[7:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv2_controller_tb/h_fifo_output">
+      <obj_property name="ElementShortName">h_fifo_output[7:0]</obj_property>
+      <obj_property name="ObjectShortName">h_fifo_output[7:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="divider357" type="divider">
       <obj_property name="label">b_fifo</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -94,10 +137,6 @@
    <wvobject fp_name="divider358" type="divider">
       <obj_property name="label">ROM</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/conv2_controller_tb/filter_rom_address">
-      <obj_property name="ElementShortName">filter_rom_address[10:0]</obj_property>
-      <obj_property name="ObjectShortName">filter_rom_address[10:0]</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/conv2_controller_tb/clk">
       <obj_property name="ElementShortName">clk</obj_property>

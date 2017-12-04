@@ -77,7 +77,7 @@ component mux2_1_8 is
         y : OUT STD_LOGIC_VECTOR(7 downto 0);  -- Chosen
         addr : IN STD_LOGIC);                  -- 0 -> x_0, 1 -> x_1
 end component mux2_1_8;
-COMPONENT dist_mem_gen_2
+COMPONENT filter_rom
     PORT (
         a : IN STD_LOGIC_VECTOR(10 DOWNTO 0);
         clk : IN STD_LOGIC;
@@ -180,7 +180,7 @@ controller: conv2_controller
   ram_address => filter_rom_address,
   state => state
 );
-filter_rom : dist_mem_gen_2
+filter_rom_0 : filter_rom
   PORT MAP (
     a => filter_rom_address,
     clk => clk,

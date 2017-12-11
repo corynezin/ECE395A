@@ -1,0 +1,279 @@
+AA,
+
+B7,
+
+AF,
+
+8A,
+
+60,
+
+BE,
+
+81,
+
+B9,
+
+FE,
+
+A9,
+
+D4,
+
+44,
+
+92,
+
+E5,
+
+CD,
+
+22,
+
+4C,
+
+49,
+
+40,
+
+E0,
+
+0D,
+
+BD,
+
+77,
+
+95,
+
+EF,
+
+DE,
+
+AD,
+
+BE,
+
+EF,
+
+F2,
+
+FF,
+
+53,
+
+B1,
+
+B6,
+
+33,
+
+DC,
+
+CE,
+
+94,
+
+30,
+
+EC,
+
+D7,
+
+16,
+
+15,
+
+CD,
+
+95,
+
+AB,
+
+4F,
+
+D4,
+
+iternum: 0, n: 0, i: 0, y: 8610
+iternum: 1, n: 0, i: 1, y: -13069
+iternum: 2, n: 0, i: 2, y: -28505
+iternum: 3, n: 0, i: 3, y: -1981
+iternum: 4, n: 0, i: 4, y: 9037
+iternum: 5, n: 0, i: 5, y: 8478
+iternum: 6, n: 0, i: 6, y: -9022
+iternum: 7, n: 0, i: 7, y: 2641
+iternum: 8, n: 0, i: 8, y: -51437
+iternum: 9, n: 0, i: 9, y: 23105
+iternum: 10, n: 0, i: 10, y: 32642
+iternum: 11, n: 0, i: 11, y: 11226
+iternum: 12, n: 0, i: 12, y: -26129
+iternum: 13, n: 0, i: 13, y: 12467
+iternum: 14, n: 0, i: 14, y: 6360
+iternum: 15, n: 0, i: 15, y: -29588
+iternum: 16, n: 0, i: 16, y: 28234
+iternum: 17, n: 0, i: 17, y: -2425
+iternum: 18, n: 0, i: 18, y: 5546
+iternum: 19, n: 0, i: 19, y: -14685
+iternum: 20, n: 0, i: 20, y: -3473
+iternum: 21, n: 0, i: 21, y: 17882
+iternum: 22, n: 0, i: 22, y: 16539
+iternum: 23, n: 0, i: 23, y: -13668
+iternum: 24, n: 0, i: 24, y: 4526
+iternum: 25, n: 0, i: 25, y: 31019
+iternum: 26, n: 0, i: 26, y: -49424
+iternum: 27, n: 0, i: 27, y: -24100
+iternum: 28, n: 0, i: 28, y: 28422
+iternum: 29, n: 0, i: 29, y: -3629
+iternum: 30, n: 0, i: 30, y: -40010
+iternum: 31, n: 0, i: 31, y: 46449
+iternum: 32, n: 0, i: 32, y: 4274
+iternum: 33, n: 0, i: 33, y: -43720
+iternum: 34, n: 0, i: 34, y: 18291
+iternum: 35, n: 0, i: 35, y: 15030
+iternum: 36, n: 0, i: 36, y: -1147
+iternum: 37, n: 0, i: 37, y: -21216
+iternum: 38, n: 0, i: 38, y: 25619
+iternum: 39, n: 0, i: 39, y: -960
+iternum: 40, n: 0, i: 40, y: -3234
+iternum: 41, n: 0, i: 41, y: -18769
+iternum: 42, n: 0, i: 42, y: 40683
+iternum: 43, n: 0, i: 43, y: -3071
+iternum: 44, n: 0, i: 44, y: -5600
+iternum: 45, n: 1, i: 60, y: -4117
+iternum: 46, n: 1, i: 61, y: -9429
+iternum: 47, n: 1, i: 62, y: 14857
+iternum: 48, n: 1, i: 63, y: 31479
+iternum: 49, n: 1, i: 64, y: -25547
+iternum: 50, n: 1, i: 65, y: 11449
+iternum: 51, n: 1, i: 66, y: -31149
+iternum: 52, n: 1, i: 67, y: -25574
+iternum: 53, n: 1, i: 68, y: 13224
+iternum: 54, n: 1, i: 69, y: 2332
+iternum: 55, n: 1, i: 70, y: -8306
+iternum: 56, n: 1, i: 71, y: 23841
+iternum: 57, n: 1, i: 72, y: -19800
+iternum: 58, n: 1, i: 73, y: -11457
+iternum: 59, n: 1, i: 74, y: 5083
+iternum: 60, n: 1, i: 75, y: 10087
+iternum: 61, n: 1, i: 76, y: -2307
+iternum: 62, n: 1, i: 77, y: 25592
+iternum: 63, n: 1, i: 78, y: 6134
+iternum: 64, n: 1, i: 79, y: -12478
+iternum: 65, n: 1, i: 80, y: 5481
+iternum: 66, n: 1, i: 81, y: -17061
+iternum: 67, n: 1, i: 82, y: 9924
+iternum: 68, n: 1, i: 83, y: -12237
+iternum: 69, n: 1, i: 84, y: -12116
+iternum: 70, n: 1, i: 85, y: 39496
+iternum: 71, n: 1, i: 86, y: -6938
+iternum: 72, n: 1, i: 87, y: 15246
+iternum: 73, n: 1, i: 88, y: -11430
+iternum: 74, n: 1, i: 89, y: 8886
+iternum: 75, n: 1, i: 90, y: -22578
+iternum: 76, n: 1, i: 91, y: 46177
+iternum: 77, n: 1, i: 92, y: -16868
+iternum: 78, n: 1, i: 93, y: 5562
+iternum: 79, n: 1, i: 94, y: -16474
+iternum: 80, n: 1, i: 95, y: 989
+iternum: 81, n: 1, i: 96, y: -48325
+iternum: 82, n: 1, i: 97, y: 9741
+iternum: 83, n: 1, i: 98, y: -5958
+iternum: 84, n: 1, i: 99, y: 15442
+iternum: 85, n: 1, i: 100, y: 20656
+iternum: 86, n: 1, i: 101, y: -3809
+iternum: 87, n: 1, i: 102, y: -31872
+iternum: 88, n: 1, i: 103, y: 5868
+iternum: 89, n: 1, i: 104, y: 6055
+iternum: 90, n: 2, i: 120, y: -31502
+iternum:  90 i:  120 n:  2
+[115, -26, -52, -104, 49, 98, -59, -117, 22, 45, 90, -76, 105, -46, -92, 72]
+[-79, -74, 51, -36, -50, -108, 48, -20, -41, 22, 21, -51, -107, -85, 79, -44]
+iternum: 91, n: 2, i: 121, y: 10748
+iternum: 92, n: 2, i: 122, y: 19165
+iternum: 93, n: 2, i: 123, y: 26079
+iternum: 94, n: 2, i: 124, y: -1331
+iternum: 95, n: 2, i: 125, y: -40523
+iternum: 96, n: 2, i: 126, y: 26203
+iternum: 97, n: 2, i: 127, y: 1120
+iternum: 98, n: 2, i: 128, y: 13743
+iternum: 99, n: 2, i: 129, y: -25135
+iternum: 100, n: 2, i: 130, y: -1240
+iternum: 101, n: 2, i: 131, y: 2943
+iternum: 102, n: 2, i: 132, y: 2619
+iternum: 103, n: 2, i: 133, y: 15675
+iternum: 104, n: 2, i: 134, y: -16023
+iternum: 105, n: 2, i: 135, y: 15694
+iternum: 106, n: 2, i: 136, y: -2651
+iternum: 107, n: 2, i: 137, y: -10570
+iternum: 108, n: 2, i: 138, y: 787
+iternum: 109, n: 2, i: 139, y: -2019
+iternum: 110, n: 2, i: 140, y: 26353
+iternum: 111, n: 2, i: 141, y: -25010
+iternum: 112, n: 2, i: 142, y: -19781
+iternum: 113, n: 2, i: 143, y: -10244
+iternum: 114, n: 2, i: 144, y: 19330
+iternum: 115, n: 2, i: 145, y: 23042
+iternum: 116, n: 2, i: 146, y: -39975
+iternum: 117, n: 2, i: 147, y: 1824
+iternum: 118, n: 2, i: 148, y: 22460
+iternum: 119, n: 2, i: 149, y: -1476
+iternum: 120, n: 2, i: 150, y: -29672
+iternum: 121, n: 2, i: 151, y: 4969
+iternum: 122, n: 2, i: 152, y: 45419
+iternum: 123, n: 2, i: 153, y: -30152
+iternum: 124, n: 2, i: 154, y: -34199
+iternum: 125, n: 2, i: 155, y: -6777
+iternum: 126, n: 2, i: 156, y: 33146
+iternum: 127, n: 2, i: 157, y: 9462
+iternum: 128, n: 2, i: 158, y: -20484
+iternum: 129, n: 2, i: 159, y: -223
+iternum: 130, n: 2, i: 160, y: 13267
+iternum: 131, n: 2, i: 161, y: -12389
+iternum: 132, n: 2, i: 162, y: -7715
+iternum: 133, n: 2, i: 163, y: 2894
+iternum: 134, n: 2, i: 164, y: 32512
+iternum: 135, n: 3, i: 180, y: 3234
+iternum: 136, n: 3, i: 181, y: 19816
+iternum: 137, n: 3, i: 182, y: -20146
+iternum: 138, n: 3, i: 183, y: -10682
+iternum: 139, n: 3, i: 184, y: 10437
+iternum: 140, n: 3, i: 185, y: -14904
+iternum: 141, n: 3, i: 186, y: 17635
+iternum: 142, n: 3, i: 187, y: 15825
+iternum: 143, n: 3, i: 188, y: 1043
+iternum: 144, n: 3, i: 189, y: -20751
+iternum: 145, n: 3, i: 190, y: 12870
+iternum: 146, n: 3, i: 191, y: -10828
+iternum: 147, n: 3, i: 192, y: -22820
+iternum: 148, n: 3, i: 193, y: 14419
+iternum: 149, n: 3, i: 194, y: 47065
+iternum: 150, n: 3, i: 195, y: 2546
+iternum: 151, n: 3, i: 196, y: -17993
+iternum: 152, n: 3, i: 197, y: -9656
+iternum: 153, n: 3, i: 198, y: -3906
+iternum: 154, n: 3, i: 199, y: -27172
+iternum: 155, n: 3, i: 200, y: 1098
+iternum: 156, n: 3, i: 201, y: 29030
+iternum: 157, n: 3, i: 202, y: -10814
+iternum: 158, n: 3, i: 203, y: 6206
+iternum: 159, n: 3, i: 204, y: 10423
+iternum: 160, n: 3, i: 205, y: -686
+iternum: 161, n: 3, i: 206, y: -14308
+iternum: 162, n: 3, i: 207, y: 23976
+iternum: 163, n: 3, i: 208, y: -33765
+iternum: 164, n: 3, i: 209, y: -11199
+iternum: 165, n: 3, i: 210, y: -7213
+iternum: 166, n: 3, i: 211, y: 18002
+iternum: 167, n: 3, i: 212, y: -7152
+iternum: 168, n: 3, i: 213, y: 13298
+iternum: 169, n: 3, i: 214, y: 28649
+iternum: 170, n: 3, i: 215, y: -31344
+iternum: 171, n: 3, i: 216, y: -13500
+iternum: 172, n: 3, i: 217, y: 20563
+iternum: 173, n: 3, i: 218, y: 17988
+iternum: 174, n: 3, i: 219, y: -13077
+iternum: 175, n: 3, i: 220, y: 13251
+iternum: 176, n: 3, i: 221, y: 13381
+iternum: 177, n: 3, i: 222, y: -20662
+iternum: 178, n: 3, i: 223, y: -1910
+iternum: 179, n: 3, i: 224, y: 18782

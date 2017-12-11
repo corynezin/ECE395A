@@ -10,21 +10,28 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1897475000000000fs"></ZoomStartTime>
-      <ZoomEndTime time="1930625000000001fs"></ZoomEndTime>
-      <Cursor1Time time="1918125000000000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="136400000000001fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="149"></NameColumnWidth>
+      <NameColumnWidth column_width="127"></NameColumnWidth>
       <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="64" />
+   <WVObjectSize size="34" />
    <wave_markers>
       <marker label="" time="1877000000000000" />
       <marker label="" time="1883000000000000" />
       <marker label="" time="1919000000100000" />
+      <marker label="" time="1989000000000000" />
       <marker label="" time="1913000000000000" />
+      <marker label="" time="1983000000000000" />
+      <marker label="" time="6059000000000000" />
    </wave_markers>
+   <wvobject type="logic" fp_name="/conv2_controller_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
    <wvobject type="array" fp_name="/conv2_controller_tb/state">
       <obj_property name="ElementShortName">state[3:0]</obj_property>
       <obj_property name="ObjectShortName">state[3:0]</obj_property>
@@ -37,18 +44,6 @@
       <obj_property name="label">x_fifo</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/x_fifo_wren">
-      <obj_property name="ElementShortName">x_fifo_wren</obj_property>
-      <obj_property name="ObjectShortName">x_fifo_wren</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/x_fifo_rden">
-      <obj_property name="ElementShortName">x_fifo_rden</obj_property>
-      <obj_property name="ObjectShortName">x_fifo_rden</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/x_fifo_full">
-      <obj_property name="ElementShortName">x_fifo_full</obj_property>
-      <obj_property name="ObjectShortName">x_fifo_full</obj_property>
-   </wvobject>
    <wvobject type="logic" fp_name="/conv2_controller_tb/x_mux_addr">
       <obj_property name="ElementShortName">x_mux_addr</obj_property>
       <obj_property name="ObjectShortName">x_mux_addr</obj_property>
@@ -56,26 +51,42 @@
    <wvobject type="array" fp_name="/conv2_controller_tb/x_fifo_input">
       <obj_property name="ElementShortName">x_fifo_input[7:0]</obj_property>
       <obj_property name="ObjectShortName">x_fifo_input[7:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_FIXED</obj_property>
+      <obj_property name="AnalogYRangeMin">-128.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">128.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_LINEAR</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">0</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/conv2_controller_tb/x_fifo_output">
       <obj_property name="ElementShortName">x_fifo_output[7:0]</obj_property>
       <obj_property name="ObjectShortName">x_fifo_output[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/x_fifo/almost_full">
-      <obj_property name="ElementShortName">almost_full</obj_property>
-      <obj_property name="ObjectShortName">almost_full</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/x_fifo/prog_full">
-      <obj_property name="ElementShortName">prog_full</obj_property>
-      <obj_property name="ObjectShortName">prog_full</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="divider356" type="divider">
+      <obj_property name="label">b_fifo</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv2_controller_tb/b_fifo/din">
+      <obj_property name="ElementShortName">din[7:0]</obj_property>
+      <obj_property name="ObjectShortName">din[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider130" type="divider">
       <obj_property name="label">h_fifo</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/conv2_controller_tb/filter_rom_address">
       <obj_property name="ElementShortName">filter_rom_address[10:0]</obj_property>
       <obj_property name="ObjectShortName">filter_rom_address[10:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv2_controller_tb/h_fifo/din">
+      <obj_property name="ElementShortName">din[7:0]</obj_property>
+      <obj_property name="ObjectShortName">din[7:0]</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/conv2_controller_tb/h_fifo_wren">
       <obj_property name="ElementShortName">h_fifo_wren</obj_property>
@@ -85,201 +96,92 @@
       <obj_property name="ElementShortName">h_fifo_rden</obj_property>
       <obj_property name="ObjectShortName">h_fifo_rden</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/h_fifo_full">
-      <obj_property name="ElementShortName">h_fifo_full</obj_property>
-      <obj_property name="ObjectShortName">h_fifo_full</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/h_fifo_empty">
-      <obj_property name="ElementShortName">h_fifo_empty</obj_property>
-      <obj_property name="ObjectShortName">h_fifo_empty</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/h_fifo_prog_full">
-      <obj_property name="ElementShortName">h_fifo_prog_full</obj_property>
-      <obj_property name="ObjectShortName">h_fifo_prog_full</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/conv2_controller_tb/h_fifo_input">
-      <obj_property name="ElementShortName">h_fifo_input[7:0]</obj_property>
-      <obj_property name="ObjectShortName">h_fifo_input[7:0]</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   <wvobject type="logic" fp_name="/conv2_controller_tb/h_mux_addr">
+      <obj_property name="ElementShortName">h_mux_addr</obj_property>
+      <obj_property name="ObjectShortName">h_mux_addr</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/conv2_controller_tb/h_fifo_output">
       <obj_property name="ElementShortName">h_fifo_output[7:0]</obj_property>
       <obj_property name="ObjectShortName">h_fifo_output[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="divider357" type="divider">
-      <obj_property name="label">b_fifo</obj_property>
+   <wvobject type="array" fp_name="/conv2_controller_tb/h_fifo_input">
+      <obj_property name="ElementShortName">h_fifo_input[7:0]</obj_property>
+      <obj_property name="ObjectShortName">h_fifo_input[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider1300" type="divider">
+      <obj_property name="label">mac</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/b_fifo_wren">
-      <obj_property name="ElementShortName">b_fifo_wren</obj_property>
-      <obj_property name="ObjectShortName">b_fifo_wren</obj_property>
+   <wvobject type="logic" fp_name="/conv2_controller_tb/dot_valid">
+      <obj_property name="ElementShortName">dot_valid</obj_property>
+      <obj_property name="ObjectShortName">dot_valid</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/b_fifo_rden">
-      <obj_property name="ElementShortName">b_fifo_rden</obj_property>
-      <obj_property name="ObjectShortName">b_fifo_rden</obj_property>
+   <wvobject type="array" fp_name="/conv2_controller_tb/inner_product/x">
+      <obj_property name="ElementShortName">x[7:0]</obj_property>
+      <obj_property name="ObjectShortName">x[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/b_fifo_full">
-      <obj_property name="ElementShortName">b_fifo_full</obj_property>
-      <obj_property name="ObjectShortName">b_fifo_full</obj_property>
+   <wvobject type="array" fp_name="/conv2_controller_tb/inner_product/y">
+      <obj_property name="ElementShortName">y[7:0]</obj_property>
+      <obj_property name="ObjectShortName">y[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/b_fifo_empty">
-      <obj_property name="ElementShortName">b_fifo_empty</obj_property>
-      <obj_property name="ObjectShortName">b_fifo_empty</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/conv2_controller_tb/b_fifo_input">
-      <obj_property name="ElementShortName">b_fifo_input[7:0]</obj_property>
-      <obj_property name="ObjectShortName">b_fifo_input[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/conv2_controller_tb/b_fifo_output">
-      <obj_property name="ElementShortName">b_fifo_output[7:0]</obj_property>
-      <obj_property name="ObjectShortName">b_fifo_output[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="divider358" type="divider">
-      <obj_property name="label">ROM</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/clk">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
+   <wvobject type="array" fp_name="/conv2_controller_tb/inner_product/zout">
+      <obj_property name="ElementShortName">zout[47:0]</obj_property>
+      <obj_property name="ObjectShortName">zout[47:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="divider620" type="divider">
-      <obj_property name="label">controller</obj_property>
+      <obj_property name="label">o_fifo</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/controller/clk">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/controller/last_fifo_full">
-      <obj_property name="ElementShortName">last_fifo_full</obj_property>
-      <obj_property name="ObjectShortName">last_fifo_full</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/controller/last_fifo_empty">
-      <obj_property name="ElementShortName">last_fifo_empty</obj_property>
-      <obj_property name="ObjectShortName">last_fifo_empty</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/controller/x_fifo_full">
-      <obj_property name="ElementShortName">x_fifo_full</obj_property>
-      <obj_property name="ObjectShortName">x_fifo_full</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/controller/h_fifo_full">
-      <obj_property name="ElementShortName">h_fifo_full</obj_property>
-      <obj_property name="ObjectShortName">h_fifo_full</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/controller/o_fifo_full">
-      <obj_property name="ElementShortName">o_fifo_full</obj_property>
-      <obj_property name="ObjectShortName">o_fifo_full</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/controller/x_fifo_empty">
-      <obj_property name="ElementShortName">x_fifo_empty</obj_property>
-      <obj_property name="ObjectShortName">x_fifo_empty</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/controller/h_fifo_empty">
-      <obj_property name="ElementShortName">h_fifo_empty</obj_property>
-      <obj_property name="ObjectShortName">h_fifo_empty</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/controller/o_fifo_empty">
-      <obj_property name="ElementShortName">o_fifo_empty</obj_property>
-      <obj_property name="ObjectShortName">o_fifo_empty</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/controller/rst">
-      <obj_property name="ElementShortName">rst</obj_property>
-      <obj_property name="ObjectShortName">rst</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/controller/x_mux">
-      <obj_property name="ElementShortName">x_mux</obj_property>
-      <obj_property name="ObjectShortName">x_mux</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/controller/h_mux">
-      <obj_property name="ElementShortName">h_mux</obj_property>
-      <obj_property name="ObjectShortName">h_mux</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/controller/o_mux">
-      <obj_property name="ElementShortName">o_mux</obj_property>
-      <obj_property name="ObjectShortName">o_mux</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/controller/x_fifo_rden">
-      <obj_property name="ElementShortName">x_fifo_rden</obj_property>
-      <obj_property name="ObjectShortName">x_fifo_rden</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/controller/x_fifo_wren">
-      <obj_property name="ElementShortName">x_fifo_wren</obj_property>
-      <obj_property name="ObjectShortName">x_fifo_wren</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/controller/h_fifo_rden">
-      <obj_property name="ElementShortName">h_fifo_rden</obj_property>
-      <obj_property name="ObjectShortName">h_fifo_rden</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/controller/h_fifo_wren">
-      <obj_property name="ElementShortName">h_fifo_wren</obj_property>
-      <obj_property name="ObjectShortName">h_fifo_wren</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/controller/o_fifo_rden">
-      <obj_property name="ElementShortName">o_fifo_rden</obj_property>
-      <obj_property name="ObjectShortName">o_fifo_rden</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/controller/o_fifo_wren">
+   <wvobject type="logic" fp_name="/conv2_controller_tb/o_fifo_wren">
       <obj_property name="ElementShortName">o_fifo_wren</obj_property>
       <obj_property name="ObjectShortName">o_fifo_wren</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/controller/b_fifo_rden">
-      <obj_property name="ElementShortName">b_fifo_rden</obj_property>
-      <obj_property name="ObjectShortName">b_fifo_rden</obj_property>
+   <wvobject type="logic" fp_name="/conv2_controller_tb/o_mux_addr">
+      <obj_property name="ElementShortName">o_mux_addr</obj_property>
+      <obj_property name="ObjectShortName">o_mux_addr</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/controller/b_fifo_wren">
-      <obj_property name="ElementShortName">b_fifo_wren</obj_property>
-      <obj_property name="ObjectShortName">b_fifo_wren</obj_property>
+   <wvobject type="logic" fp_name="/conv2_controller_tb/o_fifo_rden">
+      <obj_property name="ElementShortName">o_fifo_rden</obj_property>
+      <obj_property name="ObjectShortName">o_fifo_rden</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/conv2_controller_tb/controller/ram_address">
-      <obj_property name="ElementShortName">ram_address[10:0]</obj_property>
-      <obj_property name="ObjectShortName">ram_address[10:0]</obj_property>
+   <wvobject type="array" fp_name="/conv2_controller_tb/o_fifo_input">
+      <obj_property name="ElementShortName">o_fifo_input[47:0]</obj_property>
+      <obj_property name="ObjectShortName">o_fifo_input[47:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/conv2_controller_tb/controller/state">
-      <obj_property name="ElementShortName">state[3:0]</obj_property>
-      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+   <wvobject type="array" fp_name="/conv2_controller_tb/o_fifo_output">
+      <obj_property name="ElementShortName">o_fifo_output[47:0]</obj_property>
+      <obj_property name="ObjectShortName">o_fifo_output[47:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/conv2_controller_tb/controller/curr_state">
-      <obj_property name="ElementShortName">curr_state[3:0]</obj_property>
-      <obj_property name="ObjectShortName">curr_state[3:0]</obj_property>
+   <wvobject type="logic" fp_name="/conv2_controller_tb/o_fifo_full">
+      <obj_property name="ElementShortName">o_fifo_full</obj_property>
+      <obj_property name="ObjectShortName">o_fifo_full</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/conv2_controller_tb/controller/curr_state_d1">
-      <obj_property name="ElementShortName">curr_state_d1[3:0]</obj_property>
-      <obj_property name="ObjectShortName">curr_state_d1[3:0]</obj_property>
+   <wvobject type="logic" fp_name="/conv2_controller_tb/o_fifo_empty">
+      <obj_property name="ElementShortName">o_fifo_empty</obj_property>
+      <obj_property name="ObjectShortName">o_fifo_empty</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/conv2_controller_tb/controller/curr_state_d2">
-      <obj_property name="ElementShortName">curr_state_d2[3:0]</obj_property>
-      <obj_property name="ObjectShortName">curr_state_d2[3:0]</obj_property>
+   <wvobject type="logic" fp_name="/conv2_controller_tb/result_ready">
+      <obj_property name="ElementShortName">result_ready</obj_property>
+      <obj_property name="ObjectShortName">result_ready</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/controller/b_fifo_wren_assert">
-      <obj_property name="ElementShortName">b_fifo_wren_assert</obj_property>
-      <obj_property name="ObjectShortName">b_fifo_wren_assert</obj_property>
+   <wvobject type="logic" fp_name="/conv2_controller_tb/relu_ready">
+      <obj_property name="ElementShortName">relu_ready</obj_property>
+      <obj_property name="ObjectShortName">relu_ready</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/controller/b_fifo_rden_assert">
-      <obj_property name="ElementShortName">b_fifo_rden_assert</obj_property>
-      <obj_property name="ObjectShortName">b_fifo_rden_assert</obj_property>
+   <wvobject type="array" fp_name="/conv2_controller_tb/maxpool_output">
+      <obj_property name="ElementShortName">maxpool_output[47:0]</obj_property>
+      <obj_property name="ObjectShortName">maxpool_output[47:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/controller/x_fifo_wren_assert">
-      <obj_property name="ElementShortName">x_fifo_wren_assert</obj_property>
-      <obj_property name="ObjectShortName">x_fifo_wren_assert</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/controller/x_fifo_rden_assert">
-      <obj_property name="ElementShortName">x_fifo_rden_assert</obj_property>
-      <obj_property name="ObjectShortName">x_fifo_rden_assert</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/controller/h_fifo_wren_assert">
-      <obj_property name="ElementShortName">h_fifo_wren_assert</obj_property>
-      <obj_property name="ObjectShortName">h_fifo_wren_assert</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/controller/h_fifo_rden_assert">
-      <obj_property name="ElementShortName">h_fifo_rden_assert</obj_property>
-      <obj_property name="ObjectShortName">h_fifo_rden_assert</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/controller/o_fifo_wren_assert">
-      <obj_property name="ElementShortName">o_fifo_wren_assert</obj_property>
-      <obj_property name="ObjectShortName">o_fifo_wren_assert</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv2_controller_tb/controller/o_fifo_rden_assert">
-      <obj_property name="ElementShortName">o_fifo_rden_assert</obj_property>
-      <obj_property name="ObjectShortName">o_fifo_rden_assert</obj_property>
+   <wvobject type="array" fp_name="/conv2_controller_tb/relu_output">
+      <obj_property name="ElementShortName">relu_output[47:0]</obj_property>
+      <obj_property name="ObjectShortName">relu_output[47:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>

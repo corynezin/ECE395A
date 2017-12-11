@@ -1,9 +1,15 @@
 # compile vhdl design source files
-vhdl xil_defaultlib  "../../../conv_2_controller.srcs/sources_1/ip/filter_rom/filter_rom_sim_netlist.vhdl"
 vhdl xil_defaultlib  "../../../conv_2_controller.srcs/sources_1/ip/fifo_64/fifo_64_sim_netlist.vhdl"
 vhdl xil_defaultlib  "../../../../../../Maia/vhdl/conv_2/conv_2.srcs/sources_1/ip/fifo_16/fifo_16_sim_netlist.vhdl"
-vhdl xil_defaultlib  "../../../../../../Maia/vhdl/source/conv2_controller.vhd"
+vhdl xil_defaultlib  "../../../conv_2_controller.srcs/sources_1/ip/fifo_45/fifo_45_sim_netlist.vhdl"
+vhdl xil_defaultlib  "../../../../inner_product_fifo/inner_product_fifo.srcs/sources_1/ip/xbip_multadd_0/sim/xbip_multadd_0.vhd"
+vhdl xil_defaultlib  "../../../../inner_product_fifo/inner_product_fifo.srcs/sources_1/new/dot.vhd"
 vhdl xil_defaultlib  "../../../../conv/conv.srcs/sources_1/new/mux2_1.vhd"
+vhdl xil_defaultlib  "../../../../../../Maia/vhdl/source/conv2_controller.vhd"
+vhdl xil_defaultlib  "../../../conv_2_controller.srcs/sources_1/ip/filter_rom/filter_rom_sim_netlist.vhdl"
+vhdl xil_defaultlib  "../../../../relu/relu.srcs/sources_1/new/relu.vhd"
+vhdl xil_defaultlib  "../../../../maxpool/maxpool.srcs/sources_1/new/maxpool.vhd"
+vhdl xil_defaultlib  "../../../../maxpool/maxpool.srcs/sources_1/imports/new/downsample.vhd"
 vhdl xil_defaultlib  "../../../conv_2_controller.srcs/sim_1/new/conv2_controller_tb.vhd"
 
 # Do not sort compile order

@@ -10,15 +10,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="2070110000100667fs"></ZoomStartTime>
-      <ZoomEndTime time="2084970000100668fs"></ZoomEndTime>
-      <Cursor1Time time="2071990000101000fs"></Cursor1Time>
+      <ZoomStartTime time="38083333333333fs"></ZoomStartTime>
+      <ZoomEndTime time="112383333333334fs"></ZoomEndTime>
+      <Cursor1Time time="100000000000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="115"></NameColumnWidth>
+      <NameColumnWidth column_width="66"></NameColumnWidth>
       <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="8" />
+   <WVObjectSize size="13" />
    <wave_markers>
       <marker label="" time="2099000000100000" />
       <marker label="" time="2105000000000000" />
@@ -30,49 +30,57 @@
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/dot_tb/out1">
-      <obj_property name="ElementShortName">out1[7:0]</obj_property>
-      <obj_property name="ObjectShortName">out1[7:0]</obj_property>
+   <wvobject fp_name="divider495" type="divider">
+      <obj_property name="label">ram</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/dot_tb/ramcomp1/a">
+      <obj_property name="ElementShortName">a[12:0]</obj_property>
+      <obj_property name="ObjectShortName">a[12:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/dot_tb/ramcomp1/spo">
+      <obj_property name="ElementShortName">spo[7:0]</obj_property>
+      <obj_property name="ObjectShortName">spo[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider501" type="divider">
+      <obj_property name="label">fifo</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider525" type="divider">
+      <obj_property name="label">mac</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/dot_tb/mac/validsig">
+      <obj_property name="ElementShortName">validsig</obj_property>
+      <obj_property name="ObjectShortName">validsig</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/dot_tb/mac/x">
+      <obj_property name="ElementShortName">x[7:0]</obj_property>
+      <obj_property name="ObjectShortName">x[7:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      <obj_property name="CustomSignalColor">#D2691E</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/dot_tb/out2">
-      <obj_property name="ElementShortName">out2[7:0]</obj_property>
-      <obj_property name="ObjectShortName">out2[7:0]</obj_property>
+   <wvobject type="array" fp_name="/dot_tb/mac/y">
+      <obj_property name="ElementShortName">y[7:0]</obj_property>
+      <obj_property name="ObjectShortName">y[7:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      <obj_property name="CustomSignalColor">#D2691E</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/dot_tb/ram1out">
-      <obj_property name="ElementShortName">ram1out[7:0]</obj_property>
-      <obj_property name="ObjectShortName">ram1out[7:0]</obj_property>
-      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/dot_tb/ram2out">
-      <obj_property name="ElementShortName">ram2out[7:0]</obj_property>
-      <obj_property name="ObjectShortName">ram2out[7:0]</obj_property>
-      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/dot_tb/ramindex">
-      <obj_property name="ElementShortName">ramindex[9:0]</obj_property>
-      <obj_property name="ObjectShortName">ramindex[9:0]</obj_property>
-      <obj_property name="CustomSignalColor">#808080</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/dot_tb/innerprod">
-      <obj_property name="ElementShortName">innerprod[47:0]</obj_property>
-      <obj_property name="ObjectShortName">innerprod[47:0]</obj_property>
+   <wvobject type="array" fp_name="/dot_tb/mac/carry">
+      <obj_property name="ElementShortName">carry[47:0]</obj_property>
+      <obj_property name="ObjectShortName">carry[47:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      <obj_property name="CustomSignalColor">#FFFFFF</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/dot_tb/valid">
-      <obj_property name="ElementShortName">valid</obj_property>
-      <obj_property name="ObjectShortName">valid</obj_property>
-      <obj_property name="CustomSignalColor">#00FF00</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
+   <wvobject type="array" fp_name="/dot_tb/mac/ans">
+      <obj_property name="ElementShortName">ans[47:0]</obj_property>
+      <obj_property name="ObjectShortName">ans[47:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/dot_tb/mac/zout">
+      <obj_property name="ElementShortName">zout[47:0]</obj_property>
+      <obj_property name="ObjectShortName">zout[47:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/dot_tb/mac/cc">
+      <obj_property name="ElementShortName">cc</obj_property>
+      <obj_property name="ObjectShortName">cc</obj_property>
    </wvobject>
 </wave_config>

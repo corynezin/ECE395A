@@ -26,10 +26,10 @@ signal y: STD_LOGIC_VECTOR(N-1 downto 0) := (N-1=>'1',others=>'0');
 
 begin
 d2: downsample
-    generic map(
+    GENERIC MAP(
         N => N
     )
-    Port Map (
+    PORT MAP (
         d => y,
         q => output,
         clk => clk

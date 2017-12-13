@@ -12,7 +12,7 @@ end conv2_controller_tb;
 architecture Behavioral of conv2_controller_tb is
 
 component conv2_controller is
-  Port ( 
+Port ( 
 -- input 
     clk : IN STD_LOGIC;
     last_fifo_full : IN STD_LOGIC;
@@ -202,23 +202,20 @@ PORT MAP (
     dout => b_fifo_output,
     full => b_fifo_full,
     empty => b_fifo_empty);
-
 x_mux: mux2_1_8
-port map ( 
+PORT MAP ( 
     x_0 => b_fifo_output,
     x_1 => x_fifo_output, 
     y => x_fifo_input,
-    addr => x_mux_addr);
-    
+    addr => x_mux_addr); 
 h_mux: mux2_1_8
-port map ( 
+PORT MAP ( 
     x_0 => filter_rom_output,
     x_1 => h_fifo_output,
     y => h_fifo_input,
-    addr => h_mux_addr);
-    
+    addr => h_mux_addr);    
 controller: conv2_controller
-port map( 
+PORT MAP( 
     -- input 
     clk => clk,
     last_fifo_full => b_fifo_full,
@@ -260,11 +257,9 @@ filter_rom_0 : filter_rom
 PORT MAP (
     a => filter_rom_address,
     clk => clk,
-    qspo => filter_rom_output
-);
-
+    qspo => filter_rom_output);
 inner_product : dot
-port map( 
+PORT MAP( 
     x => x_fifo_output,
     y => mac_filter_input,
     T => "0000010000",
@@ -273,9 +268,7 @@ port map(
     ce => mac_enable,
     zout => mac_output,
     valid => dot_valid,
-    ctr_rst => ctr_rst
-);
-
+    ctr_rst => ctr_rst);
 o_fifo: fifo_45
 PORT MAP (
     clk => clk,
@@ -286,23 +279,20 @@ PORT MAP (
     dout => o_fifo_output,
     empty => o_fifo_empty,
     prog_full => o_fifo_full);
-
 r: Relu
-generic map
+GENERIC MAP
     (N => 48)
-Port map (
+PORT MAP (
     d0 => o_fifo_output,
     output => relu_output);
-
 mp: maxpool2
-generic map
+GENERIC MAP
     (N => 48)
 PORT MAP( 
     input => relu_output,
     output => maxpool_output,
-    clk => clk
-);
-
+    clk => clk);
+    
 partial_sum <= std_logic_vector(signed(mac_output) + signed(o_fifo_output));
 o_fifo_input <= mac_output when o_mux_addr = '0' else partial_sum;
 b_fifo_input <= lfsr(7 downto 0);

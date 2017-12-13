@@ -1,0 +1,2 @@
+vhdl xil_defaultlib "../../../../../ip/fifo_64/fifo_64_sim_netlist.vhdl" 
+nosort

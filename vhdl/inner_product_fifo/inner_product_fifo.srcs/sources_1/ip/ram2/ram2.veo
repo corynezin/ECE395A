@@ -55,7 +55,7 @@
 
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
 ram2 your_instance_name (
-  .a(a),      // input wire [9 : 0] a
+  .a(a),      // input wire [12 : 0] a
   .spo(spo)  // output wire [7 : 0] spo
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------

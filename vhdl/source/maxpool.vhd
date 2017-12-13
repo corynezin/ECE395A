@@ -7,13 +7,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 entity maxpool2 is
-    generic (N : INTEGER ); -- Bit width
+    generic (N : INTEGER);
     Port ( input : in STD_LOGIC_VECTOR (N-1 downto 0);
            output : out STD_LOGIC_VECTOR (N-1 downto 0);
-           clk : in STD_LOGIC;
-           ceclk: in STD_LOGIC; -- clock enabled clock, anded with input_valid already
-           input_valid: in STD_LOGIC; -- high when output of previous stage (relu) is valid
-           output_valid: out STD_LOGIC); -- high when output of this stage is valid
+           clk : in STD_LOGIC);
 end maxpool2;
 
 architecture RTL of maxpool2 is
@@ -24,32 +21,27 @@ component downsample is
            clk: in STD_LOGIC);
 end component downsample;
 
-signal z: STD_LOGIC_VECTOR(N-1 downto 0) := (N-1=>'1',others=>'0'); -- Previous sample to be compared
-signal y: STD_LOGIC_VECTOR(N-1 downto 0) := (N-1=>'1',others=>'0'); -- output of pooling, full rate
-signal delay1,delay2,delay3: STD_LOGIC;
+signal z: STD_LOGIC_VECTOR(N-1 downto 0) := (N-1=>'1',others=>'0');
+signal y: STD_LOGIC_VECTOR(N-1 downto 0) := (N-1=>'1',others=>'0');
+
 begin
 d2: downsample
-    generic map(
+    GENERIC MAP(
         N => N
     )
-    Port Map (
+    PORT MAP (
         d => y,
-        q => output, -- downsampled output of pooling
-        clk => ceclk
+        q => output,
+        clk => clk
     );
     
-y <= input when signed(input) > signed(z) else z; -- check which is greater for pooling
+y <= input when signed(input) > signed(z) else z;
 
 process(clk)
 begin
 if rising_edge(clk) then
-    z <= input;             -- Delayed version for comparison
-    delay1 <= input_valid;  -- Max pooling has a natural latency of one
-    delay2 <= delay1;       -- output clock cycle, or two input clock cycle
-    delay3 <= delay2;       -- Since it reduces the rate of the data by a factor of 2.
+    z <= input;
 end if;
 end process;
-output_valid <= delay3 and delay1;
--- This just works...
 
 end RTL;

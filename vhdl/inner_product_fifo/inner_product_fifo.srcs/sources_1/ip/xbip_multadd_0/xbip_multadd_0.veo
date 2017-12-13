@@ -61,7 +61,6 @@ xbip_multadd_0 your_instance_name (
   .A(A),                // input wire [7 : 0] A
   .B(B),                // input wire [7 : 0] B
   .C(C),                // input wire [47 : 0] C
-  .PCIN(PCIN),          // input wire [47 : 0] PCIN
   .SUBTRACT(SUBTRACT),  // input wire SUBTRACT
   .P(P),                // output wire [47 : 0] P
   .PCOUT(PCOUT)        // output wire [47 : 0] PCOUT

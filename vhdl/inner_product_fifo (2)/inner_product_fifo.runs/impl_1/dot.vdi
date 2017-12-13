@@ -1,0 +1,714 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Dec  7 13:39:57 2017
+# Process ID: 24495
+# Current directory: /home/nezin/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.runs/impl_1
+# Command line: vivado -log dot.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source dot.tcl -notrace
+# Log file: /home/nezin/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.runs/impl_1/dot.vdi
+# Journal file: /home/nezin/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source dot.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Project 1-454] Reading design checkpoint '/home/nezin/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.srcs/sources_1/ip/xbip_multadd_0/xbip_multadd_0.dcp' for cell 'mac0'
+INFO: [Netlist 29-17] Analyzing 129 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.srcs/constrs_1/new/ram_init.xdc]
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.srcs/constrs_1/new/ram_init.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+link_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1499.887 ; gain = 373.930 ; free physical = 4867 ; free virtual = 47451
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020-clg484'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020-clg484'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+Command: report_drc (run_mandatory_drcs) for: opt_checks
+INFO: [DRC 23-27] Running DRC with 8 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.75 . Memory (MB): peak = 1573.918 ; gain = 74.031 ; free physical = 4861 ; free virtual = 47445
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: bd65e75e
+
+Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1964.410 ; gain = 0.000 ; free physical = 4468 ; free virtual = 47052
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 9 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: bd65e75e
+
+Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1964.410 ; gain = 0.000 ; free physical = 4468 ; free virtual = 47052
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 11475009f
+
+Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1964.410 ; gain = 0.000 ; free physical = 4468 ; free virtual = 47052
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 11475009f
+
+Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.14 . Memory (MB): peak = 1964.410 ; gain = 0.000 ; free physical = 4468 ; free virtual = 47052
+INFO: [Opt 31-389] Phase BUFG optimization created 0 cells and removed 0 cells
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 11475009f
+
+Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.14 . Memory (MB): peak = 1964.410 ; gain = 0.000 ; free physical = 4468 ; free virtual = 47052
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1964.410 ; gain = 0.000 ; free physical = 4468 ; free virtual = 47052
+Ending Logic Optimization Task | Checksum: 11475009f
+
+Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.14 . Memory (MB): peak = 1964.410 ; gain = 0.000 ; free physical = 4468 ; free virtual = 47052
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 19ecea14d
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1964.410 ; gain = 0.000 ; free physical = 4468 ; free virtual = 47052
+22 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1964.410 ; gain = 464.523 ; free physical = 4468 ; free virtual = 47052
+INFO: [Common 17-1381] The checkpoint '/home/nezin/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.runs/impl_1/dot_opt.dcp' has been generated.
+Command: report_drc -file dot_drc_opted.rpt
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/nezin/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.runs/impl_1/dot_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Chipscope 16-241] No debug cores found in the current design.
+Before running the implement_debug_core command, either use the Set Up Debug wizard (GUI mode)
+or use the create_debug_core and connect_debug_core Tcl commands to insert debug cores into the design.
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020-clg484'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020-clg484'
+Command: report_drc (run_mandatory_drcs) for: incr_eco_checks
+INFO: [DRC 23-27] Running DRC with 8 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+Command: report_drc (run_mandatory_drcs) for: placer_checks
+INFO: [DRC 23-27] Running DRC with 8 threads
+WARNING: [DRC CKLD-2] Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads: Clock net clk_IBUF is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): clk_IBUF_inst/O
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 1 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2030.441 ; gain = 0.000 ; free physical = 4453 ; free virtual = 47037
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: a88bdd11
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2030.441 ; gain = 0.000 ; free physical = 4453 ; free virtual = 47037
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2030.441 ; gain = 0.000 ; free physical = 4453 ; free virtual = 47036
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+WARNING: [Place 30-568] A LUT 'i[1]_i_2' is driving clock pin of 22 registers. This could lead to large hold time violations. First few involved registers are:
+	cc_reg {FDRE}
+	i_reg[0] {FDRE}
+	i_reg[0]__0 {FDRE}
+	i_reg[1] {FDRE}
+	i_reg[1]__0 {FDRE}
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 108846802
+
+Time (s): cpu = 00:00:00.98 ; elapsed = 00:00:00.65 . Memory (MB): peak = 2030.441 ; gain = 0.000 ; free physical = 4422 ; free virtual = 47032
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1a46342ba
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.68 . Memory (MB): peak = 2030.441 ; gain = 0.000 ; free physical = 4422 ; free virtual = 47032
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1a46342ba
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.68 . Memory (MB): peak = 2030.441 ; gain = 0.000 ; free physical = 4422 ; free virtual = 47032
+Phase 1 Placer Initialization | Checksum: 1a46342ba
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.68 . Memory (MB): peak = 2030.441 ; gain = 0.000 ; free physical = 4422 ; free virtual = 47032
+
+Phase 2 Global Placement
+WARNING: [Place 46-30] place_design is not in timing mode. Skip physical synthesis in placer
+Phase 2 Global Placement | Checksum: 1f28af66e
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2110.469 ; gain = 80.027 ; free physical = 4401 ; free virtual = 47011
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1f28af66e
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2110.469 ; gain = 80.027 ; free physical = 4401 ; free virtual = 47011
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1ca4110d2
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2110.469 ; gain = 80.027 ; free physical = 4401 ; free virtual = 47011
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 16233f99c
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2110.469 ; gain = 80.027 ; free physical = 4401 ; free virtual = 47011
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 16233f99c
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2110.469 ; gain = 80.027 ; free physical = 4401 ; free virtual = 47011
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 2310a3fb2
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 2110.469 ; gain = 80.027 ; free physical = 4397 ; free virtual = 47007
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 2310a3fb2
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2110.469 ; gain = 80.027 ; free physical = 4397 ; free virtual = 47007
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 2310a3fb2
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2110.469 ; gain = 80.027 ; free physical = 4397 ; free virtual = 47007
+Phase 3 Detail Placement | Checksum: 2310a3fb2
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2110.469 ; gain = 80.027 ; free physical = 4397 ; free virtual = 47007
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+Phase 4.1 Post Commit Optimization | Checksum: 2310a3fb2
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2110.469 ; gain = 80.027 ; free physical = 4397 ; free virtual = 47007
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 2310a3fb2
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2110.469 ; gain = 80.027 ; free physical = 4398 ; free virtual = 47009
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 2310a3fb2
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2110.469 ; gain = 80.027 ; free physical = 4398 ; free virtual = 47009
+
+Phase 4.4 Final Placement Cleanup
+Phase 4.4 Final Placement Cleanup | Checksum: 2136a5bc9
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2110.469 ; gain = 80.027 ; free physical = 4398 ; free virtual = 47009
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 2136a5bc9
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2110.469 ; gain = 80.027 ; free physical = 4398 ; free virtual = 47009
+Ending Placer Task | Checksum: 15218a4f2
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2110.469 ; gain = 80.027 ; free physical = 4414 ; free virtual = 47025
+37 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2110.469 ; gain = 0.000 ; free physical = 4414 ; free virtual = 47025
+INFO: [Common 17-1381] The checkpoint '/home/nezin/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.runs/impl_1/dot_placed.dcp' has been generated.
+report_io: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.22 . Memory (MB): peak = 2110.469 ; gain = 0.000 ; free physical = 4405 ; free virtual = 47015
+report_utilization: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.14 . Memory (MB): peak = 2110.469 ; gain = 0.000 ; free physical = 4414 ; free virtual = 47025
+report_control_sets: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2110.469 ; gain = 0.000 ; free physical = 4414 ; free virtual = 47024
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020-clg484'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020-clg484'
+Running DRC as a precondition to command route_design
+Command: report_drc (run_mandatory_drcs) for: router_checks
+INFO: [DRC 23-27] Running DRC with 8 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+Checksum: PlaceDB: a98cc7e1 ConstDB: 0 ShapeSum: a88bdd11 RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: a6b25909
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 2183.254 ; gain = 72.785 ; free physical = 4269 ; free virtual = 46879
+
+Phase 2 Router Initialization
+INFO: [Route 35-64] No timing constraints were detected. The router will operate in resource-optimization mode.
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: a6b25909
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 2188.242 ; gain = 77.773 ; free physical = 4236 ; free virtual = 46847
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: a6b25909
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 2188.242 ; gain = 77.773 ; free physical = 4236 ; free virtual = 46847
+ Number of Nodes with overlaps = 0
+Phase 2 Router Initialization | Checksum: 9d70d2a2
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 2195.297 ; gain = 84.828 ; free physical = 4234 ; free virtual = 46844
+
+Phase 3 Initial Routing
+
+Phase 3.1 Initial Routing Verification
+
+Post Initial-Routing Verification
+---------------------------------
+CRITICAL WARNING: [Route 35-54] Net: z[47] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[46] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[45] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[44] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[43] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[42] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[41] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[40] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[39] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[38] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[37] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[36] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[35] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[34] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[33] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[32] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[31] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[30] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[29] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[28] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-170] Too many nets were not completely routed. Further warnings disabled. Run 'report_route_status' for more information.
+Resolution: In order to see more information about the partially routed nets, run report_route_status with the -verbose option.
+
+Unroutable connection Types:
+----------------------------
+Type 1 : SLICEL.DMUX->DSP48E1.PCIN0
+-----Num Open nets: 1
+-----Representative Net: Net[113] z[0]
+-----SLICE_X103Y16.DMUX -> DSP48_X4Y6.PCIN0
+-----Driver Term: mac0_i_48/O Load Term [315]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[0]
+Type 2 : SLICEL.D->DSP48E1.PCIN1
+-----Num Open nets: 1
+-----Representative Net: Net[112] z[1]
+-----SLICE_X103Y16.D -> DSP48_X4Y6.PCIN1
+-----Driver Term: mac0_i_47/O Load Term [313]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[1]
+Type 3 : SLICEM.D->DSP48E1.PCIN2
+-----Num Open nets: 1
+-----Representative Net: Net[111] z[2]
+-----SLICE_X102Y14.D -> DSP48_X4Y6.PCIN2
+-----Driver Term: mac0_i_46/O Load Term [311]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[2]
+Type 4 : SLICEM.DMUX->DSP48E1.PCIN3
+-----Num Open nets: 1
+-----Representative Net: Net[110] z[3]
+-----SLICE_X102Y14.DMUX -> DSP48_X4Y6.PCIN3
+-----Driver Term: mac0_i_45/O Load Term [309]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[3]
+Type 5 : SLICEL.D->DSP48E1.PCIN4
+-----Num Open nets: 1
+-----Representative Net: Net[109] z[4]
+-----SLICE_X103Y15.D -> DSP48_X4Y6.PCIN4
+-----Driver Term: mac0_i_44/O Load Term [307]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[4]
+Type 6 : SLICEL.DMUX->DSP48E1.PCIN5
+-----Num Open nets: 1
+-----Representative Net: Net[108] z[5]
+-----SLICE_X103Y15.DMUX -> DSP48_X4Y6.PCIN5
+-----Driver Term: mac0_i_43/O Load Term [305]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[5]
+Type 7 : SLICEM.B->DSP48E1.PCIN6
+-----Num Open nets: 1
+-----Representative Net: Net[107] z[6]
+-----SLICE_X104Y15.B -> DSP48_X4Y6.PCIN6
+-----Driver Term: mac0_i_42/O Load Term [303]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[6]
+Type 8 : SLICEM.BMUX->DSP48E1.PCIN7
+-----Num Open nets: 1
+-----Representative Net: Net[106] z[7]
+-----SLICE_X104Y15.BMUX -> DSP48_X4Y6.PCIN7
+-----Driver Term: mac0_i_41/O Load Term [301]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[7]
+Type 9 : SLICEL.C->DSP48E1.PCIN8
+-----Num Open nets: 1
+-----Representative Net: Net[105] z[8]
+-----SLICE_X103Y15.C -> DSP48_X4Y6.PCIN8
+-----Driver Term: mac0_i_40/O Load Term [299]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[8]
+Type 10 : SLICEL.C->DSP48E1.PCIN9
+-----Num Open nets: 1
+-----Representative Net: Net[104] z[9]
+-----SLICE_X103Y16.C -> DSP48_X4Y6.PCIN9
+-----Driver Term: mac0_i_39/O Load Term [297]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[9]
+Type 11 : SLICEL.CMUX->DSP48E1.PCIN10
+-----Num Open nets: 1
+-----Representative Net: Net[103] z[10]
+-----SLICE_X103Y15.CMUX -> DSP48_X4Y6.PCIN10
+-----Driver Term: mac0_i_38/O Load Term [295]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[10]
+Type 12 : SLICEL.CMUX->DSP48E1.PCIN11
+-----Num Open nets: 1
+-----Representative Net: Net[102] z[11]
+-----SLICE_X103Y16.CMUX -> DSP48_X4Y6.PCIN11
+-----Driver Term: mac0_i_37/O Load Term [293]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[11]
+Type 13 : SLICEM.A->DSP48E1.PCIN12
+-----Num Open nets: 1
+-----Representative Net: Net[101] z[12]
+-----SLICE_X104Y15.A -> DSP48_X4Y6.PCIN12
+-----Driver Term: mac0_i_36/O Load Term [291]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[12]
+Type 14 : SLICEM.AMUX->DSP48E1.PCIN13
+-----Num Open nets: 1
+-----Representative Net: Net[100] z[13]
+-----SLICE_X104Y15.AMUX -> DSP48_X4Y6.PCIN13
+-----Driver Term: mac0_i_35/O Load Term [289]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[13]
+Type 15 : SLICEL.B->DSP48E1.PCIN14
+-----Num Open nets: 1
+-----Representative Net: Net[99] z[14]
+-----SLICE_X103Y16.B -> DSP48_X4Y6.PCIN14
+-----Driver Term: mac0_i_34/O Load Term [287]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[14]
+Type 16 : SLICEL.BMUX->DSP48E1.PCIN15
+-----Num Open nets: 1
+-----Representative Net: Net[98] z[15]
+-----SLICE_X103Y16.BMUX -> DSP48_X4Y6.PCIN15
+-----Driver Term: mac0_i_33/O Load Term [285]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[15]
+Type 17 : SLICEM.D->DSP48E1.PCIN16
+-----Num Open nets: 1
+-----Representative Net: Net[97] z[16]
+-----SLICE_X102Y16.D -> DSP48_X4Y6.PCIN16
+-----Driver Term: mac0_i_32/O Load Term [283]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[16]
+Type 18 : SLICEM.DMUX->DSP48E1.PCIN17
+-----Num Open nets: 1
+-----Representative Net: Net[96] z[17]
+-----SLICE_X102Y16.DMUX -> DSP48_X4Y6.PCIN17
+-----Driver Term: mac0_i_31/O Load Term [281]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[17]
+Type 19 : SLICEM.C->DSP48E1.PCIN18
+-----Num Open nets: 1
+-----Representative Net: Net[95] z[18]
+-----SLICE_X102Y14.C -> DSP48_X4Y6.PCIN18
+-----Driver Term: mac0_i_30/O Load Term [279]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[18]
+Type 20 : SLICEM.CMUX->DSP48E1.PCIN19
+-----Num Open nets: 1
+-----Representative Net: Net[94] z[19]
+-----SLICE_X102Y14.CMUX -> DSP48_X4Y6.PCIN19
+-----Driver Term: mac0_i_29/O Load Term [277]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[19]
+Type 21 : SLICEM.C->DSP48E1.PCIN20
+-----Num Open nets: 1
+-----Representative Net: Net[93] z[20]
+-----SLICE_X102Y16.C -> DSP48_X4Y6.PCIN20
+-----Driver Term: mac0_i_28/O Load Term [275]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[20]
+Type 22 : SLICEM.CMUX->DSP48E1.PCIN21
+-----Num Open nets: 1
+-----Representative Net: Net[92] z[21]
+-----SLICE_X102Y16.CMUX -> DSP48_X4Y6.PCIN21
+-----Driver Term: mac0_i_27/O Load Term [273]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[21]
+Type 23 : SLICEM.B->DSP48E1.PCIN22
+-----Num Open nets: 1
+-----Representative Net: Net[91] z[22]
+-----SLICE_X102Y14.B -> DSP48_X4Y6.PCIN22
+-----Driver Term: mac0_i_26/O Load Term [271]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[22]
+Type 24 : SLICEM.BMUX->DSP48E1.PCIN23
+-----Num Open nets: 1
+-----Representative Net: Net[90] z[23]
+-----SLICE_X102Y14.BMUX -> DSP48_X4Y6.PCIN23
+-----Driver Term: mac0_i_25/O Load Term [269]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[23]
+Type 25 : SLICEM.B->DSP48E1.PCIN24
+-----Num Open nets: 1
+-----Representative Net: Net[89] z[24]
+-----SLICE_X102Y16.B -> DSP48_X4Y6.PCIN24
+-----Driver Term: mac0_i_24/O Load Term [267]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[24]
+Type 26 : SLICEM.BMUX->DSP48E1.PCIN25
+-----Num Open nets: 1
+-----Representative Net: Net[88] z[25]
+-----SLICE_X102Y16.BMUX -> DSP48_X4Y6.PCIN25
+-----Driver Term: mac0_i_23/O Load Term [265]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[25]
+Type 27 : SLICEL.A->DSP48E1.PCIN26
+-----Num Open nets: 1
+-----Representative Net: Net[87] z[26]
+-----SLICE_X103Y15.A -> DSP48_X4Y6.PCIN26
+-----Driver Term: mac0_i_22/O Load Term [263]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[26]
+Type 28 : SLICEL.AMUX->DSP48E1.PCIN27
+-----Num Open nets: 1
+-----Representative Net: Net[86] z[27]
+-----SLICE_X103Y15.AMUX -> DSP48_X4Y6.PCIN27
+-----Driver Term: mac0_i_21/O Load Term [261]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[27]
+Type 29 : SLICEM.D->DSP48E1.PCIN28
+-----Num Open nets: 1
+-----Representative Net: Net[85] z[28]
+-----SLICE_X102Y15.D -> DSP48_X4Y6.PCIN28
+-----Driver Term: mac0_i_20/O Load Term [259]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[28]
+Type 30 : SLICEM.DMUX->DSP48E1.PCIN29
+-----Num Open nets: 1
+-----Representative Net: Net[84] z[29]
+-----SLICE_X102Y15.DMUX -> DSP48_X4Y6.PCIN29
+-----Driver Term: mac0_i_19/O Load Term [257]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[29]
+Type 31 : SLICEM.A->DSP48E1.PCIN30
+-----Num Open nets: 1
+-----Representative Net: Net[83] z[30]
+-----SLICE_X102Y16.A -> DSP48_X4Y6.PCIN30
+-----Driver Term: mac0_i_18/O Load Term [255]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[30]
+Type 32 : SLICEM.AMUX->DSP48E1.PCIN31
+-----Num Open nets: 1
+-----Representative Net: Net[82] z[31]
+-----SLICE_X102Y16.AMUX -> DSP48_X4Y6.PCIN31
+-----Driver Term: mac0_i_17/O Load Term [253]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[31]
+Type 33 : SLICEM.C->DSP48E1.PCIN32
+-----Num Open nets: 1
+-----Representative Net: Net[81] z[32]
+-----SLICE_X102Y15.C -> DSP48_X4Y6.PCIN32
+-----Driver Term: mac0_i_16/O Load Term [251]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[32]
+Type 34 : SLICEM.CMUX->DSP48E1.PCIN33
+-----Num Open nets: 1
+-----Representative Net: Net[80] z[33]
+-----SLICE_X102Y15.CMUX -> DSP48_X4Y6.PCIN33
+-----Driver Term: mac0_i_15/O Load Term [249]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[33]
+Type 35 : SLICEM.B->DSP48E1.PCIN34
+-----Num Open nets: 1
+-----Representative Net: Net[79] z[34]
+-----SLICE_X102Y15.B -> DSP48_X4Y6.PCIN34
+-----Driver Term: mac0_i_14/O Load Term [247]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[34]
+Type 36 : SLICEM.BMUX->DSP48E1.PCIN35
+-----Num Open nets: 1
+-----Representative Net: Net[78] z[35]
+-----SLICE_X102Y15.BMUX -> DSP48_X4Y6.PCIN35
+-----Driver Term: mac0_i_13/O Load Term [245]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[35]
+Type 37 : SLICEM.A->DSP48E1.PCIN36
+-----Num Open nets: 1
+-----Representative Net: Net[77] z[36]
+-----SLICE_X102Y15.A -> DSP48_X4Y6.PCIN36
+-----Driver Term: mac0_i_12/O Load Term [243]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[36]
+Type 38 : SLICEM.AMUX->DSP48E1.PCIN37
+-----Num Open nets: 1
+-----Representative Net: Net[76] z[37]
+-----SLICE_X102Y15.AMUX -> DSP48_X4Y6.PCIN37
+-----Driver Term: mac0_i_11/O Load Term [241]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[37]
+Type 39 : SLICEM.A->DSP48E1.PCIN38
+-----Num Open nets: 1
+-----Representative Net: Net[75] z[38]
+-----SLICE_X102Y14.A -> DSP48_X4Y6.PCIN38
+-----Driver Term: mac0_i_10/O Load Term [239]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[38]
+Type 40 : SLICEM.AMUX->DSP48E1.PCIN39
+-----Num Open nets: 1
+-----Representative Net: Net[74] z[39]
+-----SLICE_X102Y14.AMUX -> DSP48_X4Y6.PCIN39
+-----Driver Term: mac0_i_9/O Load Term [237]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[39]
+Type 41 : SLICEL.B->DSP48E1.PCIN40
+-----Num Open nets: 1
+-----Representative Net: Net[73] z[40]
+-----SLICE_X103Y14.B -> DSP48_X4Y6.PCIN40
+-----Driver Term: mac0_i_8/O Load Term [235]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[40]
+Type 42 : SLICEL.BMUX->DSP48E1.PCIN41
+-----Num Open nets: 1
+-----Representative Net: Net[72] z[41]
+-----SLICE_X103Y14.BMUX -> DSP48_X4Y6.PCIN41
+-----Driver Term: mac0_i_7/O Load Term [233]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[41]
+Type 43 : SLICEL.A->DSP48E1.PCIN42
+-----Num Open nets: 1
+-----Representative Net: Net[71] z[42]
+-----SLICE_X103Y14.A -> DSP48_X4Y6.PCIN42
+-----Driver Term: mac0_i_6/O Load Term [231]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[42]
+Type 44 : SLICEL.AMUX->DSP48E1.PCIN43
+-----Num Open nets: 1
+-----Representative Net: Net[70] z[43]
+-----SLICE_X103Y14.AMUX -> DSP48_X4Y6.PCIN43
+-----Driver Term: mac0_i_5/O Load Term [229]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[43]
+Type 45 : SLICEL.B->DSP48E1.PCIN44
+-----Num Open nets: 1
+-----Representative Net: Net[69] z[44]
+-----SLICE_X103Y15.B -> DSP48_X4Y6.PCIN44
+-----Driver Term: mac0_i_4/O Load Term [227]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[44]
+Type 46 : SLICEL.BMUX->DSP48E1.PCIN45
+-----Num Open nets: 1
+-----Representative Net: Net[68] z[45]
+-----SLICE_X103Y15.BMUX -> DSP48_X4Y6.PCIN45
+-----Driver Term: mac0_i_3/O Load Term [225]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[45]
+Type 47 : SLICEL.A->DSP48E1.PCIN46
+-----Num Open nets: 1
+-----Representative Net: Net[67] z[46]
+-----SLICE_X103Y16.A -> DSP48_X4Y6.PCIN46
+-----Driver Term: mac0_i_2/O Load Term [223]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[46]
+Type 48 : SLICEL.AMUX->DSP48E1.PCIN47
+-----Num Open nets: 1
+-----Representative Net: Net[66] z[47]
+-----SLICE_X103Y16.AMUX -> DSP48_X4Y6.PCIN47
+-----Driver Term: mac0_i_1/O Load Term [221]: mac0/U0/i_synth/device_supports_dsp.use_multadd_dsp/dsp48_multadd.multadd_usecase_inst/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/PCIN[47]
+Phase 3.1 Initial Routing Verification | Checksum: 1315a9d13
+
+Time (s): cpu = 00:05:13 ; elapsed = 00:00:53 . Memory (MB): peak = 2927.297 ; gain = 816.828 ; free physical = 4241 ; free virtual = 46825
+Phase 3 Initial Routing | Checksum: 1315a9d13
+
+Time (s): cpu = 00:05:13 ; elapsed = 00:00:53 . Memory (MB): peak = 2927.297 ; gain = 816.828 ; free physical = 4241 ; free virtual = 46825
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 15
+ Number of Nodes with overlaps = 0
+Phase 4.1 Global Iteration 0 | Checksum: 9fdfce1d
+
+Time (s): cpu = 00:05:13 ; elapsed = 00:00:53 . Memory (MB): peak = 2927.297 ; gain = 816.828 ; free physical = 4242 ; free virtual = 46827
+Phase 4 Rip-up And Reroute | Checksum: 9fdfce1d
+
+Time (s): cpu = 00:05:13 ; elapsed = 00:00:53 . Memory (MB): peak = 2927.297 ; gain = 816.828 ; free physical = 4242 ; free virtual = 46827
+
+Phase 5 Delay and Skew Optimization
+Phase 5 Delay and Skew Optimization | Checksum: 9fdfce1d
+
+Time (s): cpu = 00:05:13 ; elapsed = 00:00:53 . Memory (MB): peak = 2927.297 ; gain = 816.828 ; free physical = 4242 ; free virtual = 46827
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+Phase 6.1 Hold Fix Iter | Checksum: 9fdfce1d
+
+Time (s): cpu = 00:05:13 ; elapsed = 00:00:53 . Memory (MB): peak = 2927.297 ; gain = 816.828 ; free physical = 4242 ; free virtual = 46827
+Phase 6 Post Hold Fix | Checksum: 9fdfce1d
+
+Time (s): cpu = 00:05:13 ; elapsed = 00:00:53 . Memory (MB): peak = 2927.297 ; gain = 816.828 ; free physical = 4242 ; free virtual = 46827
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.240965 %
+  Global Horizontal Routing Utilization  = 0.13548 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 48
+  Number of Unrouted Nets             = 48
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 34.2342%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 36.9369%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 50%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 26.4706%, No Congested Regions.
+Phase 7 Route finalize | Checksum: 9fdfce1d
+
+Time (s): cpu = 00:05:13 ; elapsed = 00:00:53 . Memory (MB): peak = 2927.297 ; gain = 816.828 ; free physical = 4242 ; free virtual = 46827
+
+Phase 8 Verifying routed nets
+CRITICAL WARNING: [Route 35-54] Net: z[47] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[46] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[45] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[44] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[43] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[42] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[41] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[40] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[39] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[38] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[37] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[36] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[35] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[34] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[33] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[32] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[31] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[30] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[29] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-54] Net: z[28] is not completely routed.
+Resolution: Run report_route_status for more information.
+CRITICAL WARNING: [Route 35-170] Too many nets were not completely routed. Further warnings disabled. Run 'report_route_status' for more information.
+Resolution: In order to see more information about the partially routed nets, run report_route_status with the -verbose option.
+CRITICAL WARNING: [Route 35-7] Design has 48 unroutable pins, potentially caused by placement issues.
+
+ Verification failed
+Phase 8 Verifying routed nets | Checksum: 9fdfce1d
+
+Time (s): cpu = 00:07:08 ; elapsed = 00:02:47 . Memory (MB): peak = 2927.297 ; gain = 816.828 ; free physical = 4261 ; free virtual = 46845
+CRITICAL WARNING: [Route 35-1] Design is not completely routed. There are  48  nets that are not completely routed.
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 11713085a
+
+Time (s): cpu = 00:07:08 ; elapsed = 00:02:47 . Memory (MB): peak = 2927.297 ; gain = 816.828 ; free physical = 4261 ; free virtual = 46845
+INFO: [Route 35-77] Router completed with failures. Please check the log file for Critical Warnings and run report_route_status for a summary of routing status.
+
+Time (s): cpu = 00:07:08 ; elapsed = 00:02:47 . Memory (MB): peak = 2927.297 ; gain = 816.828 ; free physical = 4301 ; free virtual = 46885
+
+Routing Is Done.
+45 Infos, 3 Warnings, 44 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:07:10 ; elapsed = 00:02:48 . Memory (MB): peak = 2927.441 ; gain = 816.973 ; free physical = 4301 ; free virtual = 46885
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2927.441 ; gain = 0.000 ; free physical = 4298 ; free virtual = 46885
+INFO: [Common 17-1381] The checkpoint '/home/nezin/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.runs/impl_1/dot_routed.dcp' has been generated.
+Command: report_drc -file dot_drc_routed.rpt -pb dot_drc_routed.pb -rpx dot_drc_routed.rpx
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/nezin/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.runs/impl_1/dot_drc_routed.rpt.
+report_drc completed successfully
+Command: report_methodology -file dot_methodology_drc_routed.rpt -rpx dot_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file /home/nezin/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.runs/impl_1/dot_methodology_drc_routed.rpt.
+report_methodology completed successfully
+Command: report_power -file dot_power_routed.rpt -pb dot_power_summary_routed.pb -rpx dot_power_routed.rpx
+WARNING: [Power 33-232] No user defined clocks were found in the design!
+Resolution: Please specify clocks using create_clock/create_generated_clock for sequential elements. For pure combinatorial circuits, please specify a virtual clock, otherwise the vectorless estimation might be inaccurate
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+52 Infos, 4 Warnings, 44 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+INFO: [Common 17-206] Exiting Vivado at Thu Dec  7 13:43:18 2017...

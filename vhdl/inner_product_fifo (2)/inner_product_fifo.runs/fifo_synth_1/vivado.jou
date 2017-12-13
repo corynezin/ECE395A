@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Sun Oct 22 17:36:23 2017
+# Process ID: 25158
+# Current directory: /home/bcv/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.runs/fifo_synth_1
+# Command line: vivado -log fifo.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fifo.tcl
+# Log file: /home/bcv/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.runs/fifo_synth_1/fifo.vds
+# Journal file: /home/bcv/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.runs/fifo_synth_1/vivado.jou
+#-----------------------------------------------------------
+source fifo.tcl -notrace

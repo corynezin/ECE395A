@@ -3,7 +3,8 @@
 // Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
 // Date        : Mon Dec 11 23:21:22 2017
 // Host        : nezin-desktop running 64-bit Ubuntu 16.04.3 LTS
-// Command     : write_verilog -force -mode funcsim /home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top fifo_16 -prefix
+//               fifo_16_ fifo_16_sim_netlist.v
 // Design      : fifo_16
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -603,7 +604,6 @@ module fifo_16
         .wr_rst_busy(NLW_U0_wr_rst_busy_UNCONNECTED));
 endmodule
 
-(* ORIG_REF_NAME = "dmem" *) 
 module fifo_16_dmem
    (dout,
     clk,
@@ -734,7 +734,6 @@ module fifo_16_dmem
         .R(srst));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_ramfifo" *) 
 module fifo_16_fifo_generator_ramfifo
    (empty,
     full,
@@ -824,7 +823,6 @@ module fifo_16_fifo_generator_ramfifo
         .srst(srst));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_top" *) 
 module fifo_16_fifo_generator_top
    (empty,
     full,
@@ -938,7 +936,7 @@ endmodule
 (* C_WR_DEPTH_WRCH = "16" *) (* C_WR_FREQ = "1" *) (* C_WR_PNTR_WIDTH = "4" *) 
 (* C_WR_PNTR_WIDTH_AXIS = "10" *) (* C_WR_PNTR_WIDTH_RACH = "4" *) (* C_WR_PNTR_WIDTH_RDCH = "10" *) 
 (* C_WR_PNTR_WIDTH_WACH = "4" *) (* C_WR_PNTR_WIDTH_WDCH = "10" *) (* C_WR_PNTR_WIDTH_WRCH = "4" *) 
-(* C_WR_RESPONSE_LATENCY = "1" *) (* ORIG_REF_NAME = "fifo_generator_v13_1_4" *) 
+(* C_WR_RESPONSE_LATENCY = "1" *) 
 module fifo_16_fifo_generator_v13_1_4
    (backup,
     backup_marker,
@@ -1938,7 +1936,6 @@ module fifo_16_fifo_generator_v13_1_4
         .wr_en(wr_en));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_v13_1_4_synth" *) 
 module fifo_16_fifo_generator_v13_1_4_synth
    (empty,
     full,
@@ -1985,7 +1982,6 @@ module fifo_16_fifo_generator_v13_1_4_synth
         .wr_en(wr_en));
 endmodule
 
-(* ORIG_REF_NAME = "memory" *) 
 module fifo_16_memory
    (dout,
     clk,
@@ -2024,7 +2020,6 @@ module fifo_16_memory
         .srst(srst));
 endmodule
 
-(* ORIG_REF_NAME = "rd_bin_cntr" *) 
 module fifo_16_rd_bin_cntr
    (D,
     \gdiff.gcry_1_sym.diff_pntr_pad_reg[4] ,
@@ -2186,7 +2181,6 @@ module fifo_16_rd_bin_cntr
         .O(\gdiff.gcry_1_sym.diff_pntr_pad[4]_i_2_n_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "rd_logic" *) 
 module fifo_16_rd_logic
    (out,
     empty,
@@ -2255,7 +2249,6 @@ module fifo_16_rd_logic
         .srst(srst));
 endmodule
 
-(* ORIG_REF_NAME = "rd_status_flags_ss" *) 
 module fifo_16_rd_status_flags_ss
    (out,
     empty,
@@ -2335,7 +2328,6 @@ module fifo_16_rd_status_flags_ss
         .O(ram_full_fb_i_reg));
 endmodule
 
-(* ORIG_REF_NAME = "wr_bin_cntr" *) 
 module fifo_16_wr_bin_cntr
    (p_2_out,
     ram_empty_i_reg,
@@ -2629,7 +2621,6 @@ module fifo_16_wr_bin_cntr
         .O(ram_full_fb_i_i_4_n_0));
 endmodule
 
-(* ORIG_REF_NAME = "wr_logic" *) 
 module fifo_16_wr_logic
    (out,
     full,
@@ -2734,7 +2725,6 @@ module fifo_16_wr_logic
         .wr_en(wr_en));
 endmodule
 
-(* ORIG_REF_NAME = "wr_pf_ss" *) 
 module fifo_16_wr_pf_ss
    (prog_full,
     srst,
@@ -2835,7 +2825,6 @@ module fifo_16_wr_pf_ss
         .R(srst));
 endmodule
 
-(* ORIG_REF_NAME = "wr_status_flags_ss" *) 
 module fifo_16_wr_status_flags_ss
    (out,
     full,

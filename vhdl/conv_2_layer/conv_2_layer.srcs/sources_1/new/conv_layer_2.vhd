@@ -121,30 +121,30 @@ Port Map(
     h_mux_addr => h_mux_addr,
     o_mux_addr => o_mux_addr);
     
---generate_conv:
---for i in 1 to 63 generate begin
---    conv_gen: conv_unit
---    Generic Map(
---        mif_name => "/home/nezin/Documents/ECE395A/vhdl/source/mem/" & integer'image(i) & ".mem")
---    Port Map(
---        clk => clk,
---        srst => srst,
---        din => din,
---        dout => output_matrix(i),
---        mac_enable => mac_enable,
---        ctr_rst => ctr_rst,
---        filter_input_enable => filter_input_enable,
---        filter_rom_address => filter_rom_address,
---        x_fifo_wren => x_fifo_wren,
---        x_fifo_rden => x_fifo_rden,
---        h_fifo_wren => h_fifo_wren,
---        h_fifo_rden => h_fifo_rden,
---        o_fifo_wren => o_fifo_wren,
---        o_fifo_rden => o_fifo_rden,
---        x_mux_addr => x_mux_addr,
---        h_mux_addr => h_mux_addr,
---        o_mux_addr => o_mux_addr);    
---    end generate generate_conv;
+generate_conv:
+for i in 1 to 63 generate begin
+    conv_gen: conv_unit
+    Generic Map(
+        mif_name => "/home/nezin/Documents/ECE395A/vhdl/source/mem/" & integer'image(i) & ".mem")
+    Port Map(
+        clk => clk,
+        srst => srst,
+        din => din,
+        dout => output_matrix(i),
+        mac_enable => mac_enable,
+        ctr_rst => ctr_rst,
+        filter_input_enable => filter_input_enable,
+        filter_rom_address => filter_rom_address,
+        x_fifo_wren => x_fifo_wren,
+        x_fifo_rden => x_fifo_rden,
+        h_fifo_wren => h_fifo_wren,
+        h_fifo_rden => h_fifo_rden,
+        o_fifo_wren => o_fifo_wren,
+        o_fifo_rden => o_fifo_rden,
+        x_mux_addr => x_mux_addr,
+        h_mux_addr => h_mux_addr,
+        o_mux_addr => o_mux_addr);    
+    end generate generate_conv;
     
 controller: conv2_controller
 PORT MAP( 

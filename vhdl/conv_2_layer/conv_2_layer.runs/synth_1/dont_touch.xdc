@@ -3,3 +3,15 @@
 
 # IP: /home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fifo_45 || ORIG_REF_NAME==fifo_45}]
+
+# IP: ip/fifo_7680/fifo_7680.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fifo_7680 || ORIG_REF_NAME==fifo_7680}]
+
+# IP: /home/nezin/Documents/ECE395A/vhdl/ip/fifo_generator_0/fifo_generator_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fifo_generator_0 || ORIG_REF_NAME==fifo_generator_0}]
+
+# IP: /home/nezin/Documents/ECE395A/vhdl/conv_relu_pool/conv_relu_pool.srcs/sources_1/ip/fir128_1/fir128_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fir128_1 || ORIG_REF_NAME==fir128_1}]
+
+# IP: /home/nezin/Documents/ECE395A/vhdl/conv_relu_pool/conv_relu_pool.srcs/sources_1/ip/fir128_0/fir128_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fir128_0 || ORIG_REF_NAME==fir128_0}]

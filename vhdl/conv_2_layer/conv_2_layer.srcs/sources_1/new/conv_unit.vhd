@@ -12,7 +12,7 @@ Generic(
     N_in: integer := 8;
     N_out: integer := 48;
     addr_bits: integer := 11;
-    mif_name: string := "/home/nezin/Documents/ECE395A/vhdl/source/mem/0.mem");
+    mif_name: string);
 Port(
     clk: in STD_LOGIC;
     srst: in STD_LOGIC;

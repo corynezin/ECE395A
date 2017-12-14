@@ -104,7 +104,7 @@ mp: maxpool2
     )
     port map(
         clk => clk,
-        ceclk => ceclk,
+        ceclk => ceclk       ,
         input => sum,
         output => w,
         input_valid => sum_valid,

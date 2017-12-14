@@ -22,19 +22,33 @@ Port (
     srst: in STD_LOGIC );
 end component conv_layer_2;
 
-COMPONENT fifo_64
+component conv_relu_pool is
+    generic(
+        M: Integer:=8; --Input bit width
+        N: Integer:=24 --Output bit width
+    );
+    Port(
+        x: IN STD_LOGIC_VECTOR(M-1 downto 0);
+        y: OUT STD_LOGIC_VECTOR(N-1 downto 0);
+        rst: IN STD_LOGIC;
+        clk: IN STD_LOGIC;
+        y_valid: OUT STD_LOGIC
+    );
+end component conv_relu_pool;
+
+COMPONENT fifo_7680
   PORT (
     clk : IN STD_LOGIC;
-    srst : IN STD_LOGIC;
-    din : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+    rst : IN STD_LOGIC;
+    din : IN STD_LOGIC_VECTOR(23 DOWNTO 0);
     wr_en : IN STD_LOGIC;
     rd_en : IN STD_LOGIC;
-    dout : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+    dout : OUT STD_LOGIC_VECTOR(23 DOWNTO 0);
     full : OUT STD_LOGIC;
-    almost_full : OUT STD_LOGIC;
-    empty : OUT STD_LOGIC
+    empty : OUT STD_LOGIC;
+    prog_full : OUT STD_LOGIC
   );
-end COMPONENT fifo_64;
+END COMPONENT;
 
 signal clk: STD_LOGIC:= '0';
 signal srst: STD_LOGIC := '0';
@@ -47,18 +61,32 @@ signal b_fifo_output: STD_LOGIC_VECTOR(7 downto 0);
 signal choose: STD_LOGIC := '0';
 signal lfsr: STD_LOGIC_VECTOR(7 downto 0):= "00000001";
 signal conv_layer_output: STD_LOGIC_VECTOR(47 downto 0) := (others => '0');
+signal emulated_input: STD_LOGIC_VECTOR(7 downto 0);
+signal y_valid: STD_LOGIC:='0';
+signal true_b_fifo_wren: STD_LOGIC:='0';
 begin
 
-b_fifo: fifo_64
-PORT MAP (
+conv1: conv_relu_pool
+    Port Map(
+        x => emulated_input,
+        y => b_fifo_input,
+        rst => srst,
+        clk => clk,
+        y_valid => y_valid
+    );
+    
+b_fifo: fifo_7680
+  PORT MAP (
     clk => clk,
-    srst => srst,
+    rst => srst,
     din => b_fifo_input,
-    wr_en => b_fifo_wren,
+    wr_en => true_b_fifo_wren,
     rd_en => b_fifo_rden,
     dout => b_fifo_output,
-    full => b_fifo_full,
-    empty => b_fifo_empty);
+    --full => b_fifo_full,
+    empty => b_fifo_empty,
+    prog_full => b_fifo_full
+  );
     
 conv_layer: conv_layer_2
 Port Map ( 
@@ -76,7 +104,9 @@ process begin
     choose <= '1';
 end process;
 
-b_fifo_input <= lfsr(7 downto 0);
+true_b_fifo_wren <= b_fifo_wren and y_valid;
+
+emulated_input <= lfsr(7 downto 0);
 process(clk) begin
     if rising_edge(clk) then
         lfsr(0) <= lfsr(7) xor lfsr(5) xor lfsr(4) xor lfsr(3);

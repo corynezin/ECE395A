@@ -6,4 +6,4 @@
 # Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 #
 
-vivado -log conv_layer_2.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source conv_layer_2.tcl
+vivado -log conv_layer_2_tb.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source conv_layer_2_tb.tcl

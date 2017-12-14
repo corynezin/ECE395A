@@ -27,7 +27,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log conv_layer_2.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source conv_layer_2.tcl" );
+         "-log conv_layer_2_tb.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source conv_layer_2_tb.tcl" );
 
 
 

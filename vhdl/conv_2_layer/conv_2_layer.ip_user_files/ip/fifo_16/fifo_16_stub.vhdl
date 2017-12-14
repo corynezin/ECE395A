@@ -3,7 +3,8 @@
 -- Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
 -- Date        : Mon Dec 11 23:21:22 2017
 -- Host        : nezin-desktop running 64-bit Ubuntu 16.04.3 LTS
--- Command     : write_vhdl -force -mode synth_stub /home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top fifo_16 -prefix
+--               fifo_16_ fifo_16_stub.vhdl
 -- Design      : fifo_16
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1

@@ -8,15 +8,14 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity dot is
     Generic (
-        N: integer := 8;
-        M: integer := 8;
+        N_signal: integer := 24;
+        N_coef: integer := 8;
         L: integer := 10;
         O: integer := 48
     );
     Port ( 
-        x:      in STD_LOGIC_VECTOR (N-1 downto 0); --component of first vector
-        y:      in STD_LOGIC_VECTOR (M-1 downto 0); --component of second vector
-        T:      in UNSIGNED (L-1 downto 0);         --Length of vector
+        x:      in STD_LOGIC_VECTOR (N_signal-1 downto 0); --component of first vector
+        y:      in STD_LOGIC_VECTOR (N_coef-1 downto 0); --component of second vector
         sclr:   in STD_LOGIC;                     --Synchronus Clear
         clk:    in STD_LOGIC;                     --Clock
         ce:     in STD_LOGIC;                     --Clock Enable

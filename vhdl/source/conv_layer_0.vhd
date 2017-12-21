@@ -33,7 +33,6 @@ end component;
 -- FIFO component
 component fifo_generator_0 is
   Port ( 
-    
       clk : in STD_LOGIC;
       srst : in STD_LOGIC;
       din : in STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -43,6 +42,7 @@ component fifo_generator_0 is
       full : out STD_LOGIC;
       almost_full : out STD_LOGIC;
       empty : out STD_LOGIC;
+      data_count : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
       prog_full : out STD_LOGIC );
 end component;
 
@@ -76,7 +76,6 @@ signal wr_intermediate : STD_LOGIC;
 signal wr_inter : STD_LOGIC;
 signal h1_output_valid : STD_LOGIC := '0';
 signal is_output_valid : STD_LOGIC := '0';
-signal counter_signal : STD_LOGIC_VECTOR(7 downto 0);
 begin
 h0: conv_0 port map (
     x => fifo_out,
@@ -139,7 +138,6 @@ begin
             counter := 0;
             is_output_valid <= '1';
         end if;
-        counter_signal <= std_logic_vector(to_signed(counter,8));
     end if;
     
 end process;

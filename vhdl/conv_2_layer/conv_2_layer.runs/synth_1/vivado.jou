@@ -2,11 +2,11 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Wed Dec 13 20:28:07 2017
-# Process ID: 31185
+# Start of session at: Tue Dec 19 10:43:02 2017
+# Process ID: 22834
 # Current directory: /home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.runs/synth_1
-# Command line: vivado -log conv_layer_2_tb.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source conv_layer_2_tb.tcl
-# Log file: /home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.runs/synth_1/conv_layer_2_tb.vds
+# Command line: vivado -log conv_relu_pool.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source conv_relu_pool.tcl
+# Log file: /home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.runs/synth_1/conv_relu_pool.vds
 # Journal file: /home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
-source conv_layer_2_tb.tcl -notrace
+source conv_relu_pool.tcl -notrace

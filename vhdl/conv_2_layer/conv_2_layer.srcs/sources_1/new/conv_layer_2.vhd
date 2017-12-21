@@ -7,11 +7,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity conv_layer_2 is
 Generic (
-    N_in: integer := 8;
+    N_signal: integer := 24;
+    N_coef: integer := 8;
     N_out: integer := 48;
     addr_bits: integer := 11);
 Port ( 
-    din: in STD_LOGIC_VECTOR (N_in-1 downto 0);
+    din: in STD_LOGIC_VECTOR (N_signal-1 downto 0);
     b_fifo_full: in STD_LOGIC;
     b_fifo_empty: in STD_LOGIC;
     b_fifo_wren: out STD_LOGIC;
@@ -25,7 +26,7 @@ architecture RTL of conv_layer_2 is
 type output_array is array (0 to 63) of STD_LOGIC_VECTOR(47 downto 0);
 component conv_unit is
 Generic(
-    N_in: integer := 8;
+    N_in: integer := 24;
     N_out: integer := 48;
     addr_bits: integer := 11;
     mif_name: string := "/home/nezin/Documents/ECE395A/vhdl/source/mem/0.mem");
@@ -184,7 +185,9 @@ PORT MAP(
 process(clk)
 variable i: integer := 0;
 begin
-    i := (i + 1) mod 64;
-    dout <= output_matrix(i);
+    if rising_edge(clk) then
+        i := (i + 1) mod 64;
+        dout <= output_matrix(i);
+    end if;
 end process;
 end RTL;

@@ -9,14 +9,15 @@ Library xpm;
 use xpm.vcomponents.all;
 entity conv_unit is
 Generic( 
-    N_in: integer := 8;
+    N_signal: integer := 24;
+    N_coef: integer := 8;
     N_out: integer := 48;
     addr_bits: integer := 11;
     mif_name: string);
 Port(
     clk: in STD_LOGIC;
     srst: in STD_LOGIC;
-    din: in STD_LOGIC_VECTOR(N_in-1 downto 0);
+    din: in STD_LOGIC_VECTOR(N_signal-1 downto 0);
     dout: out STD_LOGIC_VECTOR(N_out-1 downto 0);
     mac_enable: in STD_LOGIC;
     ctr_rst: in STD_LOGIC;
@@ -34,49 +35,40 @@ Port(
 end conv_unit;
 
 architecture RTL of conv_unit is
+COMPONENT fifo_16x24
+PORT (
+    clk : IN STD_LOGIC;
+    srst : IN STD_LOGIC;
+    din : IN STD_LOGIC_VECTOR(N_signal-1 DOWNTO 0);
+    wr_en : IN STD_LOGIC;
+    rd_en : IN STD_LOGIC;
+    dout : OUT STD_LOGIC_VECTOR(N_signal-1 DOWNTO 0);
+    full : OUT STD_LOGIC;
+    empty : OUT STD_LOGIC);
+END COMPONENT;
 COMPONENT fifo_16
 PORT (
     clk : IN STD_LOGIC;
     srst : IN STD_LOGIC;
-    din : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+    din : IN STD_LOGIC_VECTOR(N_coef-1 DOWNTO 0);
     wr_en : IN STD_LOGIC;
     rd_en : IN STD_LOGIC;
-    dout : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+    dout : OUT STD_LOGIC_VECTOR(N_coef-1 DOWNTO 0);
     full : OUT STD_LOGIC;
     almost_full : OUT STD_LOGIC;
     empty : OUT STD_LOGIC;
     prog_full : OUT STD_LOGIC);
 END COMPONENT;
-COMPONENT fifo_64
-PORT (
-    clk : IN STD_LOGIC;
-    srst : IN STD_LOGIC;
-    din : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    wr_en : IN STD_LOGIC;
-    rd_en : IN STD_LOGIC;
-    dout : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-    full : OUT STD_LOGIC;
-    almost_full : OUT STD_LOGIC;
-    empty : OUT STD_LOGIC);
-END COMPONENT;
-COMPONENT mux2_1_8 is
-Port ( 
-    x_0 : IN STD_LOGIC_VECTOR(7 downto 0); -- Choice 0
-    x_1 : IN STD_LOGIC_VECTOR(7 downto 0); -- Choice 1
-    y : OUT STD_LOGIC_VECTOR(7 downto 0);  -- Chosen
-    addr : IN STD_LOGIC);                  -- 0 -> x_0, 1 -> x_1
-end component mux2_1_8;
 
 COMPONENT dot is
 Generic (
-    N: integer := 8;
-    M: integer := 8;
+    N_signal: integer := 24;
+    N_coef: integer := 8;
     L: integer := 10;
     O: integer := 48);
 Port ( 
-    x:      in STD_LOGIC_VECTOR (N-1 downto 0); --component of first vector
-    y:      in STD_LOGIC_VECTOR (M-1 downto 0); --component of second vector
-    T:      in UNSIGNED (L-1 downto 0);         --Length of vector
+    x:      in STD_LOGIC_VECTOR (N_signal-1 downto 0); --component of first vector
+    y:      in STD_LOGIC_VECTOR (N_coef-1 downto 0); --component of second vector
     sclr:   in STD_LOGIC;                     --Synchronus Clear
     clk:    in STD_LOGIC;                     --Clock
     ce:     in STD_LOGIC;                     --Clock Enable
@@ -111,15 +103,16 @@ COMPONENT maxpool2 is
            clk : in STD_LOGIC);
 end COMPONENT maxpool2;
 
-signal x_fifo_output, h_fifo_output: STD_LOGIC_VECTOR( N_in-1 downto 0) := (others => '0');
+signal x_fifo_output: STD_LOGIC_VECTOR( N_signal-1 downto 0) := (others => '0');
+signal h_fifo_output: STD_LOGIC_VECTOR( N_coef-1 downto 0) := (others => '0');
 signal o_fifo_output: STD_LOGIC_VECTOR (N_out-1 downto 0);
-signal x_fifo_input, h_fifo_input: STD_LOGIC_VECTOR(N_in-1 downto 0) := (others => '0');
+signal x_fifo_input: STD_LOGIC_VECTOR(N_signal-1 downto 0) := (others => '0');
+signal h_fifo_input: STD_LOGIC_VECTOR(N_coef-1 downto 0) := (others => '0');
 signal o_fifo_input: STD_LOGIC_VECTOR(N_out-1 downto 0):= (others => '0');
 signal x_fifo_full, h_fifo_full, o_fifo_full: STD_LOGIC:= '0';
-signal x_fifo_prog_full, h_fifo_prog_full: STD_LOGIC := '0';
-signal filter_rom_output: STD_LOGIC_VECTOR (N_in-1 downto 0) := (others => '0');
+signal filter_rom_output: STD_LOGIC_VECTOR (N_coef-1 downto 0) := (others => '0');
 signal dot_valid: STD_LOGIC:='0';
-signal mac_filter_input: STD_LOGIC_VECTOR(N_in-1 downto 0) := (others => '0');
+signal mac_filter_input: STD_LOGIC_VECTOR(N_coef-1 downto 0) := (others => '0');
 signal actual_dot_valid : STD_LOGIC := '0';
 signal mac_output: STD_LOGIC_VECTOR(N_out-1 downto 0) := (others => '0');
 signal partial_sum: STD_LOGIC_VECTOR(N_out-1 downto 0);
@@ -128,7 +121,7 @@ signal relu_output: STD_LOGIC_VECTOR(N_out-1 downto 0 );
 signal maxpool_output: STD_LOGIC_VECTOR(N_out-1 downto 0 );
 
 begin
-x_fifo: fifo_16
+x_fifo: fifo_16x24
 PORT MAP (
     clk => clk,
     srst => srst,
@@ -136,8 +129,7 @@ PORT MAP (
     wr_en => x_fifo_wren,
     rd_en => x_fifo_rden,
     dout => x_fifo_output,
-    full => x_fifo_full,
-    prog_full => x_fifo_prog_full
+    full => x_fifo_full
 );
 h_fifo: fifo_16
 PORT MAP (
@@ -147,21 +139,12 @@ PORT MAP (
     wr_en => h_fifo_wren,
     rd_en => h_fifo_rden,
     dout => h_fifo_output,
-    full => h_fifo_full,
-    prog_full => h_fifo_prog_full
+    full => h_fifo_full
 );
-x_mux: mux2_1_8
-PORT MAP ( 
-    x_0 => din,
-    x_1 => x_fifo_output, 
-    y => x_fifo_input,
-    addr => x_mux_addr); 
-h_mux: mux2_1_8
-PORT MAP ( 
-    x_0 => filter_rom_output,
-    x_1 => h_fifo_output,
-    y => h_fifo_input,
-    addr => h_mux_addr);    
+
+x_fifo_input <= din when x_mux_addr = '0' else x_fifo_output;
+  
+h_fifo_input <= filter_rom_output when h_mux_addr = '0' else h_fifo_input;
 xpm_memory_sprom_inst:xpm_memory_sprom
     generic map(
     --Common module generics
@@ -173,7 +156,7 @@ xpm_memory_sprom_inst:xpm_memory_sprom
     WAKEUP_TIME => "disable_sleep",--string;"disable_sleep"or"use_sleep_pin"
     MESSAGE_CONTROL => 0, --integer;0,1
     --Port A module generics
-    READ_DATA_WIDTH_A => N_in, --positiveinteger
+    READ_DATA_WIDTH_A => N_coef, --positiveinteger
     ADDR_WIDTH_A => addr_bits, --positiveinteger
     READ_RESET_VALUE_A => "0", --string
     READ_LATENCY_A => 2 --non-negativeinteger
@@ -197,7 +180,6 @@ inner_product : dot
 PORT MAP( 
     x => x_fifo_output,
     y => mac_filter_input,
-    T => "0000010000",
     sclr => srst,
     clk => clk,
     ce => mac_enable,

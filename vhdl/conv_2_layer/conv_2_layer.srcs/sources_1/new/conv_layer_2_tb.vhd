@@ -1,13 +1,15 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 entity conv_layer_2_tb is
---  Port ( );
+    Port (
+    dout: out STD_LOGIC_VECTOR(47 downto 0)
+    );
 end conv_layer_2_tb;
 
 architecture Behavioral of conv_layer_2_tb is
 component conv_layer_2 is
 Generic (
-    N_in: integer := 8;
+    N_in: integer := 24;
     N_out: integer := 48;
     addr_bits: integer := 11
     );
@@ -52,12 +54,12 @@ END COMPONENT;
 
 signal clk: STD_LOGIC:= '0';
 signal srst: STD_LOGIC := '0';
-signal b_fifo_input: STD_LOGIC_VECTOR(7 downto 0);
+signal b_fifo_input: STD_LOGIC_VECTOR(23 downto 0);
 signal b_fifo_wren: STD_LOGIC := '0';
 signal b_fifo_rden: STD_LOGIC := '0';
 signal b_fifo_full: STD_LOGIC := '0';
 signal b_fifo_empty: STD_LOGIC := '0';
-signal b_fifo_output: STD_LOGIC_VECTOR(7 downto 0);
+signal b_fifo_output: STD_LOGIC_VECTOR(23 downto 0);
 signal choose: STD_LOGIC := '0';
 signal lfsr: STD_LOGIC_VECTOR(7 downto 0):= "00000001";
 signal conv_layer_output: STD_LOGIC_VECTOR(47 downto 0) := (others => '0');
@@ -105,7 +107,7 @@ process begin
 end process;
 
 true_b_fifo_wren <= b_fifo_wren and y_valid;
-
+dout <= conv_layer_output;
 emulated_input <= lfsr(7 downto 0);
 process(clk) begin
     if rising_edge(clk) then

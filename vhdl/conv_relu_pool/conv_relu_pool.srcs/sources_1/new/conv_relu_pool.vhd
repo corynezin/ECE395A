@@ -49,7 +49,7 @@ component Relu is
   );
 end component Relu;
 
-component maxpool2 is
+component maxpool2_1 is
     generic (N : INTEGER);
     Port ( input : in STD_LOGIC_VECTOR (N-1 downto 0);
            output : out STD_LOGIC_VECTOR (N-1 downto 0);
@@ -57,7 +57,7 @@ component maxpool2 is
            ceclk: in STD_LOGIC;
            input_valid: in STD_LOGIC;
            output_valid: out STD_LOGIC);
-end component maxpool2;
+end component maxpool2_1;
 
 signal conv0_valid: STD_LOGIC:= '0';
 signal conv1_valid: STD_LOGIC:= '0';
@@ -98,13 +98,13 @@ r: Relu
         d0 => sum,
         output => z
     );
-mp: maxpool2
+mp: maxpool2_1
     generic map(
         N => 24
     )
     port map(
         clk => clk,
-        ceclk => ceclk       ,
+        ceclk => ceclk,
         input => sum,
         output => w,
         input_valid => sum_valid,

@@ -1,0 +1,1 @@
+fifo_16x24_sim_netlist.vhdl,vhdl,xil_defaultlib,../../../../conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24_sim_netlist.vhdl,

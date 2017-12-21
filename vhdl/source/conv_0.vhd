@@ -65,7 +65,11 @@ begin
         -- weight changing
         if i = 127 and init = 0 then
             if (data_valid = '1') then
-                j := (j + 1) mod 128;
+                if j = 127 then
+                    j := 0;
+                else
+                    j := j + 1;
+                end if;
                 sel_valid <= '1';
                 sel <= std_logic_vector(to_unsigned(j,8));
             end if;

@@ -1,1 +1,0 @@
--wto "1cbc5c9936544b3ea85088fe181abbb3" --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" -L "xpm" --snapshot "conv_layer_2_tb_behav" "xil_defaultlib.conv_layer_2_tb" -log "elaborate.log" 

@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\renewcommand{\baselinestretch}{1.0}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\bibliographystyle{IEEEtran}
+
+\begin{document}
+\title{Product Design Specification: \\
+       \textbf{Real Time Modulation Classification using FPGAs}}
+\author{Cory Nezin, Brenda So}
+\maketitle
+
+\renewcommand\thesection{\Alph{section}}
+\section{Purpose}
+Wireless signal classification has applications in jammer identification, automatic cognitive radio control, and interference mitigation.  The purpose of this project is to create a low-power, low-weight, low-latency device capable of state of the art modulation classification.  The product includes a register-transfer level design and implementation of a convolutional neural network.
+\section{Features}
+\begin{itemize}
+\item Cost: \$5-\$10 (ASIC), \$100 (FPGA)
+\item Quantity: 1000
+\item Maintenance: None
+\item Packaging: Ceramic
+\item Materials: Light-weight chip
+\item Weight: Less than $0.5$ $pounds$
+\item Aesthetics: Small, darkly colored.  Difficult to detect
+\item Product life: 2 years
+\end{itemize}
+\section{Competition}
+\begin{itemize}
+\item Qualcomm's ``Snapdragon''
+\item Apple's ``Nueral Engine''
+\item Cadence's ``Tensilica Vision C5''
+\end{itemize}
+\section{Intended Market}
+\begin{itemize}
+\item Military
+\item Academia
+\end{itemize}
+\section{Performance Requirements}
+\begin{itemize}
+\item Less than $50ms$ classification latency
+\item $75\%$ accuracy or higher for positive SNR
+\end{itemize}
+\section{Life-cycle}
+\begin{itemize}
+\item Predicted 2-3 years before obsolescence
+\end{itemize}
+\section{Human Factors}
+\begin{itemize}
+\item Special training or documentation may be required for new users.
+\end{itemize}
+\section{Social, Political, Legal, and Ethical Issues}
+\begin{itemize}
+\item Device may be used to kill people
+\end{itemize}
+\end{document}

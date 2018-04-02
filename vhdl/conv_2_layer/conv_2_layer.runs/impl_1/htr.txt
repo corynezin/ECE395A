@@ -6,4 +6,4 @@
 # Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 #
 
-vivado -log conv_relu_pool.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source conv_relu_pool.tcl -notrace
+vivado -log maia.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source maia.tcl -notrace

@@ -1,4 +1,7 @@
 # compile vhdl design source files
+vhdl xil_defaultlib  "../../../../matmul/matmul.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_sim_netlist.vhdl"
+vhdl xil_defaultlib  "../../../../matmul/matmul.srcs/sources_1/ip/activation_fifo/activation_fifo_sim_netlist.vhdl"
+vhdl xil_defaultlib  "../../../conv_2_layer.srcs/sources_1/ip/fifo_generator_1_1/fifo_generator_1_sim_netlist.vhdl"
 vhdl xil_defaultlib  "../../../../ip/fifo_45/fifo_45_sim_netlist.vhdl"
 vhdl xil_defaultlib  "../../../../ip/fifo_16/fifo_16_sim_netlist.vhdl"
 vhdl xil_defaultlib  "../../../conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24_sim_netlist.vhdl"
@@ -15,11 +18,14 @@ vhdl xil_defaultlib  "../../../conv_2_layer.srcs/sources_1/new/conv_layer_2.vhd"
 vhdl xil_defaultlib  "../../../../conv_relu_pool/conv_relu_pool.srcs/sources_1/new/conv_relu_pool.vhd"
 vhdl xil_defaultlib  "../../../conv_2_layer.srcs/sources_1/new/conv_unit.vhd"
 vhdl xil_defaultlib  "../../../../source/dot.vhd"
+vhdl xil_defaultlib  "../../../../matmul/matmul.srcs/sources_1/new/dot_n.vhd"
 vhdl xil_defaultlib  "../../../../source/downsample.vhd"
-vhdl xil_defaultlib  "../../../../source/maxpool.vhd"
+vhdl xil_defaultlib  "../../../../matmul/matmul.srcs/sources_1/new/matmul.vhd"
 vhdl xil_defaultlib  "../../../../source/maxpool_1.vhd"
 vhdl xil_defaultlib  "../../../../source/mux2_1.vhd"
+vhdl xil_defaultlib  "../../../../matmul/matmul.srcs/sources_1/new/mux_3.vhd"
 vhdl xil_defaultlib  "../../../../source/relu.vhd"
+vhdl xil_defaultlib  "../../../../slope_bias_loader/slope_bias_loader.srcs/sources_1/new/slope_bias_loader.vhd"
 vhdl xil_defaultlib  "../../../conv_2_layer.srcs/sources_1/new/conv_layer_2_tb.vhd"
 
 # Do not sort compile order

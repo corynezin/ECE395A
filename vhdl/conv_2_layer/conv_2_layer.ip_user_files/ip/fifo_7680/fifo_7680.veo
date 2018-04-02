@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2017 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -56,7 +56,7 @@
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
 fifo_7680 your_instance_name (
   .clk(clk),              // input wire clk
-  .rst(rst),              // input wire rst
+  .srst(srst),            // input wire srst
   .din(din),              // input wire [23 : 0] din
   .wr_en(wr_en),          // input wire wr_en
   .rd_en(rd_en),          // input wire rd_en

@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log conv_relu_pool.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source conv_relu_pool.tcl
+EAStep vivado -log maia.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source maia.tcl

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="conv_layer_2_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="conv_layer_2_tb" />
+            <top_module name="vcomponents" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="3115333334fs"></ZoomStartTime>
+      <ZoomEndTime time="3562333335fs"></ZoomEndTime>
+      <Cursor1Time time="3198833000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="172"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="63" />
+   <wvobject type="array" fp_name="/conv_layer_2_tb/dout">
+      <obj_property name="ElementShortName">dout[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/input_a">
+      <obj_property name="ElementShortName">input_a[15:0]</obj_property>
+      <obj_property name="ObjectShortName">input_a[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/input_b">
+      <obj_property name="ElementShortName">input_b[15:0]</obj_property>
+      <obj_property name="ObjectShortName">input_b[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/srst">
+      <obj_property name="ElementShortName">srst</obj_property>
+      <obj_property name="ObjectShortName">srst</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider587" type="divider">
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/conv1/conv0/h0/x">
+      <obj_property name="ElementShortName">x[15:0]</obj_property>
+      <obj_property name="ObjectShortName">x[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/conv1/conv0/h0/y">
+      <obj_property name="ElementShortName">y[23:0]</obj_property>
+      <obj_property name="ObjectShortName">y[23:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/conv1/conv0/h0/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/conv1/conv0/h0/data_valid">
+      <obj_property name="ElementShortName">data_valid</obj_property>
+      <obj_property name="ObjectShortName">data_valid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/conv1/conv0/h0/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/conv1/conv0/h0/output_valid">
+      <obj_property name="ElementShortName">output_valid</obj_property>
+      <obj_property name="ObjectShortName">output_valid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/conv1/conv0/h0/sel">
+      <obj_property name="ElementShortName">sel[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sel[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/conv1/conv0/h0/sel_valid">
+      <obj_property name="ElementShortName">sel_valid</obj_property>
+      <obj_property name="ObjectShortName">sel_valid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/conv1/conv0/h0/valid_data">
+      <obj_property name="ElementShortName">valid_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">valid_data[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/conv1/conv0/h0/valid_intermediate">
+      <obj_property name="ElementShortName">valid_intermediate</obj_property>
+      <obj_property name="ObjectShortName">valid_intermediate</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/conv1/conv0/h0/init_sig">
+      <obj_property name="ElementShortName">init_sig</obj_property>
+      <obj_property name="ObjectShortName">init_sig</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/conv_layer_2_tb/conv1/conv0/h0/M">
+      <obj_property name="ElementShortName">M</obj_property>
+      <obj_property name="ObjectShortName">M</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/conv_layer_2_tb/conv1/conv0/h0/N">
+      <obj_property name="ElementShortName">N</obj_property>
+      <obj_property name="ObjectShortName">N</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/conv_layer_2_tb/conv1/conv0/h0/P">
+      <obj_property name="ElementShortName">P</obj_property>
+      <obj_property name="ObjectShortName">P</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider588" type="divider">
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/conv1/conv1/h1/x">
+      <obj_property name="ElementShortName">x[15:0]</obj_property>
+      <obj_property name="ObjectShortName">x[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/conv1/conv1/h1/y">
+      <obj_property name="ElementShortName">y[23:0]</obj_property>
+      <obj_property name="ObjectShortName">y[23:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/conv1/conv1/h1/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/conv1/conv1/h1/data_valid">
+      <obj_property name="ElementShortName">data_valid</obj_property>
+      <obj_property name="ObjectShortName">data_valid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/conv1/conv1/h1/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/conv1/conv1/h1/output_valid">
+      <obj_property name="ElementShortName">output_valid</obj_property>
+      <obj_property name="ObjectShortName">output_valid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/conv1/conv1/h1/sel">
+      <obj_property name="ElementShortName">sel[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sel[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/conv1/conv1/h1/sel_valid">
+      <obj_property name="ElementShortName">sel_valid</obj_property>
+      <obj_property name="ObjectShortName">sel_valid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/conv1/conv1/h1/valid_data">
+      <obj_property name="ElementShortName">valid_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">valid_data[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/conv1/conv1/h1/valid_intermediate">
+      <obj_property name="ElementShortName">valid_intermediate</obj_property>
+      <obj_property name="ObjectShortName">valid_intermediate</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/conv1/conv1/h1/init_sig">
+      <obj_property name="ElementShortName">init_sig</obj_property>
+      <obj_property name="ObjectShortName">init_sig</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/conv_layer_2_tb/conv1/conv1/h1/M">
+      <obj_property name="ElementShortName">M</obj_property>
+      <obj_property name="ObjectShortName">M</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/conv_layer_2_tb/conv1/conv1/h1/N">
+      <obj_property name="ElementShortName">N</obj_property>
+      <obj_property name="ObjectShortName">N</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/conv_layer_2_tb/conv1/conv1/h1/P">
+      <obj_property name="ElementShortName">P</obj_property>
+      <obj_property name="ObjectShortName">P</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider647" type="divider">
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/conv1/y1">
+      <obj_property name="ElementShortName">y1[23:0]</obj_property>
+      <obj_property name="ObjectShortName">y1[23:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">20</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/conv1/y2">
+      <obj_property name="ElementShortName">y2[23:0]</obj_property>
+      <obj_property name="ObjectShortName">y2[23:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">20</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/conv1/sum">
+      <obj_property name="ElementShortName">sum[23:0]</obj_property>
+      <obj_property name="ObjectShortName">sum[23:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">20</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/conv1/z">
+      <obj_property name="ElementShortName">z[23:0]</obj_property>
+      <obj_property name="ObjectShortName">z[23:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">20</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/conv1/w">
+      <obj_property name="ElementShortName">w[23:0]</obj_property>
+      <obj_property name="ObjectShortName">w[23:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">20</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/conv1/sum_valid">
+      <obj_property name="ElementShortName">sum_valid</obj_property>
+      <obj_property name="ObjectShortName">sum_valid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/conv1/pool_valid">
+      <obj_property name="ElementShortName">pool_valid</obj_property>
+      <obj_property name="ObjectShortName">pool_valid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/conv1/valid_valid">
+      <obj_property name="ElementShortName">valid_valid</obj_property>
+      <obj_property name="ObjectShortName">valid_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider768" type="divider">
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/b_fifo/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/b_fifo/srst">
+      <obj_property name="ElementShortName">srst</obj_property>
+      <obj_property name="ObjectShortName">srst</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/b_fifo/din">
+      <obj_property name="ElementShortName">din[23:0]</obj_property>
+      <obj_property name="ObjectShortName">din[23:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">20</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/b_fifo/wr_en">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/b_fifo/rd_en">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/b_fifo/dout">
+      <obj_property name="ElementShortName">dout[23:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[23:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">20</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/b_fifo/full">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/b_fifo/empty">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/b_fifo/prog_full">
+      <obj_property name="ElementShortName">prog_full</obj_property>
+      <obj_property name="ObjectShortName">prog_full</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider769" type="divider">
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/conv_layer/conv_0/din">
+      <obj_property name="ElementShortName">din[23:0]</obj_property>
+      <obj_property name="ObjectShortName">din[23:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/conv_layer/conv_0/dout">
+      <obj_property name="ElementShortName">dout[63:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[63:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">46</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/conv_layer/conv_0/x_fifo_output">
+      <obj_property name="ElementShortName">x_fifo_output[23:0]</obj_property>
+      <obj_property name="ObjectShortName">x_fifo_output[23:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">20</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/conv_layer/conv_0/h_fifo_output">
+      <obj_property name="ElementShortName">h_fifo_output[31:0]</obj_property>
+      <obj_property name="ObjectShortName">h_fifo_output[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">26</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/conv_layer/conv_0/o_fifo_output">
+      <obj_property name="ElementShortName">o_fifo_output[63:0]</obj_property>
+      <obj_property name="ObjectShortName">o_fifo_output[63:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">46</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/conv_layer/conv_0/x_fifo_input">
+      <obj_property name="ElementShortName">x_fifo_input[23:0]</obj_property>
+      <obj_property name="ObjectShortName">x_fifo_input[23:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/conv_layer/conv_0/h_fifo_input">
+      <obj_property name="ElementShortName">h_fifo_input[31:0]</obj_property>
+      <obj_property name="ObjectShortName">h_fifo_input[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">26</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/conv_layer/conv_0/coded_coefficient">
+      <obj_property name="ElementShortName">coded_coefficient[7:0]</obj_property>
+      <obj_property name="ObjectShortName">coded_coefficient[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/conv_layer/conv_0/o_fifo_input">
+      <obj_property name="ElementShortName">o_fifo_input[63:0]</obj_property>
+      <obj_property name="ObjectShortName">o_fifo_input[63:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">46</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2017 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -55,7 +55,7 @@
 COMPONENT fifo_7680
   PORT (
     clk : IN STD_LOGIC;
-    rst : IN STD_LOGIC;
+    srst : IN STD_LOGIC;
     din : IN STD_LOGIC_VECTOR(23 DOWNTO 0);
     wr_en : IN STD_LOGIC;
     rd_en : IN STD_LOGIC;
@@ -74,7 +74,7 @@ END COMPONENT;
 your_instance_name : fifo_7680
   PORT MAP (
     clk => clk,
-    rst => rst,
+    srst => srst,
     din => din,
     wr_en => wr_en,
     rd_en => rd_en,

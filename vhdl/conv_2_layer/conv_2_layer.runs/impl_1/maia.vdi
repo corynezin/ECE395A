@@ -1,0 +1,606 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Mon Apr  2 10:22:58 2018
+# Process ID: 2321
+# Current directory: /home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.runs/impl_1
+# Command line: vivado -log maia.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source maia.tcl -notrace
+# Log file: /home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.runs/impl_1/maia.vdi
+# Journal file: /home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source maia.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Project 1-454] Reading design checkpoint '/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_7680/fifo_7680.dcp' for cell 'b_fifo'
+INFO: [Project 1-454] Reading design checkpoint '/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_generator_1_1/fifo_generator_1.dcp' for cell 's_fifo'
+INFO: [Project 1-454] Reading design checkpoint '/home/nezin/Documents/ECE395A/vhdl/ip/fifo_generator_0/fifo_generator_0.dcp' for cell 'conv1/conv0/fifo_128_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nezin/Documents/ECE395A/vhdl/conv_relu_pool/conv_relu_pool.srcs/sources_1/ip/fir128_0/fir128_0.dcp' for cell 'conv1/conv0/h0/F'
+INFO: [Project 1-454] Reading design checkpoint '/home/nezin/Documents/ECE395A/vhdl/conv_relu_pool/conv_relu_pool.srcs/sources_1/ip/fir128_1/fir128_1.dcp' for cell 'conv1/conv1/h1/F'
+INFO: [Project 1-454] Reading design checkpoint '/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.dcp' for cell 'conv_layer/conv_0/h_fifo'
+INFO: [Project 1-454] Reading design checkpoint '/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.dcp' for cell 'conv_layer/conv_0/o_fifo'
+INFO: [Project 1-454] Reading design checkpoint '/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.dcp' for cell 'conv_layer/conv_0/x_fifo'
+INFO: [Project 1-454] Reading design checkpoint '/home/nezin/Documents/ECE395A/vhdl/matmul/matmul.srcs/sources_1/ip/activation_fifo/activation_fifo.dcp' for cell 'fc_layer/act_fifo'
+INFO: [Project 1-454] Reading design checkpoint '/home/nezin/Documents/ECE395A/vhdl/matmul/matmul.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp' for cell 'fc_layer/fc1'
+INFO: [Netlist 29-17] Analyzing 4944 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/matmul/matmul.srcs/sources_1/ip/activation_fifo/activation_fifo.xdc] for cell 'fc_layer/act_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/matmul/matmul.srcs/sources_1/ip/activation_fifo/activation_fifo.xdc] for cell 'fc_layer/act_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/conv_0/h_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/conv_0/h_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[1].conv_gen/h_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[1].conv_gen/h_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[6].conv_gen/h_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[6].conv_gen/h_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[7].conv_gen/h_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[7].conv_gen/h_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[8].conv_gen/h_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[8].conv_gen/h_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[9].conv_gen/h_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[9].conv_gen/h_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[10].conv_gen/h_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[10].conv_gen/h_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[11].conv_gen/h_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[11].conv_gen/h_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[12].conv_gen/h_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[12].conv_gen/h_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[13].conv_gen/h_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[13].conv_gen/h_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[14].conv_gen/h_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[14].conv_gen/h_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[15].conv_gen/h_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[15].conv_gen/h_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[2].conv_gen/h_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[2].conv_gen/h_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[3].conv_gen/h_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[3].conv_gen/h_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[4].conv_gen/h_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[4].conv_gen/h_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[5].conv_gen/h_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_16/fifo_16.xdc] for cell 'conv_layer/generate_conv[5].conv_gen/h_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/conv_0/x_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/conv_0/x_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[1].conv_gen/x_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[1].conv_gen/x_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[6].conv_gen/x_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[6].conv_gen/x_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[7].conv_gen/x_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[7].conv_gen/x_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[8].conv_gen/x_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[8].conv_gen/x_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[9].conv_gen/x_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[9].conv_gen/x_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[10].conv_gen/x_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[10].conv_gen/x_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[11].conv_gen/x_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[11].conv_gen/x_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[12].conv_gen/x_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[12].conv_gen/x_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[13].conv_gen/x_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[13].conv_gen/x_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[14].conv_gen/x_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[14].conv_gen/x_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[15].conv_gen/x_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[15].conv_gen/x_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[2].conv_gen/x_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[2].conv_gen/x_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[3].conv_gen/x_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[3].conv_gen/x_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[4].conv_gen/x_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[4].conv_gen/x_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[5].conv_gen/x_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_16x24/fifo_16x24.xdc] for cell 'conv_layer/generate_conv[5].conv_gen/x_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_relu_pool/conv_relu_pool.srcs/sources_1/ip/fir128_0/constraints/fir_compiler_v7_2.xdc] for cell 'conv1/conv0/h0/F/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_relu_pool/conv_relu_pool.srcs/sources_1/ip/fir128_0/constraints/fir_compiler_v7_2.xdc] for cell 'conv1/conv0/h0/F/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_7680/fifo_7680.xdc] for cell 'b_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_7680/fifo_7680.xdc] for cell 'b_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/conv_0/o_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/conv_0/o_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[1].conv_gen/o_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[1].conv_gen/o_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[6].conv_gen/o_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[6].conv_gen/o_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[7].conv_gen/o_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[7].conv_gen/o_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[8].conv_gen/o_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[8].conv_gen/o_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[9].conv_gen/o_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[9].conv_gen/o_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[10].conv_gen/o_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[10].conv_gen/o_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[11].conv_gen/o_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[11].conv_gen/o_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[12].conv_gen/o_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[12].conv_gen/o_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[13].conv_gen/o_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[13].conv_gen/o_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[14].conv_gen/o_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[14].conv_gen/o_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[15].conv_gen/o_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[15].conv_gen/o_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[2].conv_gen/o_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[2].conv_gen/o_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[3].conv_gen/o_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[3].conv_gen/o_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[4].conv_gen/o_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[4].conv_gen/o_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[5].conv_gen/o_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45.xdc] for cell 'conv_layer/generate_conv[5].conv_gen/o_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_generator_0/fifo_generator_0.xdc] for cell 'conv1/conv0/fifo_128_0/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_generator_0/fifo_generator_0.xdc] for cell 'conv1/conv0/fifo_128_0/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_generator_0/fifo_generator_0.xdc] for cell 'conv1/conv1/fifo_128_0/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/ip/fifo_generator_0/fifo_generator_0.xdc] for cell 'conv1/conv1/fifo_128_0/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_relu_pool/conv_relu_pool.srcs/sources_1/ip/fir128_1/constraints/fir_compiler_v7_2.xdc] for cell 'conv1/conv1/h1/F/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_relu_pool/conv_relu_pool.srcs/sources_1/ip/fir128_1/constraints/fir_compiler_v7_2.xdc] for cell 'conv1/conv1/h1/F/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_generator_1_1/fifo_generator_1.xdc] for cell 's_fifo/U0'
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_generator_1_1/fifo_generator_1.xdc] for cell 's_fifo/U0'
+Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/constrs_1/new/timing.xdc]
+Finished Parsing XDC File [/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/constrs_1/new/timing.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 171 instances were transformed.
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 160 instances
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 11 instances
+
+link_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1625.316 ; gain = 503.242 ; free physical = 2832 ; free virtual = 54767
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020-clg484'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020-clg484'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+Command: report_drc (run_mandatory_drcs) for: opt_checks
+INFO: [DRC 23-27] Running DRC with 8 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.84 . Memory (MB): peak = 1690.348 ; gain = 65.031 ; free physical = 2838 ; free virtual = 54759
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1785481d4
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2196.840 ; gain = 0.000 ; free physical = 2692 ; free virtual = 54588
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 2992 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 1264744c6
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2196.840 ; gain = 0.000 ; free physical = 2674 ; free virtual = 54570
+INFO: [Opt 31-389] Phase Constant propagation created 1 cells and removed 1 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 137c9ef37
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 2196.840 ; gain = 0.000 ; free physical = 2668 ; free virtual = 54564
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 948 cells
+
+Phase 4 BUFG optimization
+INFO: [Opt 31-194] Inserted BUFG clk_fifo_BUFG_inst to drive 66 load(s) on clock net clk_fifo_BUFG
+INFO: [Opt 31-194] Inserted BUFG clk_s_fifo_BUFG_inst to drive 42 load(s) on clock net clk_s_fifo_BUFG
+INFO: [Opt 31-193] Inserted 2 BUFG(s) on clock nets
+Phase 4 BUFG optimization | Checksum: c3d654b0
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 2196.840 ; gain = 0.000 ; free physical = 2666 ; free virtual = 54561
+INFO: [Opt 31-389] Phase BUFG optimization created 2 cells and removed 0 cells
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: c3d654b0
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 2196.840 ; gain = 0.000 ; free physical = 2666 ; free virtual = 54561
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2196.840 ; gain = 0.000 ; free physical = 2665 ; free virtual = 54561
+Ending Logic Optimization Task | Checksum: c3d654b0
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 2196.840 ; gain = 0.000 ; free physical = 2673 ; free virtual = 54568
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 2 BRAM(s) out of a total of 45 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 64 Total Ports: 90
+Number of Flops added for Enable Generation: 3
+
+Ending PowerOpt Patch Enables Task | Checksum: af738af3
+
+Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.29 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2578 ; free virtual = 54477
+Ending Power Optimization Task | Checksum: af738af3
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:09 . Memory (MB): peak = 2787.457 ; gain = 590.617 ; free physical = 2600 ; free virtual = 54499
+39 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:32 . Memory (MB): peak = 2787.457 ; gain = 1162.141 ; free physical = 2600 ; free virtual = 54499
+INFO: [Common 17-1381] The checkpoint '/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.runs/impl_1/maia_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2584 ; free virtual = 54492
+Command: report_drc -file maia_drc_opted.rpt
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.runs/impl_1/maia_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Chipscope 16-241] No debug cores found in the current design.
+Before running the implement_debug_core command, either use the Set Up Debug wizard (GUI mode)
+or use the create_debug_core and connect_debug_core Tcl commands to insert debug cores into the design.
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020-clg484'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020-clg484'
+Command: report_drc (run_mandatory_drcs) for: incr_eco_checks
+INFO: [DRC 23-27] Running DRC with 8 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+Command: report_drc (run_mandatory_drcs) for: placer_checks
+INFO: [DRC 23-27] Running DRC with 8 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.14 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2477 ; free virtual = 54392
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 6f38739d
+
+Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2477 ; free virtual = 54392
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2472 ; free virtual = 54387
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Place 30-568] A LUT 'conv1/mp/d2/t_i_2' is driving clock pin of 25 registers. This could lead to large hold time violations. First few involved registers are:
+	conv1/mp/d2/inter_reg[0] {FDRE}
+	conv1/mp/d2/inter_reg[10] {FDRE}
+	conv1/mp/d2/inter_reg[13] {FDRE}
+	conv1/mp/d2/inter_reg[11] {FDRE}
+	conv1/mp/d2/inter_reg[12] {FDRE}
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: c9824518
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:08 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2460 ; free virtual = 54372
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1acfe0460
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:15 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2384 ; free virtual = 54291
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1acfe0460
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:15 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2382 ; free virtual = 54290
+Phase 1 Placer Initialization | Checksum: 1acfe0460
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:15 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2382 ; free virtual = 54290
+
+Phase 2 Global Placement
+Phase 2 Global Placement | Checksum: 16165e33f
+
+Time (s): cpu = 00:01:23 ; elapsed = 00:00:35 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2249 ; free virtual = 54182
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 16165e33f
+
+Time (s): cpu = 00:01:23 ; elapsed = 00:00:35 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2245 ; free virtual = 54179
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 19ada23b5
+
+Time (s): cpu = 00:01:38 ; elapsed = 00:00:41 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2222 ; free virtual = 54156
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 18b0f77f0
+
+Time (s): cpu = 00:01:38 ; elapsed = 00:00:41 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2218 ; free virtual = 54152
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 18b0f77f0
+
+Time (s): cpu = 00:01:39 ; elapsed = 00:00:42 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2218 ; free virtual = 54152
+
+Phase 3.5 Timing Path Optimizer
+Phase 3.5 Timing Path Optimizer | Checksum: 1a46b95cf
+
+Time (s): cpu = 00:01:43 ; elapsed = 00:00:43 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2234 ; free virtual = 54163
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 106fb617d
+
+Time (s): cpu = 00:01:51 ; elapsed = 00:00:50 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2174 ; free virtual = 54105
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 16113ba0d
+
+Time (s): cpu = 00:01:52 ; elapsed = 00:00:51 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2207 ; free virtual = 54125
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 16113ba0d
+
+Time (s): cpu = 00:01:53 ; elapsed = 00:00:52 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2207 ; free virtual = 54126
+Phase 3 Detail Placement | Checksum: 16113ba0d
+
+Time (s): cpu = 00:01:53 ; elapsed = 00:00:52 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2211 ; free virtual = 54130
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 200713b12
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Place 46-38] Processed net srst_reg_n_0, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-41] BUFG insertion identified 1 candidate nets, 0 success, 1 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
+Phase 4.1.1.1 BUFG Insertion | Checksum: 200713b12
+
+Time (s): cpu = 00:02:11 ; elapsed = 00:00:58 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2271 ; free virtual = 54178
+INFO: [Place 30-746] Post Placement Timing Summary WNS=3.429. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 1d88e3240
+
+Time (s): cpu = 00:02:11 ; elapsed = 00:00:58 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2271 ; free virtual = 54178
+Phase 4.1 Post Commit Optimization | Checksum: 1d88e3240
+
+Time (s): cpu = 00:02:12 ; elapsed = 00:00:58 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2272 ; free virtual = 54179
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1d88e3240
+
+Time (s): cpu = 00:02:12 ; elapsed = 00:00:59 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2271 ; free virtual = 54178
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 1d88e3240
+
+Time (s): cpu = 00:02:12 ; elapsed = 00:00:59 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2272 ; free virtual = 54179
+
+Phase 4.4 Final Placement Cleanup
+Phase 4.4 Final Placement Cleanup | Checksum: 11b048a74
+
+Time (s): cpu = 00:02:13 ; elapsed = 00:00:59 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2272 ; free virtual = 54179
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 11b048a74
+
+Time (s): cpu = 00:02:13 ; elapsed = 00:01:00 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2272 ; free virtual = 54179
+Ending Placer Task | Checksum: b2dd9ac9
+
+Time (s): cpu = 00:02:13 ; elapsed = 00:01:00 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2295 ; free virtual = 54202
+59 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:02:18 ; elapsed = 00:01:02 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2295 ; free virtual = 54202
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:08 ; elapsed = 00:00:03 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2274 ; free virtual = 54230
+INFO: [Common 17-1381] The checkpoint '/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.runs/impl_1/maia_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2289 ; free virtual = 54209
+report_io: Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.23 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2279 ; free virtual = 54199
+report_utilization: Time (s): cpu = 00:00:00.35 ; elapsed = 00:00:00.41 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2287 ; free virtual = 54208
+report_control_sets: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.21 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2287 ; free virtual = 54207
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020-clg484'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020-clg484'
+Running DRC as a precondition to command route_design
+Command: report_drc (run_mandatory_drcs) for: router_checks
+INFO: [DRC 23-27] Running DRC with 8 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+Checksum: PlaceDB: 7f778146 ConstDB: 0 ShapeSum: 33661983 RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: fec4bded
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:16 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2133 ; free virtual = 54049
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: fec4bded
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:16 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2122 ; free virtual = 54040
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: fec4bded
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:17 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2088 ; free virtual = 54008
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: fec4bded
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:17 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2088 ; free virtual = 54008
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 1746d8d8e
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:24 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2040 ; free virtual = 53968
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.752  | TNS=0.000  | WHS=-1.704 | THS=-3285.490|
+
+Phase 2 Router Initialization | Checksum: 17ef11443
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:26 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2038 ; free virtual = 53963
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 16d11ff6d
+
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:29 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 1984 ; free virtual = 53918
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 4009
+ Number of Nodes with overlaps = 220
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.669  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: d91175ba
+
+Time (s): cpu = 00:02:58 ; elapsed = 00:01:03 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2085 ; free virtual = 53996
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 12
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.669  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 1c3b07cb6
+
+Time (s): cpu = 00:03:00 ; elapsed = 00:01:04 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2088 ; free virtual = 53999
+Phase 4 Rip-up And Reroute | Checksum: 1c3b07cb6
+
+Time (s): cpu = 00:03:00 ; elapsed = 00:01:04 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2088 ; free virtual = 53999
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 15b1c7d79
+
+Time (s): cpu = 00:03:03 ; elapsed = 00:01:05 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2118 ; free virtual = 54028
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.758  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: 15b1c7d79
+
+Time (s): cpu = 00:03:03 ; elapsed = 00:01:05 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2118 ; free virtual = 54028
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 15b1c7d79
+
+Time (s): cpu = 00:03:04 ; elapsed = 00:01:05 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2118 ; free virtual = 54028
+Phase 5 Delay and Skew Optimization | Checksum: 15b1c7d79
+
+Time (s): cpu = 00:03:04 ; elapsed = 00:01:05 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2118 ; free virtual = 54028
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1f0c22738
+
+Time (s): cpu = 00:03:08 ; elapsed = 00:01:06 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2118 ; free virtual = 54028
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.758  | TNS=0.000  | WHS=-0.301 | THS=-0.339 |
+
+Phase 6.1 Hold Fix Iter | Checksum: 1f56e1ed5
+
+Time (s): cpu = 00:03:09 ; elapsed = 00:01:07 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2109 ; free virtual = 54019
+Phase 6 Post Hold Fix | Checksum: 209a28efb
+
+Time (s): cpu = 00:03:10 ; elapsed = 00:01:07 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2109 ; free virtual = 54019
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 14.539 %
+  Global Horizontal Routing Utilization  = 18.3862 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 1daa0d975
+
+Time (s): cpu = 00:03:10 ; elapsed = 00:01:07 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2109 ; free virtual = 54020
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 1daa0d975
+
+Time (s): cpu = 00:03:10 ; elapsed = 00:01:07 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2108 ; free virtual = 54019
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 256aab6be
+
+Time (s): cpu = 00:03:13 ; elapsed = 00:01:10 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2105 ; free virtual = 54025
+
+Phase 10 Post Router Timing
+
+Phase 10.1 Update Timing
+Phase 10.1 Update Timing | Checksum: 1cbe5fcb1
+
+Time (s): cpu = 00:03:17 ; elapsed = 00:01:11 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2102 ; free virtual = 54023
+INFO: [Route 35-57] Estimated Timing Summary | WNS=2.758  | TNS=0.000  | WHS=0.062  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 1cbe5fcb1
+
+Time (s): cpu = 00:03:17 ; elapsed = 00:01:11 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2102 ; free virtual = 54023
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:03:17 ; elapsed = 00:01:11 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2164 ; free virtual = 54085
+
+Routing Is Done.
+73 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:03:23 ; elapsed = 00:01:13 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2164 ; free virtual = 54085
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:09 ; elapsed = 00:00:03 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2092 ; free virtual = 54076
+INFO: [Common 17-1381] The checkpoint '/home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.runs/impl_1/maia_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2142 ; free virtual = 54080
+Command: report_drc -file maia_drc_routed.rpt -pb maia_drc_routed.pb -rpx maia_drc_routed.rpx
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.runs/impl_1/maia_drc_routed.rpt.
+report_drc completed successfully
+Command: report_methodology -file maia_methodology_drc_routed.rpt -rpx maia_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file /home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.runs/impl_1/maia_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:27 ; elapsed = 00:00:07 . Memory (MB): peak = 2787.457 ; gain = 0.000 ; free physical = 2022 ; free virtual = 53956
+Command: report_power -file maia_power_routed.rpt -pb maia_power_summary_routed.pb -rpx maia_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+80 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:19 ; elapsed = 00:00:06 . Memory (MB): peak = 2822.238 ; gain = 34.781 ; free physical = 2008 ; free virtual = 53949
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Common 17-206] Exiting Vivado at Mon Apr  2 10:26:53 2018...

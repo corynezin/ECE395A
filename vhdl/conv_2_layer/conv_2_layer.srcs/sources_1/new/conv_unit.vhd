@@ -111,7 +111,7 @@ COMPONENT maxpool2_1 is
            output_valid: out STD_LOGIC
            );
 end COMPONENT maxpool2_1;
-COMPONENT slope_bias_loader is
+COMPONENT slope_bias_loader_dsp is
     Generic(
         B: integer := 8;
         bias_adjustment_factor: integer := -303112;
@@ -125,7 +125,7 @@ COMPONENT slope_bias_loader is
         input: in std_logic_vector(B - 1 downto 0);
         output: out std_logic_vector(N + M - 1 downto 0)
      );
-end COMPONENT slope_bias_loader;
+end COMPONENT slope_bias_loader_dsp;
 
 signal x_fifo_output: STD_LOGIC_VECTOR( N_signal-1 downto 0) := (others => '0');
 signal h_fifo_output: STD_LOGIC_VECTOR( N_coef_dec-1 downto 0) := (others => '0');
@@ -206,13 +206,13 @@ xpm_memory_sprom_inst:xpm_memory_sprom
     sbiterra=>open,--donotchange
     dbiterra=>open--donotchange
     );
-sbl: slope_bias_loader
+sbl_dsp48: slope_bias_loader_dsp
     generic map (
-    B => 8, N => 6, M => 26,
-    bias_adjustment_factor => -56780,
+    B => 16, N => 6, M => 26,
+    bias_adjustment_factor => -338292,
     negative_bias_exponent => 16,
-    slope_adjustment_factor => 2250, -- 7772*2^-16 = 0.11859 is about 0.1185932 (the real slope)
-    negative_slope_exponent => 16
+    slope_adjustment_factor => 7246,
+    negative_slope_exponent => 24
     )
     port map (
     input => coded_coefficient,

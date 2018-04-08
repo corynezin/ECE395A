@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2017 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -57,7 +57,7 @@ COMPONENT fir128_1
     aclk : IN STD_LOGIC;
     s_axis_data_tvalid : IN STD_LOGIC;
     s_axis_data_tready : OUT STD_LOGIC;
-    s_axis_data_tdata : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+    s_axis_data_tdata : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     s_axis_config_tvalid : IN STD_LOGIC;
     s_axis_config_tready : OUT STD_LOGIC;
     s_axis_config_tdata : IN STD_LOGIC_VECTOR(7 DOWNTO 0);

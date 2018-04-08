@@ -26,7 +26,8 @@ end component downsample;
 
 signal z: STD_LOGIC_VECTOR(N-1 downto 0) := (N-1=>'1',others=>'0'); -- Previous sample to be compared
 signal y: STD_LOGIC_VECTOR(N-1 downto 0) := (N-1=>'1',others=>'0'); -- output of pooling, full rate
-signal delay1,delay2,delay3: STD_LOGIC;
+signal delay1,delay2,delay3: STD_LOGIC:= '0';
+signal output_valid_signal: STD_LOGIC:='0';
 begin
 d2: downsample
     generic map(
@@ -49,7 +50,8 @@ if rising_edge(clk) then
     delay3 <= delay2;       -- Since it reduces the rate of the data by a factor of 2.
 end if;
 end process;
-output_valid <= delay3 and delay1;
+output_valid_signal <= delay1;
+output_valid <= output_valid_signal;
 -- This just works...
 
 end RTL;

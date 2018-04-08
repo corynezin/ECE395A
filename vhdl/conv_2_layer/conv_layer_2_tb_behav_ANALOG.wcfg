@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="3115333334fs"></ZoomStartTime>
-      <ZoomEndTime time="3562333335fs"></ZoomEndTime>
-      <Cursor1Time time="3198833000fs"></Cursor1Time>
+      <ZoomStartTime time="647737500000fs"></ZoomStartTime>
+      <ZoomEndTime time="653557500001fs"></ZoomEndTime>
+      <Cursor1Time time="650000000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="172"></NameColumnWidth>
-      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+      <NameColumnWidth column_width="256"></NameColumnWidth>
+      <ValueColumnWidth column_width="75"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="63" />
+   <WVObjectSize size="111" />
    <wvobject type="array" fp_name="/conv_layer_2_tb/dout">
       <obj_property name="ElementShortName">dout[7:0]</obj_property>
       <obj_property name="ObjectShortName">dout[7:0]</obj_property>
@@ -178,9 +178,17 @@
       <obj_property name="radix_fractionWidth">20</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/conv_layer_2_tb/conv1/z">
-      <obj_property name="ElementShortName">z[23:0]</obj_property>
-      <obj_property name="ObjectShortName">z[23:0]</obj_property>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/conv1/relu_out">
+      <obj_property name="ElementShortName">relu_out[23:0]</obj_property>
+      <obj_property name="ObjectShortName">relu_out[23:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">20</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/conv1/maxpl_in">
+      <obj_property name="ElementShortName">maxpl_in[23:0]</obj_property>
+      <obj_property name="ObjectShortName">maxpl_in[23:0]</obj_property>
       <obj_property name="Radix">REALRADIX</obj_property>
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
       <obj_property name="radix_fractionWidth">20</obj_property>
@@ -194,6 +202,11 @@
       <obj_property name="radix_fractionWidth">20</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
    </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/b_fifo/U0/data_count">
+      <obj_property name="ElementShortName">data_count[10:0]</obj_property>
+      <obj_property name="ObjectShortName">data_count[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
    <wvobject type="logic" fp_name="/conv_layer_2_tb/conv1/sum_valid">
       <obj_property name="ElementShortName">sum_valid</obj_property>
       <obj_property name="ObjectShortName">sum_valid</obj_property>
@@ -205,6 +218,18 @@
    <wvobject type="logic" fp_name="/conv_layer_2_tb/conv1/valid_valid">
       <obj_property name="ElementShortName">valid_valid</obj_property>
       <obj_property name="ObjectShortName">valid_valid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/b_fifo/wr_en">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/b_fifo/rd_en">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/b_fifo/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
    <wvobject fp_name="divider768" type="divider">
    </wvobject>
@@ -219,8 +244,8 @@
    <wvobject type="array" fp_name="/conv_layer_2_tb/b_fifo/din">
       <obj_property name="ElementShortName">din[23:0]</obj_property>
       <obj_property name="ObjectShortName">din[23:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
       <obj_property name="radix_fractionWidth">20</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
    </wvobject>
@@ -273,6 +298,8 @@
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
       <obj_property name="radix_fractionWidth">20</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
+      <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/conv_layer_2_tb/conv_layer/conv_0/h_fifo_output">
       <obj_property name="ElementShortName">h_fifo_output[31:0]</obj_property>
@@ -281,6 +308,26 @@
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
       <obj_property name="radix_fractionWidth">26</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
+      <obj_property name="CustomSignalColor">#A52A2A</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/conv_layer/conv_0/o_fifo_input">
+      <obj_property name="ElementShortName">o_fifo_input[63:0]</obj_property>
+      <obj_property name="ObjectShortName">o_fifo_input[63:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">46</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/conv_layer/o_fifo_wren">
+      <obj_property name="ElementShortName">o_fifo_wren</obj_property>
+      <obj_property name="ObjectShortName">o_fifo_wren</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/conv_layer/conv_0/mac_enable">
+      <obj_property name="ElementShortName">mac_enable</obj_property>
+      <obj_property name="ObjectShortName">mac_enable</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/conv_layer_2_tb/conv_layer/conv_0/o_fifo_output">
       <obj_property name="ElementShortName">o_fifo_output[63:0]</obj_property>
@@ -290,28 +337,270 @@
       <obj_property name="radix_fractionWidth">46</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
    </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/conv_layer/conv_0/dout">
+      <obj_property name="ElementShortName">dout[63:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[63:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">46</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
    <wvobject type="array" fp_name="/conv_layer_2_tb/conv_layer/conv_0/x_fifo_input">
       <obj_property name="ElementShortName">x_fifo_input[23:0]</obj_property>
       <obj_property name="ObjectShortName">x_fifo_input[23:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">20</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/conv_layer_2_tb/conv_layer/conv_0/h_fifo_input">
-      <obj_property name="ElementShortName">h_fifo_input[31:0]</obj_property>
-      <obj_property name="ObjectShortName">h_fifo_input[31:0]</obj_property>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/conv_layer/conv_0/x_fifo_output">
+      <obj_property name="ElementShortName">x_fifo_output[23:0]</obj_property>
+      <obj_property name="ObjectShortName">x_fifo_output[23:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">20</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+      <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/conv_layer/conv_0/x_fifo_full">
+      <obj_property name="ElementShortName">x_fifo_full</obj_property>
+      <obj_property name="ObjectShortName">x_fifo_full</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/conv_layer/x_fifo_wren">
+      <obj_property name="ElementShortName">x_fifo_wren</obj_property>
+      <obj_property name="ObjectShortName">x_fifo_wren</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/conv_layer/controller/x_fifo_wren_assert">
+      <obj_property name="ElementShortName">x_fifo_wren_assert</obj_property>
+      <obj_property name="ObjectShortName">x_fifo_wren_assert</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/conv_layer/x_fifo_rden">
+      <obj_property name="ElementShortName">x_fifo_rden</obj_property>
+      <obj_property name="ObjectShortName">x_fifo_rden</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/conv_layer/controller/x_mux">
+      <obj_property name="ElementShortName">x_mux</obj_property>
+      <obj_property name="ObjectShortName">x_mux</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/conv_layer/h_fifo_wren">
+      <obj_property name="ElementShortName">h_fifo_wren</obj_property>
+      <obj_property name="ObjectShortName">h_fifo_wren</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/conv_layer/controller/h_fifo_wren_assert">
+      <obj_property name="ElementShortName">h_fifo_wren_assert</obj_property>
+      <obj_property name="ObjectShortName">h_fifo_wren_assert</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/conv_layer/h_fifo_rden">
+      <obj_property name="ElementShortName">h_fifo_rden</obj_property>
+      <obj_property name="ObjectShortName">h_fifo_rden</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/conv_layer/controller/curr_state">
+      <obj_property name="ElementShortName">curr_state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">curr_state[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/conv_layer/conv_0/answer_ready">
+      <obj_property name="ElementShortName">answer_ready</obj_property>
+      <obj_property name="ObjectShortName">answer_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider924" type="divider">
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/fc_layer/activation">
+      <obj_property name="ElementShortName">activation[31:0]</obj_property>
+      <obj_property name="ObjectShortName">activation[31:0]</obj_property>
       <obj_property name="Radix">REALRADIX</obj_property>
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
       <obj_property name="radix_fractionWidth">26</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/conv_layer_2_tb/conv_layer/conv_0/coded_coefficient">
-      <obj_property name="ElementShortName">coded_coefficient[7:0]</obj_property>
-      <obj_property name="ObjectShortName">coded_coefficient[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/conv_layer_2_tb/conv_layer/conv_0/o_fifo_input">
-      <obj_property name="ElementShortName">o_fifo_input[63:0]</obj_property>
-      <obj_property name="ObjectShortName">o_fifo_input[63:0]</obj_property>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/fc_layer/t">
+      <obj_property name="ElementShortName">t[31:0]</obj_property>
+      <obj_property name="ObjectShortName">t[31:0]</obj_property>
       <obj_property name="Radix">REALRADIX</obj_property>
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">46</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/fc_layer/x">
+      <obj_property name="ElementShortName">x[31:0]</obj_property>
+      <obj_property name="ObjectShortName">x[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/fc_layer/arg_max">
+      <obj_property name="ElementShortName">arg_max[3:0]</obj_property>
+      <obj_property name="ObjectShortName">arg_max[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/fc_layer/input_from_prev_layer">
+      <obj_property name="ElementShortName">input_from_prev_layer</obj_property>
+      <obj_property name="ObjectShortName">input_from_prev_layer</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/fc_layer/max_value">
+      <obj_property name="ElementShortName">max_value[31:0]</obj_property>
+      <obj_property name="ObjectShortName">max_value[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/fc_layer/rom_out">
+      <obj_property name="ElementShortName">rom_out[511:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out[511:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/fc_layer/dot_out">
+      <obj_property name="ElementShortName">dot_out[0:63][31:0]</obj_property>
+      <obj_property name="ObjectShortName">dot_out[0:63][31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/fc_layer/activation_fifo_input">
+      <obj_property name="ElementShortName">activation_fifo_input[31:0]</obj_property>
+      <obj_property name="ObjectShortName">activation_fifo_input[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/fc_layer/bias">
+      <obj_property name="ElementShortName">bias[0:63][63:0]</obj_property>
+      <obj_property name="ObjectShortName">bias[0:63][63:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/fc_layer/dot_rst">
+      <obj_property name="ElementShortName">dot_rst</obj_property>
+      <obj_property name="ObjectShortName">dot_rst</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/fc_layer/prev_input">
+      <obj_property name="ElementShortName">prev_input[31:0]</obj_property>
+      <obj_property name="ObjectShortName">prev_input[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/fc_layer/answer_ready">
+      <obj_property name="ElementShortName">answer_ready</obj_property>
+      <obj_property name="ObjectShortName">answer_ready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/fc_layer/\generate_dots(0)\/dot_gen/a">
+      <obj_property name="ElementShortName">a[31:0]</obj_property>
+      <obj_property name="ObjectShortName">a[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">26</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/fc_layer/\generate_dots(0)\/dot_gen/b">
+      <obj_property name="ElementShortName">b[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_layer_2_tb/fc_layer/\generate_dots(0)\/dot_gen/carry_clear">
+      <obj_property name="ElementShortName">carry_clear</obj_property>
+      <obj_property name="ObjectShortName">carry_clear</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/fc_layer/\generate_dots(0)\/dot_gen/y">
+      <obj_property name="ElementShortName">y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">y[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/fc_layer/\generate_dots(1)\/dot_gen/y">
+      <obj_property name="ElementShortName">y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">y[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/fc_layer/\generate_dots(2)\/dot_gen/y">
+      <obj_property name="ElementShortName">y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">y[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/fc_layer/\generate_dots(3)\/dot_gen/y">
+      <obj_property name="ElementShortName">y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">y[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/fc_layer/\generate_dots(4)\/dot_gen/y">
+      <obj_property name="ElementShortName">y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">y[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/fc_layer/\generate_dots(5)\/dot_gen/y">
+      <obj_property name="ElementShortName">y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">y[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/fc_layer/\generate_dots(62)\/dot_gen/y">
+      <obj_property name="ElementShortName">y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">y[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/fc_layer/\generate_dots(63)\/dot_gen/y">
+      <obj_property name="ElementShortName">y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">y[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/fc_layer/relu_in">
+      <obj_property name="ElementShortName">relu_in[0:63][31:0]</obj_property>
+      <obj_property name="ObjectShortName">relu_in[0:63][31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/fc_layer/\generate_dots(3)\/dot_gen/a">
+      <obj_property name="ElementShortName">a[31:0]</obj_property>
+      <obj_property name="ObjectShortName">a[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">26</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/fc_layer/\generate_dots(3)\/dot_gen/b">
+      <obj_property name="ElementShortName">b[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/fc_layer/\generate_dots(3)\/dot_gen/bias">
+      <obj_property name="ElementShortName">bias[24:0]</obj_property>
+      <obj_property name="ObjectShortName">bias[24:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/fc_layer/\generate_dots(3)\/dot_gen/accumulated_value">
+      <obj_property name="ElementShortName">accumulated_value[42:0]</obj_property>
+      <obj_property name="ObjectShortName">accumulated_value[42:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">29</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_layer_2_tb/fc_layer/\generate_dots(3)\/dot_gen/y">
+      <obj_property name="ElementShortName">y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">y[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
    </wvobject>
 </wave_config>

@@ -1,7 +1,7 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
--- Date        : Tue Nov 28 15:45:38 2017
+-- Date        : Thu Feb 22 16:09:56 2018
 -- Host        : nezin-desktop running 64-bit Ubuntu 16.04.3 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/nezin/Documents/ECE395A/vhdl/conv_2/conv_2.srcs/sources_1/ip/dist_mem_gen_2/dist_mem_gen_2_sim_netlist.vhdl
@@ -675,7 +675,7 @@ begin
     );
 g0_b0: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F98F7D059DF262C6"
+      INIT => X"F98F7D05D5F262C6"
     )
         port map (
       I0 => \a_reg_reg[0]_rep_n_0\,
@@ -688,7 +688,7 @@ g0_b0: unisim.vcomponents.LUT6
     );
 g0_b1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"A1086316B540912F"
+      INIT => X"A1086316FB40912F"
     )
         port map (
       I0 => \a_reg_reg[0]_rep_n_0\,
@@ -701,7 +701,7 @@ g0_b1: unisim.vcomponents.LUT6
     );
 g0_b2: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"6AA5DFBA43F16D26"
+      INIT => X"6AA5DFBA5FF16D26"
     )
         port map (
       I0 => \a_reg_reg[0]_rep_n_0\,
@@ -714,7 +714,7 @@ g0_b2: unisim.vcomponents.LUT6
     );
 g0_b3: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"9D2E68984F3343AD"
+      INIT => X"9D2E68985F3343AD"
     )
         port map (
       I0 => \a_reg_reg[0]_rep_n_0\,
@@ -727,7 +727,7 @@ g0_b3: unisim.vcomponents.LUT6
     );
 g0_b4: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"46A9976FB4E015A2"
+      INIT => X"46A9976FEAE015A2"
     )
         port map (
       I0 => a_reg(0),
@@ -740,7 +740,7 @@ g0_b4: unisim.vcomponents.LUT6
     );
 g0_b5: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"D2C920C73968A3B7"
+      INIT => X"D2C920C77D68A3B7"
     )
         port map (
       I0 => a_reg(0),
@@ -753,7 +753,7 @@ g0_b5: unisim.vcomponents.LUT6
     );
 g0_b6: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"88B2C998E34F6D10"
+      INIT => X"88B2C998F34F6D10"
     )
         port map (
       I0 => a_reg(0),
@@ -766,7 +766,7 @@ g0_b6: unisim.vcomponents.LUT6
     );
 g0_b7: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"922EB9BB2FA877EF"
+      INIT => X"922EB9BB7FA877EF"
     )
         port map (
       I0 => a_reg(0),

@@ -9,7 +9,7 @@ entity conv_layer_2 is
 Generic (
     N_filters : integer := 16; -- Used to be 64
     N_signal: integer := 24;
-    N_coef_enc: integer := 8;
+    N_coef_enc: integer := 16;
     N_coef_dec: integer := 32;
     N_out: integer := 64;
     addr_bits: integer := 9);
@@ -33,7 +33,7 @@ Generic(
     N_filter_sets: integer := 32;
     N_window: integer := 16;
     N_signal: integer := 24;
-    N_coef_enc: integer := 8;
+    N_coef_enc: integer := 16;
     N_coef_dec: integer := 32;
     N_out: integer := 64; --16+24+32
     addr_bits: integer := 9; -- was 11
@@ -113,7 +113,7 @@ signal rr_int: STD_LOGIC:='0';
 begin
 conv_0: conv_unit
 Generic Map(
-    mif_name => "/home/nezin/Documents/ECE395A/vhdl/coefficients/conv2_truncated_reversed_flipped_0.mem")
+    mif_name => "/home/nezin/Documents/ECE395A/vhdl/coefficients/conv2_truncated_reversed_flipped3_16bit0.mem")
 Port Map(
     clk => clk,
     srst => srst,
@@ -139,7 +139,7 @@ generate_conv:
 for i in 1 to N_filters - 1 generate begin
     conv_gen: conv_unit
     Generic Map(
-        mif_name => "/home/nezin/Documents/ECE395A/vhdl/coefficients/conv2_truncated_reversed_flipped_" & integer'image(i) & ".mem")
+        mif_name => "/home/nezin/Documents/ECE395A/vhdl/coefficients/conv2_truncated_reversed_flipped3_16bit" & integer'image(i) & ".mem")
     Port Map(
         clk => clk,
         srst => srst,

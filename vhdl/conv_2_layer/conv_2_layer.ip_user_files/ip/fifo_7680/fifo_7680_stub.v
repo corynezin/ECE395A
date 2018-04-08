@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-// Date        : Fri Mar 30 23:38:08 2018
+// Date        : Mon Apr  2 21:53:38 2018
 // Host        : nezin-desktop running 64-bit Ubuntu 16.04.3 LTS
 // Command     : write_verilog -force -mode synth_stub
 //               /home/nezin/Documents/ECE395A/vhdl/conv_2_layer/conv_2_layer.srcs/sources_1/ip/fifo_7680/fifo_7680_stub.v
@@ -15,8 +15,8 @@
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* x_core_info = "fifo_generator_v13_1_4,Vivado 2017.2" *)
 module fifo_7680(clk, srst, din, wr_en, rd_en, dout, full, empty, 
-  prog_full)
-/* synthesis syn_black_box black_box_pad_pin="clk,srst,din[23:0],wr_en,rd_en,dout[23:0],full,empty,prog_full" */;
+  data_count, prog_full)
+/* synthesis syn_black_box black_box_pad_pin="clk,srst,din[23:0],wr_en,rd_en,dout[23:0],full,empty,data_count[10:0],prog_full" */;
   input clk;
   input srst;
   input [23:0]din;
@@ -25,5 +25,6 @@ module fifo_7680(clk, srst, din, wr_en, rd_en, dout, full, empty,
   output [23:0]dout;
   output full;
   output empty;
+  output [10:0]data_count;
   output prog_full;
 endmodule

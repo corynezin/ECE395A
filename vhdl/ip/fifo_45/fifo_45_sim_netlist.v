@@ -1,10 +1,9 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-// Date        : Wed Dec  6 23:44:03 2017
+// Date        : Sun Feb 25 17:07:46 2018
 // Host        : nezin-desktop running 64-bit Ubuntu 16.04.3 LTS
-// Command     : write_verilog -force -mode funcsim
-//               /home/nezin/Documents/ECE395A/vhdl/conv_2_controller/conv_2_controller.srcs/sources_1/ip/fifo_45/fifo_45_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim /home/nezin/Documents/ECE395A/vhdl/ip/fifo_45/fifo_45_sim_netlist.v
 // Design      : fifo_45
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -26,17 +25,17 @@ module fifo_45
     prog_full);
   (* x_interface_info = "xilinx.com:signal:clock:1.0 core_clk CLK" *) input clk;
   input srst;
-  (* x_interface_info = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE WR_DATA" *) input [47:0]din;
+  (* x_interface_info = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE WR_DATA" *) input [63:0]din;
   (* x_interface_info = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE WR_EN" *) input wr_en;
   (* x_interface_info = "xilinx.com:interface:fifo_read:1.0 FIFO_READ RD_EN" *) input rd_en;
-  (* x_interface_info = "xilinx.com:interface:fifo_read:1.0 FIFO_READ RD_DATA" *) output [47:0]dout;
+  (* x_interface_info = "xilinx.com:interface:fifo_read:1.0 FIFO_READ RD_DATA" *) output [63:0]dout;
   (* x_interface_info = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE FULL" *) output full;
   (* x_interface_info = "xilinx.com:interface:fifo_read:1.0 FIFO_READ EMPTY" *) output empty;
   output prog_full;
 
   wire clk;
-  wire [47:0]din;
-  wire [47:0]dout;
+  wire [63:0]din;
+  wire [63:0]dout;
   wire empty;
   wire full;
   wire prog_full;
@@ -195,7 +194,7 @@ module fifo_45
   (* C_COUNT_TYPE = "0" *) 
   (* C_DATA_COUNT_WIDTH = "6" *) 
   (* C_DEFAULT_VALUE = "BlankString" *) 
-  (* C_DIN_WIDTH = "48" *) 
+  (* C_DIN_WIDTH = "64" *) 
   (* C_DIN_WIDTH_AXIS = "1" *) 
   (* C_DIN_WIDTH_RACH = "32" *) 
   (* C_DIN_WIDTH_RDCH = "64" *) 
@@ -203,7 +202,7 @@ module fifo_45
   (* C_DIN_WIDTH_WDCH = "64" *) 
   (* C_DIN_WIDTH_WRCH = "2" *) 
   (* C_DOUT_RST_VAL = "0" *) 
-  (* C_DOUT_WIDTH = "48" *) 
+  (* C_DOUT_WIDTH = "64" *) 
   (* C_ENABLE_RLOCS = "0" *) 
   (* C_ENABLE_RST_SYNC = "1" *) 
   (* C_EN_SAFETY_CKT = "0" *) 
@@ -612,18 +611,18 @@ module fifo_45_blk_mem_gen_generic_cstr
     \gc0.count_d1_reg[5] ,
     \gcc0.gc0.count_d1_reg[5] ,
     din);
-  output [47:0]dout;
+  output [63:0]dout;
   input clk;
   input tmp_ram_rd_en;
   input [0:0]ram_full_fb_i_reg;
   input srst;
   input [5:0]\gc0.count_d1_reg[5] ;
   input [5:0]\gcc0.gc0.count_d1_reg[5] ;
-  input [47:0]din;
+  input [63:0]din;
 
   wire clk;
-  wire [47:0]din;
-  wire [47:0]dout;
+  wire [63:0]din;
+  wire [63:0]dout;
   wire [5:0]\gc0.count_d1_reg[5] ;
   wire [5:0]\gcc0.gc0.count_d1_reg[5] ;
   wire [0:0]ram_full_fb_i_reg;
@@ -651,18 +650,18 @@ module fifo_45_blk_mem_gen_prim_width
     \gc0.count_d1_reg[5] ,
     \gcc0.gc0.count_d1_reg[5] ,
     din);
-  output [47:0]dout;
+  output [63:0]dout;
   input clk;
   input tmp_ram_rd_en;
   input [0:0]ram_full_fb_i_reg;
   input srst;
   input [5:0]\gc0.count_d1_reg[5] ;
   input [5:0]\gcc0.gc0.count_d1_reg[5] ;
-  input [47:0]din;
+  input [63:0]din;
 
   wire clk;
-  wire [47:0]din;
-  wire [47:0]dout;
+  wire [63:0]din;
+  wire [63:0]dout;
   wire [5:0]\gc0.count_d1_reg[5] ;
   wire [5:0]\gcc0.gc0.count_d1_reg[5] ;
   wire [0:0]ram_full_fb_i_reg;
@@ -690,31 +689,15 @@ module fifo_45_blk_mem_gen_prim_wrapper
     \gc0.count_d1_reg[5] ,
     \gcc0.gc0.count_d1_reg[5] ,
     din);
-  output [47:0]dout;
+  output [63:0]dout;
   input clk;
   input tmp_ram_rd_en;
   input [0:0]ram_full_fb_i_reg;
   input srst;
   input [5:0]\gc0.count_d1_reg[5] ;
   input [5:0]\gcc0.gc0.count_d1_reg[5] ;
-  input [47:0]din;
+  input [63:0]din;
 
-  wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_21 ;
-  wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_22 ;
-  wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_29 ;
-  wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_30 ;
-  wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_37 ;
-  wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_38 ;
-  wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_45 ;
-  wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_46 ;
-  wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_53 ;
-  wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_54 ;
-  wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_61 ;
-  wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_62 ;
-  wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_69 ;
-  wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_70 ;
-  wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_77 ;
-  wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_78 ;
   wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_85 ;
   wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_86 ;
   wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_87 ;
@@ -724,8 +707,8 @@ module fifo_45_blk_mem_gen_prim_wrapper
   wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_91 ;
   wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_92 ;
   wire clk;
-  wire [47:0]din;
-  wire [47:0]dout;
+  wire [63:0]din;
+  wire [63:0]dout;
   wire [5:0]\gc0.count_d1_reg[5] ;
   wire [5:0]\gcc0.gc0.count_d1_reg[5] ;
   wire [0:0]ram_full_fb_i_reg;
@@ -925,12 +908,12 @@ module fifo_45_blk_mem_gen_prim_wrapper
         .CLKARDCLK(clk),
         .CLKBWRCLK(clk),
         .DBITERR(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_DBITERR_UNCONNECTED ),
-        .DIADI({1'b0,1'b0,din[23:18],1'b0,1'b0,din[17:12],1'b0,1'b0,din[11:6],1'b0,1'b0,din[5:0]}),
-        .DIBDI({1'b0,1'b0,din[47:42],1'b0,1'b0,din[41:36],1'b0,1'b0,din[35:30],1'b0,1'b0,din[29:24]}),
+        .DIADI(din[31:0]),
+        .DIBDI(din[63:32]),
         .DIPADIP({1'b0,1'b0,1'b0,1'b0}),
         .DIPBDIP({1'b0,1'b0,1'b0,1'b0}),
-        .DOADO({\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_21 ,\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_22 ,dout[23:18],\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_29 ,\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_30 ,dout[17:12],\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_37 ,\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_38 ,dout[11:6],\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_45 ,\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_46 ,dout[5:0]}),
-        .DOBDO({\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_53 ,\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_54 ,dout[47:42],\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_61 ,\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_62 ,dout[41:36],\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_69 ,\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_70 ,dout[35:30],\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_77 ,\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_78 ,dout[29:24]}),
+        .DOADO(dout[31:0]),
+        .DOBDO(dout[63:32]),
         .DOPADOP({\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_85 ,\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_86 ,\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_87 ,\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_88 }),
         .DOPBDOP({\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_89 ,\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_90 ,\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_91 ,\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_n_92 }),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_ECCPARITY_UNCONNECTED [7:0]),
@@ -960,18 +943,18 @@ module fifo_45_blk_mem_gen_top
     \gc0.count_d1_reg[5] ,
     \gcc0.gc0.count_d1_reg[5] ,
     din);
-  output [47:0]dout;
+  output [63:0]dout;
   input clk;
   input tmp_ram_rd_en;
   input [0:0]ram_full_fb_i_reg;
   input srst;
   input [5:0]\gc0.count_d1_reg[5] ;
   input [5:0]\gcc0.gc0.count_d1_reg[5] ;
-  input [47:0]din;
+  input [63:0]din;
 
   wire clk;
-  wire [47:0]din;
-  wire [47:0]dout;
+  wire [63:0]din;
+  wire [63:0]dout;
   wire [5:0]\gc0.count_d1_reg[5] ;
   wire [5:0]\gcc0.gc0.count_d1_reg[5] ;
   wire [0:0]ram_full_fb_i_reg;
@@ -999,18 +982,18 @@ module fifo_45_blk_mem_gen_v8_3_6
     \gc0.count_d1_reg[5] ,
     \gcc0.gc0.count_d1_reg[5] ,
     din);
-  output [47:0]dout;
+  output [63:0]dout;
   input clk;
   input tmp_ram_rd_en;
   input [0:0]ram_full_fb_i_reg;
   input srst;
   input [5:0]\gc0.count_d1_reg[5] ;
   input [5:0]\gcc0.gc0.count_d1_reg[5] ;
-  input [47:0]din;
+  input [63:0]din;
 
   wire clk;
-  wire [47:0]din;
-  wire [47:0]dout;
+  wire [63:0]din;
+  wire [63:0]dout;
   wire [5:0]\gc0.count_d1_reg[5] ;
   wire [5:0]\gcc0.gc0.count_d1_reg[5] ;
   wire [0:0]ram_full_fb_i_reg;
@@ -1038,18 +1021,18 @@ module fifo_45_blk_mem_gen_v8_3_6_synth
     \gc0.count_d1_reg[5] ,
     \gcc0.gc0.count_d1_reg[5] ,
     din);
-  output [47:0]dout;
+  output [63:0]dout;
   input clk;
   input tmp_ram_rd_en;
   input [0:0]ram_full_fb_i_reg;
   input srst;
   input [5:0]\gc0.count_d1_reg[5] ;
   input [5:0]\gcc0.gc0.count_d1_reg[5] ;
-  input [47:0]din;
+  input [63:0]din;
 
   wire clk;
-  wire [47:0]din;
-  wire [47:0]dout;
+  wire [63:0]din;
+  wire [63:0]dout;
   wire [5:0]\gc0.count_d1_reg[5] ;
   wire [5:0]\gcc0.gc0.count_d1_reg[5] ;
   wire [0:0]ram_full_fb_i_reg;
@@ -1078,19 +1061,19 @@ module fifo_45_fifo_generator_ramfifo
     din,
     rd_en,
     wr_en);
-  output [47:0]dout;
+  output [63:0]dout;
   output empty;
   output full;
   output prog_full;
   input clk;
   input srst;
-  input [47:0]din;
+  input [63:0]din;
   input rd_en;
   input wr_en;
 
   wire clk;
-  wire [47:0]din;
-  wire [47:0]dout;
+  wire [63:0]din;
+  wire [63:0]dout;
   wire empty;
   wire full;
   wire \gntv_or_sync_fifo.gl0.rd_n_10 ;
@@ -1169,19 +1152,19 @@ module fifo_45_fifo_generator_top
     din,
     rd_en,
     wr_en);
-  output [47:0]dout;
+  output [63:0]dout;
   output empty;
   output full;
   output prog_full;
   input clk;
   input srst;
-  input [47:0]din;
+  input [63:0]din;
   input rd_en;
   input wr_en;
 
   wire clk;
-  wire [47:0]din;
-  wire [47:0]dout;
+  wire [63:0]din;
+  wire [63:0]dout;
   wire empty;
   wire full;
   wire prog_full;
@@ -1210,10 +1193,10 @@ endmodule
 (* C_AXI_DATA_WIDTH = "64" *) (* C_AXI_ID_WIDTH = "1" *) (* C_AXI_LEN_WIDTH = "8" *) 
 (* C_AXI_LOCK_WIDTH = "1" *) (* C_AXI_RUSER_WIDTH = "1" *) (* C_AXI_TYPE = "1" *) 
 (* C_AXI_WUSER_WIDTH = "1" *) (* C_COMMON_CLOCK = "1" *) (* C_COUNT_TYPE = "0" *) 
-(* C_DATA_COUNT_WIDTH = "6" *) (* C_DEFAULT_VALUE = "BlankString" *) (* C_DIN_WIDTH = "48" *) 
+(* C_DATA_COUNT_WIDTH = "6" *) (* C_DEFAULT_VALUE = "BlankString" *) (* C_DIN_WIDTH = "64" *) 
 (* C_DIN_WIDTH_AXIS = "1" *) (* C_DIN_WIDTH_RACH = "32" *) (* C_DIN_WIDTH_RDCH = "64" *) 
 (* C_DIN_WIDTH_WACH = "1" *) (* C_DIN_WIDTH_WDCH = "64" *) (* C_DIN_WIDTH_WRCH = "2" *) 
-(* C_DOUT_RST_VAL = "0" *) (* C_DOUT_WIDTH = "48" *) (* C_ENABLE_RLOCS = "0" *) 
+(* C_DOUT_RST_VAL = "0" *) (* C_DOUT_WIDTH = "64" *) (* C_ENABLE_RLOCS = "0" *) 
 (* C_ENABLE_RST_SYNC = "1" *) (* C_EN_SAFETY_CKT = "0" *) (* C_ERROR_INJECTION_TYPE = "0" *) 
 (* C_ERROR_INJECTION_TYPE_AXIS = "0" *) (* C_ERROR_INJECTION_TYPE_RACH = "0" *) (* C_ERROR_INJECTION_TYPE_RDCH = "0" *) 
 (* C_ERROR_INJECTION_TYPE_WACH = "0" *) (* C_ERROR_INJECTION_TYPE_WDCH = "0" *) (* C_ERROR_INJECTION_TYPE_WRCH = "0" *) 
@@ -1510,7 +1493,7 @@ module fifo_45_fifo_generator_v13_1_4
   input wr_rst;
   input rd_clk;
   input rd_rst;
-  input [47:0]din;
+  input [63:0]din;
   input wr_en;
   input rd_en;
   input [5:0]prog_empty_thresh;
@@ -1523,7 +1506,7 @@ module fifo_45_fifo_generator_v13_1_4
   input injectdbiterr;
   input injectsbiterr;
   input sleep;
-  output [47:0]dout;
+  output [63:0]dout;
   output full;
   output almost_full;
   output wr_ack;
@@ -1736,8 +1719,8 @@ module fifo_45_fifo_generator_v13_1_4
   wire \<const0> ;
   wire \<const1> ;
   wire clk;
-  wire [47:0]din;
-  wire [47:0]dout;
+  wire [63:0]din;
+  wire [63:0]dout;
   wire empty;
   wire full;
   wire prog_full;
@@ -2284,19 +2267,19 @@ module fifo_45_fifo_generator_v13_1_4_synth
     din,
     rd_en,
     wr_en);
-  output [47:0]dout;
+  output [63:0]dout;
   output empty;
   output full;
   output prog_full;
   input clk;
   input srst;
-  input [47:0]din;
+  input [63:0]din;
   input rd_en;
   input wr_en;
 
   wire clk;
-  wire [47:0]din;
-  wire [47:0]dout;
+  wire [63:0]din;
+  wire [63:0]dout;
   wire empty;
   wire full;
   wire prog_full;
@@ -2326,18 +2309,18 @@ module fifo_45_memory
     \gc0.count_d1_reg[5] ,
     \gcc0.gc0.count_d1_reg[5] ,
     din);
-  output [47:0]dout;
+  output [63:0]dout;
   input clk;
   input tmp_ram_rd_en;
   input [0:0]ram_full_fb_i_reg;
   input srst;
   input [5:0]\gc0.count_d1_reg[5] ;
   input [5:0]\gcc0.gc0.count_d1_reg[5] ;
-  input [47:0]din;
+  input [63:0]din;
 
   wire clk;
-  wire [47:0]din;
-  wire [47:0]dout;
+  wire [63:0]din;
+  wire [63:0]dout;
   wire [5:0]\gc0.count_d1_reg[5] ;
   wire [5:0]\gcc0.gc0.count_d1_reg[5] ;
   wire [0:0]ram_full_fb_i_reg;

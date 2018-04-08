@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="dist_mem_gen_2_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1511901884">
-  <File Type="RDS-UTIL" Name="dist_mem_gen_2_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="dist_mem_gen_2_drc_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="dist_mem_gen_2_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="dist_mem_gen_2.dcp"/>
+<GenRun Id="dist_mem_gen_2_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1519333740">
+  <File Type="PA-TCL" Name="dist_mem_gen_2.tcl"/>
+  <File Type="RDS-RDS" Name="dist_mem_gen_2.vds"/>
   <File Type="VDS-TIMINGSUMMARY" Name="dist_mem_gen_2_timing_summary_synth.rpt"/>
   <File Type="VDS-TIMING-PB" Name="dist_mem_gen_2_timing_summary_synth.pb"/>
-  <File Type="RDS-RDS" Name="dist_mem_gen_2.vds"/>
-  <File Type="PA-TCL" Name="dist_mem_gen_2.tcl"/>
+  <File Type="RDS-DCP" Name="dist_mem_gen_2.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="dist_mem_gen_2_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="dist_mem_gen_2_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="dist_mem_gen_2_drc_synth.rpt"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/dist_mem_gen_2">
     <File Path="$PSRCDIR/sources_1/ip/dist_mem_gen_2/dist_mem_gen_2.xci">
       <FileInfo>

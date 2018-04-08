@@ -62,6 +62,7 @@ module fifo_7680 (
   dout,
   full,
   empty,
+  data_count,
   prog_full
 );
 
@@ -80,6 +81,7 @@ output wire [23 : 0] dout;
 output wire full;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_read:1.0 FIFO_READ EMPTY" *)
 output wire empty;
+output wire [10 : 0] data_count;
 output wire prog_full;
 
   fifo_generator_v13_1_4 #(
@@ -97,7 +99,7 @@ output wire prog_full;
     .C_HAS_ALMOST_EMPTY(0),
     .C_HAS_ALMOST_FULL(0),
     .C_HAS_BACKUP(0),
-    .C_HAS_DATA_COUNT(0),
+    .C_HAS_DATA_COUNT(1),
     .C_HAS_INT_CLK(0),
     .C_HAS_MEMINIT_FILE(0),
     .C_HAS_OVERFLOW(0),
@@ -317,7 +319,7 @@ output wire prog_full;
     .almost_empty(),
     .valid(),
     .underflow(),
-    .data_count(),
+    .data_count(data_count),
     .rd_data_count(),
     .wr_data_count(),
     .prog_full(prog_full),

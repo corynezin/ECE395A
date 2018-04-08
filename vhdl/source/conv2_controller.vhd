@@ -20,7 +20,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity conv2_controller is
   generic(
-    N_filters: integer := 128
+    N_filters: integer := 32
   );
   Port ( 
   -- input 
@@ -52,7 +52,7 @@ entity conv2_controller is
       b_fifo_rden: OUT STD_LOGIC;
       b_fifo_wren: OUT STD_LOGIC;
       
-      ram_address: OUT STD_LOGIC_VECTOR(10 downto 0);
+      ram_address: OUT STD_LOGIC_VECTOR(8 downto 0);
       mac_enable: OUT STD_LOGIC;
       filter_input_enable: OUT STD_LOGIC;
       ctr_rst: OUT STD_LOGIC;
@@ -140,7 +140,7 @@ begin
                     o_counter := 0;
                     wc_counter := 0;
                     ram_counter := 0;
-                    ram_address <= "00000000000";
+                    ram_address <= "000000000";
                 end if;
             when "0001" =>
                 -- case 1 : INIT state, the MAC and output FIFO should not be changed
@@ -190,7 +190,7 @@ begin
                 else
                     counter5 := counter5 + 1;
                 end if;
-                if h_fifo_prog_full = '0' then
+                if ram_counter <= 15 then
                     ram_counter := ram_counter + 1;
                 end if;
             when "0010" =>
@@ -199,8 +199,13 @@ begin
                 x_mux <= '0';   
                 h_mux <= '1';   -- read back from h_fifo
                 o_mux <= '0';
-                x_fifo_rden_assert <= '1';
+                --x_fifo_rden_assert <= '1';
                 x_fifo_wren_assert <= '0';
+                if prev_state = "0101" then
+                    x_fifo_rden_assert <= '1';
+                else
+                    x_fifo_rden_assert <= '1';
+                end if;
                 if prev_state = "0100" or prev_state = "0101" then
                     h_fifo_rden_assert <= '0'; -- changed 1 to 0
                     h_fifo_wren_assert <= '0'; -- same here
@@ -284,7 +289,7 @@ begin
                 mac_enable <= '1';
                 filter_input_enable <= '1';
                 ctr_rst <= '0';
-                if (w_counter = 45) then
+                if (w_counter = 44) then --was 45
                     -- go to change weight state
                     ram_counter := ram_counter + 1;
                     wc_counter := wc_counter + 1;
@@ -297,6 +302,7 @@ begin
                 else 
                     -- no need to change weights, go back to state 2
                     curr_state <= "0010";
+                    --b_fifo_rden_assert <= '1';
                     filter_input_enable <= '0';
                 end if;
             when "0101" =>
@@ -308,6 +314,7 @@ begin
                 x_fifo_wren_assert <= '1';
                 o_fifo_rden_assert <= '0';
                 o_fifo_wren_assert <= '0';
+                
                 if wc_counter = N_filters - 1 then
                     relu_ready <= '1';
                 else
@@ -320,7 +327,7 @@ begin
                     counter1 := counter1 + 1;
                 end if;
                 if counter5 = 0 then
-                    b_fifo_rden_assert <= '0';
+                    b_fifo_rden_assert <= '1'; --used to be 0
                 else
                     b_fifo_rden_assert <= '1';
                 end if;
@@ -343,7 +350,6 @@ begin
                 if counter5 = 16 then
                     b_fifo_rden_assert <= '0';
                 end if;
-
                 if counter5 = 16 then
                     x_fifo_rden_assert <= '0';
                     h_mux <= '1';
@@ -367,15 +373,19 @@ begin
               -- output to MUXes
               x_mux <= '0';
               h_mux <= '0';
-              o_mux <= '0';
+              o_mux <= '1';
               result_ready <= '1';
               -- output to FIFOs
               x_fifo_rden_assert <= '0';
               x_fifo_wren_assert <= '0';
               h_fifo_rden_assert <= '0';
               h_fifo_wren_assert <= '0';
-              o_fifo_rden_assert <= '1';
+              if counter6 >= 1 then
+              o_fifo_wren_assert <= '1';
+              else
               o_fifo_wren_assert <= '0';
+              end if;
+              o_fifo_rden_assert <= '1';
               b_fifo_rden_assert <= '0';
               b_fifo_wren_assert <= '0';
               if counter6 < 2 then
@@ -393,7 +403,7 @@ begin
         prev_state <= curr_state;
 --        prev_prev_state <= prev_state;
 --         prev_prev_prev_state <= prev_prev_state;
-        ram_address <= std_logic_vector(to_unsigned(ram_counter,11));
+        ram_address <= std_logic_vector(to_unsigned(ram_counter,9));
     end if;
 end process;
 

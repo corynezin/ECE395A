@@ -8,11 +8,12 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity conv_relu_pool is
     generic(
-        M: Integer:=8; --Input bit width
+        M: Integer:=16; --Input bit width
         N: Integer:=24 --Output bit width
     );
     Port(
-        x: IN STD_LOGIC_VECTOR(M-1 downto 0);
+        a: IN STD_LOGIC_VECTOR(M-1 downto 0);
+        b: IN STD_LOGIC_VECTOR(M-1 downto 0);
         y: OUT STD_LOGIC_VECTOR(N-1 downto 0);
         rst: IN STD_LOGIC;
         clk: IN STD_LOGIC;
@@ -22,16 +23,24 @@ end conv_relu_pool;
 
 architecture RTL of conv_relu_pool is
 component conv_layer_0 is
-  Port ( 
-         x: IN STD_LOGIC_VECTOR(M-1 downto 0);
-         rst: IN STD_LOGIC;
-         clk: IN STD_LOGIC;
-         y: OUT STD_LOGIC_VECTOR(N-1 downto 0);
-         output_valid: OUT STD_LOGIC
-         );
+    generic(
+        M: Integer:=16; --Input bit width
+        N: Integer:=24 --Output bit width
+    );
+    Port( 
+        x: IN STD_LOGIC_VECTOR(M-1 downto 0);
+        rst: IN STD_LOGIC;
+        clk: IN STD_LOGIC;
+        y: OUT STD_LOGIC_VECTOR(N-1 downto 0);
+        output_valid: OUT STD_LOGIC
+        );
 end component conv_layer_0;
 
 component conv_layer_1 is
+    generic(
+        M: Integer:=16; --Input bit width
+        N: Integer:=24 --Output bit width
+    );
   Port ( 
          x: IN STD_LOGIC_VECTOR(M-1 downto 0);
          rst: IN STD_LOGIC;
@@ -63,17 +72,29 @@ signal conv0_valid: STD_LOGIC:= '0';
 signal conv1_valid: STD_LOGIC:= '0';
 signal y1,y2: STD_LOGIC_VECTOR(N-1 downto 0);
 signal sum: STD_LOGIC_VECTOR(N-1 downto 0);
-signal z: STD_LOGIC_VECTOR(N-1 downto 0);
-signal w: STD_LOGIC_VECTOR(N-1 downto 0);
+signal z: STD_LOGIC_VECTOR(N-1 downto 0) := (others => '0');
+signal w: STD_LOGIC_VECTOR(N-1 downto 0) := (others => '0');
 signal ceclk: STD_LOGIC:= '0';
 signal sum_valid: STD_LOGIC:='0';
 signal pool_valid: STD_LOGIC:='0';
+signal valid_valid: STD_LOGIC:='0';
+signal relu_out: STD_LOGIC_VECTOR(23 downto 0);
+signal maxpl_in: STD_LOGIC_VECTOR(23 downto 0);
 begin
+
 sum_valid <= conv0_valid and conv1_valid;
-ceclk <= clk and sum_valid;
+
+ceclk <= clk and valid_valid;
+process(clk) begin
+    if rising_edge(clk)  then
+        if sum_valid = '1' then
+            valid_valid <= sum_valid;
+        end if;
+    end if;
+end process;
 conv0: conv_layer_0
     port map(
-        x => x,
+        x => a,
         y => y1,
         rst => rst,
         clk => clk,
@@ -81,7 +102,7 @@ conv0: conv_layer_0
     );
 conv1: conv_layer_1
     port map(
-        x => x,
+        x => b,
         y => y2,
         rst => rst,
         clk => clk,
@@ -96,7 +117,7 @@ r: Relu
     )
     port map(
         d0 => sum,
-        output => z
+        output => relu_out
     );
 mp: maxpool2_1
     generic map(
@@ -105,12 +126,22 @@ mp: maxpool2_1
     port map(
         clk => clk,
         ceclk => ceclk,
-        input => sum,
+        input => maxpl_in,
         output => w,
         input_valid => sum_valid,
         output_valid => pool_valid
     );
     
+process(clk) begin
+if rising_edge(clk) then
+--    if sum_valid = '1' then
+--        maxpl_in <= relu_out;
+--    else
+--        maxpl_in <= (others => '0');
+--    end if;
+    maxpl_in <= relu_out;
+end if;
+end process;
 y <= w when sum_valid = '1' else (others=>'0');
-y_valid <= '1' when pool_valid = '1' else '0';
+y_valid <= '1' when sum_valid = '1' else '0'; --used to be pool valid
 end RTL;

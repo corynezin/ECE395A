@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
--- Date        : Sat Nov 25 16:18:34 2017
+-- Date        : Sat Nov 25 16:18:33 2017
 -- Host        : nezin-desktop running 64-bit Ubuntu 16.04.3 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/nezin/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.srcs/sources_1/ip/ram1/ram1_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top ram1 -prefix
+--               ram1_ ram1_sim_netlist.vhdl
 -- Design      : ram1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -98,8 +98,6 @@ entity ram1_dist_mem_gen_v8_0_11 is
   attribute C_SYNC_ENABLE of ram1_dist_mem_gen_v8_0_11 : entity is 1;
   attribute C_WIDTH : integer;
   attribute C_WIDTH of ram1_dist_mem_gen_v8_0_11 : entity is 8;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ram1_dist_mem_gen_v8_0_11 : entity is "dist_mem_gen_v8_0_11";
 end ram1_dist_mem_gen_v8_0_11;
 
 architecture STRUCTURE of ram1_dist_mem_gen_v8_0_11 is

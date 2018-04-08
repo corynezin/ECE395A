@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-// Date        : Tue Nov 28 15:45:38 2017
+// Date        : Thu Feb 22 16:09:56 2018
 // Host        : nezin-desktop running 64-bit Ubuntu 16.04.3 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/nezin/Documents/ECE395A/vhdl/conv_2/conv_2.srcs/sources_1/ip/dist_mem_gen_2/dist_mem_gen_2_sim_netlist.v
@@ -793,7 +793,7 @@ module dist_mem_gen_2_rom
         .Q(a_reg[9]),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'hF98F7D059DF262C6)) 
+    .INIT(64'hF98F7D05D5F262C6)) 
     g0_b0
        (.I0(\a_reg_reg[0]_rep_n_0 ),
         .I1(\a_reg_reg[1]_rep_n_0 ),
@@ -803,7 +803,7 @@ module dist_mem_gen_2_rom
         .I5(\a_reg_reg[5]_rep_n_0 ),
         .O(g0_b0_n_0));
   LUT6 #(
-    .INIT(64'hA1086316B540912F)) 
+    .INIT(64'hA1086316FB40912F)) 
     g0_b1
        (.I0(\a_reg_reg[0]_rep_n_0 ),
         .I1(\a_reg_reg[1]_rep_n_0 ),
@@ -813,7 +813,7 @@ module dist_mem_gen_2_rom
         .I5(\a_reg_reg[5]_rep_n_0 ),
         .O(g0_b1_n_0));
   LUT6 #(
-    .INIT(64'h6AA5DFBA43F16D26)) 
+    .INIT(64'h6AA5DFBA5FF16D26)) 
     g0_b2
        (.I0(\a_reg_reg[0]_rep_n_0 ),
         .I1(\a_reg_reg[1]_rep_n_0 ),
@@ -823,7 +823,7 @@ module dist_mem_gen_2_rom
         .I5(\a_reg_reg[5]_rep_n_0 ),
         .O(g0_b2_n_0));
   LUT6 #(
-    .INIT(64'h9D2E68984F3343AD)) 
+    .INIT(64'h9D2E68985F3343AD)) 
     g0_b3
        (.I0(\a_reg_reg[0]_rep_n_0 ),
         .I1(\a_reg_reg[1]_rep_n_0 ),
@@ -833,7 +833,7 @@ module dist_mem_gen_2_rom
         .I5(\a_reg_reg[5]_rep_n_0 ),
         .O(g0_b3_n_0));
   LUT6 #(
-    .INIT(64'h46A9976FB4E015A2)) 
+    .INIT(64'h46A9976FEAE015A2)) 
     g0_b4
        (.I0(a_reg[0]),
         .I1(a_reg[1]),
@@ -843,7 +843,7 @@ module dist_mem_gen_2_rom
         .I5(a_reg[5]),
         .O(g0_b4_n_0));
   LUT6 #(
-    .INIT(64'hD2C920C73968A3B7)) 
+    .INIT(64'hD2C920C77D68A3B7)) 
     g0_b5
        (.I0(a_reg[0]),
         .I1(a_reg[1]),
@@ -853,7 +853,7 @@ module dist_mem_gen_2_rom
         .I5(a_reg[5]),
         .O(g0_b5_n_0));
   LUT6 #(
-    .INIT(64'h88B2C998E34F6D10)) 
+    .INIT(64'h88B2C998F34F6D10)) 
     g0_b6
        (.I0(a_reg[0]),
         .I1(a_reg[1]),
@@ -863,7 +863,7 @@ module dist_mem_gen_2_rom
         .I5(a_reg[5]),
         .O(g0_b6_n_0));
   LUT6 #(
-    .INIT(64'h922EB9BB2FA877EF)) 
+    .INIT(64'h922EB9BB7FA877EF)) 
     g0_b7
        (.I0(a_reg[0]),
         .I1(a_reg[1]),

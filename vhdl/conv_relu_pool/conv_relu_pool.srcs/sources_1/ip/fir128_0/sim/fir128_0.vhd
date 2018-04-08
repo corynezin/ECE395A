@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2017 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -61,7 +61,7 @@ ENTITY fir128_0 IS
     aclk : IN STD_LOGIC;
     s_axis_data_tvalid : IN STD_LOGIC;
     s_axis_data_tready : OUT STD_LOGIC;
-    s_axis_data_tdata : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+    s_axis_data_tdata : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     s_axis_config_tvalid : IN STD_LOGIC;
     s_axis_config_tready : OUT STD_LOGIC;
     s_axis_config_tdata : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
@@ -154,7 +154,7 @@ ARCHITECTURE fir128_0_arch OF fir128_0 IS
       s_axis_data_tready : OUT STD_LOGIC;
       s_axis_data_tlast : IN STD_LOGIC;
       s_axis_data_tuser : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-      s_axis_data_tdata : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+      s_axis_data_tdata : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
       s_axis_config_tvalid : IN STD_LOGIC;
       s_axis_config_tready : OUT STD_LOGIC;
       s_axis_config_tlast : IN STD_LOGIC;
@@ -194,13 +194,13 @@ BEGIN
       C_ELABORATION_DIR => "./",
       C_COMPONENT_NAME => "fir128_0",
       C_COEF_FILE => "fir128_0.mif",
-      C_COEF_FILE_LINES => 1024,
-      C_FILTER_TYPE => 11,
+      C_COEF_FILE_LINES => 256,
+      C_FILTER_TYPE => 0,
       C_INTERP_RATE => 1,
       C_DECIM_RATE => 1,
       C_ZERO_PACKING_FACTOR => 1,
       C_SYMMETRY => 0,
-      C_NUM_FILTS => 128,
+      C_NUM_FILTS => 32,
       C_NUM_TAPS => 8,
       C_NUM_CHANNELS => 1,
       C_CHANNEL_PATTERN => "fixed",
@@ -211,10 +211,10 @@ BEGIN
       C_COL_PIPE_LEN => 4,
       C_COL_CONFIG => "8",
       C_OPTIMIZATION => 0,
-      C_DATA_PATH_WIDTHS => "8",
-      C_DATA_IP_PATH_WIDTHS => "8",
-      C_DATA_PX_PATH_WIDTHS => "8",
-      C_DATA_WIDTH => 8,
+      C_DATA_PATH_WIDTHS => "16",
+      C_DATA_IP_PATH_WIDTHS => "16",
+      C_DATA_PX_PATH_WIDTHS => "16",
+      C_DATA_WIDTH => 16,
       C_COEF_PATH_WIDTHS => "16",
       C_COEF_WIDTH => 16,
       C_DATA_PATH_SRC => "0",
@@ -222,10 +222,10 @@ BEGIN
       C_PX_PATH_SRC => "0",
       C_DATA_PATH_SIGN => "0",
       C_COEF_PATH_SIGN => "0",
-      C_ACCUM_PATH_WIDTHS => "25",
+      C_ACCUM_PATH_WIDTHS => "33",
       C_OUTPUT_WIDTH => 24,
       C_OUTPUT_PATH_WIDTHS => "24",
-      C_ACCUM_OP_PATH_WIDTHS => "25",
+      C_ACCUM_OP_PATH_WIDTHS => "33",
       C_EXT_MULT_CNFG => "none",
       C_DATA_PATH_PSAMP_SRC => "0",
       C_OP_PATH_PSAMP_SRC => "0",
@@ -243,13 +243,13 @@ BEGIN
       C_DATA_MEM_PACKING => 0,
       C_COEF_MEM_PACKING => 0,
       C_FILTS_PACKED => 0,
-      C_LATENCY => 10,
+      C_LATENCY => 16,
       C_HAS_ARESETn => 0,
       C_HAS_ACLKEN => 0,
       C_DATA_HAS_TLAST => 0,
       C_S_DATA_HAS_FIFO => 1,
       C_S_DATA_HAS_TUSER => 0,
-      C_S_DATA_TDATA_WIDTH => 8,
+      C_S_DATA_TDATA_WIDTH => 16,
       C_S_DATA_TUSER_WIDTH => 1,
       C_M_DATA_HAS_TREADY => 0,
       C_M_DATA_HAS_TUSER => 0,

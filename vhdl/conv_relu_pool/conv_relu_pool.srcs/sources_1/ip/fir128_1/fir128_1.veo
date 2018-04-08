@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2017 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -58,7 +58,7 @@ fir128_1 your_instance_name (
   .aclk(aclk),                                  // input wire aclk
   .s_axis_data_tvalid(s_axis_data_tvalid),      // input wire s_axis_data_tvalid
   .s_axis_data_tready(s_axis_data_tready),      // output wire s_axis_data_tready
-  .s_axis_data_tdata(s_axis_data_tdata),        // input wire [7 : 0] s_axis_data_tdata
+  .s_axis_data_tdata(s_axis_data_tdata),        // input wire [15 : 0] s_axis_data_tdata
   .s_axis_config_tvalid(s_axis_config_tvalid),  // input wire s_axis_config_tvalid
   .s_axis_config_tready(s_axis_config_tready),  // output wire s_axis_config_tready
   .s_axis_config_tdata(s_axis_config_tdata),    // input wire [7 : 0] s_axis_config_tdata

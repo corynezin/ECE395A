@@ -1,0 +1,246 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Mar  1 20:53:17 2018
+# Process ID: 26296
+# Current directory: /home/nezin/Documents/ECE395A/vhdl/slope_bias_loader/slope_bias_loader.runs/synth_2
+# Command line: vivado -log slope_bias_loader_tb.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source slope_bias_loader_tb.tcl
+# Log file: /home/nezin/Documents/ECE395A/vhdl/slope_bias_loader/slope_bias_loader.runs/synth_2/slope_bias_loader_tb.vds
+# Journal file: /home/nezin/Documents/ECE395A/vhdl/slope_bias_loader/slope_bias_loader.runs/synth_2/vivado.jou
+#-----------------------------------------------------------
+source slope_bias_loader_tb.tcl -notrace
+Command: synth_design -top slope_bias_loader_tb -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020-clg484'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020-clg484'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 26305 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1187.641 ; gain = 75.992 ; free physical = 15100 ; free virtual = 58553
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'slope_bias_loader_tb' [/home/nezin/Documents/ECE395A/vhdl/slope_bias_loader/slope_bias_loader.srcs/sim_1/new/slope_bias_loader_tb.vhd:16]
+	Parameter B bound to: 8 - type: integer 
+	Parameter N bound to: 6 - type: integer 
+	Parameter M bound to: 26 - type: integer 
+	Parameter slope_adjustment_factor bound to: 1276 - type: integer 
+	Parameter negative_slope_exponent bound to: 16 - type: integer 
+	Parameter bias bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'slope_bias_loader' declared at '/home/nezin/Documents/ECE395A/vhdl/slope_bias_loader/slope_bias_loader.srcs/sources_1/new/slope_bias_loader.vhd:9' bound to instance 'sbl' of component 'slope_bias_loader' [/home/nezin/Documents/ECE395A/vhdl/slope_bias_loader/slope_bias_loader.srcs/sim_1/new/slope_bias_loader_tb.vhd:36]
+INFO: [Synth 8-638] synthesizing module 'slope_bias_loader' [/home/nezin/Documents/ECE395A/vhdl/slope_bias_loader/slope_bias_loader.srcs/sources_1/new/slope_bias_loader.vhd:26]
+	Parameter B bound to: 8 - type: integer 
+	Parameter N bound to: 6 - type: integer 
+	Parameter M bound to: 26 - type: integer 
+	Parameter slope_adjustment_factor bound to: 1276 - type: integer 
+	Parameter negative_slope_exponent bound to: 16 - type: integer 
+	Parameter bias bound to: 7 - type: integer 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-256] done synthesizing module 'slope_bias_loader' (1#1) [/home/nezin/Documents/ECE395A/vhdl/slope_bias_loader/slope_bias_loader.srcs/sources_1/new/slope_bias_loader.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'slope_bias_loader_tb' (2#1) [/home/nezin/Documents/ECE395A/vhdl/slope_bias_loader/slope_bias_loader.srcs/sim_1/new/slope_bias_loader_tb.vhd:16]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1228.141 ; gain = 116.492 ; free physical = 15149 ; free virtual = 58561
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1228.141 ; gain = 116.492 ; free physical = 15149 ; free virtual = 58561
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1236.145 ; gain = 124.496 ; free physical = 15150 ; free virtual = 58562
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1244.152 ; gain = 132.504 ; free physical = 15141 ; free virtual = 58553
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Multipliers : 
+	                 8x12  Multipliers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module slope_bias_loader 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Multipliers : 
+	                 8x12  Multipliers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1376.137 ; gain = 264.488 ; free physical = 14978 ; free virtual = 58398
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1376.137 ; gain = 264.488 ; free physical = 14978 ; free virtual = 58398
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1376.137 ; gain = 264.488 ; free physical = 14976 ; free virtual = 58396
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1376.137 ; gain = 264.488 ; free physical = 14976 ; free virtual = 58396
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1376.137 ; gain = 264.488 ; free physical = 14976 ; free virtual = 58396
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1376.137 ; gain = 264.488 ; free physical = 14976 ; free virtual = 58396
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1376.137 ; gain = 264.488 ; free physical = 14976 ; free virtual = 58396
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1376.137 ; gain = 264.488 ; free physical = 14976 ; free virtual = 58396
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1376.137 ; gain = 264.488 ; free physical = 14976 ; free virtual = 58396
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    17|
+|2     |LUT1   |    24|
+|3     |LUT2   |    22|
+|4     |LUT3   |     5|
+|5     |LUT4   |     6|
+|6     |LUT5   |    10|
+|7     |LUT6   |     7|
+|8     |IBUF   |     8|
+|9     |OBUF   |    32|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   131|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1376.137 ; gain = 264.488 ; free physical = 14976 ; free virtual = 58396
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1376.137 ; gain = 264.488 ; free physical = 14978 ; free virtual = 58398
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1376.145 ; gain = 264.488 ; free physical = 14978 ; free virtual = 58398
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 25 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+13 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1543.969 ; gain = 444.910 ; free physical = 14918 ; free virtual = 58338
+INFO: [Common 17-1381] The checkpoint '/home/nezin/Documents/ECE395A/vhdl/slope_bias_loader/slope_bias_loader.runs/synth_2/slope_bias_loader_tb.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.12 . Memory (MB): peak = 1567.980 ; gain = 0.000 ; free physical = 14918 ; free virtual = 58338
+INFO: [Common 17-206] Exiting Vivado at Thu Mar  1 20:53:38 2018...

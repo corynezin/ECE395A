@@ -7,8 +7,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 entity conv_1 is
-    Port ( x : in STD_LOGIC_VECTOR (7 downto 0);
-           y : out STD_LOGIC_VECTOR (23 downto 0);
+    generic(
+        M: Integer:=16; --Input bit width
+        N: Integer:=24; --Output bit width
+        P: Integer:=32 --Coefficient sets
+    );
+    Port ( x : in STD_LOGIC_VECTOR (M-1 downto 0);
+           y : out STD_LOGIC_VECTOR (N-1 downto 0);
            rst: in STD_LOGIC;
            data_valid: in STD_LOGIC;
            clk: in STD_LOGIC;
@@ -21,23 +26,26 @@ component fir128_1 is
     aclk : in STD_LOGIC;
     s_axis_data_tvalid : in STD_LOGIC;
     s_axis_data_tready : out STD_LOGIC;
-    s_axis_data_tdata : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    s_axis_data_tdata : in STD_LOGIC_VECTOR ( M-1 downto 0 );
     s_axis_config_tvalid : in STD_LOGIC;
     s_axis_config_tready : out STD_LOGIC;
     s_axis_config_tdata : in STD_LOGIC_VECTOR ( 7 downto 0 );
     m_axis_data_tvalid : out STD_LOGIC;
-    m_axis_data_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 )
+    m_axis_data_tdata : out STD_LOGIC_VECTOR ( N-1 downto 0 )
   );
 
 end component fir128_1;
 
 signal sel: STD_LOGIC_VECTOR(7 downto 0):= "00000000";
 signal sel_valid: STD_LOGIC := '0';
-signal valid_data : STD_LOGIC_VECTOR(7 downto 0);
+signal valid_data : STD_LOGIC_VECTOR(M-1 downto 0);
+signal valid_intermediate: STD_LOGIC:='0';
+signal init_sig: STD_LOGIC := '1';
 -- signal inter_weights_ready : STD_LOGIC := '1';
 -- DEBUGGING SIGNALS
 -- signal inter_signal : STD_LOGIC_VECTOR(7 downto 0) := "00000000";
 begin
+output_valid <= valid_intermediate when init_sig = '0' else '0';
 
 F: fir128_1
     port map(
@@ -60,34 +68,41 @@ variable init : integer := 1;
 begin
     if rising_edge(clk) then
         if (init = 0) then
-            i := (i + 1) mod 128;
+            i := (i + 1);-- mod 128; -- 32 was 128
         end if;
-        
-        if i = 127 and init = 0 then
+        -- weight changing
+        if i = 127 - 17 and init = 0 then -- 31 was 127
             if (data_valid = '1') then
-                j := (j + 1) mod 128;
+                if j = P-1 then -- 31 was 127
+                    j := 0;
+                else
+                    j := j + 1;
+                end if;
                 sel_valid <= '1';
                 sel <= std_logic_vector(to_unsigned(j,8));
             end if;
-        else
+        elsif i /= 0 then
             sel_valid <= '0';
         end if;
         
         -- throw away the first 7 datapoints
-        if (i >= 16#0c# and i <= 16#12#) then
-            output_valid <= '0';
+        if i < 8 or i = 128 then
+            valid_intermediate <= '0';
         else
-            output_valid <= '1'; 
+            valid_intermediate <= '1'; 
         end if;
 
         if rst = '1' then
+            init := 0;
+            init_sig <= '0';
+        else
             init := 1;
+            init_sig <= '1';
             i := 0;
             j := 0;
             sel <= std_logic_vector(to_unsigned(j,8));
-        else
-            init := 0;
         end if;
+        i := i mod 128;
     end if;
 end process;
 

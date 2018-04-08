@@ -1,0 +1,327 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
+| Date             : Sat Mar 10 17:04:45 2018
+| Host             : nezin-desktop running 64-bit Ubuntu 16.04.3 LTS
+| Command          : report_power -file matmul_power_routed.rpt -pb matmul_power_summary_routed.pb -rpx matmul_power_routed.rpx
+| Design           : matmul
+| Device           : xc7z020clg484-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+-------+
+| Total On-Chip Power (W)  | 0.202 |
+| Dynamic (W)              | 0.080 |
+| Device Static (W)        | 0.121 |
+| Effective TJA (C/W)      | 11.5  |
+| Max Ambient (C)          | 82.7  |
+| Junction Temperature (C) | 27.3  |
+| Confidence Level         | Low   |
+| Setting File             | ---   |
+| Simulation Activity File | ---   |
+| Design Nets Matched      | NA    |
++--------------------------+-------+
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.004 |        3 |       --- |             --- |
+| Slice Logic              |     0.006 |     3650 |       --- |             --- |
+|   LUT as Logic           |     0.005 |     1825 |     53200 |            3.43 |
+|   F7/F8 Muxes            |    <0.001 |      800 |     53200 |            1.50 |
+|   Register               |    <0.001 |      712 |    106400 |            0.67 |
+|   LUT as Distributed RAM |    <0.001 |       44 |     17400 |            0.25 |
+|   CARRY4                 |    <0.001 |       38 |     13300 |            0.29 |
+|   Others                 |     0.000 |      218 |       --- |             --- |
+| Signals                  |     0.019 |     5038 |       --- |             --- |
+| Block RAM                |     0.015 |      7.5 |       140 |            5.36 |
+| DSPs                     |     0.035 |       64 |       220 |           29.09 |
+| I/O                      |     0.002 |       66 |       200 |           33.00 |
+| Static Power             |     0.121 |          |           |                 |
+| Total                    |     0.202 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.085 |       0.077 |      0.008 |
+| Vccaux    |       1.800 |     0.019 |       0.000 |      0.019 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.002 |       0.001 |      0.001 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.002 |       0.001 |      0.001 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.017 |       0.000 |      0.017 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+| clk   | clk    |            20.0 |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++----------------------------------------------+-----------+
+| Name                                         | Power (W) |
++----------------------------------------------+-----------+
+| matmul                                       |     0.080 |
+|   activation_fifo                            |    <0.001 |
+|     U0                                       |    <0.001 |
+|       inst_fifo_gen                          |    <0.001 |
+|         gconvfifo.rf                         |    <0.001 |
+|           grf.rf                             |    <0.001 |
+|             gntv_or_sync_fifo.gl0.rd         |    <0.001 |
+|               grss.rsts                      |    <0.001 |
+|               rpntr                          |    <0.001 |
+|             gntv_or_sync_fifo.gl0.wr         |    <0.001 |
+|               gwss.wsts                      |    <0.001 |
+|               wpntr                          |    <0.001 |
+|             gntv_or_sync_fifo.mem            |    <0.001 |
+|               gdm.dm_gen.dm                  |    <0.001 |
+|                 RAM_reg_0_63_0_2             |    <0.001 |
+|                 RAM_reg_0_63_12_14           |    <0.001 |
+|                 RAM_reg_0_63_15_17           |    <0.001 |
+|                 RAM_reg_0_63_18_20           |    <0.001 |
+|                 RAM_reg_0_63_21_23           |    <0.001 |
+|                 RAM_reg_0_63_24_26           |    <0.001 |
+|                 RAM_reg_0_63_27_29           |    <0.001 |
+|                 RAM_reg_0_63_30_31           |    <0.001 |
+|                 RAM_reg_0_63_3_5             |    <0.001 |
+|                 RAM_reg_0_63_6_8             |    <0.001 |
+|                 RAM_reg_0_63_9_11            |    <0.001 |
+|   generate_dots[0].dot_gen                   |    <0.001 |
+|   generate_dots[10].dot_gen                  |    <0.001 |
+|   generate_dots[11].dot_gen                  |    <0.001 |
+|   generate_dots[12].dot_gen                  |    <0.001 |
+|   generate_dots[13].dot_gen                  |    <0.001 |
+|   generate_dots[14].dot_gen                  |    <0.001 |
+|   generate_dots[15].dot_gen                  |    <0.001 |
+|   generate_dots[16].dot_gen                  |    <0.001 |
+|   generate_dots[17].dot_gen                  |     0.001 |
+|   generate_dots[18].dot_gen                  |    <0.001 |
+|   generate_dots[19].dot_gen                  |    <0.001 |
+|   generate_dots[1].dot_gen                   |     0.001 |
+|   generate_dots[20].dot_gen                  |    <0.001 |
+|   generate_dots[21].dot_gen                  |    <0.001 |
+|   generate_dots[22].dot_gen                  |    <0.001 |
+|   generate_dots[23].dot_gen                  |    <0.001 |
+|   generate_dots[24].dot_gen                  |    <0.001 |
+|   generate_dots[25].dot_gen                  |     0.001 |
+|   generate_dots[26].dot_gen                  |    <0.001 |
+|   generate_dots[27].dot_gen                  |    <0.001 |
+|   generate_dots[28].dot_gen                  |    <0.001 |
+|   generate_dots[29].dot_gen                  |    <0.001 |
+|   generate_dots[2].dot_gen                   |    <0.001 |
+|   generate_dots[30].dot_gen                  |    <0.001 |
+|   generate_dots[31].dot_gen                  |     0.001 |
+|   generate_dots[32].dot_gen                  |    <0.001 |
+|   generate_dots[33].dot_gen                  |     0.001 |
+|   generate_dots[34].dot_gen                  |    <0.001 |
+|   generate_dots[35].dot_gen                  |    <0.001 |
+|   generate_dots[36].dot_gen                  |    <0.001 |
+|   generate_dots[37].dot_gen                  |    <0.001 |
+|   generate_dots[38].dot_gen                  |    <0.001 |
+|   generate_dots[39].dot_gen                  |    <0.001 |
+|   generate_dots[3].dot_gen                   |    <0.001 |
+|   generate_dots[40].dot_gen                  |    <0.001 |
+|   generate_dots[41].dot_gen                  |     0.001 |
+|   generate_dots[42].dot_gen                  |    <0.001 |
+|   generate_dots[43].dot_gen                  |    <0.001 |
+|   generate_dots[44].dot_gen                  |    <0.001 |
+|   generate_dots[45].dot_gen                  |    <0.001 |
+|   generate_dots[46].dot_gen                  |    <0.001 |
+|   generate_dots[47].dot_gen                  |    <0.001 |
+|   generate_dots[48].dot_gen                  |    <0.001 |
+|   generate_dots[49].dot_gen                  |     0.001 |
+|   generate_dots[4].dot_gen                   |    <0.001 |
+|   generate_dots[50].dot_gen                  |    <0.001 |
+|   generate_dots[51].dot_gen                  |    <0.001 |
+|   generate_dots[52].dot_gen                  |    <0.001 |
+|   generate_dots[53].dot_gen                  |    <0.001 |
+|   generate_dots[54].dot_gen                  |    <0.001 |
+|   generate_dots[55].dot_gen                  |    <0.001 |
+|   generate_dots[56].dot_gen                  |    <0.001 |
+|   generate_dots[57].dot_gen                  |     0.001 |
+|   generate_dots[58].dot_gen                  |    <0.001 |
+|   generate_dots[59].dot_gen                  |    <0.001 |
+|   generate_dots[5].dot_gen                   |    <0.001 |
+|   generate_dots[60].dot_gen                  |    <0.001 |
+|   generate_dots[61].dot_gen                  |    <0.001 |
+|   generate_dots[62].dot_gen                  |    <0.001 |
+|   generate_dots[63].dot_gen                  |    <0.001 |
+|   generate_dots[6].dot_gen                   |    <0.001 |
+|   generate_dots[7].dot_gen                   |    <0.001 |
+|   generate_dots[8].dot_gen                   |    <0.001 |
+|   generate_dots[9].dot_gen                   |     0.001 |
+|   generate_sbl[0].mux_gen                    |    <0.001 |
+|   generate_sbl[10].mux_gen                   |    <0.001 |
+|   generate_sbl[11].mux_gen                   |    <0.001 |
+|   generate_sbl[12].mux_gen                   |    <0.001 |
+|   generate_sbl[13].mux_gen                   |    <0.001 |
+|   generate_sbl[14].mux_gen                   |    <0.001 |
+|   generate_sbl[15].mux_gen                   |    <0.001 |
+|   generate_sbl[16].mux_gen                   |    <0.001 |
+|   generate_sbl[17].mux_gen                   |    <0.001 |
+|   generate_sbl[18].mux_gen                   |    <0.001 |
+|   generate_sbl[19].mux_gen                   |    <0.001 |
+|   generate_sbl[1].mux_gen                    |    <0.001 |
+|   generate_sbl[20].mux_gen                   |    <0.001 |
+|   generate_sbl[21].mux_gen                   |    <0.001 |
+|   generate_sbl[22].mux_gen                   |    <0.001 |
+|   generate_sbl[23].mux_gen                   |    <0.001 |
+|   generate_sbl[24].mux_gen                   |    <0.001 |
+|   generate_sbl[25].mux_gen                   |    <0.001 |
+|   generate_sbl[26].mux_gen                   |    <0.001 |
+|   generate_sbl[27].mux_gen                   |    <0.001 |
+|   generate_sbl[28].mux_gen                   |    <0.001 |
+|   generate_sbl[29].mux_gen                   |    <0.001 |
+|   generate_sbl[2].mux_gen                    |    <0.001 |
+|   generate_sbl[30].mux_gen                   |    <0.001 |
+|   generate_sbl[31].mux_gen                   |    <0.001 |
+|   generate_sbl[32].mux_gen                   |    <0.001 |
+|   generate_sbl[33].mux_gen                   |    <0.001 |
+|   generate_sbl[34].mux_gen                   |    <0.001 |
+|   generate_sbl[35].mux_gen                   |    <0.001 |
+|   generate_sbl[36].mux_gen                   |    <0.001 |
+|   generate_sbl[37].mux_gen                   |    <0.001 |
+|   generate_sbl[38].mux_gen                   |    <0.001 |
+|   generate_sbl[39].mux_gen                   |    <0.001 |
+|   generate_sbl[3].mux_gen                    |    <0.001 |
+|   generate_sbl[40].mux_gen                   |    <0.001 |
+|   generate_sbl[41].mux_gen                   |    <0.001 |
+|   generate_sbl[42].mux_gen                   |    <0.001 |
+|   generate_sbl[43].mux_gen                   |    <0.001 |
+|   generate_sbl[44].mux_gen                   |    <0.001 |
+|   generate_sbl[45].mux_gen                   |    <0.001 |
+|   generate_sbl[46].mux_gen                   |    <0.001 |
+|   generate_sbl[47].mux_gen                   |    <0.001 |
+|   generate_sbl[48].mux_gen                   |    <0.001 |
+|   generate_sbl[49].mux_gen                   |    <0.001 |
+|   generate_sbl[4].mux_gen                    |    <0.001 |
+|   generate_sbl[50].mux_gen                   |    <0.001 |
+|   generate_sbl[51].mux_gen                   |    <0.001 |
+|   generate_sbl[52].mux_gen                   |    <0.001 |
+|   generate_sbl[53].mux_gen                   |    <0.001 |
+|   generate_sbl[54].mux_gen                   |    <0.001 |
+|   generate_sbl[55].mux_gen                   |    <0.001 |
+|   generate_sbl[56].mux_gen                   |    <0.001 |
+|   generate_sbl[57].mux_gen                   |    <0.001 |
+|   generate_sbl[58].mux_gen                   |    <0.001 |
+|   generate_sbl[59].mux_gen                   |    <0.001 |
+|   generate_sbl[5].mux_gen                    |    <0.001 |
+|   generate_sbl[60].mux_gen                   |    <0.001 |
+|   generate_sbl[61].mux_gen                   |    <0.001 |
+|   generate_sbl[62].mux_gen                   |    <0.001 |
+|   generate_sbl[63].mux_gen                   |    <0.001 |
+|   generate_sbl[6].mux_gen                    |    <0.001 |
+|   generate_sbl[7].mux_gen                    |    <0.001 |
+|   generate_sbl[8].mux_gen                    |    <0.001 |
+|   generate_sbl[9].mux_gen                    |    <0.001 |
+|   mem0                                       |     0.021 |
+|     U0                                       |     0.021 |
+|       inst_blk_mem_gen                       |     0.021 |
+|         gnbram.gnativebmg.native_blk_mem_gen |     0.021 |
+|           valid.cstr                         |     0.021 |
+|             ramloop[0].ram.r                 |     0.001 |
+|               prim_init.ram                  |     0.001 |
+|             ramloop[1].ram.r                 |     0.002 |
+|               prim_init.ram                  |     0.002 |
+|             ramloop[2].ram.r                 |     0.002 |
+|               prim_init.ram                  |     0.002 |
+|             ramloop[3].ram.r                 |     0.002 |
+|               prim_init.ram                  |     0.002 |
+|             ramloop[4].ram.r                 |     0.002 |
+|               prim_init.ram                  |     0.002 |
+|             ramloop[5].ram.r                 |     0.002 |
+|               prim_init.ram                  |     0.002 |
+|             ramloop[6].ram.r                 |     0.002 |
+|               prim_init.ram                  |     0.002 |
+|             ramloop[7].ram.r                 |     0.002 |
+|               prim_init.ram                  |     0.002 |
++----------------------------------------------+-----------+
+
+

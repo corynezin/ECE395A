@@ -92,7 +92,7 @@ architecture tb of tb_fir128_1 is
   -- Data slave channel signals
   signal s_axis_data_tvalid              : std_logic := '0';  -- payload is valid
   signal s_axis_data_tready              : std_logic := '1';  -- slave is ready
-  signal s_axis_data_tdata               : std_logic_vector(7 downto 0) := (others => '0');  -- data payload
+  signal s_axis_data_tdata               : std_logic_vector(15 downto 0) := (others => '0');  -- data payload
 
   -- Config slave channel signals
   signal s_axis_config_tvalid            : std_logic := '0';  -- payload is valid
@@ -111,10 +111,10 @@ architecture tb of tb_fir128_1 is
   -----------------------------------------------------------------------
 
   -- Data slave channel alias signals
-  signal s_axis_data_tdata_data        : std_logic_vector(7 downto 0) := (others => '0');
+  signal s_axis_data_tdata_data        : std_logic_vector(15 downto 0) := (others => '0');
 
   -- Config slave channel alias signals
-  signal s_axis_config_tdata_filter_select    : std_logic_vector(6 downto 0) := (others => '0');
+  signal s_axis_config_tdata_filter_select    : std_logic_vector(4 downto 0) := (others => '0');
 
   -- Data master channel alias signals
   signal m_axis_data_tdata_data        : std_logic_vector(23 downto 0) := (others => '0');
@@ -164,7 +164,7 @@ begin
     -- Procedure to drive a number of input samples with specific data
     -- data is the data value to drive on the tdata signal
     -- samples is the number of zero-data input samples to drive
-    procedure drive_data ( data    : std_logic_vector(7 downto 0);
+    procedure drive_data ( data    : std_logic_vector(15 downto 0);
                            samples : natural := 1 ) is
       variable ip_count : integer := 0;
     begin
@@ -191,11 +191,11 @@ begin
 
     -- Procedure to drive an impulse and let the impulse response emerge on the data master channel
     -- samples is the number of input samples to drive; default is enough for impulse response output to emerge
-    procedure drive_impulse ( samples : natural := 23 ) is
-      variable impulse : std_logic_vector(7 downto 0);
+    procedure drive_impulse ( samples : natural := 29 ) is
+      variable impulse : std_logic_vector(15 downto 0);
     begin
       impulse := (others => '0');  -- initialize unused bits to zero
-      impulse(7 downto 0) := "01000000";
+      impulse(15 downto 0) := "0100000000000000";
       drive_data(impulse);
       if samples > 1 then
         drive_zeros(samples-1);
@@ -215,13 +215,13 @@ begin
     drive_impulse(2);  -- start of impulse; data is now zero
     s_axis_data_tvalid <= '0';
     wait for CLOCK_PERIOD * 5;  -- provide no data for 5 input samples worth
-    drive_zeros(21);  -- back to normal operation
+    drive_zeros(27);  -- back to normal operation
 
     -- Select a different filter coefficient set using the config slave channel
     s_axis_data_tvalid   <= '0';
     s_axis_config_tvalid <= '1';
     s_axis_config_tdata  <= (others => '0');  -- clear unused bits of TDATA
-    s_axis_config_tdata(6 downto 0) <= std_logic_vector(to_unsigned(1, 7));  -- select set 1 (range 0 to 127)
+    s_axis_config_tdata(4 downto 0) <= std_logic_vector(to_unsigned(1, 5));  -- select set 1 (range 0 to 31)
     loop
       wait until rising_edge(aclk);
       exit when s_axis_config_tready = '1';
@@ -277,10 +277,10 @@ begin
   -----------------------------------------------------------------------
 
   -- Data slave channel alias signals
-  s_axis_data_tdata_data        <= s_axis_data_tdata(7 downto 0);
+  s_axis_data_tdata_data        <= s_axis_data_tdata(15 downto 0);
 
   -- Config slave channel alias signals
-  s_axis_config_tdata_filter_select   <= s_axis_config_tdata(6 downto 0);
+  s_axis_config_tdata_filter_select   <= s_axis_config_tdata(4 downto 0);
 
   -- Data master channel alias signals: update these only when they are valid
   m_axis_data_tdata_data        <= m_axis_data_tdata(23 downto 0) when m_axis_data_tvalid = '1';

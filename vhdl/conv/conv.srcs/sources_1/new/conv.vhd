@@ -7,8 +7,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 entity conv_0 is
-    Port ( x : in STD_LOGIC_VECTOR (7 downto 0);
-           y : out STD_LOGIC_VECTOR (23 downto 0);
+    generic(
+        M: Integer:=16; --Input bit width
+        N: Integer:=24; --Output bit width
+        P: Integer:=32 --Coefficient sets
+    );
+    Port ( x : in STD_LOGIC_VECTOR (M-1 downto 0);
+           y : out STD_LOGIC_VECTOR (N-1 downto 0);
            rst: in STD_LOGIC;
            data_valid: in STD_LOGIC;
            clk: in STD_LOGIC;
@@ -21,12 +26,12 @@ component fir128_0 is
     aclk : in STD_LOGIC;
     s_axis_data_tvalid : in STD_LOGIC;
     s_axis_data_tready : out STD_LOGIC;
-    s_axis_data_tdata : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    s_axis_data_tdata : in STD_LOGIC_VECTOR ( M-1 downto 0 );
     s_axis_config_tvalid : in STD_LOGIC;
     s_axis_config_tready : out STD_LOGIC;
     s_axis_config_tdata : in STD_LOGIC_VECTOR ( 7 downto 0 );
     m_axis_data_tvalid : out STD_LOGIC;
-    m_axis_data_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 )
+    m_axis_data_tdata : out STD_LOGIC_VECTOR ( N-1 downto 0 )
   );
 
 end component fir128_0;
@@ -60,12 +65,12 @@ variable init : integer := 1;
 begin
     if rising_edge(clk) then
         if (init = 0) then
-            i := (i + 1) mod 128;
+            i := (i + 1) mod P;
         end if;
         
-        if i = 127 and init = 0 then
+        if i = P-1 and init = 0 then
             if (data_valid = '1') then
-                j := (j + 1) mod 128;
+                j := (j + 1) mod P;
                 sel_valid <= '1';
                 sel <= std_logic_vector(to_unsigned(j,8));
             end if;

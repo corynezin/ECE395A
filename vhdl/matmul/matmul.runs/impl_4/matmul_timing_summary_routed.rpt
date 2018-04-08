@@ -1,0 +1,1331 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
+| Date         : Sat Mar 10 17:04:46 2018
+| Host         : nezin-desktop running 64-bit Ubuntu 16.04.3 LTS
+| Command      : report_timing_summary -warn_on_violation -max_paths 10 -file matmul_timing_summary_routed.rpt -rpx matmul_timing_summary_routed.rpx
+| Design       : matmul
+| Device       : 7z020-clg484
+| Speed File   : -1  PRODUCTION 1.11 2014-09-11
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 26 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 32 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     11.106        0.000                      0                 7333        0.037        0.000                      0                 7333        8.750        0.000                       0                   837  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock  Waveform(ns)       Period(ns)      Frequency(MHz)
+-----  ------------       ----------      --------------
+clk    {0.000 10.000}     20.000          50.000          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk                11.106        0.000                      0                 7333        0.037        0.000                      0                 7333        8.750        0.000                       0                   837  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk
+  To Clock:  clk
+
+Setup :            0  Failing Endpoints,  Worst Slack       11.106ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.037ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        8.750ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             11.106ns  (required time - arrival time)
+  Source:                 out_index_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            activation_fifo_input_reg[12]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        8.858ns  (logic 1.372ns (15.488%)  route 7.486ns (84.512%))
+  Logic Levels:           4  (LUT6=1 MUXF7=2 MUXF8=1)
+  Clock Path Skew:        -0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.477ns = ( 24.477 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.999ns
+    Clock Pessimism Removal (CPR):    0.458ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         1.719     4.999    clk_IBUF_BUFG
+    SLICE_X61Y17         FDRE                                         r  out_index_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y17         FDRE (Prop_fdre_C_Q)         0.456     5.455 r  out_index_reg[1]/Q
+                         net (fo=514, routed)         5.344    10.799    generate_dots[37].dot_gen/out[1]
+    SLICE_X20Y24         MUXF7 (Prop_muxf7_S_O)       0.292    11.091 r  generate_dots[37].dot_gen/activation_fifo_input_reg[12]_i_27/O
+                         net (fo=1, routed)           0.000    11.091    generate_dots[33].dot_gen/out_index_reg[1]_11
+    SLICE_X20Y24         MUXF8 (Prop_muxf8_I1_O)      0.088    11.179 r  generate_dots[33].dot_gen/activation_fifo_input_reg[12]_i_11/O
+                         net (fo=1, routed)           2.142    13.321    generate_dots[57].dot_gen/out_index_reg[2]_37
+    SLICE_X56Y19         LUT6 (Prop_lut6_I5_O)        0.319    13.640 r  generate_dots[57].dot_gen/activation_fifo_input[12]_i_3/O
+                         net (fo=1, routed)           0.000    13.640    generate_dots[25].dot_gen/out_index_reg[4]_11
+    SLICE_X56Y19         MUXF7 (Prop_muxf7_I1_O)      0.217    13.857 r  generate_dots[25].dot_gen/activation_fifo_input_reg[12]_i_1/O
+                         net (fo=1, routed)           0.000    13.857    dot_out[0][12]
+    SLICE_X56Y19         FDRE                                         r  activation_fifo_input_reg[12]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    AA9                                               0.000    20.000 r  clk (IN)
+                         net (fo=0)                   0.000    20.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874    20.874 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.972    22.846    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    22.937 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         1.540    24.477    clk_IBUF_BUFG
+    SLICE_X56Y19         FDRE                                         r  activation_fifo_input_reg[12]/C
+                         clock pessimism              0.458    24.935    
+                         clock uncertainty           -0.035    24.899    
+    SLICE_X56Y19         FDRE (Setup_fdre_C_D)        0.064    24.963    activation_fifo_input_reg[12]
+  -------------------------------------------------------------------
+                         required time                         24.963    
+                         arrival time                         -13.857    
+  -------------------------------------------------------------------
+                         slack                                 11.106    
+
+Slack (MET) :             11.149ns  (required time - arrival time)
+  Source:                 out_index_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            activation_fifo_input_reg[28]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        8.815ns  (logic 1.387ns (15.734%)  route 7.428ns (84.266%))
+  Logic Levels:           4  (LUT6=1 MUXF7=2 MUXF8=1)
+  Clock Path Skew:        -0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.477ns = ( 24.477 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.999ns
+    Clock Pessimism Removal (CPR):    0.458ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         1.719     4.999    clk_IBUF_BUFG
+    SLICE_X61Y17         FDRE                                         r  out_index_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y17         FDRE (Prop_fdre_C_Q)         0.456     5.455 r  out_index_reg[1]/Q
+                         net (fo=514, routed)         5.155    10.610    generate_dots[37].dot_gen/out[1]
+    SLICE_X21Y24         MUXF7 (Prop_muxf7_S_O)       0.276    10.886 r  generate_dots[37].dot_gen/activation_fifo_input_reg[28]_i_27/O
+                         net (fo=1, routed)           0.000    10.886    generate_dots[33].dot_gen/out_index_reg[1]_27
+    SLICE_X21Y24         MUXF8 (Prop_muxf8_I1_O)      0.094    10.980 r  generate_dots[33].dot_gen/activation_fifo_input_reg[28]_i_11/O
+                         net (fo=1, routed)           2.273    13.253    generate_dots[57].dot_gen/out_index_reg[2]_85
+    SLICE_X56Y20         LUT6 (Prop_lut6_I5_O)        0.316    13.569 r  generate_dots[57].dot_gen/activation_fifo_input[28]_i_3/O
+                         net (fo=1, routed)           0.000    13.569    generate_dots[25].dot_gen/out_index_reg[4]_27
+    SLICE_X56Y20         MUXF7 (Prop_muxf7_I1_O)      0.245    13.814 r  generate_dots[25].dot_gen/activation_fifo_input_reg[28]_i_1/O
+                         net (fo=1, routed)           0.000    13.814    dot_out[0][28]
+    SLICE_X56Y20         FDRE                                         r  activation_fifo_input_reg[28]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    AA9                                               0.000    20.000 r  clk (IN)
+                         net (fo=0)                   0.000    20.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874    20.874 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.972    22.846    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    22.937 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         1.540    24.477    clk_IBUF_BUFG
+    SLICE_X56Y20         FDRE                                         r  activation_fifo_input_reg[28]/C
+                         clock pessimism              0.458    24.935    
+                         clock uncertainty           -0.035    24.899    
+    SLICE_X56Y20         FDRE (Setup_fdre_C_D)        0.064    24.963    activation_fifo_input_reg[28]
+  -------------------------------------------------------------------
+                         required time                         24.963    
+                         arrival time                         -13.814    
+  -------------------------------------------------------------------
+                         slack                                 11.149    
+
+Slack (MET) :             11.160ns  (required time - arrival time)
+  Source:                 out_index_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            activation_fifo_input_reg[30]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        8.805ns  (logic 1.404ns (15.945%)  route 7.401ns (84.055%))
+  Logic Levels:           4  (LUT6=1 MUXF7=2 MUXF8=1)
+  Clock Path Skew:        -0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.477ns = ( 24.477 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.999ns
+    Clock Pessimism Removal (CPR):    0.458ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         1.719     4.999    clk_IBUF_BUFG
+    SLICE_X61Y17         FDRE                                         r  out_index_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y17         FDRE (Prop_fdre_C_Q)         0.456     5.455 r  out_index_reg[1]/Q
+                         net (fo=514, routed)         5.074    10.528    generate_dots[33].dot_gen/out[1]
+    SLICE_X18Y24         MUXF7 (Prop_muxf7_S_O)       0.314    10.842 r  generate_dots[33].dot_gen/activation_fifo_input_reg[30]_i_26/O
+                         net (fo=1, routed)           0.000    10.842    generate_dots[33].dot_gen/activation_fifo_input_reg[30]_i_26_n_0
+    SLICE_X18Y24         MUXF8 (Prop_muxf8_I0_O)      0.098    10.940 r  generate_dots[33].dot_gen/activation_fifo_input_reg[30]_i_11/O
+                         net (fo=1, routed)           2.327    13.268    generate_dots[57].dot_gen/out_index_reg[2]_91
+    SLICE_X57Y20         LUT6 (Prop_lut6_I5_O)        0.319    13.587 r  generate_dots[57].dot_gen/activation_fifo_input[30]_i_3/O
+                         net (fo=1, routed)           0.000    13.587    generate_dots[25].dot_gen/out_index_reg[4]_29
+    SLICE_X57Y20         MUXF7 (Prop_muxf7_I1_O)      0.217    13.804 r  generate_dots[25].dot_gen/activation_fifo_input_reg[30]_i_1/O
+                         net (fo=1, routed)           0.000    13.804    dot_out[0][30]
+    SLICE_X57Y20         FDRE                                         r  activation_fifo_input_reg[30]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    AA9                                               0.000    20.000 r  clk (IN)
+                         net (fo=0)                   0.000    20.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874    20.874 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.972    22.846    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    22.937 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         1.540    24.477    clk_IBUF_BUFG
+    SLICE_X57Y20         FDRE                                         r  activation_fifo_input_reg[30]/C
+                         clock pessimism              0.458    24.935    
+                         clock uncertainty           -0.035    24.899    
+    SLICE_X57Y20         FDRE (Setup_fdre_C_D)        0.064    24.963    activation_fifo_input_reg[30]
+  -------------------------------------------------------------------
+                         required time                         24.963    
+                         arrival time                         -13.804    
+  -------------------------------------------------------------------
+                         slack                                 11.160    
+
+Slack (MET) :             11.243ns  (required time - arrival time)
+  Source:                 out_index_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            activation_fifo_input_reg[24]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        8.723ns  (logic 1.372ns (15.729%)  route 7.351ns (84.271%))
+  Logic Levels:           4  (LUT6=1 MUXF7=2 MUXF8=1)
+  Clock Path Skew:        -0.063ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.478ns = ( 24.478 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.999ns
+    Clock Pessimism Removal (CPR):    0.458ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         1.719     4.999    clk_IBUF_BUFG
+    SLICE_X61Y17         FDRE                                         r  out_index_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y17         FDRE (Prop_fdre_C_Q)         0.456     5.455 r  out_index_reg[1]/Q
+                         net (fo=514, routed)         5.091    10.545    generate_dots[37].dot_gen/out[1]
+    SLICE_X18Y22         MUXF7 (Prop_muxf7_S_O)       0.292    10.837 r  generate_dots[37].dot_gen/activation_fifo_input_reg[24]_i_27/O
+                         net (fo=1, routed)           0.000    10.837    generate_dots[33].dot_gen/out_index_reg[1]_23
+    SLICE_X18Y22         MUXF8 (Prop_muxf8_I1_O)      0.088    10.925 r  generate_dots[33].dot_gen/activation_fifo_input_reg[24]_i_11/O
+                         net (fo=1, routed)           2.260    13.186    generate_dots[57].dot_gen/out_index_reg[2]_73
+    SLICE_X57Y18         LUT6 (Prop_lut6_I5_O)        0.319    13.505 r  generate_dots[57].dot_gen/activation_fifo_input[24]_i_3/O
+                         net (fo=1, routed)           0.000    13.505    generate_dots[25].dot_gen/out_index_reg[4]_23
+    SLICE_X57Y18         MUXF7 (Prop_muxf7_I1_O)      0.217    13.722 r  generate_dots[25].dot_gen/activation_fifo_input_reg[24]_i_1/O
+                         net (fo=1, routed)           0.000    13.722    dot_out[0][24]
+    SLICE_X57Y18         FDRE                                         r  activation_fifo_input_reg[24]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    AA9                                               0.000    20.000 r  clk (IN)
+                         net (fo=0)                   0.000    20.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874    20.874 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.972    22.846    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    22.937 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         1.541    24.478    clk_IBUF_BUFG
+    SLICE_X57Y18         FDRE                                         r  activation_fifo_input_reg[24]/C
+                         clock pessimism              0.458    24.936    
+                         clock uncertainty           -0.035    24.900    
+    SLICE_X57Y18         FDRE (Setup_fdre_C_D)        0.064    24.964    activation_fifo_input_reg[24]
+  -------------------------------------------------------------------
+                         required time                         24.964    
+                         arrival time                         -13.722    
+  -------------------------------------------------------------------
+                         slack                                 11.243    
+
+Slack (MET) :             11.316ns  (required time - arrival time)
+  Source:                 out_index_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            activation_fifo_input_reg[10]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        8.649ns  (logic 1.404ns (16.232%)  route 7.245ns (83.768%))
+  Logic Levels:           4  (LUT6=1 MUXF7=2 MUXF8=1)
+  Clock Path Skew:        -0.063ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.478ns = ( 24.478 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.999ns
+    Clock Pessimism Removal (CPR):    0.458ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         1.719     4.999    clk_IBUF_BUFG
+    SLICE_X61Y17         FDRE                                         r  out_index_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y17         FDRE (Prop_fdre_C_Q)         0.456     5.455 r  out_index_reg[1]/Q
+                         net (fo=514, routed)         5.004    10.458    generate_dots[33].dot_gen/out[1]
+    SLICE_X20Y26         MUXF7 (Prop_muxf7_S_O)       0.314    10.772 r  generate_dots[33].dot_gen/activation_fifo_input_reg[10]_i_26/O
+                         net (fo=1, routed)           0.000    10.772    generate_dots[33].dot_gen/activation_fifo_input_reg[10]_i_26_n_0
+    SLICE_X20Y26         MUXF8 (Prop_muxf8_I0_O)      0.098    10.870 r  generate_dots[33].dot_gen/activation_fifo_input_reg[10]_i_11/O
+                         net (fo=1, routed)           2.242    13.112    generate_dots[57].dot_gen/out_index_reg[2]_31
+    SLICE_X56Y18         LUT6 (Prop_lut6_I5_O)        0.319    13.431 r  generate_dots[57].dot_gen/activation_fifo_input[10]_i_3/O
+                         net (fo=1, routed)           0.000    13.431    generate_dots[25].dot_gen/out_index_reg[4]_9
+    SLICE_X56Y18         MUXF7 (Prop_muxf7_I1_O)      0.217    13.648 r  generate_dots[25].dot_gen/activation_fifo_input_reg[10]_i_1/O
+                         net (fo=1, routed)           0.000    13.648    dot_out[0][10]
+    SLICE_X56Y18         FDRE                                         r  activation_fifo_input_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    AA9                                               0.000    20.000 r  clk (IN)
+                         net (fo=0)                   0.000    20.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874    20.874 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.972    22.846    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    22.937 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         1.541    24.478    clk_IBUF_BUFG
+    SLICE_X56Y18         FDRE                                         r  activation_fifo_input_reg[10]/C
+                         clock pessimism              0.458    24.936    
+                         clock uncertainty           -0.035    24.900    
+    SLICE_X56Y18         FDRE (Setup_fdre_C_D)        0.064    24.964    activation_fifo_input_reg[10]
+  -------------------------------------------------------------------
+                         required time                         24.964    
+                         arrival time                         -13.648    
+  -------------------------------------------------------------------
+                         slack                                 11.316    
+
+Slack (MET) :             11.347ns  (required time - arrival time)
+  Source:                 out_index_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            activation_fifo_input_reg[11]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        8.618ns  (logic 1.389ns (16.118%)  route 7.229ns (83.882%))
+  Logic Levels:           4  (LUT6=1 MUXF7=2 MUXF8=1)
+  Clock Path Skew:        -0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.477ns = ( 24.477 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.999ns
+    Clock Pessimism Removal (CPR):    0.458ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         1.719     4.999    clk_IBUF_BUFG
+    SLICE_X61Y17         FDRE                                         r  out_index_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y17         FDRE (Prop_fdre_C_Q)         0.456     5.455 r  out_index_reg[1]/Q
+                         net (fo=514, routed)         5.309    10.764    generate_dots[33].dot_gen/out[1]
+    SLICE_X23Y24         MUXF7 (Prop_muxf7_S_O)       0.296    11.060 r  generate_dots[33].dot_gen/activation_fifo_input_reg[11]_i_26/O
+                         net (fo=1, routed)           0.000    11.060    generate_dots[33].dot_gen/activation_fifo_input_reg[11]_i_26_n_0
+    SLICE_X23Y24         MUXF8 (Prop_muxf8_I0_O)      0.104    11.164 r  generate_dots[33].dot_gen/activation_fifo_input_reg[11]_i_11/O
+                         net (fo=1, routed)           1.919    13.083    generate_dots[57].dot_gen/out_index_reg[2]_34
+    SLICE_X55Y18         LUT6 (Prop_lut6_I5_O)        0.316    13.399 r  generate_dots[57].dot_gen/activation_fifo_input[11]_i_3/O
+                         net (fo=1, routed)           0.000    13.399    generate_dots[25].dot_gen/out_index_reg[4]_10
+    SLICE_X55Y18         MUXF7 (Prop_muxf7_I1_O)      0.217    13.616 r  generate_dots[25].dot_gen/activation_fifo_input_reg[11]_i_1/O
+                         net (fo=1, routed)           0.000    13.616    dot_out[0][11]
+    SLICE_X55Y18         FDRE                                         r  activation_fifo_input_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    AA9                                               0.000    20.000 r  clk (IN)
+                         net (fo=0)                   0.000    20.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874    20.874 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.972    22.846    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    22.937 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         1.540    24.477    clk_IBUF_BUFG
+    SLICE_X55Y18         FDRE                                         r  activation_fifo_input_reg[11]/C
+                         clock pessimism              0.458    24.935    
+                         clock uncertainty           -0.035    24.899    
+    SLICE_X55Y18         FDRE (Setup_fdre_C_D)        0.064    24.963    activation_fifo_input_reg[11]
+  -------------------------------------------------------------------
+                         required time                         24.963    
+                         arrival time                         -13.616    
+  -------------------------------------------------------------------
+                         slack                                 11.347    
+
+Slack (MET) :             11.374ns  (required time - arrival time)
+  Source:                 out_index_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            activation_fifo_input_reg[13]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        8.591ns  (logic 1.372ns (15.970%)  route 7.219ns (84.030%))
+  Logic Levels:           4  (LUT6=1 MUXF7=2 MUXF8=1)
+  Clock Path Skew:        -0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.477ns = ( 24.477 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.999ns
+    Clock Pessimism Removal (CPR):    0.458ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         1.719     4.999    clk_IBUF_BUFG
+    SLICE_X61Y17         FDRE                                         r  out_index_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y17         FDRE (Prop_fdre_C_Q)         0.456     5.455 r  out_index_reg[1]/Q
+                         net (fo=514, routed)         5.120    10.575    generate_dots[37].dot_gen/out[1]
+    SLICE_X22Y24         MUXF7 (Prop_muxf7_S_O)       0.292    10.867 r  generate_dots[37].dot_gen/activation_fifo_input_reg[13]_i_27/O
+                         net (fo=1, routed)           0.000    10.867    generate_dots[33].dot_gen/out_index_reg[1]_12
+    SLICE_X22Y24         MUXF8 (Prop_muxf8_I1_O)      0.088    10.955 r  generate_dots[33].dot_gen/activation_fifo_input_reg[13]_i_11/O
+                         net (fo=1, routed)           2.099    13.054    generate_dots[57].dot_gen/out_index_reg[2]_40
+    SLICE_X56Y20         LUT6 (Prop_lut6_I5_O)        0.319    13.373 r  generate_dots[57].dot_gen/activation_fifo_input[13]_i_3/O
+                         net (fo=1, routed)           0.000    13.373    generate_dots[25].dot_gen/out_index_reg[4]_12
+    SLICE_X56Y20         MUXF7 (Prop_muxf7_I1_O)      0.217    13.590 r  generate_dots[25].dot_gen/activation_fifo_input_reg[13]_i_1/O
+                         net (fo=1, routed)           0.000    13.590    dot_out[0][13]
+    SLICE_X56Y20         FDRE                                         r  activation_fifo_input_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    AA9                                               0.000    20.000 r  clk (IN)
+                         net (fo=0)                   0.000    20.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874    20.874 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.972    22.846    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    22.937 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         1.540    24.477    clk_IBUF_BUFG
+    SLICE_X56Y20         FDRE                                         r  activation_fifo_input_reg[13]/C
+                         clock pessimism              0.458    24.935    
+                         clock uncertainty           -0.035    24.899    
+    SLICE_X56Y20         FDRE (Setup_fdre_C_D)        0.064    24.963    activation_fifo_input_reg[13]
+  -------------------------------------------------------------------
+                         required time                         24.963    
+                         arrival time                         -13.590    
+  -------------------------------------------------------------------
+                         slack                                 11.374    
+
+Slack (MET) :             11.414ns  (required time - arrival time)
+  Source:                 out_index_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            activation_fifo_input_reg[14]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        8.549ns  (logic 1.404ns (16.424%)  route 7.145ns (83.576%))
+  Logic Levels:           4  (LUT6=1 MUXF7=2 MUXF8=1)
+  Clock Path Skew:        -0.066ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.475ns = ( 24.475 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.999ns
+    Clock Pessimism Removal (CPR):    0.458ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         1.719     4.999    clk_IBUF_BUFG
+    SLICE_X61Y17         FDRE                                         r  out_index_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y17         FDRE (Prop_fdre_C_Q)         0.456     5.455 r  out_index_reg[1]/Q
+                         net (fo=514, routed)         5.133    10.588    generate_dots[33].dot_gen/out[1]
+    SLICE_X20Y25         MUXF7 (Prop_muxf7_S_O)       0.314    10.902 r  generate_dots[33].dot_gen/activation_fifo_input_reg[14]_i_26/O
+                         net (fo=1, routed)           0.000    10.902    generate_dots[33].dot_gen/activation_fifo_input_reg[14]_i_26_n_0
+    SLICE_X20Y25         MUXF8 (Prop_muxf8_I0_O)      0.098    11.000 r  generate_dots[33].dot_gen/activation_fifo_input_reg[14]_i_11/O
+                         net (fo=1, routed)           2.012    13.011    generate_dots[57].dot_gen/out_index_reg[2]_43
+    SLICE_X55Y21         LUT6 (Prop_lut6_I5_O)        0.319    13.330 r  generate_dots[57].dot_gen/activation_fifo_input[14]_i_3/O
+                         net (fo=1, routed)           0.000    13.330    generate_dots[25].dot_gen/out_index_reg[4]_13
+    SLICE_X55Y21         MUXF7 (Prop_muxf7_I1_O)      0.217    13.547 r  generate_dots[25].dot_gen/activation_fifo_input_reg[14]_i_1/O
+                         net (fo=1, routed)           0.000    13.547    dot_out[0][14]
+    SLICE_X55Y21         FDRE                                         r  activation_fifo_input_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    AA9                                               0.000    20.000 r  clk (IN)
+                         net (fo=0)                   0.000    20.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874    20.874 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.972    22.846    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    22.937 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         1.538    24.475    clk_IBUF_BUFG
+    SLICE_X55Y21         FDRE                                         r  activation_fifo_input_reg[14]/C
+                         clock pessimism              0.458    24.933    
+                         clock uncertainty           -0.035    24.897    
+    SLICE_X55Y21         FDRE (Setup_fdre_C_D)        0.064    24.961    activation_fifo_input_reg[14]
+  -------------------------------------------------------------------
+                         required time                         24.961    
+                         arrival time                         -13.547    
+  -------------------------------------------------------------------
+                         slack                                 11.414    
+
+Slack (MET) :             11.546ns  (required time - arrival time)
+  Source:                 out_index_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            activation_fifo_input_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        8.424ns  (logic 1.432ns (16.999%)  route 6.992ns (83.001%))
+  Logic Levels:           4  (LUT6=1 MUXF7=2 MUXF8=1)
+  Clock Path Skew:        -0.059ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.482ns = ( 24.482 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.999ns
+    Clock Pessimism Removal (CPR):    0.458ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         1.719     4.999    clk_IBUF_BUFG
+    SLICE_X61Y17         FDRE                                         r  out_index_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y17         FDRE (Prop_fdre_C_Q)         0.456     5.455 r  out_index_reg[1]/Q
+                         net (fo=514, routed)         5.301    10.756    generate_dots[33].dot_gen/out[1]
+    SLICE_X22Y22         MUXF7 (Prop_muxf7_S_O)       0.314    11.070 r  generate_dots[33].dot_gen/activation_fifo_input_reg[5]_i_26/O
+                         net (fo=1, routed)           0.000    11.070    generate_dots[33].dot_gen/activation_fifo_input_reg[5]_i_26_n_0
+    SLICE_X22Y22         MUXF8 (Prop_muxf8_I0_O)      0.098    11.168 r  generate_dots[33].dot_gen/activation_fifo_input_reg[5]_i_11/O
+                         net (fo=1, routed)           1.691    12.859    generate_dots[57].dot_gen/out_index_reg[2]_16
+    SLICE_X59Y15         LUT6 (Prop_lut6_I5_O)        0.319    13.178 r  generate_dots[57].dot_gen/activation_fifo_input[5]_i_3/O
+                         net (fo=1, routed)           0.000    13.178    generate_dots[25].dot_gen/out_index_reg[4]_4
+    SLICE_X59Y15         MUXF7 (Prop_muxf7_I1_O)      0.245    13.423 r  generate_dots[25].dot_gen/activation_fifo_input_reg[5]_i_1/O
+                         net (fo=1, routed)           0.000    13.423    dot_out[0][5]
+    SLICE_X59Y15         FDRE                                         r  activation_fifo_input_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    AA9                                               0.000    20.000 r  clk (IN)
+                         net (fo=0)                   0.000    20.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874    20.874 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.972    22.846    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    22.937 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         1.545    24.482    clk_IBUF_BUFG
+    SLICE_X59Y15         FDRE                                         r  activation_fifo_input_reg[5]/C
+                         clock pessimism              0.458    24.940    
+                         clock uncertainty           -0.035    24.904    
+    SLICE_X59Y15         FDRE (Setup_fdre_C_D)        0.064    24.968    activation_fifo_input_reg[5]
+  -------------------------------------------------------------------
+                         required time                         24.968    
+                         arrival time                         -13.423    
+  -------------------------------------------------------------------
+                         slack                                 11.546    
+
+Slack (MET) :             11.568ns  (required time - arrival time)
+  Source:                 out_index_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            activation_fifo_input_reg[29]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        8.395ns  (logic 1.400ns (16.676%)  route 6.995ns (83.324%))
+  Logic Levels:           4  (LUT6=1 MUXF7=2 MUXF8=1)
+  Clock Path Skew:        -0.065ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.476ns = ( 24.476 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.999ns
+    Clock Pessimism Removal (CPR):    0.458ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         1.719     4.999    clk_IBUF_BUFG
+    SLICE_X61Y17         FDRE                                         r  out_index_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y17         FDRE (Prop_fdre_C_Q)         0.456     5.455 r  out_index_reg[1]/Q
+                         net (fo=514, routed)         5.088    10.543    generate_dots[37].dot_gen/out[1]
+    SLICE_X22Y23         MUXF7 (Prop_muxf7_S_O)       0.292    10.835 r  generate_dots[37].dot_gen/activation_fifo_input_reg[29]_i_27/O
+                         net (fo=1, routed)           0.000    10.835    generate_dots[33].dot_gen/out_index_reg[1]_28
+    SLICE_X22Y23         MUXF8 (Prop_muxf8_I1_O)      0.088    10.923 r  generate_dots[33].dot_gen/activation_fifo_input_reg[29]_i_11/O
+                         net (fo=1, routed)           1.907    12.830    generate_dots[57].dot_gen/out_index_reg[2]_88
+    SLICE_X55Y20         LUT6 (Prop_lut6_I5_O)        0.319    13.149 r  generate_dots[57].dot_gen/activation_fifo_input[29]_i_3/O
+                         net (fo=1, routed)           0.000    13.149    generate_dots[25].dot_gen/out_index_reg[4]_28
+    SLICE_X55Y20         MUXF7 (Prop_muxf7_I1_O)      0.245    13.394 r  generate_dots[25].dot_gen/activation_fifo_input_reg[29]_i_1/O
+                         net (fo=1, routed)           0.000    13.394    dot_out[0][29]
+    SLICE_X55Y20         FDRE                                         r  activation_fifo_input_reg[29]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    AA9                                               0.000    20.000 r  clk (IN)
+                         net (fo=0)                   0.000    20.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874    20.874 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.972    22.846    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    22.937 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         1.539    24.476    clk_IBUF_BUFG
+    SLICE_X55Y20         FDRE                                         r  activation_fifo_input_reg[29]/C
+                         clock pessimism              0.458    24.934    
+                         clock uncertainty           -0.035    24.898    
+    SLICE_X55Y20         FDRE (Setup_fdre_C_D)        0.064    24.962    activation_fifo_input_reg[29]
+  -------------------------------------------------------------------
+                         required time                         24.962    
+                         arrival time                         -13.394    
+  -------------------------------------------------------------------
+                         slack                                 11.568    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.037ns  (arrival time - required time)
+  Source:                 activation_fifo_input_reg[21]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_21_23/RAMA/I
+                            (rising edge-triggered cell RAMD64E clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.011ns
+    Source Clock Delay      (SCD):    1.497ns
+    Clock Pessimism Removal (CPR):    0.502ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         0.572     1.497    clk_IBUF_BUFG
+    SLICE_X55Y19         FDRE                                         r  activation_fifo_input_reg[21]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y19         FDRE (Prop_fdre_C_Q)         0.141     1.638 r  activation_fifo_input_reg[21]/Q
+                         net (fo=1, routed)           0.056     1.694    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_21_23/DIA
+    SLICE_X54Y19         RAMD64E                                      r  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_21_23/RAMA/I
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         0.838     2.011    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_21_23/WCLK
+    SLICE_X54Y19         RAMD64E                                      r  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_21_23/RAMA/CLK
+                         clock pessimism             -0.502     1.510    
+    SLICE_X54Y19         RAMD64E (Hold_ramd64e_CLK_I)
+                                                      0.147     1.657    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_21_23/RAMA
+  -------------------------------------------------------------------
+                         required time                         -1.657    
+                         arrival time                           1.694    
+  -------------------------------------------------------------------
+                         slack                                  0.037    
+
+Slack (MET) :             0.037ns  (arrival time - required time)
+  Source:                 activation_fifo_input_reg[27]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_27_29/RAMA/I
+                            (rising edge-triggered cell RAMD64E clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.010ns
+    Source Clock Delay      (SCD):    1.496ns
+    Clock Pessimism Removal (CPR):    0.502ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         0.571     1.496    clk_IBUF_BUFG
+    SLICE_X55Y20         FDRE                                         r  activation_fifo_input_reg[27]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y20         FDRE (Prop_fdre_C_Q)         0.141     1.637 r  activation_fifo_input_reg[27]/Q
+                         net (fo=1, routed)           0.056     1.693    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_27_29/DIA
+    SLICE_X54Y20         RAMD64E                                      r  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_27_29/RAMA/I
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         0.837     2.010    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_27_29/WCLK
+    SLICE_X54Y20         RAMD64E                                      r  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_27_29/RAMA/CLK
+                         clock pessimism             -0.502     1.509    
+    SLICE_X54Y20         RAMD64E (Hold_ramd64e_CLK_I)
+                                                      0.147     1.656    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_27_29/RAMA
+  -------------------------------------------------------------------
+                         required time                         -1.656    
+                         arrival time                           1.693    
+  -------------------------------------------------------------------
+                         slack                                  0.037    
+
+Slack (MET) :             0.037ns  (arrival time - required time)
+  Source:                 activation_fifo_input_reg[15]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_15_17/RAMA/I
+                            (rising edge-triggered cell RAMD64E clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.014ns
+    Source Clock Delay      (SCD):    1.500ns
+    Clock Pessimism Removal (CPR):    0.502ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         0.575     1.500    clk_IBUF_BUFG
+    SLICE_X55Y16         FDRE                                         r  activation_fifo_input_reg[15]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y16         FDRE (Prop_fdre_C_Q)         0.141     1.641 r  activation_fifo_input_reg[15]/Q
+                         net (fo=1, routed)           0.056     1.697    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_15_17/DIA
+    SLICE_X54Y16         RAMD64E                                      r  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_15_17/RAMA/I
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         0.841     2.014    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_15_17/WCLK
+    SLICE_X54Y16         RAMD64E                                      r  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_15_17/RAMA/CLK
+                         clock pessimism             -0.502     1.513    
+    SLICE_X54Y16         RAMD64E (Hold_ramd64e_CLK_I)
+                                                      0.147     1.660    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_15_17/RAMA
+  -------------------------------------------------------------------
+                         required time                         -1.660    
+                         arrival time                           1.697    
+  -------------------------------------------------------------------
+                         slack                                  0.037    
+
+Slack (MET) :             0.080ns  (arrival time - required time)
+  Source:                 activation_fifo_input_reg[24]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_24_26/RAMA/I
+                            (rising edge-triggered cell RAMD64E clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.240ns  (logic 0.141ns (58.691%)  route 0.099ns (41.309%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.013ns
+    Source Clock Delay      (SCD):    1.499ns
+    Clock Pessimism Removal (CPR):    0.502ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         0.574     1.499    clk_IBUF_BUFG
+    SLICE_X57Y18         FDRE                                         r  activation_fifo_input_reg[24]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X57Y18         FDRE (Prop_fdre_C_Q)         0.141     1.640 r  activation_fifo_input_reg[24]/Q
+                         net (fo=1, routed)           0.099     1.739    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_24_26/DIA
+    SLICE_X58Y19         RAMD64E                                      r  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_24_26/RAMA/I
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         0.840     2.013    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_24_26/WCLK
+    SLICE_X58Y19         RAMD64E                                      r  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_24_26/RAMA/CLK
+                         clock pessimism             -0.502     1.512    
+    SLICE_X58Y19         RAMD64E (Hold_ramd64e_CLK_I)
+                                                      0.147     1.659    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_24_26/RAMA
+  -------------------------------------------------------------------
+                         required time                         -1.659    
+                         arrival time                           1.739    
+  -------------------------------------------------------------------
+                         slack                                  0.080    
+
+Slack (MET) :             0.089ns  (arrival time - required time)
+  Source:                 activation_fifo_input_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/RAMA/I
+                            (rising edge-triggered cell RAMD64E clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.251ns  (logic 0.141ns (56.174%)  route 0.110ns (43.826%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.018ns
+    Source Clock Delay      (SCD):    1.502ns
+    Clock Pessimism Removal (CPR):    0.502ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         0.577     1.502    clk_IBUF_BUFG
+    SLICE_X59Y15         FDRE                                         r  activation_fifo_input_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X59Y15         FDRE (Prop_fdre_C_Q)         0.141     1.643 r  activation_fifo_input_reg[0]/Q
+                         net (fo=1, routed)           0.110     1.753    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/DIA
+    SLICE_X58Y14         RAMD64E                                      r  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/RAMA/I
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         0.845     2.018    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/WCLK
+    SLICE_X58Y14         RAMD64E                                      r  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/RAMA/CLK
+                         clock pessimism             -0.502     1.517    
+    SLICE_X58Y14         RAMD64E (Hold_ramd64e_CLK_I)
+                                                      0.147     1.664    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/RAMA
+  -------------------------------------------------------------------
+                         required time                         -1.664    
+                         arrival time                           1.753    
+  -------------------------------------------------------------------
+                         slack                                  0.089    
+
+Slack (MET) :             0.095ns  (arrival time - required time)
+  Source:                 activation_fifo_input_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_3_5/RAMB/I
+                            (rising edge-triggered cell RAMD64E clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.257ns  (logic 0.141ns (54.812%)  route 0.116ns (45.188%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.017ns
+    Source Clock Delay      (SCD):    1.500ns
+    Clock Pessimism Removal (CPR):    0.502ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         0.575     1.500    clk_IBUF_BUFG
+    SLICE_X59Y17         FDRE                                         r  activation_fifo_input_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X59Y17         FDRE (Prop_fdre_C_Q)         0.141     1.641 r  activation_fifo_input_reg[4]/Q
+                         net (fo=1, routed)           0.116     1.757    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_3_5/DIB
+    SLICE_X58Y15         RAMD64E                                      r  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_3_5/RAMB/I
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         0.844     2.017    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_3_5/WCLK
+    SLICE_X58Y15         RAMD64E                                      r  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_3_5/RAMB/CLK
+                         clock pessimism             -0.502     1.516    
+    SLICE_X58Y15         RAMD64E (Hold_ramd64e_CLK_I)
+                                                      0.146     1.662    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_3_5/RAMB
+  -------------------------------------------------------------------
+                         required time                         -1.662    
+                         arrival time                           1.757    
+  -------------------------------------------------------------------
+                         slack                                  0.095    
+
+Slack (MET) :             0.096ns  (arrival time - required time)
+  Source:                 activation_fifo_input_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/RAMC/I
+                            (rising edge-triggered cell RAMD64E clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.256ns  (logic 0.141ns (55.026%)  route 0.115ns (44.974%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.018ns
+    Source Clock Delay      (SCD):    1.501ns
+    Clock Pessimism Removal (CPR):    0.502ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         0.576     1.501    clk_IBUF_BUFG
+    SLICE_X59Y16         FDRE                                         r  activation_fifo_input_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X59Y16         FDRE (Prop_fdre_C_Q)         0.141     1.642 r  activation_fifo_input_reg[2]/Q
+                         net (fo=1, routed)           0.115     1.757    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/DIC
+    SLICE_X58Y14         RAMD64E                                      r  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/RAMC/I
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         0.845     2.018    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/WCLK
+    SLICE_X58Y14         RAMD64E                                      r  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/RAMC/CLK
+                         clock pessimism             -0.502     1.517    
+    SLICE_X58Y14         RAMD64E (Hold_ramd64e_CLK_I)
+                                                      0.144     1.661    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/RAMC
+  -------------------------------------------------------------------
+                         required time                         -1.661    
+                         arrival time                           1.757    
+  -------------------------------------------------------------------
+                         slack                                  0.096    
+
+Slack (MET) :             0.096ns  (arrival time - required time)
+  Source:                 activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/RAMA/WADR4
+                            (rising edge-triggered cell RAMD64E clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.309ns  (logic 0.141ns (45.565%)  route 0.168ns (54.435%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.018ns
+    Source Clock Delay      (SCD):    1.502ns
+    Clock Pessimism Removal (CPR):    0.504ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         0.577     1.502    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/clk
+    SLICE_X59Y14         FDRE                                         r  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X59Y14         FDRE (Prop_fdre_C_Q)         0.141     1.643 r  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[4]/Q
+                         net (fo=57, routed)          0.168     1.811    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/ADDRD4
+    SLICE_X58Y14         RAMD64E                                      r  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/RAMA/WADR4
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         0.845     2.018    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/WCLK
+    SLICE_X58Y14         RAMD64E                                      r  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/RAMA/CLK
+                         clock pessimism             -0.504     1.515    
+    SLICE_X58Y14         RAMD64E (Hold_ramd64e_CLK_WADR4)
+                                                      0.200     1.715    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/RAMA
+  -------------------------------------------------------------------
+                         required time                         -1.715    
+                         arrival time                           1.811    
+  -------------------------------------------------------------------
+                         slack                                  0.096    
+
+Slack (MET) :             0.096ns  (arrival time - required time)
+  Source:                 activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/RAMB/WADR4
+                            (rising edge-triggered cell RAMD64E clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.309ns  (logic 0.141ns (45.565%)  route 0.168ns (54.435%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.018ns
+    Source Clock Delay      (SCD):    1.502ns
+    Clock Pessimism Removal (CPR):    0.504ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         0.577     1.502    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/clk
+    SLICE_X59Y14         FDRE                                         r  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X59Y14         FDRE (Prop_fdre_C_Q)         0.141     1.643 r  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[4]/Q
+                         net (fo=57, routed)          0.168     1.811    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/ADDRD4
+    SLICE_X58Y14         RAMD64E                                      r  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/RAMB/WADR4
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         0.845     2.018    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/WCLK
+    SLICE_X58Y14         RAMD64E                                      r  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/RAMB/CLK
+                         clock pessimism             -0.504     1.515    
+    SLICE_X58Y14         RAMD64E (Hold_ramd64e_CLK_WADR4)
+                                                      0.200     1.715    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/RAMB
+  -------------------------------------------------------------------
+                         required time                         -1.715    
+                         arrival time                           1.811    
+  -------------------------------------------------------------------
+                         slack                                  0.096    
+
+Slack (MET) :             0.096ns  (arrival time - required time)
+  Source:                 activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/RAMC/WADR4
+                            (rising edge-triggered cell RAMD64E clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.309ns  (logic 0.141ns (45.565%)  route 0.168ns (54.435%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.018ns
+    Source Clock Delay      (SCD):    1.502ns
+    Clock Pessimism Removal (CPR):    0.504ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         0.577     1.502    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/clk
+    SLICE_X59Y14         FDRE                                         r  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X59Y14         FDRE (Prop_fdre_C_Q)         0.141     1.643 r  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[4]/Q
+                         net (fo=57, routed)          0.168     1.811    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/ADDRD4
+    SLICE_X58Y14         RAMD64E                                      r  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/RAMC/WADR4
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_IBUF_BUFG_inst/O
+                         net (fo=836, routed)         0.845     2.018    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/WCLK
+    SLICE_X58Y14         RAMD64E                                      r  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/RAMC/CLK
+                         clock pessimism             -0.504     1.515    
+    SLICE_X58Y14         RAMD64E (Hold_ramd64e_CLK_WADR4)
+                                                      0.200     1.715    activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/RAMC
+  -------------------------------------------------------------------
+                         required time                         -1.715    
+                         arrival time                           1.811    
+  -------------------------------------------------------------------
+                         slack                                  0.096    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk
+Waveform(ns):       { 0.000 10.000 }
+Period(ns):         20.000
+Sources:            { clk }
+
+Check Type        Corner  Lib Pin      Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     DSP48E1/CLK  n/a            3.884         20.000      16.116     DSP48_X4Y12   generate_dots[18].dot_gen/new_value_reg/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            3.884         20.000      16.116     DSP48_X4Y15   generate_dots[22].dot_gen/new_value_reg/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            3.884         20.000      16.116     DSP48_X1Y7    generate_dots[36].dot_gen/new_value_reg/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            3.884         20.000      16.116     DSP48_X2Y9    generate_dots[40].dot_gen/new_value_reg/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            3.884         20.000      16.116     DSP48_X3Y5    generate_dots[4].dot_gen/new_value_reg/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            3.884         20.000      16.116     DSP48_X2Y3    generate_dots[54].dot_gen/new_value_reg/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            3.884         20.000      16.116     DSP48_X3Y0    generate_dots[27].dot_gen/new_value_reg/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            3.884         20.000      16.116     DSP48_X4Y1    generate_dots[31].dot_gen/new_value_reg/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            3.884         20.000      16.116     DSP48_X0Y3    generate_dots[59].dot_gen/new_value_reg/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            3.884         20.000      16.116     DSP48_X1Y3    generate_dots[63].dot_gen/new_value_reg/CLK
+Low Pulse Width   Fast    RAMD64E/CLK  n/a            1.250         10.000      8.750      SLICE_X58Y14  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/RAMA/CLK
+Low Pulse Width   Fast    RAMD64E/CLK  n/a            1.250         10.000      8.750      SLICE_X58Y14  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/RAMB/CLK
+Low Pulse Width   Fast    RAMD64E/CLK  n/a            1.250         10.000      8.750      SLICE_X58Y14  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/RAMC/CLK
+Low Pulse Width   Fast    RAMD64E/CLK  n/a            1.250         10.000      8.750      SLICE_X58Y14  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/RAMD/CLK
+Low Pulse Width   Slow    RAMD64E/CLK  n/a            1.250         10.000      8.750      SLICE_X54Y17  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_12_14/RAMA/CLK
+Low Pulse Width   Fast    RAMD64E/CLK  n/a            1.250         10.000      8.750      SLICE_X54Y17  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_12_14/RAMA/CLK
+Low Pulse Width   Slow    RAMD64E/CLK  n/a            1.250         10.000      8.750      SLICE_X54Y17  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_12_14/RAMB/CLK
+Low Pulse Width   Fast    RAMD64E/CLK  n/a            1.250         10.000      8.750      SLICE_X54Y17  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_12_14/RAMB/CLK
+Low Pulse Width   Slow    RAMD64E/CLK  n/a            1.250         10.000      8.750      SLICE_X54Y17  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_12_14/RAMC/CLK
+Low Pulse Width   Fast    RAMD64E/CLK  n/a            1.250         10.000      8.750      SLICE_X54Y17  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_12_14/RAMC/CLK
+High Pulse Width  Slow    RAMD64E/CLK  n/a            1.250         10.000      8.750      SLICE_X58Y14  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/RAMA/CLK
+High Pulse Width  Slow    RAMD64E/CLK  n/a            1.250         10.000      8.750      SLICE_X58Y14  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/RAMB/CLK
+High Pulse Width  Slow    RAMD64E/CLK  n/a            1.250         10.000      8.750      SLICE_X58Y14  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/RAMC/CLK
+High Pulse Width  Slow    RAMD64E/CLK  n/a            1.250         10.000      8.750      SLICE_X58Y14  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/RAMD/CLK
+High Pulse Width  Slow    RAMD64E/CLK  n/a            1.250         10.000      8.750      SLICE_X54Y16  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_15_17/RAMA/CLK
+High Pulse Width  Slow    RAMD64E/CLK  n/a            1.250         10.000      8.750      SLICE_X54Y16  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_15_17/RAMB/CLK
+High Pulse Width  Slow    RAMD64E/CLK  n/a            1.250         10.000      8.750      SLICE_X54Y16  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_15_17/RAMC/CLK
+High Pulse Width  Slow    RAMD64E/CLK  n/a            1.250         10.000      8.750      SLICE_X54Y16  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_15_17/RAMD/CLK
+High Pulse Width  Slow    RAMD64E/CLK  n/a            1.250         10.000      8.750      SLICE_X58Y15  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_3_5/RAMA/CLK
+High Pulse Width  Slow    RAMD64E/CLK  n/a            1.250         10.000      8.750      SLICE_X58Y15  activation_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_3_5/RAMB/CLK
+
+
+

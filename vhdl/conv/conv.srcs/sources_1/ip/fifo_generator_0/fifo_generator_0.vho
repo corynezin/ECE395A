@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2017 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -56,14 +56,13 @@ COMPONENT fifo_generator_0
   PORT (
     clk : IN STD_LOGIC;
     srst : IN STD_LOGIC;
-    din : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+    din : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     wr_en : IN STD_LOGIC;
     rd_en : IN STD_LOGIC;
-    dout : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+    dout : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
     full : OUT STD_LOGIC;
     almost_full : OUT STD_LOGIC;
     empty : OUT STD_LOGIC;
-    data_count : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
     prog_full : OUT STD_LOGIC
   );
 END COMPONENT;
@@ -84,7 +83,6 @@ your_instance_name : fifo_generator_0
     full => full,
     almost_full => almost_full,
     empty => empty,
-    data_count => data_count,
     prog_full => prog_full
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ---------

@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2017 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -63,7 +63,6 @@ module fifo_generator_0 (
   full,
   almost_full,
   empty,
-  data_count,
   prog_full
 );
 
@@ -71,20 +70,19 @@ module fifo_generator_0 (
 input wire clk;
 input wire srst;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE WR_DATA" *)
-input wire [7 : 0] din;
+input wire [15 : 0] din;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE WR_EN" *)
 input wire wr_en;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_read:1.0 FIFO_READ RD_EN" *)
 input wire rd_en;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_read:1.0 FIFO_READ RD_DATA" *)
-output wire [7 : 0] dout;
+output wire [15 : 0] dout;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE FULL" *)
 output wire full;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE ALMOST_FULL" *)
 output wire almost_full;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_read:1.0 FIFO_READ EMPTY" *)
 output wire empty;
-output wire [6 : 0] data_count;
 output wire prog_full;
 
   fifo_generator_v13_1_4 #(
@@ -93,16 +91,16 @@ output wire prog_full;
     .C_COUNT_TYPE(0),
     .C_DATA_COUNT_WIDTH(7),
     .C_DEFAULT_VALUE("BlankString"),
-    .C_DIN_WIDTH(8),
+    .C_DIN_WIDTH(16),
     .C_DOUT_RST_VAL("0"),
-    .C_DOUT_WIDTH(8),
+    .C_DOUT_WIDTH(16),
     .C_ENABLE_RLOCS(0),
     .C_FAMILY("zynq"),
     .C_FULL_FLAGS_RST_VAL(0),
     .C_HAS_ALMOST_EMPTY(0),
     .C_HAS_ALMOST_FULL(1),
     .C_HAS_BACKUP(0),
-    .C_HAS_DATA_COUNT(1),
+    .C_HAS_DATA_COUNT(0),
     .C_HAS_INT_CLK(0),
     .C_HAS_MEMINIT_FILE(0),
     .C_HAS_OVERFLOW(0),
@@ -322,7 +320,7 @@ output wire prog_full;
     .almost_empty(),
     .valid(),
     .underflow(),
-    .data_count(data_count),
+    .data_count(),
     .rd_data_count(),
     .wr_data_count(),
     .prog_full(prog_full),

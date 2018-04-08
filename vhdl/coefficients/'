@@ -1,0 +1,3 @@
+with open('fc1_biases.txt') as f:
+    for line in f:
+        a = Decimal(float(line))

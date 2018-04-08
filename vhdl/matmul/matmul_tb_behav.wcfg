@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="matmul_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="matmul_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="927083333333333fs"></ZoomStartTime>
+      <ZoomEndTime time="974083333333334fs"></ZoomEndTime>
+      <Cursor1Time time="1127000000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="32" />
+   <wvobject type="array" fp_name="/matmul_tb/m/x">
+      <obj_property name="ElementShortName">x[31:0]</obj_property>
+      <obj_property name="ObjectShortName">x[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/matmul_tb/m/y">
+      <obj_property name="ElementShortName">y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">y[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/matmul_tb/m/input_from_prev_layer">
+      <obj_property name="ElementShortName">input_from_prev_layer</obj_property>
+      <obj_property name="ObjectShortName">input_from_prev_layer</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/matmul_tb/m/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/matmul_tb/m/t">
+      <obj_property name="ElementShortName">t[31:0]</obj_property>
+      <obj_property name="ObjectShortName">t[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/matmul_tb/m/initialized">
+      <obj_property name="ElementShortName">initialized</obj_property>
+      <obj_property name="ObjectShortName">initialized</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/matmul_tb/m/clken">
+      <obj_property name="ElementShortName">clken</obj_property>
+      <obj_property name="ObjectShortName">clken</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/matmul_tb/m/switch">
+      <obj_property name="ElementShortName">switch</obj_property>
+      <obj_property name="ObjectShortName">switch</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/matmul_tb/m/switching">
+      <obj_property name="ElementShortName">switching</obj_property>
+      <obj_property name="ObjectShortName">switching</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/matmul_tb/m/nclken">
+      <obj_property name="ElementShortName">nclken</obj_property>
+      <obj_property name="ObjectShortName">nclken</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/matmul_tb/m/full">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/matmul_tb/m/empty">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/matmul_tb/m/dot_valid">
+      <obj_property name="ElementShortName">dot_valid</obj_property>
+      <obj_property name="ObjectShortName">dot_valid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/matmul_tb/m/done_counting">
+      <obj_property name="ElementShortName">done_counting</obj_property>
+      <obj_property name="ObjectShortName">done_counting</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/matmul_tb/m/using_activations">
+      <obj_property name="ElementShortName">using_activations</obj_property>
+      <obj_property name="ObjectShortName">using_activations</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/matmul_tb/m/addr">
+      <obj_property name="ElementShortName">addr[8:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/matmul_tb/m/rom_out">
+      <obj_property name="ElementShortName">rom_out[511:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out[511:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/matmul_tb/m/activation_fifo_input">
+      <obj_property name="ElementShortName">activation_fifo_input[31:0]</obj_property>
+      <obj_property name="ObjectShortName">activation_fifo_input[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">26</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/matmul_tb/m/activation">
+      <obj_property name="ElementShortName">activation[31:0]</obj_property>
+      <obj_property name="ObjectShortName">activation[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">26</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/matmul_tb/m/fifo_wren">
+      <obj_property name="ElementShortName">fifo_wren</obj_property>
+      <obj_property name="ObjectShortName">fifo_wren</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/matmul_tb/m/fifo_rden">
+      <obj_property name="ElementShortName">fifo_rden</obj_property>
+      <obj_property name="ObjectShortName">fifo_rden</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/matmul_tb/m/fifo_rst">
+      <obj_property name="ElementShortName">fifo_rst</obj_property>
+      <obj_property name="ObjectShortName">fifo_rst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/matmul_tb/m/dot_rst">
+      <obj_property name="ElementShortName">dot_rst</obj_property>
+      <obj_property name="ObjectShortName">dot_rst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/matmul_tb/m/fifo_rst">
+      <obj_property name="ElementShortName">fifo_rst</obj_property>
+      <obj_property name="ObjectShortName">fifo_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider40" type="divider">
+      <obj_property name="label">dot</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/matmul_tb/m/\generate_dots(1)\/dot_gen/carry_clear">
+      <obj_property name="ElementShortName">carry_clear</obj_property>
+      <obj_property name="ObjectShortName">carry_clear</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/matmul_tb/m/\generate_dots(1)\/dot_gen/y">
+      <obj_property name="ElementShortName">y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">y[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">26</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/matmul_tb/m/\generate_dots(1)\/dot_gen/high">
+      <obj_property name="ElementShortName">high[24:0]</obj_property>
+      <obj_property name="ObjectShortName">high[24:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">19</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/matmul_tb/m/\generate_dots(1)\/dot_gen/low">
+      <obj_property name="ElementShortName">low[17:0]</obj_property>
+      <obj_property name="ObjectShortName">low[17:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">12</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/matmul_tb/m/\generate_dots(1)\/dot_gen/high_bias">
+      <obj_property name="ElementShortName">high_bias[42:0]</obj_property>
+      <obj_property name="ObjectShortName">high_bias[42:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">31</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/matmul_tb/m/arg_max">
+      <obj_property name="ElementShortName">arg_max[3:0]</obj_property>
+      <obj_property name="ObjectShortName">arg_max[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/matmul_tb/m/output_valid">
+      <obj_property name="ElementShortName">output_valid</obj_property>
+      <obj_property name="ObjectShortName">output_valid</obj_property>
+   </wvobject>
+</wave_config>

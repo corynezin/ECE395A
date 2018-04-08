@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2017 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -71,13 +71,13 @@ module fifo_generator_0 (
 input wire clk;
 input wire srst;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE WR_DATA" *)
-input wire [7 : 0] din;
+input wire [15 : 0] din;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE WR_EN" *)
 input wire wr_en;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_read:1.0 FIFO_READ RD_EN" *)
 input wire rd_en;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_read:1.0 FIFO_READ RD_DATA" *)
-output wire [7 : 0] dout;
+output wire [15 : 0] dout;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE FULL" *)
 output wire full;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE ALMOST_FULL" *)
@@ -93,9 +93,9 @@ output wire prog_full;
     .C_COUNT_TYPE(0),
     .C_DATA_COUNT_WIDTH(7),
     .C_DEFAULT_VALUE("BlankString"),
-    .C_DIN_WIDTH(8),
+    .C_DIN_WIDTH(16),
     .C_DOUT_RST_VAL("0"),
-    .C_DOUT_WIDTH(8),
+    .C_DOUT_WIDTH(16),
     .C_ENABLE_RLOCS(0),
     .C_FAMILY("zynq"),
     .C_FULL_FLAGS_RST_VAL(0),

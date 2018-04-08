@@ -7,8 +7,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 entity conv_layer_0 is
+    Generic(
+        M: integer := 16
+    );
     Port ( 
-         x: IN STD_LOGIC_VECTOR(7 downto 0);
+         x: IN STD_LOGIC_VECTOR(M-1 downto 0);
          rst: IN STD_LOGIC;
          clk: IN STD_LOGIC;
          y: OUT STD_LOGIC_VECTOR(23 downto 0);
@@ -20,9 +23,14 @@ architecture RTL of conv_layer_0 is
 
 -- Convolution component
 component conv_0 is
+    generic(
+        M: Integer:=16; --Input bit width
+        N: Integer:=24; --Output bit width
+        P: Integer:=32 --Coefficient sets
+    );
     Port ( 
-           x : in STD_LOGIC_VECTOR (7 downto 0);
-           y : out STD_LOGIC_VECTOR (23 downto 0);
+           x : in STD_LOGIC_VECTOR (M-1 downto 0);
+           y : out STD_LOGIC_VECTOR (N-1 downto 0);
            rst: in STD_LOGIC;
            data_valid: in STD_LOGIC;
            clk: in STD_LOGIC;
@@ -33,13 +41,12 @@ end component;
 -- FIFO component
 component fifo_generator_0 is
   Port ( 
-    
       clk : in STD_LOGIC;
       srst : in STD_LOGIC;
-      din : in STD_LOGIC_VECTOR ( 7 downto 0 );
+      din : in STD_LOGIC_VECTOR ( M-1 downto 0 );
       wr_en : in STD_LOGIC;
       rd_en : in STD_LOGIC;
-      dout : out STD_LOGIC_VECTOR ( 7 downto 0 );
+      dout : out STD_LOGIC_VECTOR ( M-1 downto 0 );
       full : out STD_LOGIC;
       almost_full : out STD_LOGIC;
       empty : out STD_LOGIC;
@@ -47,10 +54,13 @@ component fifo_generator_0 is
 end component;
 
 component mux2_1_8 is
+  Generic(
+        M: Integer:= 16
+  );
   Port ( 
-        x_0 : IN STD_LOGIC_VECTOR(7 downto 0);
-        x_1 : IN STD_LOGIC_VECTOR(7 downto 0);
-        y : OUT STD_LOGIC_VECTOR(7 downto 0);
+        x_0 : IN STD_LOGIC_VECTOR(M-1 downto 0);
+        x_1 : IN STD_LOGIC_VECTOR(M-1 downto 0);
+        y : OUT STD_LOGIC_VECTOR(M-1 downto 0);
         addr : IN STD_LOGIC);
 end component;
 
@@ -66,8 +76,8 @@ end component;
 signal w_ready : STD_LOGIC := '0';
 signal rd_enable : STD_LOGIC := '0';
 signal wr_enable : STD_LOGIC := '0';
-signal fifo_in : STD_LOGIC_VECTOR(7 downto 0) := "00000000";
-signal fifo_out : STD_LOGIC_VECTOR(7 downto 0) := "00000000";
+signal fifo_in : STD_LOGIC_VECTOR(M-1 downto 0) := (others => '0');
+signal fifo_out : STD_LOGIC_VECTOR(M-1 downto 0) := (others => '0');
 signal fifo_full : STD_LOGIC;
 signal fifo_almost_full : STD_LOGIC;
 signal is_full : STD_LOGIC;

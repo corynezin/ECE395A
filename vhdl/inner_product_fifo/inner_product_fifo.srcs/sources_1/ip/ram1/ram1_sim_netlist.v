@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-// Date        : Sat Nov 25 16:18:34 2017
+// Date        : Sat Nov 25 16:18:33 2017
 // Host        : nezin-desktop running 64-bit Ubuntu 16.04.3 LTS
-// Command     : write_verilog -force -mode funcsim
-//               /home/nezin/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.srcs/sources_1/ip/ram1/ram1_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top ram1 -prefix
+//               ram1_ ram1_sim_netlist.v
 // Design      : ram1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -88,7 +88,7 @@ endmodule
 (* C_MEM_INIT_FILE = "ram1.mif" *) (* C_MEM_TYPE = "0" *) (* C_PARSER_TYPE = "1" *) 
 (* C_PIPELINE_STAGES = "0" *) (* C_QCE_JOINED = "0" *) (* C_QUALIFY_WE = "0" *) 
 (* C_READ_MIF = "1" *) (* C_REG_A_D_INPUTS = "0" *) (* C_REG_DPRA_INPUT = "0" *) 
-(* C_SYNC_ENABLE = "1" *) (* C_WIDTH = "8" *) (* ORIG_REF_NAME = "dist_mem_gen_v8_0_11" *) 
+(* C_SYNC_ENABLE = "1" *) (* C_WIDTH = "8" *) 
 module ram1_dist_mem_gen_v8_0_11
    (a,
     d,

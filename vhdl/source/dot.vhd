@@ -9,9 +9,9 @@ use IEEE.NUMERIC_STD.ALL;
 entity dot is
     Generic (
         N_signal: integer := 24;
-        N_coef: integer := 8;
+        N_coef: integer := 32;
         L: integer := 10;
-        O: integer := 48
+        O: integer := 64
     );
     Port ( 
         x:      in STD_LOGIC_VECTOR (N_signal-1 downto 0); --component of first vector
@@ -19,7 +19,7 @@ entity dot is
         sclr:   in STD_LOGIC;                     --Synchronus Clear
         clk:    in STD_LOGIC;                     --Clock
         ce:     in STD_LOGIC;                     --Clock Enable
-        zout:   out STD_LOGIC_VECTOR (O-1 downto 0);
+        zout:   out STD_LOGIC_VECTOR (64-1 downto 0);
         valid:  out STD_LOGIC;
         ctr_rst:in STD_LOGIC
     );

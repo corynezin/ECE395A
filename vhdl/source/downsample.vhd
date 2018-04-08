@@ -16,13 +16,15 @@ end downsample;
 
 architecture Behavioral of downsample is
 signal t: STD_LOGIC := '0';
+signal inter: STD_LOGIC_VECTOR(N-1 downto 0):= (others => '0');
 begin
+q <= inter;
 process(clk)
 --Variable declarations
 begin
 if rising_edge(clk) then
     if t = '0' then
-        q <= d;
+        inter <= d;
     end if;
     t <= not t;
 end if;

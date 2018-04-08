@@ -221,7 +221,12 @@ begin
         else
             s_fifo_rden <= s_fifo_rden_prev;
         end if;
-        true_b_fifo_wren <= y_valid; --used to be temp
+        if first_stage_complete = '0' then
+            true_b_fifo_wren <= y_valid;
+        else
+            true_b_fifo_wren <= '0';
+            true_b_fifo_wren <= '0';
+        end if;
         temp <= y_valid;
         clk_half <= not clk_half;
         if b_fifo_full = '1' then

@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-// Date        : Sat Nov 25 16:18:33 2017
+// Date        : Sat Nov 25 16:18:32 2017
 // Host        : nezin-desktop running 64-bit Ubuntu 16.04.3 LTS
-// Command     : write_verilog -force -mode synth_stub
-//               /home/nezin/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.srcs/sources_1/ip/ram1/ram1_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top ram1 -prefix
+//               ram1_ ram1_stub.v
 // Design      : ram1
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-1

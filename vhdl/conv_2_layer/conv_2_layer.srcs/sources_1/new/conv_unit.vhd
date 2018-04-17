@@ -261,7 +261,7 @@ PORT MAP(
     output_valid => answer_ready_int
     );
     
-partial_sum <= std_logic_vector(signed(mac_output) + signed(o_fifo_output));
+partial_sum <= std_logic_vector(signed(mac_output) + signed(o_fifo_output)) when answer_ready_int_int = '0' else o_fifo_output;
 o_fifo_input <= mac_output when o_mux_addr = '0' else partial_sum;
 mac_filter_input <= h_fifo_output when filter_input_enable = '1' else (others => '0');
 dout <= maxpool_output;

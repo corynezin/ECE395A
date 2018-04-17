@@ -381,9 +381,9 @@ begin
               h_fifo_rden_assert <= '0';
               h_fifo_wren_assert <= '0';
               if counter6 >= 1 then
-              o_fifo_wren_assert <= '1';
+                o_fifo_wren_assert <= '1';
               else
-              o_fifo_wren_assert <= '0';
+                o_fifo_wren_assert <= '0';
               end if;
               o_fifo_rden_assert <= '1';
               b_fifo_rden_assert <= '0';

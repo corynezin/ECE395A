@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1523228655">
+  <File Type="PHYSOPT-TIMING" Name="maia_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="maia_routed_error.dcp"/>
+  <File Type="ROUTE-DRC" Name="maia_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="maia_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="maia_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="maia_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="maia_drc_routed.rpx"/>
+  <File Type="ROUTE-PWR" Name="maia_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="maia_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="maia_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="maia_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="maia_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="maia_route_status.pb"/>
+  <File Type="BITSTR-BMM" Name="maia_bd.bmm"/>
+  <File Type="BITSTR-SYSDEF" Name="maia.sysdef"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="maia_timing_summary_routed.rpt"/>
+  <File Type="BG-BGN" Name="maia.bgn"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="maia_timing_summary_postroute_physopted.rpt"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BITSTR-MMI" Name="maia.mmi"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="maia_routed_bb.dcp"/>
+  <File Type="BG-DRC" Name="maia.drc"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="maia_postroute_physopt_bb.dcp"/>
+  <File Type="ROUTE-CLK" Name="maia_clock_utilization_routed.rpt"/>
+  <File Type="PLACE-IO" Name="maia_io_placed.rpt"/>
+  <File Type="PWROPT-TIMING" Name="maia_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="maia_placed.dcp"/>
+  <File Type="PLACE-UTIL-PB" Name="maia_utilization_placed.pb"/>
+  <File Type="PWROPT-DRC" Name="maia_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="maia_pwropt.dcp"/>
+  <File Type="PLACE-UTIL" Name="maia_utilization_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="maia_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="OPT-TIMING" Name="maia_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="maia.hwdef"/>
+  <File Type="OPT-DRC" Name="maia_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="maia_timing_summary_init.rpt"/>
+  <File Type="BITSTR-RBT" Name="maia.rbt"/>
+  <File Type="ROUTE-SIMILARITY" Name="maia_incremental_reuse_routed.rpt"/>
+  <File Type="PLACE-CLK" Name="maia_clock_utilization_placed.rpt"/>
+  <File Type="OPT-DCP" Name="maia_opt.dcp"/>
+  <File Type="PA-TCL" Name="maia.tcl"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="maia_postplace_pwropt.dcp"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="maia_methodology_drc_opted.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="maia_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="maia_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="maia_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="maia_timing_summary_placed.rpt"/>
+  <File Type="RDI-RDI" Name="maia.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="maia_timing_summary_postroute_physopted.pb"/>
+  <File Type="PHYSOPT-DCP" Name="maia_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="maia_drc_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="maia_postroute_physopt.dcp"/>
+  <File Type="BG-BIT" Name="maia.bit"/>
+  <File Type="ROUTE-DCP" Name="maia_routed.dcp"/>
+  <File Type="BG-BIN" Name="maia.bin"/>
+  <File Type="ROUTE-TIMING-PB" Name="maia_timing_summary_routed.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="maia_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BITSTR-MSK" Name="maia.msk"/>
+  <File Type="ROUTE-TIMING-RPX" Name="maia_timing_summary_routed.rpx"/>
+  <File Type="BITSTR-NKY" Name="maia.nky"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../matmul/matmul.srcs/sources_1/ip/activation_fifo/activation_fifo.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../source/conv2_controller.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../source/conv_0.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../source/conv_1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../source/conv_layer_0.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../source/conv_layer_1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/conv_layer_2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../conv_relu_pool/conv_relu_pool.srcs/sources_1/new/conv_relu_pool.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/conv_unit.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../source/dot.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../matmul/matmul.srcs/sources_1/new/dot_n.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../source/downsample.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../matmul/matmul.srcs/sources_1/new/matmul.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../source/maxpool_1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../source/mux2_1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../matmul/matmul.srcs/sources_1/new/mux_3.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../source/relu.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/sbl_dsp.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../slope_bias_loader/slope_bias_loader.srcs/sources_1/new/slope_bias_loader.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/maia.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../source/maxpool.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/conv_layer_2_tb.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../matmul/matmul.srcs/sources_1/ip/fully_connected_coefficients_1/fully_connected_coefficients_1.xci">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/arrays.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../ip/fifo_64/fifo_64.xci">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../helpers/conv_2/conv_2_test_rom.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../helpers/conv_2/conv_2_test_rom.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../conv/coefs/conv0_1.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../conv/coefs/conv0_0.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../coefficients/rom.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../matmul/matmul.srcs/sources_1/new/mux_3x64.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../matmul/matmul.srcs/sources_1/new/mux_3x32.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../coefficients/conv1_ram_q.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../helpers/unit.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../coefficients/conv1_ram_i.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../coefficients/fc_layer.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../coefficients/fc_truncated_layer.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../coefficients/fc_truncated_reshape_layer.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../coefficients/fc_truncated_reshape_flipped_layer.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../coefficients/fc_16bit_layer.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../coefficients/fc_12bit_layer.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="maia"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/timing.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/timing.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="fifo_7680"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo_generator_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="fir128_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo_45"/>
+  <BlockFileSet Type="BlockSrcs" Name="fir128_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo_16"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo_16x24"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo_generator_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_0"/>
+</GenRun>

@@ -200,9 +200,10 @@ begin
             reset_counter := reset_counter + 1;
         elsif reset_counter = 1 and matmul_answer_ready = '0' then
             srst <= '0';
-        elsif reset_counter = 1 and matmul_answer_ready = '1' then
+        elsif reset_counter = 1 and matmul_answer_ready = '1' and reset_counter < 100 then
+            reset_counter := reset_counter + 1;
+        else
             srst <= '1';
-            reset_counter := 0;
         end if;
         if srst = '1' then
             first_stage_complete <= '0';

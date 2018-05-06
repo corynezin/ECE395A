@@ -1,1 +1,0 @@
-mac.vhd,vhdl,xil_defaultlib,../../../../inner_product.srcs/sources_1/ip/mac/sim/mac.vhd,

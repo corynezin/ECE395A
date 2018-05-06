@@ -1,9 +1,0 @@
-0.6
-2017.2
-Jun 15 2017
-18:41:53
-/home/nezin/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.srcs/sources_1/ip/ram1/ram1_sim_netlist.vhdl,1511804785,vhdl,,,,ram1;ram1_dist_mem_gen_v8_0_11,,,,,,,,
-/home/nezin/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.srcs/sources_1/ip/ram2/ram2_sim_netlist.vhdl,1512673430,vhdl,,,,ram2;ram2_dist_mem_gen_v8_0_11;ram2_dist_mem_gen_v8_0_11_synth;ram2_rom,,,,,,,,
-/home/nezin/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.srcs/sources_1/ip/xbip_multadd_0/sim/xbip_multadd_0.vhd,1512674132,vhdl,,,,xbip_multadd_0,,,,,,,,
-/home/nezin/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.srcs/sources_1/new/dot.vhd,1512676241,vhdl,,,,dot,,,,,,,,
-/home/nezin/Documents/ECE395A/vhdl/inner_product_fifo/inner_product_fifo.srcs/sources_1/new/dot_tb.vhd,1512673641,vhdl,,,,dot_tb,,,,,,,,

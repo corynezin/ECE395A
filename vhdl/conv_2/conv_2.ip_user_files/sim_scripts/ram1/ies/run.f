@@ -1,4 +1,0 @@
--makelib ies/xil_defaultlib \
-  "../../../../../inner_product_fifo/inner_product_fifo.srcs/sources_1/ip/ram1/ram1_sim_netlist.vhdl" \
--endlib
-

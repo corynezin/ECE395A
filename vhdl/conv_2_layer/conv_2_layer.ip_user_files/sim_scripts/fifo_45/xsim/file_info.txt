@@ -1,1 +1,0 @@
-fifo_45_sim_netlist.vhdl,vhdl,xil_defaultlib,../../../../../ip/fifo_45/fifo_45_sim_netlist.vhdl,

@@ -1,4 +1,0 @@
--makelib ies/xil_defaultlib \
-  "../../../../../../../Maia/vhdl/conv_2/conv_2.srcs/sources_1/ip/fifo_16/fifo_16_sim_netlist.vhdl" \
--endlib
-

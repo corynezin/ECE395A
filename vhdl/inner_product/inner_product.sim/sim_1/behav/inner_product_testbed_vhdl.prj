@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  "../../../inner_product.srcs/sources_1/ip/mac/sim/mac.vhd"
-vhdl xil_defaultlib  "../../../inner_product.srcs/sources_1/new/matrix.vhd"
-vhdl xil_defaultlib  "../../../inner_product.srcs/sources_1/new/inner_product_testbed.vhd"
-
-# Do not sort compile order
-nosort
